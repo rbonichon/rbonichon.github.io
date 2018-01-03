@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top" >
+  <head>
+    {{ template "chrome/meta.html" . }}
+    {{ template "chrome/includes.html" . }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    <!-- atom & rss feed -->
+    <link href="/rss.xml" type="application/atom+xml"
+          rel="alternate" title="{{ .Site.Title }}">
+  </head>
+
+  <body class="layout-default">
+    {{ template "chrome/menu.html" }}
+    {{ $baseurl := .Site.BaseURL }}
+    <h1>All posts</h1>
+    <section class="posts">
+      {{ range .Data.Pages }}
+      <article class="post">
+        <header class="post-header">
+          <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+          <div class="post-time">
+            {{ .Date.Format "January 2 2006" }},
+            {{ .FuzzyWordCount }} words
+          </div>
+        </header>
+        <div class="post-after">
+          <div class="tags">
+            {{ range .Params.tags }}
+            <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </section>
+
+    {{ template "chrome/footer.html" }}
+  </body>
+</html>

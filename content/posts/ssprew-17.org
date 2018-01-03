@@ -1,0 +1,8 @@
+---
+title: "SSPREW '17"
+date: 2017-10-16
+---
+
+BINSEC will be @ [[http://www.pprew.org/][SSPREW-7]] where I'll give a tutorial about it.
+
+I'll stay to attend [[http://acsac.org][ACSAC]].

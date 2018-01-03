@@ -1,0 +1,10 @@
+---
+title: "Postdoc positions @ CEA LIST"
+date: 2017-03-29
+---
+
+The Software Reliability Lab at CEA LIST (Paris Saclay, France) is offering
+postdoc positions about *Software security through binary-level analysis*.
+
+# more 
+Full description is [[../../../../../../documents/2017-postdoc.pdf][here]].

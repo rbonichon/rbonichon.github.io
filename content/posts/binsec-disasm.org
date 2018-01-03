@@ -1,0 +1,8 @@
+---
+title: "Basic disassembly in BINSEC"
+date: 2017-08-19
+draft: true
+---
+
+
+In this post, we are interested in the basic disassembly abilities of ~BINSEC~

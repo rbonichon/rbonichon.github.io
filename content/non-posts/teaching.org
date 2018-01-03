@@ -1,0 +1,6 @@
+---
+title: "Teaching"
+---
+
+<i class="fa fa-cogs" aria-hidden="true"></i>
+ *Coming soon ...*

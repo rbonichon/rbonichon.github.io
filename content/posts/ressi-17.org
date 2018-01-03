@@ -1,0 +1,9 @@
+---
+title: "RESSI '17"
+date: 2017-04-29
+---
+
+
+
+I will be @ [[https://ressi2017.sciencesconf.org/][RESSI]] 
+to talk about BINSEC on behalf of all the group.

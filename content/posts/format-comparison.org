@@ -1,0 +1,50 @@
+---
+title: "Reassessing format strings performance"
+date: 2017-08-19
+draft: true
+---
+
+In November 2012, a thread on the OCaml devel mailing list mentioned that
+using format strings, through either the ~Printf~ or ~Format~ modules, had a
+measurable performance impact. It even mentioned that using ~Format~ had some
+further performance penalties over ~Printf~, e.g., regarding printing newlines.
+
+I am particularly drawn to OCaml's format module since I find it one of
+the best not-very-well-known features of its compact standard library.
+
+You might know that, since then, format strings handling has been changed and
+now uses GADT. In theory, this should have brought performance
+enhancements. So, in this post, I aim to revisit the performance question raised
+in 2012. It's 2017: what's the performance penalty of format strings over direct
+printing functions now in ~OCaml~ ?
+
+
+* Back to 2012
+
+Let us first summarize the point that the ~ocaml-devel~ thread was raising
+in 2012. Let me state that I do not see any concern regarding this point and
+that I am taking it at face value.
+
+
+* And on to 2017
+
+Now that GADTs are in the game, I want to revisit the following questions:
+
+1. Is is still true that direct printing functions are more efficient than
+   formatted strings functions ? (most probably - yes)
+   1. If so, how much do we lose ?
+2. Does the use of ~Format~ incur a higher performance penalty than ~Printf~ ?
+
+Let's see if there still is a measurable difference between using non-formatted
+primitives (~print_string~, ~print_int~, ...) and using format strings.
+
+
+#+begin_src ocaml
+let x = 1
+#+end_src
+
+
+We will be measuring the following printing functions with the shell's time
+utily. Each function will be its own executable. We'll see if there's any
+difference also between OCaml 3.12 (pre-GADT) and 4.05 (current stable
+release).

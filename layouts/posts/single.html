@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top" >
+  {{ template "chrome/head.html" }}
+  <body>
+    {{ template "chrome/menu.html" }}
+    {{ $baseurl := .Site.BaseURL }}
+
+    <section class="section content">
+      <div class="container">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+      </div>
+    </section>
+
+    {{ template "chrome/footer.html" }}
+  </body>
+</html>

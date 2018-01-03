@@ -1,0 +1,78 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$primary: hsl(171, 60%, 48%);
+$link: $primary;
+
+@import "bulma.sass";
+
+nav {
+    a {
+        &:visited, &:link {
+            color: $primary;
+        }
+
+        &:hover {
+            color: $yellow;
+        }
+
+        &:active {
+            color: $yellow;
+        }
+    }
+}
+
+
+.article-container {
+    padding: .5em 4em 0.5em 4em;
+    .paper {
+        padding: .3em;
+
+        .descr { }
+        .article-title {
+            &::before {
+                font-family: FontAwesome;
+                padding-right: 3px;
+                
+            }
+            font-weight: $weight-bold;
+        }
+
+        .article-author {
+            font-style: italic;
+        }
+
+        .download {
+            text-transform:uppercase;
+            font-size: 15px;
+            font-weight: $weight-bold;
+            a {
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+footer.footer {
+    padding:10px;
+}
+
+nav.navbar {
+    .container {
+    }
+}
+
+div.summary {
+    padding:15px 15px 5px 15px;
+}
+
+div.years {
+    padding-left: 4em;
+    padding-right: 4em;
+    a {
+        font-weight: $weight-bold;
+        margin-top: 2px;
+    }
+}

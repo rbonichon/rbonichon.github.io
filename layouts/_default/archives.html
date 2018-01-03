@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top" >
+  {{ template "chrome/head.html" . }}
+
+  <body>
+    {{ template "chrome/menu.html" }}
+    {{ $baseurl := .Site.BaseURL }}
+
+    <section class="section posts">
+      <div class="container">
+        {{ range where .Site.Pages "Section" "posts" }}
+        <div class="box">
+        <article class="media">
+          <header class="post-header">
+            <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+            <div class="post-time">
+              {{ .Date.Format "January 2 2006" }},
+              {{ .FuzzyWordCount }} words
+            </div>
+            <div class="summary">
+              {{ .Summary }}
+              {{ if .Truncated }}
+              <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+              <div>
+                <a href="{{ .RelPermalink }}">Read More…</a>
+              </div>
+              {{ end }}
+            </div>
+          </header>
+        </article>
+
+        </div>
+        {{ end }}
+      </div>
+    </section>
+
+    {{ template "chrome/footer.html" }}
+  </body>
+</html>

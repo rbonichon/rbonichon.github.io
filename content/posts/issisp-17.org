@@ -1,0 +1,15 @@
+---
+title: "ISSISP '17"
+date: 2017-04-29T13:55:43+01:00
+---
+
+We --- my colleague [[http://sebastien.bardin.free.fr][Sébastien]] and I --- are organizing the 8th International
+Summer School on Information Security and Protection.
+
+# more
+For those of you interested in software
+protection in particular and in analyzing binary code in general,
+this is a great opportunity to meet some of
+the best academics and professionals of the domain.
+
+For more information about ISSISP '17, the website is up and running [[https://issisp2017.github.io][there]].
