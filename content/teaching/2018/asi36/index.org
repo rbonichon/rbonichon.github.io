@@ -1,0 +1,24 @@
+---
+title: ASI36
+date: 2018-01-04
+---
+
+
+** Content
+  
+  Software attacks are extensively hitting the headlines nowadays. This course
+  aims at demystifying them by giving the fundamentals to understand these
+  attacks, what they consist in and how to protect from them. We will mostly
+  focus on software vulnerabilities.
+
+  We will cover the following topics:
+  - semantics and modelization of low-level languages
+  - classical attack and exploitation
+  - control-flow integrity techniques
+  - MATE attacks and reverse engineering
+  - code obfuscation
+  - malware: principles and analysis
+
+
+
+

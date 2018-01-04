@@ -1,6 +1,8 @@
 ---
 title: "Teaching"
+layout: teaching
 ---
+
 
 <i class="fa fa-cogs" aria-hidden="true"></i>
  *Coming soon ...*
