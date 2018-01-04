@@ -81,3 +81,18 @@ div.years {
 img.picture {
     border-radius: 8px;
 }
+
+
+.org-table {
+    table {
+        width: 20%;
+        tbody {
+            tr {
+                border: none;
+            }
+            td {
+                border: none;
+            }
+        }
+    }
+}

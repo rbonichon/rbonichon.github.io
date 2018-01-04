@@ -127,6 +127,7 @@ references:
     in Industrial Control Software
   venue: SAFECOMP 2011, Naples, Italy, September 19-22, 2011
   page: '85-98'
+  paper: safecomp2011.pdf
   DOI: 10.1007/978-3-642-24270-0_7
 
 - id: BonichonDD07
@@ -167,4 +168,5 @@ references:
   venue: IJCAR 2004, Cork, Ireland, July 4-8, 2004.
   page: '445-459'
   DOI: 10.1007/978-3-540-25984-8_33
+  paper: tamed-ijcar04.pdf
 
