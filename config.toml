@@ -17,3 +17,6 @@ publishDir = "docs"
 [taxonomies]
   category = "categories"
   tag = "tags"
+
+[permalinks]
+   teaching = "/:sections/:title/"

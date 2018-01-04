@@ -8,13 +8,14 @@
 
     <section class="section posts">
       <div class="container">
-        {{ range where .Site.Pages "Section" "posts" }}
-        <div class="box">
+        <div class="tile is-ancestor">
+        {{ range where .Site.RegularPages "Section" "posts" }}
+        <div class="tile">
         <article class="media">
           <header class="post-header">
-            <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+            <h2 class="subtitle is-5"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
             <div class="post-time">
-              {{ .Date.Format "January 2 2006" }},
+              {{ .Date.Format "2006-02-01" }},
               {{ .FuzzyWordCount }} words
             </div>
             <div class="summary">
@@ -28,9 +29,9 @@
             </div>
           </header>
         </article>
-
         </div>
         {{ end }}
+        </div>
       </div>
     </section>
 
