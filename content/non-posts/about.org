@@ -6,7 +6,9 @@ I am currently a research engineer @ [[http://cea.fr/en][CEA]] working on the [[
 
 You can contact me by e-mail, snail mail or phone.
 
-<div class="org-table">
+<div class="columns">
+
+<div class="column is-half">
 
 |---------+------------------------------|
 | *E-mail* | =richard.bonichon_at_cea.fr= |
@@ -15,6 +17,12 @@ You can contact me by e-mail, snail mail or phone.
 |         | 91191 Gif-sur-Yvette CEDEX   |
 | *Phone*  | +33 1 69 08 42 84            |
 |---------+------------------------------|
+
+</div>
+
+<div class="column is-one-third ">
+  <img id="portrait" src="/img/rb.jpg"/>
+</div>
 
 </div>
 

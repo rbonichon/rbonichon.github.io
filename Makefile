@@ -9,8 +9,8 @@ PUBLISH_DIR = docs
 
 publish:
 	hugo 
-	(cd $(PUBLISH_DIR) & \
-	 git add * & \
-	 git commit -am "publish" & \
-	 git push -f origin master \
+	(cd $(PUBLISH_DIR); \
+	 git add *; \
+	 git commit -am "publish"; \
+	 git push -f origin master; \
 	)
