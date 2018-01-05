@@ -18,6 +18,3 @@ You can contact me by e-mail, snail mail or phone.
 
 </div>
 
-#+begin_src html
-<div>FOO</div>
-#+end_src
