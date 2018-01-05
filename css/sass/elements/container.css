@@ -1,0 +1,77 @@
+/*
+Error: Undefined mixin 'from'.
+        on line 4 of /home/richard/documents/rbwww/src/sass/sass/elements/container.sass, in `from'
+        from line 4 of /home/richard/documents/rbwww/src/sass/sass/elements/container.sass
+
+1: .container
+2:   margin: 0 auto
+3:   position: relative
+4:   +from($desktop)
+5:     max-width: $desktop - (2 * $gap)
+6:     width: $desktop - (2 * $gap)
+7:     &.is-fluid
+8:       margin-left: $gap
+9:       margin-right: $gap
+
+Backtrace:
+/home/richard/documents/rbwww/src/sass/sass/elements/container.sass:4:in `from'
+/home/richard/documents/rbwww/src/sass/sass/elements/container.sass:4
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `block in with_mixin'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `with_mixin'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:20:in `render'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/engine.rb:281:in `render'
+/home/richard/.gem/ruby/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/home/richard/.gem/ruby/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/home/richard/.gem/ruby/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/gems/2.4.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:294:in `watch'
+/home/richard/.gem/ruby/2.4.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+/home/richard/.gem/ruby/2.4.0/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+/home/richard/.gem/ruby/2.4.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/home/richard/.gem/ruby/2.4.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/home/richard/.gem/ruby/2.4.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/home/richard/.gem/ruby/2.4.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/home/richard/.gem/ruby/2.4.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/home/richard/.gem/ruby/2.4.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/home/richard/.gem/ruby/2.4.0/bin/compass:23:in `load'
+/home/richard/.gem/ruby/2.4.0/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'from'.\A         on line 4 of /home/richard/documents/rbwww/src/sass/sass/elements/container.sass, in `from'\A         from line 4 of /home/richard/documents/rbwww/src/sass/sass/elements/container.sass\A \A 1: .container\A 2:   margin: 0 auto\A 3:   position: relative\A 4:   +from($desktop)\A 5:     max-width: $desktop - (2 * $gap)\A 6:     width: $desktop - (2 * $gap)\A 7:     &.is-fluid\A 8:       margin-left: $gap\A 9:       margin-right: $gap"; }

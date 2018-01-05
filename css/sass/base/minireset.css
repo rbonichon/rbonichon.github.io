@@ -1,0 +1,93 @@
+/*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+/* line 3, ../../../../src/sass/sass/base/minireset.sass */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 30, ../../../../src/sass/sass/base/minireset.sass */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 40, ../../../../src/sass/sass/base/minireset.sass */
+ul {
+  list-style: none;
+}
+
+/* line 44, ../../../../src/sass/sass/base/minireset.sass */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+/* line 51, ../../../../src/sass/sass/base/minireset.sass */
+html {
+  box-sizing: border-box;
+}
+
+/* line 54, ../../../../src/sass/sass/base/minireset.sass */
+* {
+  box-sizing: inherit;
+}
+/* line 56, ../../../../src/sass/sass/base/minireset.sass */
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 61, ../../../../src/sass/sass/base/minireset.sass */
+img,
+embed,
+object,
+audio,
+video {
+  max-width: 100%;
+}
+
+/* line 69, ../../../../src/sass/sass/base/minireset.sass */
+iframe {
+  border: 0;
+}
+
+/* line 73, ../../../../src/sass/sass/base/minireset.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 77, ../../../../src/sass/sass/base/minireset.sass */
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
