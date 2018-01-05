@@ -1,8 +1,7 @@
-# Created 2018-01-04 Thu 16:27
 #+TITLE: DIM0436
 #+DATE: 2014-02-01
 #+AUTHOR: Richard Bonichon
-#+MACRO: pdf <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>
+
 
 * Aulas
 
