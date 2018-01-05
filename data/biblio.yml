@@ -69,8 +69,9 @@ references:
     given: Cláudia
   year: '2014'
   title: Extending SMT-LIB v2 with \(\lambda\)-Terms and Polymorphism
-  venue: SMT 2014, Vienna, Austria, July 17-18, 2014.
+  venue: SMT 2014, Vienna, Austria, July 17-18, 2014
   page: '53-62'
+  paper: smtlib_lambda-smt14.pdf
 
 - id: conf_smt_BonichonDT15
   type: paper-conference
