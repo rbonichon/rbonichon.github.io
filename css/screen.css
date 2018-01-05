@@ -10399,3 +10399,9 @@ img.picture {
 .org-table table tbody td {
   border: none;
 }
+
+/* line 100, ../../src/sass/screen.scss */
+img#portrait {
+  width: 50%;
+  border-radius: 120px;
+}
