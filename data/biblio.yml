@@ -1,5 +1,20 @@
 ---
 references:
+- id: CAV18
+  type: paper-conference
+  author:
+  - family: Farinier
+    given: Benjamin
+  - family: Bardin
+    given: Sébastien
+  - family: Bonichon
+    given: Richard
+  - family: Potet
+    given: Marie-Laure
+  year: 2018
+  title: "Model Generation for Quantified Formulas: A Taint-Based Approach"
+  venue: CAV 2018
+  paper: cav2018.pdf
 - id: BW17
   type: paper-conference
   author:

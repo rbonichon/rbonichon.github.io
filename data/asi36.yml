@@ -1,0 +1,161 @@
+---
+id: ASI36
+title: Analyse de vulnérabilté des sources et binaires
+static_directory: /asi36
+
+lectures:
+- date: 2018-01-11
+  title: Introduction
+  descr: >-
+    This introductory session presents an overview of the contents, the issues
+    surrounding security in general, the more restricted issue of analyzing
+    vulnerabilities in low-level code, as well as reminders regarding
+    compilation and code analysis.
+
+  href: intro
+  contents:
+    - title: Slides-I
+      file: ensta-01.pdf
+      type: pdf
+    - title: Slides-II
+      file: 01-chapter01.pdf
+      type: pdf
+  references:
+    - title: Mind Your Languages
+      type: pdf
+      link:
+        https://www.ssi.gouv.fr/uploads/IMG/pdf/Mind_Your_Languages_-_version_longue.pdf
+    - title: wtfjs
+      type: url
+      link: https://github.com/denysdovhan/wtfjs
+    - title: Some thoughts on security after ten years of qmail 1.0 
+      type: pdf
+      link: https://cr.yp.to/qmail/qmailsec-20071101.pdf
+- date: 2018-01-18
+  title: Basic attacks and exploitation
+  descr: >-
+    This session presents the basic low-level attack techniques: 
+
+      * buffer overflows; 
+      * heap overflows; & 
+      * format string exploitation. 
+
+    Most of the session is allotted to hands-on experimentation.
+  
+  href: basics
+  contents:
+    - title: Slides
+      file: 01-chapter02.pdf
+      type: pdf
+    - title: Exercises
+      type: pdf
+      file: 02-exercises02.pdf 
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex2.tgz
+    - title: Solutions (partial)
+      type: pdf
+      file: 03-solutions02.pdf
+  references:
+    - title: How to write Buffer Overflows
+      type: url
+      link: http://www.ouah.org/mudge.html
+    - title: Smashing The Stack For Fun And Profit
+      type: url
+      link: http://phrack.org/issues/49/14.html#article
+    - title: Microcorruption
+      type: url
+      link: https://microcorruption.com/login
+    - title: 80x86 CodeTable
+      type: pdf
+      link: http://www.jegerlehner.ch/intel/IntelCodeTable.pdf
+    - title: X86 opcode/instruction reference
+      type: url
+      link: http://ref.x86asm.net/
+    - title: Intel full ISA reference
+      type: pdf
+      link:
+        https://software.intel.com/sites/default/files/managed/a4/60/325383-sdm-vol-2abcd.pdf
+    - title: w00w00 on Heap Overflows
+      type: url
+      link: https://www.cgsecurity.org/exploit/heaptut.txt
+    - title: "Hacking: The Art of Exploitation (Jon Erickson) -- (Ch. 0x200 & 0x300)"
+      type: book
+      link: https://nostarch.com/hacking2.htm
+    - title: Low-level Software Security by Example
+      type: pdf
+      link: https://link.springer.com/content/pdf/10.1007/978-3-642-04117-4_30.pdf
+  
+- date: 2018-01-25
+  title: Control-flow integrity
+  descr: >-
+    This session presents the three main basic binary exploitation mitigation techniques:
+
+      * stack canaries; 
+      * data execution prevention; & 
+      * ASLR. 
+
+    We will also talk about their
+    limitations and briefly present more advanced control-flow integrity
+    measures that are currently available.
+      
+    A good part of the session is allotted to hands-on experimentations.
+
+  href: cfi
+  contents:
+    - title: Slides
+      file: 01-chapter03.pdf
+      type: pdf
+    - title: Exercises
+      type: pdf
+      file: 02-exercises03.pdf 
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex3.tgz
+    - title: Solutions (partial)
+      type: pdf
+      file: 03-solutions03.pdf
+
+  references:
+    - title: Exploiting OpenBSD
+      type: url
+      link: http://inertiawar.com/openbsd/
+    - title: Stack Smashing as of Today
+      type: pdf
+      link: http://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Bypassing-aslr-slides.pdf
+    - title: Bypassing PaX ASLR Protection
+      type: url
+      link: http://phrack.org/issues/59/9.html#article
+    - title: The Frame Pointer Overwrite
+      type: url
+      link: http://phrack.org/issues/55/8.html
+    - title: Bypassing StackGuard and StackShield
+      type: url
+      link: http://phrack.org/issues/56/5.html
+    - link: http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf
+      type: pdf
+      title: Practical Control-Flow Integrity & Randomization for Binary Executables
+    - link: http://www.pcc.me.uk/~peter/acad/usenix14.pdf
+      type: pdf
+      title: Enforcing Forward-Edge Control-Flow Integrity in GCC & LLVM
+    - link: https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf
+      type: pdf
+      title: The Geometry of Innocent Flesh on the Bone
+- title: MATE, attack & defense
+  date: 2018-02-12
+  contents:
+    - title: Slides
+      file: cours-cyber-ensta-02.pdf
+      type: pdf
+
+- title: Semantic attacks (program analysis)
+  date: 2018-02-15
+  contents:
+    - title: Slides
+      file: cours-cyber-ensta-03.pdf
+      type: pdf
+
+- title: Exam
+  date: 2018-02-22

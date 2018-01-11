@@ -1,0 +1,36 @@
+---
+title: "USE '18"
+date: 2018-04-08T13:55:43+01:00
+---
+
+We will talk about how we use symbolic execution in BINSEC at USE'18 @ ICST'18. 
+
+Here are the [[../../slides/use18.pdf][slides]] of the presentation..
+
+# more
+For more, this presentation is a mashup of different results obtained by our
+group during the last 2 years from the following articles.
+
+-   /Backward-bounded DSE: Targeting Infeasibility Questions on Obfuscated
+    Codes/. <br/>
+    Robin David, Sébastien Bardin, Jean-Yves Marion. <br/>
+    SP 2017.
+-  /Finding the needle in the heap: combining static analysis and
+   dynamic symbolic execution to trigger use-after-free/.<br/>
+   Josselin Feist, Laurent Mounier, Sébastien Bardin, Robin David, Marie-Laure
+  Potet. <br/>SSPREW@ACSAC 2016.
+-  /Recovering high-level conditions from binary programs/. <br/>Adel Djoudi,
+  Sébastien Bardin. <br/> FM 2016.
+-  /BINSEC-SE: A Dynamic Symbolic Execution Toolkit for
+   Binary-Level Analysis/. <br/> Robin David, Sébastien Bardin, Thanh Dinh Ta,
+   Laurent Mounier, Josselin Feist, Marie-Laure Potet,
+    Jean-Yves Marion. <br/> SANER 2016
+-   /Specification of Concretization and Symbolization Policies in
+    Symbolic Execution/. <br/> 
+    Robin David, Sébastien Bardin, Josselin Feist, Thanh Dinh Ta, Laurent
+    Mounier, Marie-Laure Potet, Jean-Yves Marion. 
+    <br/>ISSTA 2016
+- /BINSEC: Binary Code Analysis with Low-Level Regions/. <br/>
+   Adel Djoudi, Sébastien
+  Bardin. 
+  <br/>TACAS 2015.

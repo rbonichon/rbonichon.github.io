@@ -1,17 +1,14 @@
 ---
 title: ASI36
 date: 2018-01-04
+type: "teaching"
+layout : "asi36"
 ---
 
 
-<div class="columns">
 
-* &nbsp;
-<div class="column is-half">
 
-** Content
-  
-  Software attacks are extensively hitting the headlines nowadays. This course
+Software attacks are extensively hitting the headlines nowadays. This course
   aims at demystifying them by giving the fundamentals to understand these
   attacks, what they consist in and how to protect from them. We will mostly
   focus on software vulnerabilities.
@@ -25,28 +22,5 @@ date: 2018-01-04
   - code obfuscation
   - malware: principles and analysis
 
-</div>
-
-* &nbsp;
-<div class="column">
-
-** Lectures
-
-
-| # |       Date | Topic                          | Contents  |
-|---+------------+--------------------------------+-----------|
-| 1 | 2018-01-11 | Introduction                   | <i class="fa fa-file-pdf-o" aria-hidden="true"> </i>  [[/asi36/01-chapter01.pdf][Slides-II]] |
-| 2 | 2018-01-18 | Basic attacks and exploitation |           |
-| 3 | 2018-01-25 | Control-flow integrity         |           |
-| 4 |            |                                |           |
-| 5 |            |                                |           |
-| 6 |            |                                |           |
-| 7 |            |                                |           |
-
-
-</div>
-
-* &nbsp;
-</div>
 
 

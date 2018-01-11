@@ -2,13 +2,20 @@
 title: About
 ---
 
+<div class="columns">
+
+<div class="column is-two-fifths">
+
 I am currently a research engineer @ [[http://cea.fr/en][CEA]] working on the [[http://binsec.gforge.inria.fr/][BINSEC]] project.
 
 You can contact me by e-mail, snail mail or phone.
 
-<div class="columns">
+  <div class="column is-two-thirds has-text-centered">
+      <img id="portrait" src="/img/rb.jpg"/>
+  </div>
+</div>
 
-<div class="column is-half">
+<div class="column is-one-third ">
 
 |---------+------------------------------|
 | *E-mail* | =richard.bonichon_at_cea.fr= |
@@ -18,10 +25,6 @@ You can contact me by e-mail, snail mail or phone.
 | *Phone*  | +33 1 69 08 42 84            |
 |---------+------------------------------|
 
-</div>
-
-<div class="column is-one-third ">
-  <img id="portrait" src="/img/rb.jpg"/>
 </div>
 
 </div>
