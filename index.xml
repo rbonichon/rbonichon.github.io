@@ -17,8 +17,9 @@
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://rbonichon.github.io/teaching/2018/asi36/</guid>
-      <description>&amp;nbsp; Lectures    # Date Topic Contents     1 2018-01-11 Introduction    2 2018-01-18 Basic attacks and exploitation    3  Control-flow integrity    4      5      6      7       
-&amp;nbsp; Content Software attacks are extensively hitting the headlines nowadays.</description>
+      <description>&amp;nbsp; Content Software attacks are extensively hitting the headlines nowadays. This course aims at demystifying them by giving the fundamentals to understand these attacks, what they consist in and how to protect from them. We will mostly focus on software vulnerabilities.
+We will cover the following topics:
+ semantics and modelization of low-level languages classical attack and exploitation control-flow integrity techniques MATE attacks and reverse engineering code obfuscation malware: principles and analysis</description>
     </item>
     
     <item>
