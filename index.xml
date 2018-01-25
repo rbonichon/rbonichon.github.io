@@ -37,8 +37,12 @@ We will cover the following topics:
       <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://rbonichon.github.io/posts/ssprew-17/</guid>
-      <description>BINSEC will be @ SSPREW-7 where I&#39;ll give a tutorial about it.
-I&#39;ll stay to attend ACSAC.</description>
+      <description>There will be a BINSEC tutorial @ SSPREW-7.
+The tutorial uses a virtual machine which contains a compiled development snapshot of BINSEC and some examples.
+You can download it from ftp://ftp.cea.fr/incoming/y2k01/binsec_ssprew.ova (md5: 8d473d800b1fd2d3a2a929a51d1cb990).
+ username : vagrant  password : vagrant   The examples are found in the examples directory.
+The above link will be active for 2 weeks only from November, 30.
+Here are the slides.</description>
     </item>
     
     <item>
@@ -87,6 +91,7 @@ postdoc positions about &lt;strong&gt;Software security through binary-level ana
       <guid>https://rbonichon.github.io/non-posts/about/</guid>
       <description>I am currently a research engineer @ CEA working on the BINSEC project.
 You can contact me by e-mail, snail mail or phone.
+ 
    E-mail richard.bonichon_at_cea.fr   Address CEA Saclay Nano-Innov    Institut Carnot LIST    91191 Gif-sur-Yvette CEDEX   Phone +33 1 69 08 42 84</description>
     </item>
     

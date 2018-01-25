@@ -132,6 +132,30 @@
             <td> <a href="#cfi">Control-flow integrity </a></td>
           </tr>
           
+          <tr>
+            <td>4</td>
+            <td>2018-02-08</td>
+            <td> <a href="#">Lecture 4 </a></td>
+          </tr>
+          
+          <tr>
+            <td>5</td>
+            <td>2018-02-12</td>
+            <td> <a href="#">Lecture 5 </a></td>
+          </tr>
+          
+          <tr>
+            <td>6</td>
+            <td>2018-02-15</td>
+            <td> <a href="#">Lecture 6 </a></td>
+          </tr>
+          
+          <tr>
+            <td>7</td>
+            <td>2018-02-22</td>
+            <td> <a href="#">Exam </a></td>
+          </tr>
+          
           </tbody>
         </table>
       </div>
@@ -148,14 +172,13 @@
         <h2 id="intro">1. Introduction</h2>
         <hr/>
         <div class="columns">
-
-          
-          
+          <div class="column">
+            <h3>Description</h3>
+            This introductory session presents an overview of the contents, the issues surrounding security in general, the more restricted issue of analyzing vulnerabilities in low-level code, as well as reminders regarding compilation and code analysis.</div>
           
           <div class="column">
             <h3>Lecture contents</h3>
             <ul class="fa-ul">
-              
               
 <li>
   
@@ -171,8 +194,6 @@
     </a>
 </li>
 
-              
-              
 <li>
   
   <i class="fa-li fa fa-file-pdf-o" aria-hidden="true"></i>
@@ -187,7 +208,6 @@
     </a>
 </li>
 
-              
             </ul>
           </div>
           
@@ -257,14 +277,22 @@
         <h2 id="basics">2. Basic attacks and exploitation</h2>
         <hr/>
         <div class="columns">
+          <div class="column">
+            <h3>Description</h3>
+            <p>This session presents the basic low-level attack techniques:</p>
 
-          
-          
+<ul>
+<li>buffer overflows;</li>
+<li>heap overflows; &amp;</li>
+<li>format string exploitation.</li>
+</ul>
+
+<p>Most of the session is allotted to hands-on experimentation.</p>
+</div>
           
           <div class="column">
             <h3>Lecture contents</h3>
             <ul class="fa-ul">
-              
               
 <li>
   
@@ -280,8 +308,6 @@
     </a>
 </li>
 
-              
-              
 <li>
   
   <i class="fa-li fa fa-file-pdf-o" aria-hidden="true"></i>
@@ -296,8 +322,6 @@
     </a>
 </li>
 
-              
-              
 <li>
   
   <i class="fa-li fa fa-file-archive-o" aria-hidden="true"></i>
@@ -312,7 +336,6 @@
     </a>
 </li>
 
-              
             </ul>
           </div>
           
@@ -456,6 +479,222 @@
           </div>
           
         </div>
+        
+      
+        
+        <h2 id="cfi">3. Control-flow integrity</h2>
+        <hr/>
+        <div class="columns">
+          <div class="column">
+            <h3>Description</h3>
+            <p>This session presents the three main basic binary exploitation mitigation techniques:</p>
+
+<ul>
+<li>stack canaries;</li>
+<li>data execution prevention; &amp;</li>
+<li>ASLR.</li>
+</ul>
+
+<p>We will also talk about their limitations and briefly present more advanced control-flow integrity measures that are currently available.</p>
+
+<p>A good part of the session is allotted to hands-on experimentations.</p>
+</div>
+          
+          <div class="column">
+            <h3>Lecture contents</h3>
+            <ul class="fa-ul">
+              
+<li>
+  
+  <i class="fa-li fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="/asi36/01-chapter03.pdf">
+  
+
+     Slides
+    </a>
+</li>
+
+<li>
+  
+  <i class="fa-li fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="/asi36/02-exercises03.pdf">
+  
+
+     Exercises
+    </a>
+</li>
+
+<li>
+  
+  <i class="fa-li fa fa-file-archive-o" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="/asi36/asi36_ex3.tgz">
+  
+
+     Tarball
+    </a>
+</li>
+
+            </ul>
+          </div>
+          
+
+          
+          <div class="column">
+            <h3>Extra references</h3>
+
+            <ul class="fa-ul">
+              
+              
+<li>
+  
+  <i class="fa-li fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="http://www.pcc.me.uk/~peter/acad/usenix14.pdf">
+  
+
+     Enforcing Forward-Edge Control-Flow Integrity in GCC &amp; LLVM
+    </a>
+</li>
+
+            
+              
+<li>
+  
+  <i class="fa-li fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="http://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Bypassing-aslr-slides.pdf">
+  
+
+     Stack Smashing as of Today
+    </a>
+</li>
+
+            
+              
+<li>
+  
+  <i class="fa-li fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf">
+  
+
+     Practical Control-Flow Integrity &amp; Randomization for Binary Executables
+    </a>
+</li>
+
+            
+              
+<li>
+  
+  <i class="fa-li fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf">
+  
+
+     The Geometry of Innocent Flesh on the Bone
+    </a>
+</li>
+
+            
+              
+<li>
+  
+  <i class="fa-li fa fa-external-link" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="http://phrack.org/issues/59/9.html#article">
+  
+
+     Bypassing PaX ASLR Protection
+    </a>
+</li>
+
+            
+              
+<li>
+  
+  <i class="fa-li fa fa-external-link" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="http://phrack.org/issues/55/8.html">
+  
+
+     The Frame Pointer Overwrite
+    </a>
+</li>
+
+            
+              
+<li>
+  
+  <i class="fa-li fa fa-external-link" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="http://phrack.org/issues/56/5.html">
+  
+
+     Bypassing StackGuard and StackShield
+    </a>
+</li>
+
+            
+              
+<li>
+  
+  <i class="fa-li fa fa-external-link" aria-hidden="true"></i>
+  
+
+  
+  
+    <a href="http://inertiawar.com/openbsd/">
+  
+
+     Exploiting OpenBSD
+    </a>
+</li>
+
+            
+            </ul>
+
+          </div>
+          
+        </div>
+        
+      
+        
+      
+        
+      
         
       
         

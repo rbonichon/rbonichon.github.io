@@ -10316,91 +10316,99 @@ label.panel-block:hover {
   padding: 3rem 1.5rem 6rem;
 }
 
-/* line 13, ../../src/sass/screen.scss */
-nav a:visited, nav a:link {
-  color: #31c4ae;
-}
-/* line 17, ../../src/sass/screen.scss */
-nav a:hover {
-  color: #ffdd57;
-}
-/* line 21, ../../src/sass/screen.scss */
-nav a:active {
-  color: #ffdd57;
+/* line 12, ../../src/sass/screen.scss */
+a:hover {
+  color: #279b8a;
 }
 
-/* line 28, ../../src/sass/screen.scss */
+/* line 18, ../../src/sass/screen.scss */
+nav a.navbar-item:visited, nav a.navbar-item:link {
+  color: #31c4ae;
+}
+/* line 22, ../../src/sass/screen.scss */
+nav a.navbar-item:hover {
+  color: #279b8a;
+  transform: translateY(-1px);
+  boder-radius: 25px;
+  box-shadow: 0 6px 14px #31c4ae, 0 -6px 10px #279b8a;
+}
+/* line 30, ../../src/sass/screen.scss */
+nav a.navbar-item:active {
+  color: #279b8a;
+}
+
+/* line 37, ../../src/sass/screen.scss */
 .article-container {
   padding: .5em 4em 0.5em 4em;
 }
-/* line 30, ../../src/sass/screen.scss */
+/* line 39, ../../src/sass/screen.scss */
 .article-container .paper {
   padding: .3em;
 }
-/* line 34, ../../src/sass/screen.scss */
+/* line 43, ../../src/sass/screen.scss */
 .article-container .paper .article-title {
   font-weight: 700;
 }
-/* line 35, ../../src/sass/screen.scss */
+/* line 44, ../../src/sass/screen.scss */
 .article-container .paper .article-title::before {
   font-family: FontAwesome;
   padding-right: 3px;
 }
-/* line 43, ../../src/sass/screen.scss */
+/* line 52, ../../src/sass/screen.scss */
 .article-container .paper .article-author {
   font-style: italic;
 }
-/* line 47, ../../src/sass/screen.scss */
+/* line 56, ../../src/sass/screen.scss */
 .article-container .paper .download {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 700;
 }
-/* line 51, ../../src/sass/screen.scss */
+/* line 60, ../../src/sass/screen.scss */
 .article-container .paper .download a {
   padding-left: 15px;
 }
 
-/* line 58, ../../src/sass/screen.scss */
+/* line 67, ../../src/sass/screen.scss */
 footer.footer {
   padding: 10px;
 }
 
-/* line 67, ../../src/sass/screen.scss */
+/* line 76, ../../src/sass/screen.scss */
 div.summary {
   padding: 15px 15px 5px 15px;
 }
 
-/* line 71, ../../src/sass/screen.scss */
+/* line 80, ../../src/sass/screen.scss */
 div.years {
   padding-left: 4em;
   padding-right: 4em;
 }
-/* line 74, ../../src/sass/screen.scss */
+/* line 83, ../../src/sass/screen.scss */
 div.years a {
   font-weight: 700;
   margin-top: 2px;
 }
 
-/* line 81, ../../src/sass/screen.scss */
+/* line 90, ../../src/sass/screen.scss */
 img.picture {
   border-radius: 8px;
 }
 
-/* line 87, ../../src/sass/screen.scss */
+/* line 96, ../../src/sass/screen.scss */
 .org-table table {
   width: 20%;
 }
-/* line 90, ../../src/sass/screen.scss */
+/* line 99, ../../src/sass/screen.scss */
 .org-table table tbody tr {
   border: none;
 }
-/* line 93, ../../src/sass/screen.scss */
+/* line 102, ../../src/sass/screen.scss */
 .org-table table tbody td {
   border: none;
 }
 
-/* line 100, ../../src/sass/screen.scss */
+/* line 109, ../../src/sass/screen.scss */
 img#portrait {
   width: 50%;
   border-radius: 120px;
