@@ -10413,3 +10413,8 @@ img#portrait {
   width: 50%;
   border-radius: 120px;
 }
+
+/* line 115, ../../src/sass/screen.scss */
+ul.fa-ul {
+  list-style-type: none;
+}
