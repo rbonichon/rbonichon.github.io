@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="has-navbar-fixed-top" >
   <head>
-    {{ template "chrome/meta.html" . }}
-    {{ template "chrome/includes.html" . }}
+    {{ partial "chrome/meta.html" . }}
+    {{ partial "chrome/includes.html" . }}
     <link rel="canonical" href="{{ .Permalink }}">
     <!-- atom & rss feed -->
     <link href="/rss.xml" type="application/atom+xml"
@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    {{ template "chrome/menu.html" }}
+    {{ partial "chrome/menu.html" }}
     {{ $baseurl := .Site.BaseURL }}
 
     {{ block "main" .}}
@@ -22,6 +22,6 @@
         </section>
 
     {{ end }}
-        {{ template "chrome/footer.html" }}
+    {{ partial "chrome/footer.html" }}
   </body>
 </html>

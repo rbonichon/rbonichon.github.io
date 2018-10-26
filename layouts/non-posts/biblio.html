@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="has-navbar-fixed-top" >
-  {{ template "chrome/head.html" }}
+  {{ partial "chrome/head.html" }}
   <body>
-    {{ template "chrome/menu.html" }}
+    {{ partial "chrome/menu.html" }}
     {{ $baseurl := .Site.BaseURL }}
     {{ $.Scratch.Set "year" 2000 }}
 
@@ -70,7 +70,7 @@
       </div>
     </section>
 
-{{ template "chrome/footer.html" }}
+{{ partial "chrome/footer.html" }}
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
