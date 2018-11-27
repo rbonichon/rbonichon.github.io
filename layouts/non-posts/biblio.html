@@ -36,8 +36,16 @@
             {{ $n_authors := (len $article.author) }}
             {{ range $index,$a := $article.author }}
             
-              {{ substr $a.given 0 1}}. {{ $a.family -}}
-            
+              {{ $shortfirstname := (substr $a.given 0 1)}}
+              {{ $lastname := $a.family }}
+              {{ $fullname := (printf "%s. %s " $shortfirstname $lastname) }}
+
+              {{ if and (eq $lastname "Bonichon") (eq $shortfirstname "R") }}
+                <span class="has-text-primary"> {{ $fullname }}</span>
+              {{ else }}
+                 {{ $fullname }}
+              {{ end }}
+
               {{ $is_next_to_last := eq (add $index 2) $n_authors }}
               {{ $is_last := eq (add $index 1) $n_authors }}
               {{ if $is_next_to_last }} & {{ else if (not $is_last) }}, {{- else -}}.{{ end }}
