@@ -1,0 +1,92 @@
+{{ define "main" }}
+
+<section class="section content">
+  {{ $dir := .Site.Data.teaching.asi36.static_directory }}
+  {{ $lectures := (sort .Site.Data.teaching.asi36.lectures "date") }}
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <hr/>
+    <div class="columns">
+      <div class="column">
+        {{ .Content }}
+      </div>
+
+      <div class="column">
+        <h2>Lectures</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Date</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+          {{ range $index, $lec := $lectures }}
+          <tr>
+            <td>{{ add $index 1 }}</td>
+            <td>{{ .date }}</td>
+            <td> <a href="#{{.href}}">{{.title}} </a></td>
+          </tr>
+          {{ end }}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <h1>References</h1>
+
+        {{ $.Scratch.Set "dir" .Site.Data.teaching.asi36.static_directory }}
+
+        {{ range $index, $lec := $lectures }}
+        {{ if (or .contents .references) }}
+        <h2 id="{{.href}}">{{ add $index 1 }}. {{ .title }}</h2>
+        <hr/>
+        <div class="columns">
+
+          {{- if .descr }}
+          <div class="column">
+            <h3>Description</h3>
+            {{ .descr | markdownify -}}
+          </div>
+          {{ end }}
+
+          {{- if .contents }}
+          <div class="column">
+            <h3>Lecture contents</h3>
+            <ul class="fa-ul">
+              {{ range .contents }}
+              {{- partial "li_with_icon.html" (dict "dir" $dir "doc" .) -}}
+              {{ end }}
+            </ul>
+          </div>
+          {{ end }}
+
+
+          {{ if .references }}
+          <div class="column">
+            <h3>Extra references</h3>
+
+            <ul class="fa-ul">
+              {{ range (sort .references "type" "title") }}
+              {{ partial "li_with_icon.html" (dict "dir" $dir "doc" .) }}
+            {{ end }}
+            </ul>
+
+          </div>
+          {{ end }}
+        </div>
+        {{ end }}
+      {{ end }}
+
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{{ end }}

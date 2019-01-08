@@ -1,0 +1,46 @@
+---
+id: ASI36
+title: Analyse de vulnérabilté des sources et binaires
+static_directory: /asi36
+
+lectures:
+- date: 2019-01-17
+  title: Introduction
+  descr: >-
+    This introductory session presents an overview of the contents, the issues
+    surrounding security in general, the more restricted issue of analyzing
+    vulnerabilities in low-level code, as well as reminders regarding
+    compilation and code analysis.
+  href: intro
+  references:
+    - title: Mind Your Languages
+      type: pdf
+      link:
+        https://www.ssi.gouv.fr/uploads/IMG/pdf/Mind_Your_Languages_-_version_longue.pdf
+    - title: wtfjs
+      type: url
+      link: https://github.com/denysdovhan/wtfjs
+    - title: Some thoughts on security after ten years of qmail 1.0 
+      type: pdf
+      link: https://cr.yp.to/qmail/qmailsec-20071101.pdf
+    - title: "Undefined Behavior: What happened to My Code?"
+      type: pdf
+      link: https://pdos.csail.mit.edu/papers/ub:apsys12.pdf
+
+- date: 2019-01-25
+  title: Basic attacks & exploitation
+
+- date: 2019-02-01
+  title: MATE, attack & defense
+
+- date: 2019-02-08
+  title: Control-flow integrity
+
+- date: 2019-02-15
+  title: Semantic attacks (program analysis)
+
+- date: 2019-02-22
+  title: Advanced topics
+
+- date: 2019-03-01
+  title: Exam
