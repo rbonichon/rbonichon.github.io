@@ -42,7 +42,7 @@
         {{ $.Scratch.Set "dir" .Site.Data.teaching.asi36.static_directory }}
 
         {{ range $index, $lec := $lectures }}
-        {{ if (or .contents .references) }}
+        {{ if (or .descr (or .contents .references)) }}
         <h2 id="{{.href}}">{{ add $index 1 }}. {{ .title }}</h2>
         <hr/>
         <div class="columns">
