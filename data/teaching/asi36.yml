@@ -1,7 +1,7 @@
 ---
 id: ASI36
 title: Analyse de vulnérabilté des sources et binaires
-static_directory: /asi36
+static_directory: /asi36/2019
 
 lectures:
 - date: 2019-01-17
@@ -12,6 +12,14 @@ lectures:
     vulnerabilities in low-level code, as well as reminders regarding
     compilation and code analysis.
   href: intro
+  contents:
+    - title: Slides-I
+      file: ensta-01.pdf
+      type: pdf
+    - title: Slides-II
+      file: 01-chapter01.pdf
+      type: pdf
+
   references:
     - title: Mind Your Languages
       type: pdf
@@ -30,7 +38,7 @@ lectures:
 - date: 2019-01-25
   title: Basic attacks & exploitation
   descr: >-
-    This session presents the basic low-level attack techniques: 
+    This session presents basic low-level attack techniques: 
 
       * buffer overflows; 
       * heap overflows; & 
@@ -39,6 +47,18 @@ lectures:
     Most of the session is allotted to hands-on experimentation.
   
   href: basics
+  contents:
+    - title: Slides
+      file: 01-chapter02.pdf
+      type: pdf
+    - title: Exercises
+      type: pdf
+      file: 02-exercises02.pdf 
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex2.tgz
+
   references:
     - title: How to write Buffer Overflows
       type: url
@@ -75,11 +95,17 @@ lectures:
   descr: >-
     TBA
 
+
 - date: 2019-02-08
+  title: Semantic attacks (program analysis)
+  descr: >-
+    TBA
+
+- date: 2019-02-15
   href: cfi
   title: Control-flow integrity
   descr: >-
-    This session presents the three main basic binary exploitation mitigation techniques:
+    This session presents three main basic binary exploitation mitigation techniques:
 
       * stack canaries; 
       * data execution prevention; & 
@@ -118,11 +144,6 @@ lectures:
     - link: https://www.cs.vu.nl/~herbertb/papers/srop_sp14.pdf
       title: Framing Signals --- A Return to Portable Shellcode
       type: pdf
-
-- date: 2019-02-15
-  title: Semantic attacks (program analysis)
-  descr: >-
-    TBA
 
 - date: 2019-02-22
   title: Advanced topics
