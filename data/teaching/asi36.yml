@@ -155,8 +155,14 @@ lectures:
   descr: >-
     The final exam will contain 2 parts:
 
-      * The presentation of a research article (groups of 2);
-      * A mini CTF problem (find the secret key!) and its solution report (written or oral).
+      * The presentation of a research article (groups of 2) -- rank the articles
+        from the list in decreasing order and send the ranking them to the professors;
+        the list here ;
+      * A mini CTF problem (find the secret key!) and its solution report
+        (written or oral).
+
+      The CTFs are available from https://github.com/rbonichon/asi36-ctf
+      
   references:
     - link: https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf
       type: pdf
