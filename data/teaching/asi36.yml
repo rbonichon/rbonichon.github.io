@@ -89,19 +89,19 @@ lectures:
       type: pdf
       link: https://link.springer.com/content/pdf/10.1007/978-3-642-04117-4_30.pdf
 
-- date: 2019-01-31
+- date: 2019-02-07
   title: MATE, attack & defense
   href: mate
   descr: >-
     TBA
 
 
-- date: 2019-02-07
+- date: 2019-02-14
   title: Semantic attacks (program analysis)
   descr: >-
     TBA
 
-- date: 2019-02-14
+- date: 2019-02-21
   href: cfi
   title: Control-flow integrity
   descr: >-
@@ -145,7 +145,7 @@ lectures:
       title: Framing Signals --- A Return to Portable Shellcode
       type: pdf
 
-- date: 2019-02-21
+- date: 2019-02-25
   title: Advanced topics
   descr: >-
     Advanced topics on low-level security analyses.
@@ -180,7 +180,7 @@ lectures:
       title: Binary Code is not easy
       type: pdf
     - link: https://users.ece.cmu.edu/~aavgerin/papers/Oakland10.pdf
-      title: All you Ever Wanted to Know About Dynamic Taint Analysis
+      title: All you Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (but might have been afraid to ask)
       type: pdf
     - link: https://www.cs.ucsb.edu/~vigna/publications/2016_SP_angrSoK.pdf
       type: pdf
