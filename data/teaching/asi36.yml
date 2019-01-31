@@ -89,19 +89,19 @@ lectures:
       type: pdf
       link: https://link.springer.com/content/pdf/10.1007/978-3-642-04117-4_30.pdf
 
-- date: 2019-02-01
+- date: 2019-01-31
   title: MATE, attack & defense
   href: mate
   descr: >-
     TBA
 
 
-- date: 2019-02-08
+- date: 2019-02-07
   title: Semantic attacks (program analysis)
   descr: >-
     TBA
 
-- date: 2019-02-15
+- date: 2019-02-14
   href: cfi
   title: Control-flow integrity
   descr: >-
@@ -145,12 +145,50 @@ lectures:
       title: Framing Signals --- A Return to Portable Shellcode
       type: pdf
 
-- date: 2019-02-22
+- date: 2019-02-21
   title: Advanced topics
   descr: >-
     Advanced topics on low-level security analyses.
 
-- date: 2019-03-01
+- date: 2019-02-28
   title: Exam
   descr: >-
-    Written exam
+    The final exam will contain 2 parts:
+
+      * The presentation of a research article (groups of 2);
+      * A mini CTF problem (find the secret key!) and its solution report (written or oral).
+  references:
+    - link: https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf
+      type: pdf
+      title: The Geometry of Innocent Flesh on the Bone
+    - link: http://www.scs.stanford.edu/~sorbo/brop/bittau-brop.pdf
+      type: pdf
+      title: Hacking Blind
+    - link: http://www.cs.columbia.edu/~vpappas/papers/kbouncer.sec13.pdf
+      title: Transparent ROP Exploit Mitigation using Indirect Branch Tracing
+      type: pdf
+    - link: https://syssec.mistakenot.net/papers/eurosp-2017.pdf
+      type: pdf
+      title: Compiler Agnostic Function Detection in Binary
+    - link: http://ftp.cs.wisc.edu/paradyn/papers/Meng15Parsing.pdf
+      title: Binary Code is not easy
+      type: pdf
+    - link: https://users.ece.cmu.edu/~aavgerin/papers/Oakland10.pdf
+      title: All you Ever Wanted to Know About Dynamic Taint Analysis
+      type: pdf
+    - link: https://www.cs.ucsb.edu/~vigna/publications/2016_SP_angrSoK.pdf
+      type: pdf
+      title: "SoK: (State of) The Art of War: Offensive Techniques in Binary Analysis"
+    - link: https://www.cs.dartmouth.edu/~sergey/wm/woot13-shapiro.pdf
+      type: pdf
+      title: Weird Machines in ELF
+    - link: http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf
+      type: pdf
+      title: Practical Control Flow Integrity & Randomization for Binary Executables
+    - link: https://www.usenix.org/legacy/event/sec11/tech/full_papers/Schwartz.pdf
+      title: "Q: Exploit Hardening Made Easy"
+      type: pdf
+    - title: "Towards Paving the Way for Large-Scale Windows Malware Analysis: Generic Binary Unpacking with Orders-of-Magnitude Performance Boost"
+      type: pdf
+      
+

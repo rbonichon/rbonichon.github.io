@@ -68,8 +68,11 @@
 
           {{ if .references }}
           <div class="column">
+            {{ if (eq .title "Exam") }}
+            <h3>Papers</h3>
+            {{ else }}
             <h3>Extra references</h3>
-
+            {{ end }}
             <ul class="fa-ul">
               {{ range (sort .references "type" "title") }}
               {{ partial "li_with_icon.html" (dict "dir" $dir "doc" .) }}
