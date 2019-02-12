@@ -3,6 +3,8 @@
 <section class="section content">
   {{ $dir := .Site.Data.teaching.asi36.static_directory }}
   {{ $lectures := (sort .Site.Data.teaching.asi36.lectures "date") }}
+  {{ $talks := .Site.Data.teaching.asi36.talks }}
+
   <div class="container">
     <h1>{{ .Title }}</h1>
     <hr/>
@@ -65,6 +67,18 @@
           </div>
           {{ end }}
 
+          {{ if (eq .title "Exam")}}
+          <div class="column">
+            <h3>Presentations</h3>
+
+            <ul>
+              {{ range $talks }}
+              <li> {{ .paper }} ({{ .people }})
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+          {{ end }}
 
           {{ if .references }}
           <div class="column">

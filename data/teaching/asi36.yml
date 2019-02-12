@@ -144,7 +144,10 @@ lectures:
     - link: https://www.cs.vu.nl/~herbertb/papers/srop_sp14.pdf
       title: Framing Signals --- A Return to Portable Shellcode
       type: pdf
-
+    - title: ASLR Smack & Laugh Reference 
+      type: pdf
+      link: /asi36/papers/aslr.pdf
+      
 - date: 2019-02-25
   title: Advanced topics
   descr: >-
@@ -196,5 +199,9 @@ lectures:
       type: pdf
     - title: "Towards Paving the Way for Large-Scale Windows Malware Analysis: Generic Binary Unpacking with Orders-of-Magnitude Performance Boost"
       type: pdf
+      link: /asi36/papers/p395-cheng.pdf
       
 
+talks:
+- paper: Binary Code is not easy
+  people: Kaori, Willy
