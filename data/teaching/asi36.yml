@@ -96,12 +96,12 @@ lectures:
     TBA
 
 
-- date: 2019-02-14
+- date: 2019-02-21
   title: Semantic attacks (program analysis)
   descr: >-
     TBA
 
-- date: 2019-02-21
+- date: 2019-02-14
   href: cfi
   title: Control-flow integrity
   descr: >-
@@ -148,6 +148,16 @@ lectures:
       type: pdf
       link: /asi36/papers/aslr.pdf
       
+  contents:
+    - title: Exercises
+      type: pdf
+      file: 02-exercises03.pdf 
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex3.tgz
+
+      
 - date: 2019-02-25
   title: Advanced topics
   descr: >-
@@ -155,12 +165,13 @@ lectures:
 
 - date: 2019-02-28
   title: Exam
+  href: exam
   descr: >-
     The final exam will contain 2 parts:
 
       * The presentation of a research article (groups of 2) -- rank the articles
-        from the list in decreasing order and send the ranking them to the professors;
-        the list here ;
+        from the list in decreasing order and send a message ranking them to the professors;
+        (see list here) ;
       * A mini CTF problem (find the secret key!) and its solution report
         (written or oral).
 
