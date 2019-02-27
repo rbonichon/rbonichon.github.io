@@ -15,6 +15,8 @@ publish: $(PUBLISH_DIR)
 	 git push -f origin master; \
 	)
 
+# I seem to type make push a lot instead of make publish
+push: publish
 
 $(PUBLISH_DIR):
 	git submodule add -b master \

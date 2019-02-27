@@ -159,9 +159,38 @@ lectures:
 
       
 - date: 2019-02-25
-  title: Advanced topics
+  title: Fuzzing
+  href: fuzz
   descr: >-
-    Advanced topics on low-level security analyses.
+    An overview of the current state of software fuzzing.
+
+  contents:
+    - title: Exercises
+      type: pdf
+      file: 02-exercises04.pdf 
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex04.tgz
+  references:
+    - title: "Driller: Augmenting Fuzzing Through Selective Symbolic Execution"
+      type: pdf
+      link: https://cs.ucsb.edu/~vigna/publications/2016_NDSS_Driller.pdf
+    - title: "Angora: Efficient Fuzzing by Principled Search"
+      type: url
+      link: https://arxiv.org/abs/1803.01307
+    - type: pdf
+      link: https://www.cs.vu.nl/~giuffrida/papers/vuzzer-ndss-2017.pdf
+      title: "VUzzer: Application-aware Evolutionary Fuzzing"
+    - title: AFL homepage
+      type: url
+      link: http://lcamtuf.coredump.cx/afl/
+    - type: pdf
+      link: https://www.comp.nus.edu.sg/~thuanpv/publications/AFLGo_CCS17.pdf
+      title: Directed Greybox Fuzzing
+    - type: pdf
+      link: http://www.carolemieux.com/fairfuzz-ase18.pdf
+      title: "FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage"
 
 - date: 2019-02-28
   title: Exam
@@ -169,7 +198,7 @@ lectures:
   descr: >-
     The final exam will contain 2 parts:
 
-      * The presentation of a research article (groups of 2) -- rank the articles
+      * The presentation of a research article (groups of 2, 20 minutes + questions) -- rank the articles
         from the list in decreasing order and send a message ranking them to the professors;
         (see list here) ;
       * A mini CTF problem (find the secret key!) and its **written** solution
@@ -216,5 +245,19 @@ lectures:
 talks:
 - paper: Binary Code is not easy
   people: Kaori, Willy
+  time: "9:15"
 - paper: Hacking Blind
   people: François, Louis-Marie
+  time: "9:45"
+- paper: "SoK: (State of) The Art of War: Offensive Techniques in Binary Analysis"
+  people: Benjamin, Cyrielle
+  time: "10:15"
+- paper: Compiler-Agnostic Function Detection in Binaries
+  people: Ali, Matthieu
+  time: "11:00"
+- paper: The Geometry of Innnocent Flesh on the Bone
+  people: Ignacio
+  time: "11:30"
+- paper: All you Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (but might have been afraid to ask)
+  people: Pierre, Léo
+  time: "12:00"
