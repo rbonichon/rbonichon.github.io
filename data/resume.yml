@@ -1,0 +1,102 @@
+---
+email: richard.bonichon@cea.fr
+phone: +33 7 81 84 10 24
+address: 
+
+
+sections:
+- title: Education
+  entries:
+    - period:
+        start: 1999
+        end: 2002
+      location: 
+        city: Toulouse
+        country: France
+        institute: ENSEEIHT
+      title: M.Sc. in Computer Science & Applied Mathematics
+
+    - title: M.Sc. in Computer Science (DEA)
+      location:
+        institute: Université Paris 7 Denis Diderot
+        city: Paris
+        country: France
+      period:
+        start: 2002
+        end: 2003
+
+    - title: PhD in Computer Science
+      location:
+        institute: Université Paris 6 Pierre & Marie Curie
+      period:
+        start: 2003
+        end: 2006
+
+- title: Experience      
+  entries:
+    - title: Research Engineer 
+      period:
+        start: 2008
+        end: "-"
+      location:
+        institute: CEA
+        lab: LSL
+      descr: >-
+        Application of formal methods for software engineering
+    - title: Post-doc
+      location:
+        institute: LORIA
+        lab: Pareo
+      period:
+        start: 2007
+        end: 2008
+
+    - title: ATER
+      location:
+        institute: Université Paris 6 Pierre & Marie Curie
+      period:
+        start: 2006
+        end: 2007
+
+    - title: Visiting Professor
+      location:
+        institute: Universidade Federale do Rio Grande do Norte (UFRN)
+        lab: DIMAp
+      period:
+        start: 2013
+        end: 2015
+      descr: >-
+        On leave from CEA.
+
+- title: Tools 
+  entries:
+    - title: BINSEC
+      url: https://binsec.github.io
+      descr: Formal methods platform for binary code analyis
+      period:
+        start: 2015
+
+    - title: Frama-C
+      url: http://frama-c.com
+      descr: >-
+        Plugins metrics, early mthread
+      period:
+        start: 2008
+        end: 2013
+
+    - title: SMTpp
+      url: https://github.com/rbonichon/smtpp
+      period:
+        start: 2014
+        end: 2015
+
+    - title: Moca
+      url: http://moca.inria.fr
+      period:
+        start: 2007
+        end: 2009
+        
+
+
+
+    

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top" >
+  {{ partial "chrome/head.html" }}
+  <body>
+    {{ partial "chrome/menu.html" }}
+    {{ $baseurl := .Site.BaseURL }}
+    <section class="section">
+      {{ $r := .Site.Data.resume  }}
+
+      <div class="container is-desktop">
+        <h1 class="title is-1">Resume</h1>
+
+      </div>
+
+      
+    </section>
+
+    {{ $sections := .Site.Data.resume.sections }}
+
+    {{ range $section := $sections }}
+    <section class="section container is-desktop">
+      <div class="container">
+      <h2 class="subtitle is-4">
+        {{ $section.title }}
+      </h2>
+
+      {{ range $entry := (sort $section.entries "period.end" "desc") }}
+
+      <div class="box">
+        {{ $entry.period.start }} --
+        {{ if $entry.period.end }}
+        {{ $entry.period.end }}
+        {{ end }}
+
+        <h3 class="subtitle is-6">
+          {{ $entry.title }}
+        </h3>
+
+        {{ $entry.location.institute }}
+        {{ $entry.location.lab }}
+        {{ if $entry.descr }}
+        {{ $entry.descr }}
+        {{ end }}
+      </div>
+
+      {{ end }}
+
+      </div>
+    </section>
+      
+    {{ end }}
+
+      <div class="container is-desktop">
+        {{ $r  }}
+      </div>
+
+    </body>
+</html>
+    

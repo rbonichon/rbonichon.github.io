@@ -1,0 +1,8 @@
+---
+title: Resume
+date: 2018-01-04
+type: non-posts
+layout: resume
+draft: false
+---
+
