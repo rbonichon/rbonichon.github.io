@@ -246,17 +246,17 @@ talks:
 - paper: Binary Code is not easy
   people: Kaori, Willy
   time: "9:15"
-- paper: Hacking Blind
-  people: François, Louis-Marie
-  time: "9:45"
-- paper: "SoK: (State of) The Art of War: Offensive Techniques in Binary Analysis"
-  people: Benjamin, Cyrielle
-  time: "10:15"
 - paper: Compiler-Agnostic Function Detection in Binaries
   people: Ali, Matthieu
-  time: "11:00"
+  time: "9:45"
 - paper: The Geometry of Innnocent Flesh on the Bone
   people: Ignacio
+  time: "10:15"
+- paper: Hacking Blind
+  people: François, Louis-Marie
+  time: "11:00"
+- paper: "SoK: (State of) The Art of War: Offensive Techniques in Binary Analysis"
+  people: Benjamin, Cyrielle
   time: "11:30"
 - paper: All you Ever Wanted to Know About Dynamic Taint Analysis and Forward Symbolic Execution (but might have been afraid to ask)
   people: Pierre, Léo

@@ -21,27 +21,35 @@
     <section class="section container is-desktop">
       <div class="container">
       <h2 class="subtitle is-4">
-        {{ $section.title }}
+        {{ .title }}
       </h2>
 
       {{ range $entry := (sort $section.entries "period.end" "desc") }}
-
+      {{ if eq $section.type "students" }}
+        {{- partial "student.html" (dict "s" .) }}
+      {{ else }}
       <div class="box">
-        {{ $entry.period.start }} --
-        {{ if $entry.period.end }}
-        {{ $entry.period.end }}
-        {{ end }}
+        <div class="date">
+          {{ $entry.period.start }} --
+          {{ if $entry.period.end }}
+          {{ $entry.period.end }}
+          {{ end }}
+        </div>
 
-        <h3 class="subtitle is-6">
-          {{ $entry.title }}
-        </h3>
-
-        {{ $entry.location.institute }}
-        {{ $entry.location.lab }}
-        {{ if $entry.descr }}
-        {{ $entry.descr }}
-        {{ end }}
+        <div class="details">
+          <h3 class="subtitle is-6">
+            {{ $entry.title }}
+          </h3>
+          {{ $entry.location.institute }}
+          {{ $entry.location.lab }}
+        </div>
+        <div class="descr">
+          {{ if $entry.descr }}
+          {{ $entry.descr }}
+          {{ end }}
+        </div>
       </div>
+      {{ end }}
 
       {{ end }}
 

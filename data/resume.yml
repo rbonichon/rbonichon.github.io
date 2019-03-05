@@ -28,6 +28,8 @@ sections:
     - title: PhD in Computer Science
       location:
         institute: Université Paris 6 Pierre & Marie Curie
+        city: Paris
+        country: France
       period:
         start: 2003
         end: 2006
@@ -37,16 +39,20 @@ sections:
     - title: Research Engineer 
       period:
         start: 2008
-        end: "-"
+        end: 3000
       location:
         institute: CEA
         lab: LSL
+        city: Saclay
+        country: France
       descr: >-
         Application of formal methods for software engineering
     - title: Post-doc
       location:
         institute: LORIA
         lab: Pareo
+        city: Nancy
+        country: France
       period:
         start: 2007
         end: 2008
@@ -54,14 +60,20 @@ sections:
     - title: ATER
       location:
         institute: Université Paris 6 Pierre & Marie Curie
+        city: Paris
+        country: France
       period:
         start: 2006
         end: 2007
+      descr: >-
+        Teaching assistant.
 
     - title: Visiting Professor
       location:
         institute: Universidade Federale do Rio Grande do Norte (UFRN)
         lab: DIMAp
+        city: Natal
+        country: Brazil
       period:
         start: 2013
         end: 2015
@@ -75,6 +87,7 @@ sections:
       descr: Formal methods platform for binary code analyis
       period:
         start: 2015
+        end: 3000
 
     - title: Frama-C
       url: http://frama-c.com
@@ -97,6 +110,36 @@ sections:
         end: 2009
         
 
-
+- title: Students
+  type: students
+  entries:
+    - title: Low-level mixed code analysis
+      who: Frédéric Recoules
+      type: phd
+      period:
+        start: 02/2016 
+    - title: Fuzzing
+      who: Manh-Dung Nguyen 
+      type: phd
+      period: 
+        start: 11/2016
+    - title: SE
+      who: Yaëlle Vinçont
+      type: master
+      period:
+        end: 09/2017
+        start: 04/2017
+    - title: SE
+      who: Guillaume Girol
+      type: master
+      period:
+        end: 09/2017
+        start: 04/2017
+    - title: Interface
+      who: Vítor de Alcantâra Almeida
+      type: master
+      period:
+        start: 2013
+        end: 2015
 
     
