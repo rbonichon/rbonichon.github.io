@@ -1,11 +1,12 @@
 ---
-email: richard.bonichon@cea.fr
+email: richard.bonichon@gmail.com
 phone: +33 7 81 84 10 24
 address: 
 
 
 sections:
 - title: Education
+  icon: fa-graduation-cap
   entries:
     - period:
         start: 1999
@@ -13,12 +14,17 @@ sections:
       location: 
         city: Toulouse
         country: France
-        institute: ENSEEIHT
+        institute: 
+          name: ENSEEIHT
+          url: http://www.enseeiht.fr
+  
       title: M.Sc. in Computer Science & Applied Mathematics
 
     - title: M.Sc. in Computer Science (DEA)
       location:
-        institute: Université Paris 7 Denis Diderot
+        institute: 
+          name: Université Paris 7 Denis Diderot
+          url: https://www.univ-paris-diderot.fr/
         city: Paris
         country: France
       period:
@@ -27,7 +33,9 @@ sections:
 
     - title: PhD in Computer Science
       location:
-        institute: Université Paris 6 Pierre & Marie Curie
+        institute: 
+          name: Université Paris 6 Pierre & Marie Curie
+          url: http://www.upmc.fr/en/
         city: Paris
         country: France
       period:
@@ -41,7 +49,8 @@ sections:
         start: 2008
         end: 3000
       location:
-        institute: CEA
+        institute: 
+          name: CEA
         lab: LSL
         city: Saclay
         country: France
@@ -49,7 +58,8 @@ sections:
         Application of formal methods for software engineering
     - title: Post-doc
       location:
-        institute: LORIA
+        institute: 
+          name: LORIA
         lab: Pareo
         city: Nancy
         country: France
@@ -59,7 +69,8 @@ sections:
 
     - title: ATER
       location:
-        institute: Université Paris 6 Pierre & Marie Curie
+        institute: 
+          name: Université Paris 6 Pierre & Marie Curie
         city: Paris
         country: France
       period:
@@ -70,7 +81,8 @@ sections:
 
     - title: Visiting Professor
       location:
-        institute: Universidade Federale do Rio Grande do Norte (UFRN)
+        institute: 
+          name: Universidade Federale do Rio Grande do Norte (UFRN)
         lab: DIMAp
         city: Natal
         country: Brazil
@@ -81,6 +93,8 @@ sections:
         On leave from CEA.
 
 - title: Tools 
+  icon: fa-code
+  type: tools
   entries:
     - title: BINSEC
       url: https://binsec.github.io
@@ -102,16 +116,21 @@ sections:
       period:
         start: 2014
         end: 2015
+      descr: >-
+        Preprocessors and analyzers for SMT-LIB
 
     - title: Moca
       url: http://moca.inria.fr
       period:
         start: 2007
         end: 2009
-        
+      descr: >-
+        A generator of construction functions for (OCaml) datatypes with
+        (algebraic) invariants.
 
 - title: Students
   type: students
+  icon: fa-user
   entries:
     - title: Low-level mixed code analysis
       who: Frédéric Recoules
@@ -135,8 +154,8 @@ sections:
       period:
         end: 09/2017
         start: 04/2017
-    - title: Interface
-      who: Vítor de Alcantâra Almeida
+    - title: 'WPTrans: Um Assistente para Verificação de Programas em Frama-C'
+      who: Vítor Alcantâra de Almeida
       type: master
       period:
         start: 2013

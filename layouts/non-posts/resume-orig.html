@@ -5,14 +5,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <script type="text/javascript" src="/js/nav.js"></script>
-    <link href="/css/screen.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/resume.css" />
+    <link href="/css/screen.css" media="screen" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" media="screen, print" type="text/css" href="/css/resume.css" />
   </head>
   <body lang="en">
-
+    {{ partial "chrome/menu.html" }}
     {{ $baseurl := .Site.BaseURL }}
     {{ $r := .Site.Data.resume  }}
-
+    <div class="container" id="resume-container">
     <section id="main">
       <header id="title">
         <h1 id="name">Richard Bonichon</h1>
@@ -23,35 +23,37 @@
       {{ range $section := $sections }}
     <section class="main-block">
       <h2>
-          <i class="fa fa-suitcase"></i> {{ .title }}
-        </h2>
+        <i class="fa {{ if .icon }}{{ .icon }}{{ else }}fa-suitcase{{ end }}"></i> 
+        {{ .title }}
+      </h2>
 
       {{ range $entry := (sort $section.entries "period.end" "desc") }}
+      <section class="blocks">
       {{ if eq $section.type "students" }}
         {{- partial "student.html" (dict "s" .) }}
+      {{ else if eq $section.type "tools" }}
+        {{- partial "resume/tool.html" (dict "s" .) }}
       {{ else }}
-      <section class="blocks">
-        <div class="date">
-            <span>{{ $entry.period.start }}</span>
-            <span>
-              {{ if eq $entry.period.end 3000 }}
-              now 
-              {{ else }} 
-              {{ $entry.period.end }}
-              {{ end }} 
-            </span>
-          </div>
+        {{- partial "resume/date.html" (dict "date" $entry.period) -}}
           <div class="decorator">
           </div>
           <div class="details">
             <header>
               <h3>{{ $entry.title }}</h3>
               <span class="place">
-                {{ $entry.location.institute }} 
+                {{ if $entry.location.institute.url }} 
+                 <a href="$entry.location.institute.url">
+                   {{ $entry.location.institute.name }} 
+                   </a>
+                {{ else }}
+                   {{ $entry.location.institute.name }} 
+                {{ end }}
+                
                 {{ if $entry.location.lab }}
                 - {{ $entry.location.lab }}
                 {{ end }}
               </span>
+
               {{ if $entry.location.city}}
               <span class="location">
                {{ $entry.location.city }}
@@ -67,9 +69,8 @@
               {{ end }}
             </div>
           </div>
-      </section>
       {{ end }}
-
+      </section>
       {{ end }}
     </section>
     {{ end }}
@@ -80,9 +81,9 @@
           Contact Info
         </h1>
         <ul>
-          <li><i class="fa fa-globe"></i> rbonichon.github.io</li>
-          <li><i class="fa fa-envelope"></i> richard.bonichon@gmail.com</li>
-          <li><i class="fa fa-phone"></i> +33 7 81 84 10 24</li>
+          <li><i class="fa fa-globe"></i>rbonichon.github.io</li>
+          <li><i class="fa fa-envelope"></i>{{ .Site.Data.resume.email }}</li>
+          <li><i class="fa fa-phone"></i>{{ .Site.Data.resume.phone }}</li>
         </ul>
       </div>
       <div class="side-block" id="skills">
@@ -303,5 +304,6 @@
      !--     </section>
      !--   </section>
      !-- </section> -->
+</div>
   </body>
 </html>

@@ -1,8 +1,11 @@
 @import "bulma.sass";
 
-@page{
-  size: letter portrait;
-  margin: 0;
+
+@media print {
+    @page{
+        size: letter portrait;
+        margin: 0;
+    }
 }
 
 *{
@@ -12,7 +15,7 @@
 :root{
   --page-width: 20cm;
   --page-height: 29.7cm;
-  --main-width: 14cm;
+  --main-width: 13.5cm;
   --sidebar-width: calc(var(--page-width) - var(--main-width));
   --decorator-horizontal-margin: 0.2in;
 
@@ -31,6 +34,7 @@
   --main-blocks-title-icon-offset-left: -19pt;
 }
 
+@media print {
 body{
   width: var(--page-width);
   height: var(--page-height);
@@ -38,19 +42,28 @@ body{
   font-family: "Open Sans", sans-serif; 
   font-weight: 300;
   line-height: 1.3;
-  color: #444;
   hyphens: auto;
+}
+.container {}
+
+}
+
+a {
+    color: $primary;
+    font-weight: $weight-semibold;
+}
+
+@media screen {
+    #resume-container { padding-top : 3em; }
 }
 
 h1, h2, h3{
   margin: 0;
-  color: #000;
 }
 
 li{
   list-style-type: none;
 }
-
 
 #main{
   float: left;
@@ -59,13 +72,14 @@ li{
   font-size: 7pt;
 }
 
+
 #sidebar{
   float: right;
   position: relative; /* for disclaimer */
   width: var(--sidebar-width);
   height: 100%;
   padding: 0.6in var(--sidebar-horizontal-padding);
-  background-color: #f2f2f2;
+  background-color: $white-ter;
   font-size: 8.5pt;
 }
 
@@ -84,7 +98,6 @@ li{
 }
 
 #title h1{
-  font-weight: 300;
   font-size: 18pt;
   line-height: 1.5;
 }
@@ -114,8 +127,8 @@ h1#name {
   /* XXX: 0.5px for aligning fx printing */
   left: calc((var(--date-block-width) + var(--decorator-horizontal-margin)));
   font-weight: 400;
-  font-size: 11pt;
-  color: #555;
+  font-size: $size-6;
+  color: $grey-dark;
 }
 
 #main h2 > i{
@@ -125,7 +138,7 @@ h1#name {
   position: absolute;
   left: var(--main-blocks-title-icon-offset-left);
   z-index: 1; /* over decorator line */
-  color: #444;
+  color: $grey;
 }
 
 #main h2::after{ /* extends the decorator line */
@@ -143,14 +156,21 @@ h1#name {
 }
 
 /**** minor tweaks on the icon fonts ****/
+
+@mixin fatweak {
+    top: 1pt;
+}
+
+#main h2 > .fa {
+    @include fatweak;
+}
+
 #main h2 > .fa-graduation-cap{
   left: calc(var(--main-blocks-title-icon-offset-left) - 2pt);
   top: 2pt;
 }
 
-#main h2 > .fa-suitcase{
-  top: 1pt;
-}
+
 
 #main h2 > .fa-folder-open{
   top: 1.5pt;
@@ -171,9 +191,11 @@ h1#name {
   flex: 0 0 var(--date-block-width);
   padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
   padding-right: var(--decorator-horizontal-margin);
-  font-size: 7pt;
+  font-size: .55rem;
   text-align: right;
   line-height: 1;
+  color: $grey;
+  font-weight: $weight-normal;
 }
 
 .date span{
@@ -215,7 +237,7 @@ h1#name {
   width: var(--decorator-outer-dim);
   height: var(--decorator-outer-dim);
   border-radius: calc(var(--decorator-outer-dim) / 2);
-  background-color: #fff;
+  background-color: $grey-dark;
 }
 
 .decorator::after{
@@ -227,7 +249,7 @@ h1#name {
   width: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
   height: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
   border-radius: calc((var(--decorator-outer-dim) - (var(--decorator-border-width) * 2)) / 2);
-  background-color: #555;
+  background-color: $white-ter;
 }
 
 .blocks:last-child .decorator{ /* slightly shortens it */
@@ -243,7 +265,7 @@ h1#name {
 }
 
 .details header{
-  color: #000;
+  color: $black;
 }
 
 .details h3{
@@ -289,6 +311,13 @@ h1#name {
   content: "\f041";
 }
 
+.details .tool-url { 
+    float: right;
+    font-size: .6rem;
+
+}
+
+
 /***** fine-tunes on the lists... *****/
 
 #main ul{
@@ -322,13 +351,10 @@ h1#name {
   margin-left: 0 !important;
 }
 
-
-
 /* sidebar */
 
 #sidebar h1{
-  font-weight: 400;
-  font-size: 11pt;
+  font-size: $size-6;
 }
 
 .side-block{
@@ -379,4 +405,15 @@ h1#name {
   font-family: "Source Code Pro";
   font-weight: 400;
   font-style: normal;
+}
+
+.descr {
+    font-weight: $weight-normal;
+}
+
+
+@media print {
+    .hidden-print {
+        display: none !important;
+    }
 }
