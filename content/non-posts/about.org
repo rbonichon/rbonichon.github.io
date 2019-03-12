@@ -6,7 +6,7 @@ title: About
 
 <div class="column is-two-fifths">
 
-I am currently a research engineer @ [[http://cea.fr/en][CEA]] working on the [[http://binsec.gforge.inria.fr/][BINSEC]] project.
+I am currently a research engineer @ [[http://cea.fr/en][CEA]] working on the [[https://binsec.github.io][BINSEC]] tool.
 
 You can contact me by e-mail, snail mail or phone.
 
