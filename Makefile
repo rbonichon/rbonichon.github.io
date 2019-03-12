@@ -7,6 +7,9 @@ watch:
 
 PUBLISH_DIR = docs
 
+$(PUBLISH_DIR):
+	mkdir -p $(PUBLISH_DIR)
+
 publish: $(PUBLISH_DIR)
 	hugo 
 	(cd $(PUBLISH_DIR); \
