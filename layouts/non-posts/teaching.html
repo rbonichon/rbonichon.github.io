@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="has-navbar-fixed-top" >
-  {{ template "chrome/head.html" }}
+  {{ partial "chrome/head.html" }}
   <body>
-    {{ template "chrome/menu.html" }}
+    {{ partial "chrome/menu.html" }}
     {{ $baseurl := .Site.BaseURL }}
 
     <section class="section">
@@ -20,10 +20,9 @@
         </div>
         {{ end }}
 
-
       </div>
     </section>
-    {{ template "chrome/footer.html" }}
+    {{ partial "chrome/footer.html" }}
 
   </body>
 </html>

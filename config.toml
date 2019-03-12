@@ -11,7 +11,7 @@ buildFuture =                 false
 # config file (default is path/config.yaml|json|toml)
 config = "config.toml"
 contentDir = "content"
-
+layoutDir = "layouts"
 publishDir = "docs"
 
 [taxonomies]

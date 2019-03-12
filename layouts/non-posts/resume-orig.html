@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script type="text/javascript" src="/js/nav.js"></script>
+    <link href="/css/screen.css" media="screen" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" media="screen, print" type="text/css" href="/css/resume.css" />
+  </head>
+  <body lang="en">
+    {{ partial "chrome/menu.html" }}
+    {{ $baseurl := .Site.BaseURL }}
+    {{ $r := .Site.Data.resume  }}
+    <div class="container" id="resume-container">
+    <section id="main">
+      <header id="title">
+        <h1 id="name">Richard Bonichon</h1>
+        <span class="subtitle">Research Engineer</span>
+      </header>
+       {{ $sections := .Site.Data.resume.sections }}
+
+      {{ range $section := $sections }}
+    <section class="main-block">
+      <h2>
+        <i class="fa {{ if .icon }}{{ .icon }}{{ else }}fa-suitcase{{ end }}"></i> 
+        {{ .title }}
+      </h2>
+
+      {{ range $entry := (sort $section.entries "period.end" "desc") }}
+      <section class="blocks">
+      {{ if eq $section.type "students" }}
+        {{- partial "student.html" (dict "s" .) }}
+      {{ else if eq $section.type "tools" }}
+        {{- partial "resume/tool.html" (dict "s" .) }}
+      {{ else }}
+        {{- partial "resume/date.html" (dict "date" $entry.period) -}}
+          <div class="decorator">
+          </div>
+          <div class="details">
+            <header>
+              <h3>{{ $entry.title }}</h3>
+              <span class="place">
+                {{ if $entry.location.institute.url }} 
+                 <a href="$entry.location.institute.url">
+                   {{ $entry.location.institute.name }} 
+                   </a>
+                {{ else }}
+                   {{ $entry.location.institute.name }} 
+                {{ end }}
+                
+                {{ if $entry.location.lab }}
+                - {{ $entry.location.lab }}
+                {{ end }}
+              </span>
+
+              {{ if $entry.location.city}}
+              <span class="location">
+               {{ $entry.location.city }}
+               {{ if $entry.location.country }}
+                ,{{ $entry.location.country }}
+               {{ end }}
+              </span>
+              {{ end }}
+            </header>
+            <div class="descr">
+              {{ if $entry.descr }}
+              {{ $entry.descr }}
+              {{ end }}
+            </div>
+          </div>
+      {{ end }}
+      </section>
+      {{ end }}
+    </section>
+    {{ end }}
+    </section>
+    <aside id="sidebar">
+      <div class="side-block" id="contact">
+        <h1>
+          Contact Info
+        </h1>
+        <ul>
+          <li><i class="fa fa-globe"></i>rbonichon.github.io</li>
+          <li><i class="fa fa-envelope"></i>{{ .Site.Data.resume.email }}</li>
+          <li><i class="fa fa-phone"></i>{{ .Site.Data.resume.phone }}</li>
+        </ul>
+      </div>
+      <div class="side-block" id="skills">
+        <h1 class="has-text-weight-semibold">
+          Skills
+        </h1>
+        <ul>
+          <li>Program analysis</li>
+          <li>Verification</li>
+          <li>Automated theorem proving</li>
+          <li>Functional programming (OCaml)</li>
+        </ul>
+        <ul>
+          <li>French</li>
+          <li>English</li>
+          <li>Portuguese</li>
+          <li>German</li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <!--   <section class="main-block">
+     !--     <h2>
+     !--       <i class="fa fa-suitcase"></i> Experiences
+     !--     </h2>
+     !--     <section class="blocks">
+     !--       <div class="date">
+     !--         <span>2015</span><span>present</span>
+     !--       </div>
+     !--       <div class="decorator">
+     !--       </div>
+     !--       <div class="details">
+     !--         <header>
+     !--           <h3>Some Position</h3>
+     !--           <span class="place">Some Workplace</span>
+     !--           <span class="location">(remote)</span>
+     !--         </header>
+     !--         <div>
+     !--           <ul>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper ipsum congue ac. Maecenas viverra tortor eget convallis vestibulum. Donec pulvinar venenatis est, non sollicitudin metus laoreet sed. Fusce tincidunt felis nec neque aliquet porttitor</li>
+     !--           </ul>
+     !--           </div>
+     !--       </div>
+     !--     </section>
+     !--     <section class="blocks">
+     !--       <div class="date">
+     !--         <span>2014</span><span>2015</span>
+     !--       </div>
+     !--       <div class="decorator">
+     !--       </div>
+     !--       <div class="details">
+     !--         <header>
+     !--           <h3>Another Position</h3>
+     !--           <span class="place">Some Workplace</span>
+     !--           <span class="location">Some City, Some Country</span>
+     !--         </header>
+     !--         <div>
+     !--           <ul>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+     !--           </ul>
+     !--         </div>
+     !--       </div>
+     !--     </section>
+     !--     <section class="blocks">
+     !--       <div class="date">
+     !--         <span>2013</span><span>2014</span>
+     !--       </div>
+     !--       <div class="decorator">
+     !--       </div>
+     !--       <div class="details">
+     !--         <header>
+     !--           <h3>Yet Another Job Position</h3>
+     !--           <span class="place">Some Workplace</span>
+     !--           <span class="location">Some City, Some Country</span>
+     !--         </header>
+     !--         <div>
+     !--           <ul>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio</li>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+     !--           </ul>
+     !--           </div>
+     !--       </div>
+     !--     </section>
+     !--   </section>
+     !--   <section class="main-block">
+     !--     <h2>
+     !--       <i class="fa fa-folder-open"></i> Selected Projects
+     !--     </h2>
+     !--     <section class="blocks">
+     !--       <div class="date">
+     !--         <span>2015</span><span>2016</span>
+     !--       </div>
+     !--       <div class="decorator">
+     !--       </div>
+     !--       <div class="details">
+     !--         <header>
+     !--           <h3>Some Project 1</h3>
+     !--           <span class="place">Some workplace</span>
+     !--         </header>
+     !--         <div>
+     !--           <ul>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper ipsum congue ac</li>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio</li>
+     !--           </ul>
+     !--         </div>
+     !--       </div>
+     !--     </section>
+     !--     <section class="blocks">
+     !--       <div class="date">
+     !--         <span>2014</span><span>2015</span>
+     !--       </div>
+     !--       <div class="decorator">
+     !--       </div>
+     !--       <div class="details">
+     !--         <header>
+     !--           <h3>Some Project 2</h3>
+     !--           <span class="place">Some workplace</span>
+     !--         </header>
+     !--         <div>
+     !--           <ul>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper ipsum congue ac. Maecenas viverra tortor eget convallis vestibulum. Donec pulvinar venenatis est, non sollicitudin metus laoreet sed. Fusce tincidunt felis nec neque aliquet porttitor</li>
+     !--           </ul>
+     !--         </div>
+     !--       </div>
+     !--     </section>
+     !--     <section class="blocks">
+     !--       <div class="date">
+     !--         <span>2014</span>
+     !--       </div>
+     !--       <div class="decorator">
+     !--       </div>
+     !--       <div class="details">
+     !--         <header>
+     !--           <h3>Some Project 3</h3>
+     !--           <span class="place">Some workplace</span>
+     !--         </header>
+     !--         <div>
+     !--           <ul>
+     !--             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros, placerat eu metus id, gravida eleifend odio</li>
+     !--           </ul>
+     !--         </div>
+     !--       </div>
+     !--     </section>
+     !--   </section>
+     !--   <section class="main-block concise">
+     !--     <h2>
+     !--       <i class="fa fa-graduation-cap"></i> Education
+     !--     </h2>
+     !--     <section class="blocks">
+     !--       <div class="date">
+     !--         <span>2009</span><span>2014</span>
+     !--       </div>
+     !--       <div class="decorator">
+     !--       </div>
+     !--       <div class="details">
+     !--         <header>
+     !--           <h3>Ph.D. in Forty-Two Discovery</h3>
+     !--           <span class="place">Inexistent University</span>
+     !--           <span class="location">Some City, Some Country</span>
+     !--         </header>
+     !--         <div>Relationship of the number with the answer to life, the universe and everything</div>
+     !--       </div>
+     !--     </section>
+     !--     <section class="blocks">
+     !--       <div class="date">
+     !--         <span>2005</span><span>2009</span>
+     !--       </div>
+     !--       <div class="decorator">
+     !--       </div>
+     !--       <div class="details">
+     !--         <header>
+     !--           <h3>LL.B. in H&aelig;matophagic Economics</h3>
+     !--           <span class="place">Inexistent University</span>
+     !--           <span class="location">Some City, Some Country</span>
+     !--         </header>
+     !--         <div>President's Scholarship</div>
+     !--       </div>
+     !--     </section>
+     !--     <section class="blocks">
+     !--       <div class="date">
+     !--         <span>2005</span><span>2009</span>
+     !--       </div>
+     !--       <div class="decorator">
+     !--       </div>
+     !--       <div class="details">
+     !--         <header>
+     !--           <h3>B.S. in Existential Science (Double Major)</h3>
+     !--           <span class="place">Inexistent University</span>
+     !--           <span class="location">Some City, Some Country</span>
+     !--         </header>
+     !--         <div>President's Scholarship</div>
+     !--       </div>
+     !--     </section>
+     !--     <section class="blocks">
+     !--       <div class="date">
+     !--       </div>
+     !--       <div class="decorator">
+     !--       </div>
+     !--       <div class="details">
+     !--         <header>
+     !--           <h3>Massive Online Fee&ndash;Required Course (selective list)</h3>
+     !--         </header>
+     !--         <div class="concise">
+     !--           <ul>
+     !--             <li>Introduction to something else</li>
+     !--             <li>Introduction to some more useless things</li>
+     !--             <li>Philosophy in practice</li>
+     !--             <li>Recursive research and its impact on recursive research</li>
+     !--             <li>Artificial politics</li>
+     !--           </ul>
+     !--         </div>
+     !--       </div>
+     !--     </section>
+     !--   </section>
+     !-- </section> -->
+</div>
+  </body>
+</html>

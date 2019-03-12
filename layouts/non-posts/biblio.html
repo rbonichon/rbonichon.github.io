@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="has-navbar-fixed-top" >
-  {{ template "chrome/head.html" }}
+  {{ partial "chrome/head.html" }}
   <body>
-    {{ template "chrome/menu.html" }}
+    {{ partial "chrome/menu.html" }}
     {{ $baseurl := .Site.BaseURL }}
     {{ $.Scratch.Set "year" 2000 }}
 
@@ -36,8 +36,16 @@
             {{ $n_authors := (len $article.author) }}
             {{ range $index,$a := $article.author }}
             
-              {{ substr $a.given 0 1}}. {{ $a.family -}}
-            
+              {{ $shortfirstname := (substr $a.given 0 1)}}
+              {{ $lastname := $a.family }}
+              {{ $fullname := (printf "%s. %s " $shortfirstname $lastname) }}
+
+              {{ if and (eq $lastname "Bonichon") (eq $shortfirstname "R") }}
+                <span class="has-text-primary"> {{ $fullname }}</span>
+              {{ else }}
+                 {{ $fullname }}
+              {{ end }}
+
               {{ $is_next_to_last := eq (add $index 2) $n_authors }}
               {{ $is_last := eq (add $index 1) $n_authors }}
               {{ if $is_next_to_last }} & {{ else if (not $is_last) }}, {{- else -}}.{{ end }}
@@ -70,7 +78,7 @@
       </div>
     </section>
 
-{{ template "chrome/footer.html" }}
+{{ partial "chrome/footer.html" }}
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 

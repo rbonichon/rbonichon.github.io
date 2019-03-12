@@ -1,5 +1,40 @@
 ---
 references:
+- id: jfla19-1
+  type: paper-conference 
+  author:
+  - family: Recoules
+    given: Frédéric
+  - family: Bardin
+    given: Sébastien
+  - family: Bonichon
+    given: Richard
+  - family: Mounier
+    given: Laurent
+  - family: Potet
+    given: Marie-Laure
+  year: 2019
+  venue: JFLA
+  title: De l'assembleur sur la ligne ? Appelez TInA !
+  paper: tina-jfla19.pdf
+
+- id: jfla19-2
+  type: paper-conference 
+  author:
+  - family: Farinier
+    given: Benjamin
+  - family: Bardin
+    given: Sébastien
+  - family: Bonichon
+    given: Richard
+  - family: Potet
+    given: Marie-Laure
+  year: 2019
+  venue: JFLA
+  title:  En finir avec les faux positifs grâce à l’exécution symbolique robuste
+  paper: se-robuste-jfla19.pdf
+
+
 - id: CAV18
   type: paper-conference
   author:

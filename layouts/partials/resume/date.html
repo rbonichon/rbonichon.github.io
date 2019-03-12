@@ -1,0 +1,10 @@
+<div class="date">
+  <span>{{ .date.start }}</span>
+  <span>
+    {{ if eq .date.end 3000 }}
+    now 
+    {{ else }} 
+    {{ .date.end }}
+    {{ end }} 
+  </span>
+</div>
