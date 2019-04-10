@@ -1,0 +1,21 @@
+  {{ if .date.year }}
+<div class="date-month">
+
+    <span class="year">{{ .date.year }}<span class="month">{{ .date.start }}</span></span>
+
+  <span class="year">{{ .date.year }}<span class="month">{{ .date.end }}</span></span>
+  {{ else }}
+<div class="date">
+  <span>{{ .date.start.year }}</span>
+
+  <span>
+    {{ if .date.end }}
+    {{ if eq .date.end 3000 }}
+    now 
+    {{ else }} 
+    {{ .date.end.year }}
+    {{ end }} 
+    {{ end }}
+  </span>
+{{ end }}
+</div>

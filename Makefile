@@ -7,8 +7,6 @@ watch:
 
 PUBLISH_DIR = docs
 
-$(PUBLISH_DIR):
-	mkdir -p $(PUBLISH_DIR)
 
 publish: $(PUBLISH_DIR)
 	hugo 
@@ -22,6 +20,7 @@ publish: $(PUBLISH_DIR)
 push: publish
 
 $(PUBLISH_DIR):
+	mkdir -p $(PUBLISH_DIR)
 	git submodule add -b master \
-	git@github.com:rbonichon/rbonichon.github.io.git 
+	git@github.com:rbonichon/rbonichon.github.io.git \
 	$@

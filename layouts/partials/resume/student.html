@@ -1,10 +1,10 @@
-{{- partial "resume/date.html" (dict "date" .s.period) -}}
+{{- partial "resume/date_month.html" (dict "date" .s.period) -}}
 
 <div class="decorator"></div>
 <div class="details">
   <header>
-    <h3>  {{ .s.who }} <span class="student-level">{{ .s.type }}</span></h3>
-    
+    <h3>  {{ .s.who }} 
+      <span class="student-level">{{ .s.type }}</span></h3>
     <span class="place">{{ .s.title }}</span>
   </header>
   <div class="descr"></div>

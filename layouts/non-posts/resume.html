@@ -9,13 +9,10 @@
 
       <div class="container is-desktop">
         <h1 class="title is-1">Resume</h1>
-
       </div>
-
-      
     </section>
 
-    {{ $sections := .Site.Data.resume.sections }}
+    {{ $sections := $r.sections }}
 
     {{ range $section := $sections }}
     <section class="section container is-desktop">
@@ -28,6 +25,7 @@
       {{ if eq $section.type "students" }}
         {{- partial "student.html" (dict "s" .) }}
       {{ else }}
+
       <div class="box">
         <div class="date">
           {{ $entry.period.start }} --
@@ -45,7 +43,7 @@
         </div>
         <div class="descr">
           {{ if $entry.descr }}
-          {{ $entry.descr }}
+             {{ $entry.descr }}
           {{ end }}
         </div>
       </div>

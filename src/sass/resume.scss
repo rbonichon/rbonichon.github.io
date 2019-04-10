@@ -1,11 +1,8 @@
-@import "bulma.sass";
+@import "sass/utilities/_all";
 
-
-@media print {
-    @page{
-        size: letter portrait;
-        margin: 0;
-    }
+@page{
+  size: letter portrait;
+  margin: 0;
 }
 
 *{
@@ -13,13 +10,14 @@
 }
 
 :root{
-  --page-width: 20cm;
+  --page-width: 21cm;
+
   --page-height: 29.7cm;
-  --main-width: 13.5cm;
+  --main-width: 14cm;
   --sidebar-width: calc(var(--page-width) - var(--main-width));
   --decorator-horizontal-margin: 0.2in;
 
-  --sidebar-horizontal-padding: 1em;
+  --sidebar-horizontal-padding: 0.2in;
 
   /* XXX: using px for very good precision control */
   --decorator-outer-offset-top: 10px;
@@ -34,7 +32,8 @@
   --main-blocks-title-icon-offset-left: -19pt;
 }
 
-@media print {
+
+$multiplier: 12;
 body{
   width: var(--page-width);
   height: var(--page-height);
@@ -42,23 +41,13 @@ body{
   font-family: "Open Sans", sans-serif; 
   font-weight: 300;
   line-height: 1.3;
+  color: $dark;
   hyphens: auto;
-}
-.container {}
-
-}
-
-a {
-    color: $primary;
-    font-weight: $weight-semibold;
-}
-
-@media screen {
-    #resume-container { padding-top : 3em; }
 }
 
 h1, h2, h3{
   margin: 0;
+  color: #000;
 }
 
 li{
@@ -72,14 +61,13 @@ li{
   font-size: 7pt;
 }
 
-
 #sidebar{
   float: right;
   position: relative; /* for disclaimer */
   width: var(--sidebar-width);
-  height: 100%;
+  height: calc(1.5 * var(--page-height));
   padding: 0.6in var(--sidebar-horizontal-padding);
-  background-color: $white-ter;
+  background-color: $grey-lighter;
   font-size: 8.5pt;
 }
 
@@ -90,6 +78,7 @@ li{
   text-transform: uppercase;
 }
 
+
 #title{
   position: relative;
   left: 0.55in;
@@ -98,8 +87,13 @@ li{
 }
 
 #title h1{
-  font-size: 18pt;
+  font-weight: 300;
+  font-size: 20pt;
   line-height: 1.5;
+}
+
+#title h1.name {
+    font-variant: small-caps;
 }
 
 #title h1 strong{
@@ -107,18 +101,15 @@ li{
   font-weight: 600;
 }
 
-h1#name {
-    font-weight: $weight-semibold;
-}
-
 .subtitle{
-  font-size: 8pt;
+  font-size: 12pt;
 }
 
 /*** categorial blocks ***/
 
 .main-block{
   margin-top: 0.1in;
+  margin-bottom: 2rem;
 }
 
 #main h2{
@@ -127,8 +118,8 @@ h1#name {
   /* XXX: 0.5px for aligning fx printing */
   left: calc((var(--date-block-width) + var(--decorator-horizontal-margin)));
   font-weight: 400;
-  font-size: $size-6;
-  color: $grey-dark;
+  font-size: 11pt;
+  color: #555;
 }
 
 #main h2 > i{
@@ -138,7 +129,7 @@ h1#name {
   position: absolute;
   left: var(--main-blocks-title-icon-offset-left);
   z-index: 1; /* over decorator line */
-  color: $grey;
+  color: #444;
 }
 
 #main h2::after{ /* extends the decorator line */
@@ -155,22 +146,19 @@ h1#name {
   content: ' ';
 }
 
+#main h2.subtitle {
+    border-left:none;
+}
+
 /**** minor tweaks on the icon fonts ****/
-
-@mixin fatweak {
-    top: 1pt;
-}
-
-#main h2 > .fa {
-    @include fatweak;
-}
-
 #main h2 > .fa-graduation-cap{
   left: calc(var(--main-blocks-title-icon-offset-left) - 2pt);
   top: 2pt;
 }
 
-
+#main h2 > .fa-suitcase{
+  top: 1pt;
+}
 
 #main h2 > .fa-folder-open{
   top: 1.5pt;
@@ -191,11 +179,9 @@ h1#name {
   flex: 0 0 var(--date-block-width);
   padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
   padding-right: var(--decorator-horizontal-margin);
-  font-size: .55rem;
+  font-size: 7pt;
   text-align: right;
   line-height: 1;
-  color: $grey;
-  font-weight: $weight-normal;
 }
 
 .date span{
@@ -219,6 +205,13 @@ h1#name {
   border-left: var(--decorator-border);
 }
 
+.decorator i {
+    color:#555;
+    display: block;
+    margin-left: -1.2mm; // adjust the position of icon here, may depend on the form of the icon
+    margin-top: 1mm;
+}
+
 /*
  * XXX: Use two filled circles to achieve the circle-with-white-border effect.
  * The normal technique of only using one pseudo element and
@@ -228,33 +221,33 @@ h1#name {
  *
  */
 
-.decorator::before{
-  position: absolute;
-  top: var(--decorator-outer-offset-top);
-  left: var(--decorator-outer-offset-left);
-  content: ' ';
-  display: block;
-  width: var(--decorator-outer-dim);
-  height: var(--decorator-outer-dim);
-  border-radius: calc(var(--decorator-outer-dim) / 2);
-  background-color: $grey-dark;
-}
+//  .decorator::before{
+//   position: absolute;
+//   top: var(--decorator-outer-offset-top);
+//   left: var(--decorator-outer-offset-left);
+//   content: ' ';
+//   display: block;
+//   width: var(--decorator-outer-dim);
+//   height: var(--decorator-outer-dim);
+//   border-radius: calc(var(--decorator-outer-dim) / 2);
+//   background-color: #fff;
+// }
 
-.decorator::after{
-  position: absolute;
-  top: calc(var(--decorator-outer-offset-top) + var(--decorator-border-width));
-  left: calc(var(--decorator-outer-offset-left) + var(--decorator-border-width));
-  content: ' ';
-  display: block;
-  width: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
-  height: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
-  border-radius: calc((var(--decorator-outer-dim) - (var(--decorator-border-width) * 2)) / 2);
-  background-color: $white-ter;
-}
+// .decorator::after{
+//   position: absolute;
+//   top: calc(var(--decorator-outer-offset-top) + var(--decorator-border-width));
+//   left: calc(var(--decorator-outer-offset-left) + var(--decorator-border-width));
+//   content: ' ';
+//   display: block;
+//   width: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
+//   height: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
+//   border-radius: calc((var(--decorator-outer-dim) - (var(--decorator-border-width) * 2)) / 2);
+//   background-color: red; //#555;
+// }
 
-.blocks:last-child .decorator{ /* slightly shortens it */
-  margin-bottom: 0.25in;
-}
+// .blocks:last-child .decorator{ /* slightly shortens it */
+//   margin-bottom: 0.25in;
+// }
 
 /***** fine-tunes on the details block where the real juice is *****/
 
@@ -265,11 +258,12 @@ h1#name {
 }
 
 .details header{
-  color: $black;
+  color: #000;
 }
 
 .details h3{
-  font-size: 9pt;
+  font-size: 10pt;
+  font-weight: 600;
 }
 
 .main-block:not(.concise) .details div{
@@ -288,7 +282,7 @@ h1#name {
 
 .details .place{
   float: left;
-  font-size: 7.5pt;
+  font-size: 8pt;
 }
 
 .details .location{
@@ -311,13 +305,9 @@ h1#name {
   content: "\f041";
 }
 
-.details .tool-url { 
-    float: right;
-    font-size: .6rem;
-
+.details .descr {
+    font-size:8.5pt;
 }
-
-
 /***** fine-tunes on the lists... *****/
 
 #main ul{
@@ -351,33 +341,35 @@ h1#name {
   margin-left: 0 !important;
 }
 
+
+
 /* sidebar */
 
 #sidebar h1{
-  font-size: $size-6;
+  font-weight: 400;
+  font-size: 11pt;
+  padding-bottom: .4rem;
+//  border-bottom: solid #ccc;
 }
 
 .side-block{
   margin-top: 0.5in; 
 }
 
-#contact ul{
-  margin-top: 1em;
-  padding-left: 0;
-  font-family: "Source Code Pro";
-  font-weight: $weight-normal;
-  font-size: $size-7;
-  line-height: 1.75;
-}
 
-#contact h1 {
-  font-weight: $weight-semibold;
+#contact ul{
+  margin-top: 0.05in;
+  padding-left: 0;
+  font-family: "Inconsolata";
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: .9rem;
 }
 
 #contact li > i{
   width: 9pt; /* for text alignment */
   text-align: right;
-  padding-top: .5em;
+  margin-right: .5rem;
 }
 
 #skills{
@@ -388,6 +380,22 @@ h1#name {
   margin: 0.05in 0 0.15in;
   padding: 0;
 }
+
+
+#misc{
+  line-height: 1.5;
+}
+
+
+#misc ul{
+  margin: 0.05in 0 0.15in;
+  padding: 0;
+}
+
+#misc .lang-level {
+    padding-left: 1em;
+}                  
+
 
 #disclaimer{
   position: absolute;
@@ -407,13 +415,48 @@ h1#name {
   font-style: normal;
 }
 
-.descr {
-    font-weight: $weight-normal;
+// Additions
+
+.hidden-print {
+    display: none !important;
 }
 
 
-@media print {
-    .hidden-print {
-        display: none !important;
-    }
+.details .tool-url { 
+    float: right;
+    font-size: .6rem;
+}
+
+
+ul#lang {
+    width:70%;
+}
+
+.details .student-level { 
+    float: right;
+    font-size: .6rem;
+    text-transform: capitalize;
+}
+
+span.lang-level {
+    float:right;
+}
+ul#address-tbl {
+    margin-top: -.58cm;
+    margin-left: .6cm;
+}
+
+
+div.page-break {
+    page-break-before: always;
+}
+
+section#students {
+    padding-top: 3rem;
+}
+
+a {
+    color: $grey-dark;
+    font-weight: $weight-semibold;
+    text-decoration: none;
 }

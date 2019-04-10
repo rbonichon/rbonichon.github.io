@@ -1,0 +1,175 @@
+@import "sass/utilities/_all";
+
+#resume-container {
+      font-family: "Open Sans", sans-serif; 
+}
+#title h1 {
+    text-transform: uppercase;
+}
+
+#title h3 {
+    text-transform: uppercase;
+    font-size:.9rem;
+}
+
+
+#title {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+div.decorator {
+    visibility: hidden;
+}
+
+#main h2::after{ /* extends the decorator line */
+  height: calc(var(--row-blocks-padding-top) * 2);
+  position: relative;
+  top: calc(-1 * var(--row-blocks-padding-top));
+  /* XXX: 0.5px for aligning fx printing */
+  left: calc(-1 * var(--decorator-horizontal-margin));
+  display: block;
+  border-left: var(--decorator-border);
+  z-index: 0;
+  line-height: 0;
+  font-size: 0;
+  content: ' ';
+}
+
+.blocks{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+div.date {
+    float:left;    
+    border-radius: 290486px;
+    text-align:right
+}
+
+.date {
+    flex: 0 0 1;
+    font-size: .7rem
+}
+.date span {
+    display:block;
+   
+}
+
+.date span:nth-child(2)::before{
+  position: relative;
+  display: block;
+  right: 8pt;
+  content: '|';
+}
+
+.date-month span.year {
+    display:block;
+}
+
+section#students {
+    section.blocks {
+    }
+    div.date-month,div.date{
+        padding-right: .4em;
+        font-size: .7rem;
+    }
+
+}
+
+span.month {
+    font-size: .5rem;
+    display:block;
+    padding-left: 1.5em;
+}
+
+
+.date-month span:nth-child(2)::before{
+  position: relative;
+  display: block;
+  right: -8pt;
+  content: '|';
+}
+
+.details{
+  flex: 1 0 0;
+}
+
+section.main-block {
+    margin-top:12px;
+    padding-top:0;
+}
+
+.details .location::before{
+  display: inline-block;
+  position: relative;
+  right: 3pt;
+  top: 0.25pt;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  content: "\f041";
+}
+
+
+div.details {
+    header {
+        h3 {
+            font-weight: 600;
+            .tool-url {
+                font-size:.7rem;
+                float: right;
+            }
+        }
+
+        span.place {
+            font-size: .8rem;
+        }
+        
+        span.location {
+            float:right;
+            font-size: .7rem;
+        }
+
+        padding-bottom: .5em;
+        padding-top: .2em;
+    }
+    border-left: solid $grey-lighter 1px;
+    padding-left: 1em;
+}
+
+span.lang-level {
+    float:right;
+}
+
+div.side-block {
+    font-size:.8rem;
+    ul#lang {
+        margin-bottom: 1em;;
+    }
+}
+div.descr {
+    padding-bottom: 2em;
+    width: 100%;
+}
+
+#contact ul {
+    font-family: "Inconsolata";
+    font-size:.8rem;
+}
+
+#contact li > i{
+  width: 9pt; /* for text alignment */
+  text-align: right;
+  margin-right: .5rem;
+}
+
+#address-tbl {
+    margin-top: -1.6em;
+    margin-left: 1.4em;
+}
+
+span.student-level {
+    float: right;
+    
+}
