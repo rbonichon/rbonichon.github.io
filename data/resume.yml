@@ -11,10 +11,19 @@ address:
 sections:
 - title: Experience      
   entries:
+    - title: Senior Software Engineer
+      period:
+        start: 2019
+        end: 3000
+      location:
+        institute:
+          name: Tweag I/O
+        city: Paris
+        country: France
     - title: Researcher
       period:
         start: 2008
-        end: 3000
+        end: 2019
       location:
         institute: 
           name: CEA
@@ -22,9 +31,10 @@ sections:
         city: Saclay
         country: France
       descr: >-
-        Development of formal analyses on source and binary code for safer software engineering
+        Development of (formal) program analyses on source and binary code,  for
+        safer and more secure software engineering
          <br/>
-        Lead developer of BINSEC (see Tools) <br/>
+        Lead developer of binary-code analysis platform BINSEC (see Tools) <br/>
 
     - title: Post-doc
       location:
@@ -37,7 +47,7 @@ sections:
         start: 2007
         end: 2008
       descr: >-
-        Generation of construction function respecting algebraic invariants
+        Generation of construction function respecting algebraic invariants for OCaml
     - title: ATER
       location:
         institute: 
@@ -112,7 +122,9 @@ sections:
   entries:
     - title: BINSEC
       url: https://binsec.github.io
-      descr: Formal methods platform for security-oriented binary code analyis
+      descr: >-
+        Formal methods platform for security-oriented binary code analyis
+        (symbolic execution, fuzzing, code deobfuscation, ...)
       lang: OCaml
       period:
         start: 2015
@@ -173,8 +185,8 @@ sections:
         start: 
           year: 2016
           month: 11
-    - title: "Software security: combinaing fuzzing and symbolic execution for
-  vulnerability detection"
+    - title: "Software security: combining fuzzing and symbolic execution for
+      vulnerability detection"
       who: Yaëlle Vinçont
       type: master
       period:
@@ -219,3 +231,8 @@ misc:
 - Distance running (marathon)
 - Cycling
 
+technologies:
+- OCaml
+- Python, C, Java, JavaScript
+- Emacs, Makefile, Git, Docker, LaTeX
+- Linux, OpenBSD

@@ -1,5 +1,41 @@
 ---
 references:
+- id: acsac19
+  type: paper-conference
+  author:
+    - family: Ollivier
+      given: Mathilde
+    - family: Bardin
+      given: Sébastien
+    - family: Bonichon
+      given: Richard
+    - family: Marion
+      given: Jean-Yves
+  year: 2019
+  venue: ACSAC
+  title: >-
+    How to Kill Symbolic Deobfuscation for Free (or: Unleashing the Potential of Path-Oriented Protections)
+
+      
+- id: ase19
+  type: paper-conference
+  author:
+  - family: Recoules
+    given: Frédéric
+  - family: Bardin
+    given: Sébastien
+  - family: Bonichon
+    given: Richard
+  - family: Mounier
+    given: Laurent
+  - family: Potet
+    given: Marie-Laure
+  year: 2019
+  venue: ASE
+  title: >-
+    Get rid of inline assembly through verification-oriented lifting
+  paper: tina-ase19.pdf
+  
 - id: jfla19-1
   type: paper-conference 
   author:

@@ -104,9 +104,9 @@
               </ul>
             </div>
 
-            <div class="side-block section" id="skills">
+`            <div class="side-block section" id="skills">
               <h1 class="has-text-weight-semibold subtitle is-5">
-                Skills
+                Expertise
               </h1>
               <ul>
                 {{ range $skill := .Site.Data.resume.skills }}
@@ -116,7 +116,20 @@
               <ul>
               </ul>
             </div>
-            <div class="side-block section" id="misc">
+`            <div class="side-block section" id="computer-skills">
+              <h1 class="has-text-weight-semibold subtitle is-5">
+                Computer skills
+              </h1>
+              <ul>
+                {{ range $skill := .Site.Data.resume.technologies }}
+                <li><span class="skill">{{ $skill }}</span></li>
+                {{ end }}
+              </ul>
+              <ul>
+              </ul>
+            </div>
+                        
+`            <div class="side-block section" id="misc">
               <h1 class="has-text-weight-semibold subtitle is-5">
                 Misc
               </h1>
