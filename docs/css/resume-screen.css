@@ -1,0 +1,206 @@
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/* line 3, ../../src/sass/resume-screen.scss */
+#resume-container {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 6, ../../src/sass/resume-screen.scss */
+#title h1 {
+  text-transform: uppercase;
+}
+
+/* line 10, ../../src/sass/resume-screen.scss */
+#title h3 {
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+/* line 16, ../../src/sass/resume-screen.scss */
+#title {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* line 20, ../../src/sass/resume-screen.scss */
+div.decorator {
+  visibility: hidden;
+}
+
+/* line 24, ../../src/sass/resume-screen.scss */
+#main h2::after {
+  /* extends the decorator line */
+  height: calc(var(--row-blocks-padding-top) * 2);
+  position: relative;
+  top: calc(-1 * var(--row-blocks-padding-top));
+  /* XXX: 0.5px for aligning fx printing */
+  left: calc(-1 * var(--decorator-horizontal-margin));
+  display: block;
+  border-left: var(--decorator-border);
+  z-index: 0;
+  line-height: 0;
+  font-size: 0;
+  content: ' ';
+}
+
+/* line 38, ../../src/sass/resume-screen.scss */
+.blocks {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* line 43, ../../src/sass/resume-screen.scss */
+div.date {
+  float: left;
+  border-radius: 290486px;
+  text-align: right;
+}
+
+/* line 49, ../../src/sass/resume-screen.scss */
+.date {
+  flex: 0 0 1;
+  font-size: 0.7rem;
+}
+
+/* line 53, ../../src/sass/resume-screen.scss */
+.date span {
+  display: block;
+}
+
+/* line 58, ../../src/sass/resume-screen.scss */
+.date span:nth-child(2)::before {
+  position: relative;
+  display: block;
+  right: 8pt;
+  content: '|';
+}
+
+/* line 65, ../../src/sass/resume-screen.scss */
+.date-month span.year {
+  display: block;
+}
+
+/* line 72, ../../src/sass/resume-screen.scss */
+section#students div.date-month, section#students div.date {
+  padding-right: .4em;
+  font-size: .7rem;
+}
+
+/* line 79, ../../src/sass/resume-screen.scss */
+span.month {
+  font-size: .5rem;
+  display: block;
+  padding-left: 1.5em;
+}
+
+/* line 86, ../../src/sass/resume-screen.scss */
+.date-month span:nth-child(2)::before {
+  position: relative;
+  display: block;
+  right: -8pt;
+  content: '|';
+}
+
+/* line 93, ../../src/sass/resume-screen.scss */
+.details {
+  flex: 1 0 0;
+}
+
+/* line 97, ../../src/sass/resume-screen.scss */
+section.main-block {
+  margin-top: 12px;
+  padding-top: 0;
+}
+
+/* line 102, ../../src/sass/resume-screen.scss */
+.details .location::before {
+  display: inline-block;
+  position: relative;
+  right: 3pt;
+  top: 0.25pt;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  content: "\f041";
+}
+
+/* line 115, ../../src/sass/resume-screen.scss */
+div.details {
+  border-left: solid #dbdbdb 1px;
+  padding-left: 1em;
+}
+/* line 116, ../../src/sass/resume-screen.scss */
+div.details header {
+  padding-bottom: .5em;
+  padding-top: .2em;
+}
+/* line 117, ../../src/sass/resume-screen.scss */
+div.details header h3 {
+  font-weight: 600;
+}
+/* line 119, ../../src/sass/resume-screen.scss */
+div.details header h3 .tool-url {
+  font-size: .7rem;
+  float: right;
+}
+/* line 125, ../../src/sass/resume-screen.scss */
+div.details header span.place {
+  font-size: .8rem;
+}
+/* line 129, ../../src/sass/resume-screen.scss */
+div.details header span.location {
+  float: right;
+  font-size: .7rem;
+}
+
+/* line 141, ../../src/sass/resume-screen.scss */
+span.lang-level {
+  float: right;
+}
+
+/* line 145, ../../src/sass/resume-screen.scss */
+div.side-block {
+  font-size: .8rem;
+}
+/* line 147, ../../src/sass/resume-screen.scss */
+div.side-block ul#lang {
+  margin-bottom: 1em;
+}
+
+/* line 151, ../../src/sass/resume-screen.scss */
+div.descr {
+  padding-bottom: 2em;
+  width: 100%;
+}
+
+/* line 156, ../../src/sass/resume-screen.scss */
+#contact ul {
+  font-family: "Inconsolata";
+  font-size: .8rem;
+}
+
+/* line 161, ../../src/sass/resume-screen.scss */
+#contact li > i {
+  width: 9pt;
+  /* for text alignment */
+  text-align: right;
+  margin-right: .5rem;
+}
+
+/* line 167, ../../src/sass/resume-screen.scss */
+#address-tbl {
+  margin-top: -1.6em;
+  margin-left: 1.4em;
+}
+
+/* line 172, ../../src/sass/resume-screen.scss */
+span.student-level {
+  float: right;
+}

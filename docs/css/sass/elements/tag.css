@@ -1,0 +1,55 @@
+/*
+Error: Undefined variable: "$background".
+        on line 1 of /home/richard/documents/rbonichon.github.io/src/sass/sass/elements/tag.sass
+
+1: $tag-background-color: $background !default
+2: $tag-color: $text !default
+3: $tag-radius: $radius !default
+4: $tag-delete-margin: 1px !default
+5: 
+6: .tags
+
+Backtrace:
+/home/richard/documents/rbonichon.github.io/src/sass/sass/elements/tag.sass:1
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:472:in `visit_variable'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
+/home/richard/.gem/ruby/2.6.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/home/richard/.gem/ruby/2.6.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/home/richard/.gem/ruby/2.6.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/home/richard/.gem/ruby/2.6.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$background\".\A         on line 1 of /home/richard/documents/rbonichon.github.io/src/sass/sass/elements/tag.sass\A \A 1: $tag-background-color: $background !default\A 2: $tag-color: $text !default\A 3: $tag-radius: $radius !default\A 4: $tag-delete-margin: 1px !default\A 5: \A 6: .tags"; }
