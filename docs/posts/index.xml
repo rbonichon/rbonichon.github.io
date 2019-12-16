@@ -6,10 +6,19 @@
     <description>Recent content in Posts on RB</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Apr 2018 13:55:43 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rbonichon.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SSPREW &#39;19</title>
+      <link>https://rbonichon.github.io/posts/ssprew-19/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rbonichon.github.io/posts/ssprew-19/</guid>
+      <description>I was @ SSPREW&amp;#39;19 to present our work regarding:    the state-of-the-art in anti-DSE software protection (paper)    preliminary results and observations concerning improved stochastic code deobfuscation.    It was the last SSPREW edition before the merger with the SPRO workshop, but it was a good one!  I enjoyed the workshop as usual, for its constructive purpose and nice people. There were 3 highlights to me:    the Binary Ninja tutorial.</description>
+    </item>
     
     <item>
       <title>USE &#39;18</title>
@@ -17,10 +26,7 @@
       <pubDate>Sun, 08 Apr 2018 13:55:43 +0100</pubDate>
       
       <guid>https://rbonichon.github.io/posts/use-18/</guid>
-      <description>We will talk about how we use symbolic execution in BINSEC at USE&#39;18 @ ICST&#39;18.
-Here are the slides of the presentation..
-For more, this presentation is a mashup of different results obtained by our group during the last 2 years from the following articles.
- Backward-bounded DSE: Targeting Infeasibility Questions on Obfuscated Codes.  Robin David, Sébastien Bardin, Jean-Yves Marion.  SP 2017. Finding the needle in the heap: combining static analysis and dynamic symbolic execution to trigger use-after-free.</description>
+      <description>We will talk about how we use symbolic execution in BINSEC at USE&amp;#39;18 @ ICST&amp;#39;18.  Here are the slides of the presentation..  For more, this presentation is a mashup of different results obtained by our group during the last 2 years from the following articles.    Backward-bounded DSE: Targeting Infeasibility Questions on Obfuscated Codes. &amp;lt;br/&amp;gt; Robin David, Sébastien Bardin, Jean-Yves Marion. &amp;lt;br/&amp;gt; SP 2017.    Finding the needle in the heap: combining static analysis and dynamic symbolic execution to trigger use-after-free.</description>
     </item>
     
     <item>
@@ -29,12 +35,7 @@ For more, this presentation is a mashup of different results obtained by our gro
       <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>https://rbonichon.github.io/posts/ssprew-17/</guid>
-      <description>There will be a BINSEC tutorial @ SSPREW-7.
-The tutorial uses a virtual machine which contains a compiled development snapshot of BINSEC and some examples.
-You can download it from ftp://ftp.cea.fr/incoming/y2k01/binsec_ssprew.ova (md5: 8d473d800b1fd2d3a2a929a51d1cb990).
- username : vagrant  password : vagrant   The examples are found in the examples directory.
-The above link will be active for 2 weeks only from November, 30.
-Here are the slides.</description>
+      <description>There will be a BINSEC tutorial @ SSPREW-7.  The tutorial uses a virtual machine which contains a compiled development snapshot of BINSEC and some examples.  You can download it from ftp://ftp.cea.fr/incoming/y2k01/binsec_ssprew.ova (md5: 8d473d800b1fd2d3a2a929a51d1cb990).    username : vagrant    password : vagrant    The examples are found in the examples directory.  The above link will be active for 2 weeks only from November, 30.</description>
     </item>
     
     <item>
@@ -43,9 +44,7 @@ Here are the slides.</description>
       <pubDate>Sat, 29 Apr 2017 13:55:43 +0100</pubDate>
       
       <guid>https://rbonichon.github.io/posts/issisp-17/</guid>
-      <description>We --- my colleague Sébastien and I --- are organizing the 8th International Summer School on Information Security and Protection.
-For those of you interested in software protection in particular and in analyzing binary code in general, this is a great opportunity to meet some of the best academics and professionals of the domain.
-For more information about ISSISP &#39;17, the website is up and running there.</description>
+      <description> We — my colleague Sébastien and I — are organizing the 8th International Summer School on Information Security and Protection.  For those of you interested in software protection in particular and in analyzing binary code in general, this is a great opportunity to meet some of the best academics and professionals of the domain.  For more information about ISSISP &amp;#39;17, the website is up and running there. </description>
     </item>
     
     <item>
@@ -54,7 +53,7 @@ For more information about ISSISP &#39;17, the website is up and running there.<
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://rbonichon.github.io/posts/ressi-17/</guid>
-      <description>I will be @ RESSI to talk about BINSEC on behalf of all the group.</description>
+      <description> I will be @ RESSI to talk about BINSEC on behalf of all the group. </description>
     </item>
     
     <item>
@@ -63,8 +62,7 @@ For more information about ISSISP &#39;17, the website is up and running there.<
       <pubDate>Wed, 29 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://rbonichon.github.io/posts/postdocs_2017/</guid>
-      <description>The Software Reliability Lab at CEA LIST (Paris Saclay, France) is offering postdoc positions about Software security through binary-level analysis.
-Full description is here.</description>
+      <description> The Software Reliability Lab at CEA LIST (Paris Saclay, France) is offering postdoc positions about Software security through binary-level analysis.  Full description is here. </description>
     </item>
     
   </channel>

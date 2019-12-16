@@ -7,7 +7,6 @@ watch:
 
 PUBLISH_DIR = docs
 
-
 publish: $(PUBLISH_DIR)
 	hugo 
 	(cd $(PUBLISH_DIR); \
