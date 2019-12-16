@@ -2,7 +2,3 @@
 	path = docs
 	url = git@github.com:rbonichon/rbonichon.github.io.git
 	branch = master
-[submodule "rbonichon.github.io"]
-	path = rbonichon.github.io
-	url = git@github.com:rbonichon/rbonichon.github.io.git
-	branch = master
