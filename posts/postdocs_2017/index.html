@@ -12,10 +12,11 @@
 
 
 
-    <link href="/css/screen.css" rel="stylesheet">
+    <link href="/css/screen.css" media="screen" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <script type="text/javascript" src="/js/nav.js"></script>
+
 
     <link rel="canonical" href="">
     
@@ -24,19 +25,20 @@
   </head>
 
   <body>
-    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation" >
+    <nav class="navbar is-fixed-top is-transparent hidden-print" role="navigation" aria-label="main navigation" >
   <div class="container">
     <div class="navbar-brand">
-              <a class="navbar-item " href="/">
-          <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
-          </i>
-        </a>
+      <a class="navbar-item " href="/">
+        <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
+        </i>
+      </a>
       <button class="button navbar-burger" data-target="navMenu" >
-      <span></span>
-      <span></span>
-      <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
+    
     <div class="navbar-menu" id="navMenu" >
       <div class="navbar-start ">
         <a class="navbar-item " href="/non-posts/about/">
@@ -62,7 +64,6 @@
           <i class="fa fa-2x fa-archive" aria-hidden="true" title="Archive">
           </i>
         </a>
-
       </div>
     </div>
 
@@ -75,11 +76,14 @@
     <section class="section content">
       <div class="container">
       <h1>Postdoc positions @ CEA LIST</h1>
-      <p>The Software Reliability Lab at CEA LIST (Paris Saclay, France) is offering
-postdoc positions about <strong>Software security through binary-level analysis</strong>.</p>
+      <p>
+The Software Reliability Lab at CEA LIST (Paris Saclay, France) is offering
+postdoc positions about <strong>Software security through binary-level analysis</strong>.
+</p>
+<p>
+Full description is <a href="../../../../../../documents/2017-postdoc.pdf">here</a>.
+</p>
 
-<p> 
-Full description is <a href="../../../../../../documents/2017-postdoc.pdf" title="here">here</a>.</p>
       </div>
     </section>
 
@@ -87,7 +91,7 @@ Full description is <a href="../../../../../../documents/2017-postdoc.pdf" title
   <div class="container ">
     <div class="has-text-centered">
       <p> Built with <a href="https://github.com/spf13/hugo">Hugo</a>.</p>
-      <p>© Richard Bonichon 2017</p>
+      <p>© Richard Bonichon 2017-2020</p>
     </div>
   </div>
 </footer>

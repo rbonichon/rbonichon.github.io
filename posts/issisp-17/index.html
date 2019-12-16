@@ -12,10 +12,11 @@
 
 
 
-    <link href="/css/screen.css" rel="stylesheet">
+    <link href="/css/screen.css" media="screen" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <script type="text/javascript" src="/js/nav.js"></script>
+
 
     <link rel="canonical" href="">
     
@@ -24,19 +25,20 @@
   </head>
 
   <body>
-    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation" >
+    <nav class="navbar is-fixed-top is-transparent hidden-print" role="navigation" aria-label="main navigation" >
   <div class="container">
     <div class="navbar-brand">
-              <a class="navbar-item " href="/">
-          <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
-          </i>
-        </a>
+      <a class="navbar-item " href="/">
+        <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
+        </i>
+      </a>
       <button class="button navbar-burger" data-target="navMenu" >
-      <span></span>
-      <span></span>
-      <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
+    
     <div class="navbar-menu" id="navMenu" >
       <div class="navbar-start ">
         <a class="navbar-item " href="/non-posts/about/">
@@ -62,7 +64,6 @@
           <i class="fa fa-2x fa-archive" aria-hidden="true" title="Archive">
           </i>
         </a>
-
       </div>
     </div>
 
@@ -75,16 +76,20 @@
     <section class="section content">
       <div class="container">
       <h1>ISSISP &#39;17</h1>
-      <p>We --- my colleague <a href="http://sebastien.bardin.free.fr" title="Sébastien">Sébastien</a> and I --- are organizing the 8th International
-Summer School on Information Security and Protection.</p>
-
+      <p>
+We — my colleague <a href="http://sebastien.bardin.free.fr">Sébastien</a> and I — are organizing the 8th International
+Summer School on Information Security and Protection.
+</p>
 <p>
 For those of you interested in software
 protection in particular and in analyzing binary code in general,
 this is a great opportunity to meet some of
-the best academics and professionals of the domain.</p>
+the best academics and professionals of the domain.
+</p>
+<p>
+For more information about ISSISP &#39;17, the website is up and running <a href="https://issisp2017.github.io">there</a>.
+</p>
 
-<p>For more information about ISSISP '17, the website is up and running <a href="https://issisp2017.github.io" title="there">there</a>.</p>
       </div>
     </section>
 
@@ -92,7 +97,7 @@ the best academics and professionals of the domain.</p>
   <div class="container ">
     <div class="has-text-centered">
       <p> Built with <a href="https://github.com/spf13/hugo">Hugo</a>.</p>
-      <p>© Richard Bonichon 2017</p>
+      <p>© Richard Bonichon 2017-2020</p>
     </div>
   </div>
 </footer>

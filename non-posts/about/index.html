@@ -12,7 +12,7 @@
 
 
 
-    <link href="/css/screen.css" rel="stylesheet">
+    <link href="/css/screen.css" media="screen" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <script type="text/javascript" src="/js/nav.js"></script>
@@ -24,19 +24,20 @@
   </head>
 
   <body>
-    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation" >
+    <nav class="navbar is-fixed-top is-transparent hidden-print" role="navigation" aria-label="main navigation" >
   <div class="container">
     <div class="navbar-brand">
-              <a class="navbar-item " href="/">
-          <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
-          </i>
-        </a>
+      <a class="navbar-item " href="/">
+        <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
+        </i>
+      </a>
       <button class="button navbar-burger" data-target="navMenu" >
-      <span></span>
-      <span></span>
-      <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
+    
     <div class="navbar-menu" id="navMenu" >
       <div class="navbar-start ">
         <a class="navbar-item " href="/non-posts/about/">
@@ -62,7 +63,6 @@
           <i class="fa fa-2x fa-archive" aria-hidden="true" title="Archive">
           </i>
         </a>
-
       </div>
     </div>
 
@@ -75,53 +75,47 @@
     <section class="section content">
       <div class="container">
         <h1>About</h1>
-        <p><div class="columns"></p>
+        <div class="columns">
 
-<p><div class="column is-two-fifths"></p>
-
-<p>I am currently a research engineer @ <a href="http://cea.fr/en" title="CEA">CEA</a> working on the <a href="http://binsec.gforge.inria.fr/" title="BINSEC">BINSEC</a> project.</p>
-
-<p>You can contact me by e-mail, snail mail or phone.</p>
-
-<p><div class="column is-two-thirds has-text-centered">
+<div class="column is-two-fifths">
+<p>
+I am currently a software engineer @ <a href="https://www.tweag.io/">Tweag I/O</a>.
+</p>
+<p>
+You can contact me by e-mail or snail mail.
+</p>
+<div class="column is-two-thirds has-text-centered">
       <img id="portrait" src="/img/rb.jpg"/>
   </div>
-</div></p>
-
-<p><div class="column is-one-third "></p>
-
+</div>
+<div class="column is-one-third ">
 <table>
 <tbody>
 <tr>
 <td><strong>E-mail</strong></td>
-<td><code>richard.bonichon_at_cea.fr</code></td>
+<td><code class="verbatim">richard.bonichon_at_tweag.io</code></td>
 </tr>
-
 <tr>
 <td><strong>Address</strong></td>
-<td>CEA Saclay Nano-Innov</td>
+<td>EURL Tweag</td>
 </tr>
-
 <tr>
 <td></td>
-<td>Institut Carnot LIST</td>
+<td>207 rue de Bercy</td>
 </tr>
-
 <tr>
 <td></td>
-<td>91191 Gif-sur-Yvette CEDEX</td>
+<td>75012 Paris</td>
 </tr>
-
 <tr>
-<td><strong>Phone</strong></td>
-<td>+33 1 69 08 42 84</td>
+<td></td>
+<td>France</td>
 </tr>
 </tbody>
 </table>
+</div>
 
-<p></div></p>
-
-<p></div></p>
+</div>
 
       </div>
     </section>
@@ -129,7 +123,7 @@
   <div class="container ">
     <div class="has-text-centered">
       <p> Built with <a href="https://github.com/spf13/hugo">Hugo</a>.</p>
-      <p>© Richard Bonichon 2017</p>
+      <p>© Richard Bonichon 2017-2020</p>
     </div>
   </div>
 </footer>

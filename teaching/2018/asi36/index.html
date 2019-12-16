@@ -12,7 +12,7 @@
 
 
 
-    <link href="/css/screen.css" rel="stylesheet">
+    <link href="/css/screen.css" media="screen" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <script type="text/javascript" src="/js/nav.js"></script>
@@ -24,19 +24,20 @@
   </head>
 
   <body>
-    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation" >
+    <nav class="navbar is-fixed-top is-transparent hidden-print" role="navigation" aria-label="main navigation" >
   <div class="container">
     <div class="navbar-brand">
-              <a class="navbar-item " href="/">
-          <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
-          </i>
-        </a>
+      <a class="navbar-item " href="/">
+        <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
+        </i>
+      </a>
       <button class="button navbar-burger" data-target="navMenu" >
-      <span></span>
-      <span></span>
-      <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
+    
     <div class="navbar-menu" id="navMenu" >
       <div class="navbar-start ">
         <a class="navbar-item " href="/non-posts/about/">
@@ -62,7 +63,6 @@
           <i class="fa fa-2x fa-archive" aria-hidden="true" title="Archive">
           </i>
         </a>
-
       </div>
     </div>
 
@@ -74,6 +74,7 @@
 
     
 
+
 <section class="section content">
   
   
@@ -82,20 +83,46 @@
     <hr/>
     <div class="columns">
       <div class="column">
-        <p>Software attacks are extensively hitting the headlines nowadays. This course
-  aims at demystifying them by giving the fundamentals to understand these
-  attacks, what they consist in and how to protect from them. We will mostly
-  focus on software vulnerabilities.</p>
-
-<p>We will cover the following topics:</p>
-
+        <p>
+Software attacks are extensively hitting the headlines nowadays. This course
+aims at demystifying them by giving the fundamentals to understand these
+attacks, what they consist in and how to protect from them. We will mostly
+focus on software vulnerabilities.
+</p>
+<p>
+We will cover the following topics:
+</p>
 <ul>
-<li>semantics and modelization of low-level languages</li>
-<li>classical attack and exploitation</li>
-<li>control-flow integrity techniques</li>
-<li>MATE attacks and reverse engineering</li>
-<li>code obfuscation</li>
-<li>malware: principles and analysis</li>
+<li>
+<p>
+semantics and modelization of low-level languages
+</p>
+</li>
+<li>
+<p>
+classical attack and exploitation
+</p>
+</li>
+<li>
+<p>
+control-flow integrity techniques
+</p>
+</li>
+<li>
+<p>
+MATE attacks and reverse engineering
+</p>
+</li>
+<li>
+<p>
+code obfuscation
+</p>
+</li>
+<li>
+<p>
+malware: principles and analysis
+</p>
+</li>
 </ul>
 
       </div>
@@ -973,6 +1000,15 @@
 
   </div>
 </section>
+
+    <footer class="footer">
+  <div class="container ">
+    <div class="has-text-centered">
+      <p> Built with <a href="https://github.com/spf13/hugo">Hugo</a>.</p>
+      <p>© Richard Bonichon 2017-2020</p>
+    </div>
+  </div>
+</footer>
 
 
   </body>

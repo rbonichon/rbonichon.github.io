@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="has-navbar-fixed-top" >
+
     <head>
-	<meta name="generator" content="Hugo 0.39" />
+	<meta name="generator" content="Hugo 0.58.0" />
     <meta charset="utf-8">
 <title>RB</title>
 
@@ -13,10 +14,11 @@
 
 
 
-    <link href="/css/screen.css" rel="stylesheet">
+    <link href="/css/screen.css" media="screen" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <script type="text/javascript" src="/js/nav.js"></script>
+
 
     <link rel="canonical" href="https://rbonichon.github.io/">
     
@@ -25,19 +27,20 @@
   </head>
 
   <body>
-    <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation" >
+    <nav class="navbar is-fixed-top is-transparent hidden-print" role="navigation" aria-label="main navigation" >
   <div class="container">
     <div class="navbar-brand">
-              <a class="navbar-item " href="/">
-          <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
-          </i>
-        </a>
+      <a class="navbar-item " href="/">
+        <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
+        </i>
+      </a>
       <button class="button navbar-burger" data-target="navMenu" >
-      <span></span>
-      <span></span>
-      <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
+    
     <div class="navbar-menu" id="navMenu" >
       <div class="navbar-start ">
         <a class="navbar-item " href="/non-posts/about/">
@@ -63,7 +66,6 @@
           <i class="fa fa-2x fa-archive" aria-hidden="true" title="Archive">
           </i>
         </a>
-
       </div>
     </div>
 
@@ -72,11 +74,26 @@
 </nav>
 
     
-
+    
     
     <section class="section posts">
       <div class="container">
           
+          <div class="column">
+            <article class="post column">
+              <header class="post-header has-text-centered">
+                <h1 class="is-size-3">
+                  <a class="has-text-primary" href="/posts/ssprew-19/">SSPREW &#39;19</a>
+                </h1>
+                <div class="post-time">
+                  December 16 2019,
+                  200 words
+                </div>
+
+              </header>
+            </article>
+          </div>
+      
           <div class="column">
             <article class="post column">
               <header class="post-header has-text-centered">
@@ -137,23 +154,6 @@
             </article>
           </div>
       
-          <div class="column">
-            <article class="post column">
-              <header class="post-header has-text-centered">
-                <h1 class="is-size-3">
-                  <a class="has-text-primary" href="/posts/postdocs_2017/">Postdoc positions @ CEA LIST</a>
-                </h1>
-                <div class="post-time">
-                  March 29 2017,
-                  100 words
-                </div>
-
-              </header>
-            </article>
-          </div>
-      
-
-
       </div>
     </section>
 
@@ -161,7 +161,7 @@
   <div class="container ">
     <div class="has-text-centered">
       <p> Built with <a href="https://github.com/spf13/hugo">Hugo</a>.</p>
-      <p>© Richard Bonichon 2017</p>
+      <p>© Richard Bonichon 2017-2020</p>
     </div>
   </div>
 </footer>
