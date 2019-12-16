@@ -1,5 +1,23 @@
 ---
 references:
+- id: jfla20
+  type: paper-conference 
+  author:
+  - family: Recoules
+    given: Frédéric
+  - family: Bardin
+    given: Sébastien
+  - family: Bonichon
+    given: Richard
+  - family: Mounier
+    given: Laurent
+  - family: Potet
+    given: Marie-Laure
+  year: 2020
+  venue: JFLA
+  title: Et TInA RUSTInA le lien vers l'assembleur
+  paper: rustina-jfla20.pdf
+
 - id: acsac19
   type: paper-conference
   author:
@@ -15,6 +33,25 @@ references:
   venue: ACSAC
   title: >-
     How to Kill Symbolic Deobfuscation for Free (or: Unleashing the Potential of Path-Oriented Protections)
+  paper: ksdf-acsac19.pdf
+
+
+- id: ssprew19-1
+  type: paper-conference
+  author:
+    - family: Ollivier
+      given: Mathilde
+    - family: Bardin
+      given: Sébastien
+    - family: Bonichon
+      given: Richard
+    - family: Marion
+      given: Jean-Yves
+  year: 2019
+  venue: SSPREW
+  title: >-
+    Obfuscation: Where Are We in Anti-DSE Protections? (a first attempt)
+  paper: anti-dse-ssprew19.pdf
 
       
 - id: ase19

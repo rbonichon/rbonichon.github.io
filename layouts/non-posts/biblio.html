@@ -31,7 +31,7 @@
         {{ end }}
         <article class="paper">
           <div class="descr">
-          <span class="article-title">{{ $article.title }}.</span>
+          <span class="article-title">{{ $article.title }}</span>
           <span class="article-author">
             {{ $n_authors := (len $article.author) }}
             {{ range $index,$a := $article.author }}
