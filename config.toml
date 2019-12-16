@@ -9,12 +9,14 @@ buildDrafts =                 false
 buildFuture =                 false
 
 # config file (default is path/config.yaml|json|toml)
-config = "config.toml"
+config     = "config.toml"
 contentDir = "content"
-layoutDir = "layouts"
+layoutDir  = "layouts"
 publishDir = "docs"
 
 [taxonomies]
   category = "categories"
   tag = "tags"
 
+[params]
+    mainSections = ["posts"]

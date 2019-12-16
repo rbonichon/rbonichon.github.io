@@ -1,0 +1,22 @@
+---
+title: "SSPREW '19"
+date: 2019-12-16
+---
+
+I was @ [[http://www.pprew.org/program.htm][SSPREW'19]] to present our work regarding:
+
+- the state-of-the-art in anti-DSE software protection ([[/papers/anti-dse-ssprew19.pdf][paper]])
+- preliminary results and observations concerning improved stochastic code
+  deobfuscation.
+
+It was the last SSPREW edition before the merger with the [[https://spro.aspire-fp7.eu/][SPRO]] workshop, but it
+was a good one! 
+
+I enjoyed the workshop as usual, for its constructive purpose and nice people. 
+There were 3 highlights to me:
+- the [[https://binary.ninja/][Binary Ninja]] tutorial. This was my second introduction to this tool, and
+  I must say this is just a superb tool, which is coded by nice guys as well.
+- the talk about the Guard Lines memory protection, called ~Preventing Zero-Day Exploits of Memory Vulnerabilities with Guard Lines~; and
+- Yuan Gu's keynote about ~AI Security and Smart Asset Protection~.
+
+

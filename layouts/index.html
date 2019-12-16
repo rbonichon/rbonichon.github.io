@@ -5,11 +5,11 @@
   <body>
     {{ partial "chrome/menu.html" }}
     {{ $baseurl := .Site.BaseURL }}
-
     
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     <section class="section posts">
       <div class="container">
-          {{ range first 5 (where .Data.Pages "Section" "posts") }}
+          {{ range first 5 $pages }}
           <div class="column">
             <article class="post column">
               <header class="post-header has-text-centered">
@@ -25,8 +25,6 @@
             </article>
           </div>
       {{ end }}
-
-
       </div>
     </section>
 

@@ -2,32 +2,38 @@
 title: About
 ---
 
+#+BEGIN_EXPORT html
 <div class="columns">
 
 <div class="column is-two-fifths">
+#+END_EXPORT
 
 I am currently a software engineer @ [[https://www.tweag.io/][Tweag I/O]].
 
 You can contact me by e-mail or snail mail.
 
+#+BEGIN_EXPORT html
 <div class="column is-two-thirds has-text-centered">
       <img id="portrait" src="/img/rb.jpg"/>
   </div>
 </div>
-
 <div class="column is-one-third ">
-
-|----------------+------------------------------------------|
-| *E-mail*       | =richard.bonichon_at_tweag.io=           |
-| *Address*      | EURL Tweag                               |
-|                | 207 rue de Bercy                         |
-|                | 75012 Paris                              |
-|                | France                                   |
-| SSH public key | <a href="/documents/id_rsa.pub">here</a> |
-|----------------+------------------------------------------|
+#+END_EXPORT
 
 
+
+|----------------+--------------------------------|
+| *E-mail*       | =richard.bonichon_at_tweag.io= |
+| *Address*      | EURL Tweag                     |
+|                | 207 rue de Bercy               |
+|                | 75012 Paris                    |
+|                | France                         |
+|----------------+--------------------------------|
+
+
+#+BEGIN_EXPORT html
 </div>
 
 </div>
 
+#+END_EXPORT
