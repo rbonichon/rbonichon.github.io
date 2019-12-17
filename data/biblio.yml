@@ -121,7 +121,7 @@ references:
     given: Marie-Laure
   year: 2018
   title: "Model Generation for Quantified Formulas: A Taint-Based Approach"
-  venue: CAV 2018
+  venue: CAV 
   paper: cav2018.pdf
 - id: BW17
   type: paper-conference
@@ -132,7 +132,7 @@ references:
     given: Pierre
   year: 2017
   title: Format unraveled
-  venue: Journées Francophones des Langages Applicatifs (JFLA) 2017
+  venue: Journées Francophones des Langages Applicatifs (JFLA) 
   paper: format-unraveled.pdf
   slides: format-unraveled-slides.pdf
   
@@ -163,23 +163,9 @@ references:
     given: Valério
   year: '2014'
   title: LLVM-Based Code Generation for B
-  venue: 'SBMF 2014, Maceió, AL, Brazil, September 29-October 1, 2014'
-  page: '1-16'
-  DOI: 10.1007/978-3-319-15075-8_1
+  venue: SBMF 
 
-- id: conf_lpar_BonichonH06
-  type: paper-conference
-  author:
-  - family: Bonichon
-    given: Richard
-  - family: Hermant
-    given: Olivier
-  year: '2006'
-  title: A Semantic Completeness Proof for TaMeD
-  venue: LPAR 2006, Phnom Penh, Cambodia, November 13-17.
-  page: '167-181'
-  URL: http://dx.doi.org/10.1007/11916277_12
-  DOI: 10.1007/11916277_12
+
 
 - id: conf_smt_BonichonDT14
   type: paper-conference
@@ -192,8 +178,7 @@ references:
     given: Cláudia
   year: '2014'
   title: Extending SMT-LIB v2 with \(\lambda\)-Terms and Polymorphism
-  venue: SMT 2014, Vienna, Austria, July 17-18, 2014
-  page: '53-62'
+  venue: SMT Workshop
   paper: smtlib_lambda-smt14.pdf
 
 - id: conf_smt_BonichonDT15
@@ -209,7 +194,7 @@ references:
     given: Cláudia
   year: '2015'
   title: 'SMTpp: preprocessors and analyzers for SMT-LIB'
-  venue: SMT 2015, San Francisco, California, July 18-19, 2015.
+  venue: SMT Workshop
   paper: smtpp-smt15.pdf
   
 - id: BonichonC11
@@ -249,7 +234,7 @@ references:
   year: '2011'
   title: Rigorous Evidence of Freedom from Concurrency Faults
     in Industrial Control Software
-  venue: SAFECOMP 2011, Naples, Italy, September 19-22, 2011
+  venue: SAFECOMP 
   page: '85-98'
   paper: safecomp2011.pdf
   DOI: 10.1007/978-3-642-24270-0_7
@@ -265,11 +250,10 @@ references:
     given: Damien
   year: '2007'
   title: 'Zenon : An Extensible Automated Theorem Prover Producing Checkable Proofs'
-  venue: LPAR 2007, Yerevan, Armenia, October 15-19, 2007
-  page: '151-165'
-  DOI: 10.1007/978-3-540-75560-9_13
-
-- id: conf_types_BonichonH06
+  venue: LPAR 
+  paper: zenon-lpar07.pdf
+  
+- id: conf_types_BonichonH06a
   type: paper-conference
   author:
   - family: Bonichon
@@ -278,10 +262,22 @@ references:
     given: Olivier
   year: '2006'
   title: On Constructive Cut Admissibility in Deduction Modulo
-  venue: TYPES 2006, Nottingham, UK, April 18-21, 2006 --- Revised selected papers
-  page: '33-47'
-  DOI: 10.1007/978-3-540-74464-1_3
+  venue: TYPES
+  paper: constr-elim-mod-types06.pdf
 
+- id: conf_types_BonichonH06b
+  type: paper-conference
+  author:
+  - family: Bonichon
+    given: Richard
+  - family: Hermant
+    given: Olivier
+  year: '2006'
+  title: A semantic completeness proof for TaMeD
+  venue: LPAR
+  paper: semantic-tamed-lpar06.pdf
+
+  
 - id: conf_cade_Bonichon04
   type: paper-conference
   author:
@@ -289,7 +285,7 @@ references:
     given: Richard
   year: '2004'
   title: 'TaMeD: A Tableau Method for Deduction Modulo'
-  venue: IJCAR 2004, Cork, Ireland, July 4-8, 2004.
+  venue: IJCAR
   page: '445-459'
   DOI: 10.1007/978-3-540-25984-8_33
   paper: tamed-ijcar04.pdf
