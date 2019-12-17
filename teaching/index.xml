@@ -6,10 +6,19 @@
     <description>Recent content in Teachings on RB</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rbonichon.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ASI36</title>
+      <link>https://rbonichon.github.io/teaching/2020/asi36/</link>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rbonichon.github.io/teaching/2020/asi36/</guid>
+      <description> Software attacks are extensively hitting the headlines nowadays. This course aims at demystifying them by giving the fundamentals to understand these attacks, what they consist in and how to protect from them. We will mostly focus on software vulnerabilities.  We will cover the following topics:    semantics and modelization of low-level languages    classical attack and exploitation    control-flow integrity techniques    MATE attacks and reverse engineering    code obfuscation    malware: principles and analysis   </description>
+    </item>
     
     <item>
       <title>ASI36</title>

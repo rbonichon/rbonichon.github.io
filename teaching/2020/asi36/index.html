@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top" >
+  <head>
+    <meta charset="utf-8">
+<title>RB</title>
+
+<meta name="author" content="RB">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+
+
+
+    <link href="/css/screen.css" media="screen" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<script type="text/javascript" src="/js/nav.js"></script>
+
+    <link rel="canonical" href="https://rbonichon.github.io/teaching/2020/asi36/">
+    
+    <link href="/rss.xml" type="application/atom+xml"
+          rel="alternate" title="RB">
+  </head>
+
+  <body>
+    <nav class="navbar is-fixed-top is-transparent hidden-print" role="navigation" aria-label="main navigation" >
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item " href="/">
+        <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
+        </i>
+      </a>
+      <button class="button navbar-burger" data-target="navMenu" >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <div class="navbar-menu" id="navMenu" >
+      <div class="navbar-start ">
+        <a class="navbar-item " href="/non-posts/about/">
+          <i class="fa fa-2x fa-user" aria-hidden="true" title="About">
+          </i>
+        </a>
+        <a class="navbar-item " href="/non-posts/biblio/">
+          <i class="fa fa-2x fa-book" aria-hidden="true" title="Publications">
+          </i>
+        </a>
+
+        <a class="navbar-item" href="/non-posts/teaching/">
+          <i class="fa fa-2x fa-graduation-cap" aria-hidden="true" title="Teaching">
+          </i>
+        </a>
+        <a class="navbar-item " href="https://github.com/rbonichon">
+          <i class="fa fa-2x fa-github" aria-hidden="true" title="GitHub">
+          </i>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item " href="/non-posts/archives/">
+          <i class="fa fa-2x fa-archive" aria-hidden="true" title="Archive">
+          </i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</nav>
+
+    
+
+    
+
+<section class="section content">
+  
+  
+  
+
+  <div class="container">
+    <h1>ASI36</h1>
+    <hr/>
+    <div class="columns">
+      <div class="column">
+        <p>
+Software attacks are extensively hitting the headlines nowadays. This course
+aims at demystifying them by giving the fundamentals to understand these
+attacks, what they consist in and how to protect from them. We will mostly
+focus on software vulnerabilities.
+</p>
+<p>
+We will cover the following topics:
+</p>
+<ul>
+<li>
+<p>
+semantics and modelization of low-level languages
+</p>
+</li>
+<li>
+<p>
+classical attack and exploitation
+</p>
+</li>
+<li>
+<p>
+control-flow integrity techniques
+</p>
+</li>
+<li>
+<p>
+MATE attacks and reverse engineering
+</p>
+</li>
+<li>
+<p>
+code obfuscation
+</p>
+</li>
+<li>
+<p>
+malware: principles and analysis
+</p>
+</li>
+</ul>
+
+      </div>
+
+      <div class="column">
+        <h2>Lectures</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Date</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+          
+          <tr>
+            <td>1</td>
+            <td>2020-01-19</td>
+            <td> <a href="#intro">Introduction </a></td>
+          </tr>
+          
+          <tr>
+            <td>2</td>
+            <td>2020-01-25</td>
+            <td> <a href="#basics">Basic attacks &amp; exploitation </a></td>
+          </tr>
+          
+          <tr>
+            <td>3</td>
+            <td>2020-02-07</td>
+            <td> <a href="#mate">MATE, attack &amp; defense </a></td>
+          </tr>
+          
+          <tr>
+            <td>4</td>
+            <td>2020-02-14</td>
+            <td> <a href="#cfi">Control-flow integrity </a></td>
+          </tr>
+          
+          <tr>
+            <td>5</td>
+            <td>2020-02-21</td>
+            <td> <a href="#">Semantic attacks (program analysis) </a></td>
+          </tr>
+          
+          <tr>
+            <td>6</td>
+            <td>2020-02-25</td>
+            <td> <a href="#fuzz">Fuzzing </a></td>
+          </tr>
+          
+          <tr>
+            <td>7</td>
+            <td>2020-02-28</td>
+            <td> <a href="#exam">Exam </a></td>
+          </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <h1>References</h1>
+
+        
+
+        
+        
+        <h2 id="intro">1. Introduction</h2>
+        <hr/>
+        <div class="columns">
+          <div class="column">
+            <h3>Description</h3>
+            This introductory session presents an overview of the contents, the issues surrounding security in general, the more restricted issue of analyzing vulnerabilities in low-level code, as well as reminders regarding compilation and code analysis.</div>
+          
+
+          
+
+          
+          <div class="column">
+            
+            <h3>Reading material</h3>
+            
+            <ul class="fa-ul">
+              
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://www.ssi.gouv.fr/uploads/IMG/pdf/Mind_Your_Languages_-_version_longue.pdf">
+  
+
+  Mind Your Languages
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://cr.yp.to/qmail/qmailsec-20071101.pdf">
+  
+
+  Some thoughts on security after ten years of qmail 1.0
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://pdos.csail.mit.edu/papers/ub:apsys12.pdf">
+  
+
+  Undefined Behavior: What happened to My Code?
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://github.com/denysdovhan/wtfjs">
+  
+
+  wtfjs
+    </a>
+
+    
+
+</li>
+
+
+            
+            </ul>
+
+          </div>
+          
+        </div>
+        
+      
+        
+        <h2 id="basics">2. Basic attacks &amp; exploitation</h2>
+        <hr/>
+        <div class="columns">
+          <div class="column">
+            <h3>Description</h3>
+            <p>This session presents basic low-level attack techniques:</p>
+
+<ul>
+<li>buffer overflows;</li>
+<li>heap overflows; &amp;</li>
+<li>format string exploitation.</li>
+</ul>
+
+<p>Most of the session is allotted to hands-on experimentation.</p>
+</div>
+          
+
+          
+
+          
+          <div class="column">
+            
+            <h3>Reading material</h3>
+            
+            <ul class="fa-ul">
+              
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-book" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://nostarch.com/hacking2.htm">
+  
+
+  Hacking: The Art of Exploitation (Jon Erickson) -- (Ch. 0x200 &amp; 0x300)
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://link.springer.com/content/pdf/10.1007/978-3-642-04117-4_30.pdf">
+  
+
+  Low-level Software Security by Example
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://www.jegerlehner.ch/intel/IntelCodeTable.pdf">
+  
+
+  80x86 CodeTable
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://software.intel.com/sites/default/files/managed/a4/60/325383-sdm-vol-2abcd.pdf">
+  
+
+  Intel full ISA reference
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://www.ouah.org/mudge.html">
+  
+
+  How to write Buffer Overflows
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://ref.x86asm.net/">
+  
+
+  X86 opcode/instruction reference
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://www.cgsecurity.org/exploit/heaptut.txt">
+  
+
+  w00w00 on Heap Overflows
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://phrack.org/issues/49/14.html#article">
+  
+
+  Smashing The Stack For Fun And Profit
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://microcorruption.com/login">
+  
+
+  Microcorruption
+    </a>
+
+    
+
+</li>
+
+
+            
+            </ul>
+
+          </div>
+          
+        </div>
+        
+      
+        
+        <h2 id="mate">3. MATE, attack &amp; defense</h2>
+        <hr/>
+        <div class="columns">
+          <div class="column">
+            <h3>Description</h3>
+            TBA</div>
+          
+
+          
+
+          
+        </div>
+        
+      
+        
+        <h2 id="cfi">4. Control-flow integrity</h2>
+        <hr/>
+        <div class="columns">
+          <div class="column">
+            <h3>Description</h3>
+            <p>This session presents three main basic binary exploitation mitigation techniques:</p>
+
+<ul>
+<li>stack canaries;</li>
+<li>data execution prevention; &amp;</li>
+<li>ASLR.</li>
+</ul>
+
+<p>We will also talk about their limitations and briefly present more advanced control-flow integrity measures that are currently available.</p>
+
+<p>A good part of the session is allotted to hands-on experimentations.</p>
+</div>
+          
+
+          
+
+          
+          <div class="column">
+            
+            <h3>Reading material</h3>
+            
+            <ul class="fa-ul">
+              
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://www.pcc.me.uk/~peter/acad/usenix14.pdf">
+  
+
+  Enforcing Forward-Edge Control-Flow Integrity in GCC &amp; LLVM
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Bypassing-aslr-slides.pdf">
+  
+
+  Stack Smashing as of Today
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://www.cs.vu.nl/~herbertb/papers/srop_sp14.pdf">
+  
+
+  Framing Signals --- A Return to Portable Shellcode
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="/asi36/papers/aslr.pdf">
+  
+
+  ASLR Smack &amp; Laugh Reference
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf">
+  
+
+  Practical Control-Flow Integrity &amp; Randomization for Binary Executables
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf">
+  
+
+  The Geometry of Innocent Flesh on the Bone
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://phrack.org/issues/56/5.html">
+  
+
+  Bypassing StackGuard and StackShield
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://inertiawar.com/openbsd/">
+  
+
+  Exploiting OpenBSD
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://phrack.org/issues/59/9.html#article">
+  
+
+  Bypassing PaX ASLR Protection
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://phrack.org/issues/55/8.html">
+  
+
+  The Frame Pointer Overwrite
+    </a>
+
+    
+
+</li>
+
+
+            
+            </ul>
+
+          </div>
+          
+        </div>
+        
+      
+        
+        <h2 id="">5. Semantic attacks (program analysis)</h2>
+        <hr/>
+        <div class="columns">
+          <div class="column">
+            <h3>Description</h3>
+            TBA</div>
+          
+
+          
+
+          
+        </div>
+        
+      
+        
+        <h2 id="fuzz">6. Fuzzing</h2>
+        <hr/>
+        <div class="columns">
+          <div class="column">
+            <h3>Description</h3>
+            An overview of the current state of software fuzzing.
+Fuzzers have gained tremendous traction recently as automatic tools to find bugs. There have been a number of experiments trying to improve their worst aspects while keeping their best ones. The course will present the basics about fuzzing, an overview of the results of the last five years and more hands-on experiments.</div>
+          
+
+          
+
+          
+          <div class="column">
+            
+            <h3>Reading material</h3>
+            
+            <ul class="fa-ul">
+              
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://cs.ucsb.edu/~vigna/publications/2016_NDSS_Driller.pdf">
+  
+
+  Driller: Augmenting Fuzzing Through Selective Symbolic Execution
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://www.cs.vu.nl/~giuffrida/papers/vuzzer-ndss-2017.pdf">
+  
+
+  VUzzer: Application-aware Evolutionary Fuzzing
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://www.comp.nus.edu.sg/~thuanpv/publications/AFLGo_CCS17.pdf">
+  
+
+  Directed Greybox Fuzzing
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://www.carolemieux.com/fairfuzz-ase18.pdf">
+  
+
+  FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://arxiv.org/abs/1803.01307">
+  
+
+  Angora: Efficient Fuzzing by Principled Search
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://lcamtuf.coredump.cx/afl/">
+  
+
+  AFL homepage
+    </a>
+
+    
+
+</li>
+
+
+            
+            </ul>
+
+          </div>
+          
+        </div>
+        
+      
+        
+      
+
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    <footer class="footer">
+  <div class="container ">
+    <div class="has-text-centered">
+      <p> Built with <a href="https://github.com/spf13/hugo">Hugo</a>.</p>
+      <p>© Richard Bonichon 2017-2020</p>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
