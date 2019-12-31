@@ -1,9 +1,10 @@
 {{ define "main" }}
 
-
 <section class="section content">
-  {{ $dir := .Site.Data.teaching.y2018.asi36.static_directory }}
-  {{ $lectures := (sort .Site.Data.teaching.y2018.asi36.lectures "date") }}
+  {{ $dir := .Site.Data.teaching.y2020.asi36.static_directory }}
+  {{ $lectures := (sort .Site.Data.teaching.y2020.asi36.lectures "date") }}
+  {{ $talks := .Site.Data.teaching.y2020.asi36.talks }}
+
   <div class="container">
     <h1>{{ .Title }}</h1>
     <hr/>
@@ -40,10 +41,10 @@
       <div class="column">
         <h1>References</h1>
 
-        {{ $.Scratch.Set "dir" .Site.Data.teaching.y2018.asi36.static_directory }}
+        {{ $.Scratch.Set "dir" .Site.Data.teaching.y2020.asi36.static_directory }}
 
         {{ range $index, $lec := $lectures }}
-        {{ if (or .contents .references) }}
+        {{ if (or .descr (or .contents .references)) }}
         <h2 id="{{.href}}">{{ add $index 1 }}. {{ .title }}</h2>
         <hr/>
         <div class="columns">
@@ -66,11 +67,41 @@
           </div>
           {{ end }}
 
+          {{ if (eq .title "Exam")}}
+          <div class="column">
+            <h3>Presentations (Feb. 28)</h3>
+
+            <table class="table is-striped is-narrow">
+              <thead>
+                <tr>
+                  <th>Selected article</th>
+                  <th>Students</th>
+                  <th>Scheduled</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{ range $talks }}
+              <tr>
+                <td>{{ .paper }}</td>
+                <td>{{ .people }}</td>
+                <td>{{ .time }}</td>
+              </tr>
+              {{ end }}
+
+              </tbody>
+            </table>
+            
+            </ul>
+          </div>
+          {{ end }}
 
           {{ if .references }}
           <div class="column">
-            <h3>Extra references</h3>
-
+            {{ if (eq .title "Exam") }}
+            <h3>Papers</h3>
+            {{ else }}
+            <h3>Reading material</h3>
+            {{ end }}
             <ul class="fa-ul">
               {{ range (sort .references "type" "title") }}
               {{ partial "li_with_icon.html" (dict "dir" $dir "doc" .) }}

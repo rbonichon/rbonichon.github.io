@@ -1,9 +1,9 @@
 {{ define "main" }}
 
 <section class="section content">
-  {{ $dir := .Site.Data.teaching.asi36.static_directory }}
-  {{ $lectures := (sort .Site.Data.teaching.asi36.lectures "date") }}
-  {{ $talks := .Site.Data.teaching.asi36.talks }}
+  {{ $dir := .Site.Data.teaching.y2019.asi36.static_directory }}
+  {{ $lectures := (sort .Site.Data.teaching.y2019.asi36.lectures "date") }}
+  {{ $talks := .Site.Data.teaching.y2019.asi36.talks }}
 
   <div class="container">
     <h1>{{ .Title }}</h1>
@@ -41,7 +41,7 @@
       <div class="column">
         <h1>References</h1>
 
-        {{ $.Scratch.Set "dir" .Site.Data.teaching.asi36.static_directory }}
+        {{ $.Scratch.Set "dir" .Site.Data.teaching.y2019.asi36.static_directory }}
 
         {{ range $index, $lec := $lectures }}
         {{ if (or .descr (or .contents .references)) }}
