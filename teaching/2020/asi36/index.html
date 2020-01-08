@@ -85,10 +85,10 @@
     <div class="columns">
       <div class="column">
         <p>
-Software attacks are extensively hitting the headlines nowadays. This course
-aims at demystifying them by giving the fundamentals to understand these
-attacks, what they consist in and how to protect from them. We will mostly
-focus on software vulnerabilities.
+Software attacks are a common part of today&#39;s headlines. This course aims at
+demystifying them by giving the fundamentals to understand these attacks, what
+they consist in and how to mitigate them. We will mostly focus on software
+vulnerabilities.
 </p>
 <p>
 We will cover the following topics:
@@ -119,12 +119,12 @@ MATE attacks and reverse engineering
 code obfuscation
 </p>
 </li>
-<li>
-<p>
-malware: principles and analysis
-</p>
-</li>
 </ul>
+<p>
+<strong>Note:</strong> These lectures will require a fair amount of hands-on
+experiments on the computer to make the concepts more practical. 
+They also involve supplementary reading material as part of the contents.
+</p>
 
       </div>
 
@@ -143,43 +143,43 @@ malware: principles and analysis
           
           <tr>
             <td>1</td>
-            <td>2020-01-19</td>
+            <td>2020-01-16</td>
             <td> <a href="#intro">Introduction </a></td>
           </tr>
           
           <tr>
             <td>2</td>
-            <td>2020-01-25</td>
+            <td>2020-01-23</td>
             <td> <a href="#basics">Basic attacks &amp; exploitation </a></td>
           </tr>
           
           <tr>
             <td>3</td>
-            <td>2020-02-07</td>
-            <td> <a href="#mate">MATE, attack &amp; defense </a></td>
-          </tr>
-          
-          <tr>
-            <td>4</td>
-            <td>2020-02-14</td>
+            <td>2020-02-03</td>
             <td> <a href="#cfi">Control-flow integrity </a></td>
           </tr>
           
           <tr>
+            <td>4</td>
+            <td>2020-02-06</td>
+            <td> <a href="#mate">MATE, attack &amp; defense </a></td>
+          </tr>
+          
+          <tr>
             <td>5</td>
-            <td>2020-02-21</td>
+            <td>2020-02-13</td>
             <td> <a href="#">Semantic attacks (program analysis) </a></td>
           </tr>
           
           <tr>
             <td>6</td>
-            <td>2020-02-25</td>
+            <td>2020-02-27</td>
             <td> <a href="#fuzz">Fuzzing </a></td>
           </tr>
           
           <tr>
             <td>7</td>
-            <td>2020-02-28</td>
+            <td>2020-03-05</td>
             <td> <a href="#exam">Exam </a></td>
           </tr>
           
@@ -268,6 +268,27 @@ malware: principles and analysis
   
 
   Undefined Behavior: What happened to My Code?
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://www.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf">
+  
+
+  Reflections on Trusting Trust
     </a>
 
     
@@ -528,22 +549,7 @@ malware: principles and analysis
         
       
         
-        <h2 id="mate">3. MATE, attack &amp; defense</h2>
-        <hr/>
-        <div class="columns">
-          <div class="column">
-            <h3>Description</h3>
-            TBA</div>
-          
-
-          
-
-          
-        </div>
-        
-      
-        
-        <h2 id="cfi">4. Control-flow integrity</h2>
+        <h2 id="cfi">3. Control-flow integrity</h2>
         <hr/>
         <div class="columns">
           <div class="column">
@@ -580,10 +586,10 @@ malware: principles and analysis
   </span>
   
   
-    <a href="http://www.pcc.me.uk/~peter/acad/usenix14.pdf">
+    <a href="https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf">
   
 
-  Enforcing Forward-Edge Control-Flow Integrity in GCC &amp; LLVM
+  The Geometry of Innocent Flesh on the Bone
     </a>
 
     
@@ -622,10 +628,10 @@ malware: principles and analysis
   </span>
   
   
-    <a href="https://www.cs.vu.nl/~herbertb/papers/srop_sp14.pdf">
+    <a href="/asi36/papers/guardlines.pdf">
   
 
-  Framing Signals --- A Return to Portable Shellcode
+  Preventing zero-day exploits of memory vulnerabilities with guard lines
     </a>
 
     
@@ -664,6 +670,27 @@ malware: principles and analysis
   </span>
   
   
+    <a href="https://www.cs.vu.nl/~herbertb/papers/srop_sp14.pdf">
+  
+
+  Framing Signals --- A Return to Portable Shellcode
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+  
+  </span>
+  
+  
     <a href="http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf">
   
 
@@ -685,31 +712,10 @@ malware: principles and analysis
   </span>
   
   
-    <a href="https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf">
+    <a href="http://www.pcc.me.uk/~peter/acad/usenix14.pdf">
   
 
-  The Geometry of Innocent Flesh on the Bone
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://phrack.org/issues/56/5.html">
-  
-
-  Bypassing StackGuard and StackShield
+  Enforcing Forward-Edge Control-Flow Integrity in GCC &amp; LLVM
     </a>
 
     
@@ -748,10 +754,10 @@ malware: principles and analysis
   </span>
   
   
-    <a href="http://phrack.org/issues/59/9.html#article">
+    <a href="http://phrack.org/issues/56/5.html">
   
 
-  Bypassing PaX ASLR Protection
+  Bypassing StackGuard and StackShield
     </a>
 
     
@@ -781,9 +787,87 @@ malware: principles and analysis
 
 
             
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://googleprojectzero.blogspot.com/2019/11/bad-binder-android-in-wild-exploit.html">
+  
+
+  Bad Binder: Android In-The-Wild Exploit 
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="http://phrack.org/issues/59/9.html#article">
+  
+
+  Bypassing PaX ASLR Protection
+    </a>
+
+    
+
+</li>
+
+
+            
+              
+<li>
+ <span class="fa-li">
+  
+  <i class="fa fa-external-link" aria-hidden="true"></i>
+  
+  </span>
+  
+  
+    <a href="https://paulmakowski.wordpress.com/2011/01/25/smashing-the-stack-in-2011/">
+  
+
+  Smashing the Stack in 2011
+    </a>
+
+    
+
+</li>
+
+
+            
             </ul>
 
           </div>
+          
+        </div>
+        
+      
+        
+        <h2 id="mate">4. MATE, attack &amp; defense</h2>
+        <hr/>
+        <div class="columns">
+          <div class="column">
+            <h3>Description</h3>
+            TBA</div>
+          
+
+          
+
           
         </div>
         
@@ -810,7 +894,8 @@ malware: principles and analysis
           <div class="column">
             <h3>Description</h3>
             An overview of the current state of software fuzzing.
-Fuzzers have gained tremendous traction recently as automatic tools to find bugs. There have been a number of experiments trying to improve their worst aspects while keeping their best ones. The course will present the basics about fuzzing, an overview of the results of the last five years and more hands-on experiments.</div>
+Fuzzers have gained tremendous traction recently as automatic tools to find bugs. There have been a number of experiments trying to improve their worst aspects while keeping their best ones. This course will present the basics about fuzzing, an overview of recent results in the field.
+We will devote a good amount of time to hands-on experiments with the AFL fuzzer.</div>
           
 
           
