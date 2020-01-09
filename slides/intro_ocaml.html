@@ -1,0 +1,1126 @@
+Introduction to OCaml
+
+Table of Contents
+
+* 1. Disclaimer
+* 2. Introduction 
+
+ * 2.1. The Categorical Abstract Machine Language
+ * 2.2. OCaml : an open-minded functional language
+ * 2.3. Bytecode and native code support
+ * 2.4. Users 
+
+ * 2.4.1. Domains
+
+ * 2.5. Tooling (as of )
+
+* 3. Syntax Basics? 
+
+ * 3.1. let-bindings
+ * 3.2. Functions
+ * 3.3. Recursivity
+ * 3.4. Functions are first-class citizens
+ * 3.5. Evaluation is strict 
+
+ * 3.5.1. Oddity
+
+ * 3.6. Grouping information : Tuples
+ * 3.7. Everything is a pattern
+ * 3.8. Grouping information : Records (aka named tuples)
+ * 3.9. ADT & pattern matching
+ * 3.10. Labels (aka named arguments)
+ * 3.11. Optional arguments
+ * 3.12. Optional arguments are option types
+ * 3.13. Using named arguments in practice
+ * 3.14. Nice to have: type-directed record disambiguation
+
+* 4. Imperative programming 
+
+ * 4.1. It's ok to be impure
+ * 4.2. The unit type
+ * 4.3. Trivia :: What's in a reference?
+ * 4.4. Typical OCaml code
+ * 4.5. Trivia :: Hashtables
+ * 4.6. Pitfall(s)
+ * 4.7. Exceptions
+ * 4.8. Local exceptions & pattern-matching mixed exceptions/values
+
+* 5. More advanced topics 
+
+ * 5.1. What's a module?
+ * 5.2. Interface & implementation :: mli & ml
+ * 5.3. Levels of type abstraction 
+
+ * 5.3.1. Open
+ * 5.3.2. private
+ * 5.3.3. abstract
+
+ * 5.4. Genericity 
+
+ * 5.4.1. Ad-hoc polymorphism
+ * 5.4.2. Functors (module generator)
+
+ * 5.5. First-order modules 
+
+ * 5.5.1. More involved example
+
+ * 5.6. Monadic style programming
+ * 5.7. GADTs
+ * 5.8. Death by GADTs
+ * 5.9. Format'ing text
+ * 5.10. Things that I did not talk about
+
+* 6. Conclusion
+
+1 Disclaimer
+
+This intro is incomplete ;-) 
+
+2 Introduction
+
+2.1 The Categorical Abstract Machine Language
+
+OCaml is part of the ML family, like SML (big brother) or F# (little brother). 
+
+1973
+
+ ML 
+
+ Check the foundations from http://www.nuprl.org/software/eventml/KreitzandRahli-ClassicML.pdf 
+
+1987-1992
+ Heavy CAML (LISP-based implementation) 
+1990-1991
+ Caml Light 
+1996
+ Objective Caml 1.00 
+2011
+ Rebranding to OCaml (not O'Caml, not oCaml, Just OCaml) 
+2019
+ OCaml 4.09 
+
+2.2 OCaml : an open-minded functional language
+
+It is not a purely functional language: imperative programming is part of the nominal toolbox, even OOP when it is the right fit. 
+
+The standard lib has been kept voluntarily small. 
+
+There have been various efforts to provide "batteries". 
+
+2.3 Bytecode and native code support
+
+2 compilers for the price of one: 
+
+1 a bytecode compiler (ocamlc) to a stack-based VM, and its interpreter ocamlrun works anywhere you have a C compiler
+2 a native code compiler (ocamlopt) 
+
+ * supports x86 (32/64), ARM (v5-v8), PowerPC(32/64) and … SPARC !
+ * RISC-V not yet integrated but support exists
+
+2.4 Users
+
+* (Mostly French) academic circles 
+
+ academia
+ INRIA, CEA, CMU, UPenn, Berkeley, UArizona 
+ SMEs
+ OCamlPro/Origin Labs, Nomadic Labs, TrustInSoft, Tarides, 
+
+* Financial "institutions" – Jane Street, Bloomberg, SimCorp, Lexifi
+* Facebook (ReasonML, Infer)
+* Atos, AbsInt
+* Indirectly Airbus (Astrée, Frama-C, Fluctuat), EDF
+
+2.4.1 Domains
+
+* compilers
+* program analysis
+* theorem proving
+* symbolic computations
+
+2.5 Tooling (as of )
+
+the compiler
+ last release is 4.09 (2019-09-18) 
+merlin
+
+ context-sensitive completion for OCaml (in Vim & Emacs) 
+
+ A very nice tool which has changed the life of most OCaml developers, and it's editor-agnostic ! 
+
+dune
+
+ the newest contender in dedicated build systems 
+
+ May OCamlMakefile, omake, ocamlbuild rest in peace. 
+
+OPAM (v1.0 in 2013)
+
+ current is 2.5 (2019-07-11) 
+
+ A source-based package manager for OCaml software. 
+
+(no term)
+ Emacs 
+
+Check out 
+
+* https://opam.ocaml.org/blog/turn-your-editor-into-an-ocaml-ide/
+
+3 Syntax Basics?
+
+3.1 let-bindings
+
+let x = Pervasives.read_int () in
+let y = Pervasives.read_int () in
+Pervasives.print_int (x + y);
+Pervasives.print_newline ()
+;;
+
+3.2 Functions
+
+let add x y =
+  x + y
+;;
+
+Since we are in a so-called functional languages, let's talk about functions. 
+
+Functions are curried (unlike SML functions). 
+
+That means add x y actually is add(x)(y) and add can be partially applied (or add x). 
+
+let add1 = add 1 ;;
+
+add1 2 ;;
+
+3.3 Recursivity
+
+Recursive functions are explicitly qualified by the rec keyword. 
+
+let rec fact n =
+  if n < 2 then 1 else n * fact (n - 1)
+;;
+
+let rec foldl f acc = function
+  | [] -> acc
+  | x :: xs -> foldl f (f acc x) xs
+;;
+
+foldl (+) 0 [1;2;3;4] ;; (* 10 \o/ *)
+
+Functions are not recursive by default. 
+
+(* This second declaration hides the first.*)
+let fact n = assert (n >= 0); fact n
+
+3.4 Functions are first-class citizens
+
+(* [max cmp l] computes the maximun element of a list [l] provided a [cmp]
+ * function which is expected to conform to the following specification:
+ * - cmp x y = 0 if x is equivalent to y
+ * - cmp x y > 0 if x is bigger than y
+ * - cmp x y < 0 if x if smaller than y
+ *)
+let max cmp l =
+  let rec aux cur_max l =
+    match l with
+    | [] -> cur_max
+    | x :: xs ->
+       let cur_max' =
+	 match cur_max with
+	 | None -> Some x
+	 | Some vmax -> if cmp x vmax > 0 then Some x else cur_max in
+       aux cur_max' xs
+  in aux None l
+;;
+
+max Pervasives.compare [1; 2; 3;] ;;
+
+(* Oopsie, we just rewrote the [Pervasives.max] function !*)
+Pervasives.max ;;
+
+3.5 Evaluation is strict
+
+Like in most programming languages ;-) 
+
+let double x = 2 * x ;;
+
+let dadd x y =
+  let x' = double x
+  and y' = double y in
+  ( + ) x' y'
+  (* Infix operators are prefixed ones that are treated specially by the parser.
+     Have fun and create your owns. *)
+ ;;
+
+dadd (double 1) (double 2) ;;
+
+… well except for binary Boolean operators – of course ;-). 
+
+3.5.1 Oddity
+
+Evaluation order for function arguments is unspecified. 
+
+It is usually left-to-right, though. 
+
+3.6 Grouping information : Tuples
+
+let a = 1, 2 in
+let x, y = a in
+x + y
+;;
+
+can also be written with ( .. ) as 
+
+let a = (1, 2) in
+let (x, y) = a in
+x + y
+;;
+
+3.7 Everything is a pattern
+
+type point_3d = float * float * float
+
+let create x y z = x, y, z ;;
+
+(* Yes, FP arithmetic operations have a dedicated syntax *)
+let square a = a *. a ;;
+
+let dist (x1, y1, z1) p =
+  let x2, y2, z2 = p in
+  let xdiff = x2 -. x1
+  and ydiff = y2 -. y1
+  and zdiff = z2 -. z1 in
+  square xdiff +. square ydiff +. square zdiff
+  |> sqrt
+;;
+
+let dist p1 p2 =
+  match p1, p2 with
+  (* The | can also be used as a separator instead of as a starting
+     annotation. *)
+  | (x1, y1, z1), (x2, y2, z2) ->
+     let xdiff = x2 -. x1
+     and ydiff = y2 -. y1
+     and zdiff = z2 -. z1 in
+     sqrt (square xdiff +. square ydiff +. square zdiff)
+;;
+
+3.8 Grouping information : Records (aka named tuples)
+
+type point_2d = { x : float; y: float; }  ;;
+
+(* C-like . notations for field access *)
+let dist p1 p2 =
+  let xdiff = p1.x -. p2.x
+  and ydiff = p1.y -. p2.y in
+  sqrt (xdiff *. xdiff +. ydiff *. ydiff)
+;;
+
+(* Using pattern-matching *)
+let dist2 p1 p2 =
+  match p1, p2 with
+  | { x; y; }, { x = x'; y = y';} ->
+     let xdiff = x -. x'
+     and ydiff = y -. y' in
+     sqrt (xdiff *. xdiff +. ydiff *. ydiff)
+;;
+
+(* Record can be built/destructed using a shortcut notation.
+   [let create x y = { x; y; }] is a shortcut for
+   [let create x y = { x = x; y = y; }].
+
+   Choose your field names wisely and unleash your inner procrastinator !
+ *)
+let create x y = { x; y; } ;;
+
+let of_int myx myy = { x = float myx; y = float myy; } ;;
+
+ Records are limited to 222 − 1 fields  
+
+3.9 ADT & pattern matching
+
+Exhaustive and fragile pattern matching are reported by default. 
+
+type prop =
+  | Cst of bool
+  | Var of string
+  | Band of prop * prop
+  | Bor of prop * prop
+  | Bnot of prop
+;;
+
+let free_variables =
+(* The pattern matching here is well-typeg but not exhaustive *)
+  let rec loop vars =
+    | Var s -> if List.mem s vars then vars else s :: vars
+    | Band (p1, p2) ->
+       let vars' = loop vars p1 in
+       loop vars' p2
+  in loop []
+;;
+
+let free_variables =
+  (* Now it is exhaustive, but ... fragile *)
+  let rec loop vars =
+    | Var s -> if List.mem s vars then vars else s :: vars
+    | Band (p1, p2) ->
+       let vars' = loop vars p1 in
+       loop vars' p2
+    | Bor (p1, p2) ->
+       let vars' = loop vars p1 in
+       loop vars' p2
+    | Bnot p -> loop vars p
+    | _ -> vars (* fragile pattern-matching if a constructor is added, it is
+		   matched here *)
+  in loop []
+;;
+
+The compact solution for this function includes or-patterns. 
+
+let free_variables =
+  let rec loop vars = function
+    | Var s -> if List.mem s vars then vars else s :: vars
+    | Band (p1, p2)
+    | Bor (p1, p2) -> (* 'or' pattern *)
+       let vars' = loop vars p1 in
+       loop vars' p2
+    | Bnot p -> loop vars p
+    | Cst _ -> vars (* non-fragile pattern-matching *)
+    (* When I later add the [Bxor] constructor, the
+     * compiler will show me where pattern-matching is not exhaustive.
+     *)
+  in loop []
+;;
+
+For (way) more: 
+
+* https://dl.acm.org/doi/10.1145/507669.507641
+
+3.10 Labels (aka named arguments)
+
+Named arguments are mainly used for 2 reasons: 
+
+* name-based disambiguation of same type parameters 
+
+type interval = { lo : int; hi : int } ;;
+let create ~lo ~hi = { lo; hi; }
+* homogeneous naming betting on programmers' procrastination 
+
+(* Which version would you rather write? *)
+
+let lo = 12 and hi = 15 in create ~lo ~hi  ;;
+
+let lbd = 12 and ubd = 15 in create ~lo:lbd ~hi:ubd ;;
+
+3.11 Optional arguments
+
+A special case of named arguments is optional arguments 
+
+type interval = { lo : int; hi : int } ;;
+
+let create ?(lo=0) hi = { lo; hi; } ;;
+
+create 2;;
+
+
+let create ?(lo=0) ~hi () = { lo; hi; } ;;
+
+let ival = create ~hi:2 ();;
+
+
+(* The use of partial arguments complicate a little bit closure computations.*)
+let pp_ival ?(pre="(") ?(post=")") ?(sep=",")ppf { lo; hi; } =
+  Format.fprintf ppf "@[<h>%s%d%s%d%s@]" pre lo sep hi post
+;;
+
+(* The following does not type *)
+Format.printf "%a@." pp_ival ival ;;
+
+(* You need to create another function *)
+Format.printf "%a@." (fun ppf ival -> pp_ival ppf ival) ival ;;
+
+(* The following does work though *)
+let pp_ival2 ppf = pp_ival ppf ;;
+Format.printf "%a@." pp_ival2 ival ;;
+
+3.12 Optional arguments are option types
+
+type ('a, 'b) return = {
+    value : 'a;
+    explanation : 'b option;
+  }
+;;
+
+(* Optional arguments of a type ['a] are really ['a option] types and ce be
+ * used that way in the body of the function *)
+let create_return_value ?explanation value =
+  { value; explanation; }
+;;
+
+(* Now if you have a default value [v], [Some v] needs to be used. *)
+let create_defaulted_return_value ?(explanation="message") value =
+  { value; explanation = Some explanation; }
+;;
+
+(* The construction below does not type. *)
+let create_defaulted_return_value ?(explanation="message") value =
+  { value; explanation; }
+;;
+
+3.13 Using named arguments in practice
+
+A commonly used recipe to construct functions with named arguments is: 
+
+1 Put your optional arguments
+2 Put your named arguments
+3 Put the rest of your arguments
+
+3.14 Nice to have: type-directed record disambiguation
+
+type t = { x : float; y : int; } ;;
+
+(* Shadowing x and y *)
+type t' = { x : int; y : float; } ;;
+
+
+let addall (v1:t) v2 =
+  let xsum = truncate v1.x + v2.x in
+  let ysum = v1.y + truncate v2.y in
+  xsum + ysum
+;;
+
+Check out: 
+
+1 http://gallium.inria.fr/~scherer/gagallium/resolving-field-names/
+2 http://gallium.inria.fr/~scherer/gagallium/resolving-field-names-2/
+
+4 Imperative programming
+
+4.1 It's ok to be impure
+
+A bunch of OCaml primitive constructs are imperative. 
+
+* ref
+* mutable field in records
+* arrays
+* hashtables
+* bytes (aka strings before 4.02)
+* stacks, queues, ….
+
+No need to read Okasaki's book to understand their implementation ;-) 
+
+4.2 The unit type
+
+The type of sequence elements (think 'statement') is unit, which is inhabited by a single value (). 
+
+let fact n =
+  let res = ref 1 in
+  for j = 2 to n do
+    res := !res * j; (* this assignment has type unit *)
+  done;
+  !res
+;;
+
+4.3 Trivia :: What's in a reference?
+
+let x = ref 1 ;;
+
+let y = { contents = 12 } ;;
+
+type 'a ref = { mutable contents : 'a };;
+
+4.4 Typical OCaml code
+
+Typical code mixes and matches functional and imperative features, usually for efficiency reasons. You will not be castigated for doing so. 
+
+(* Assuming I use a list-based representation for sets, it is very idiomatic
+ * way to write the code below *)
+let cardinal l =
+  let h = Hashtbl.create 7 in
+  let rec loop = function
+    | x :: xs ->
+       Hashtbl.add h x (); (* Hashtbl.replace may be better here *)
+       loop xs
+    | [] ->
+       Hashtbl.length h
+  in loop l
+;;
+(* Concatenating the elements of a string list *)
+let concat =
+  (* An OCaml [Buffer.t] is similar to a Java [StringBuffer].
+   * It is a self-growing array bytes.
+   *)
+  let b = Buffer.create 1024 in
+  fun ~sep l ->
+  Buffer.reset b;    (* cleanup any previously written contents *)
+  List.iter
+  (fun s -> Buffer.add_string b s;
+	    Buffer.add_string b sep;)
+  l;
+  Buffer.contents b
+;;
+
+4.5 Trivia :: Hashtables
+
+Hashtables have an interesting property : add does not remove old values! 
+
+let h = Hashtbl.create 7 ;;
+Hashtbl.add h 1 2 ;;
+Hashtbl.add h 1 3 ;;
+Hashtbl.iter (fun k v -> Format.printf "%d -> %d@." k v) h ;;
+
+4.6 Pitfall(s)
+
+The use of ; leads to some pitfalls for the beginner (and the guru not paying enough attention). 
+
+(* This is syntactilly incorrect *)
+let test_and_print =
+  let count_success = ref 0 in
+  fun secret ->
+  if secret = "you will never guess that" then
+    incr count_success;
+    Format.printf "Success"
+  else Format.printf "Failure"
+;;
+
+(* This is *)
+let test_and_print =
+  let count_success = ref 0 in
+  fun secret ->
+  if secret = "you will never guess that" then begin
+      incr count_success;
+      Format.printf "Success"
+    end
+  else Format.printf "Failure"
+;;
+
+4.7 Exceptions
+
+Exceptions are open algebraic data types with a dedicated construct exception 
+
+exception Empty_list ;;
+
+let nth i l =
+  assert (i >= 0);
+  let rec aux j = function
+    | [] ->
+       raise Empty_list
+    | x :: xs ->
+       if j = 0 then x
+       else aux (j - 1) xs
+  in aux i l
+;;
+
+4.8 Local exceptions & pattern-matching mixed exceptions/values
+
+let find (type a) (p:a -> bool) (arr:a array) =
+  let exception Found of a in
+  match Array.iter (fun e -> if p e then raise (Found e)) arr with
+  | () -> None
+  | exception (Found elt) -> Some elt
+;;
+
+5 More advanced topics
+
+5.1 What's a module?
+
+The moment you have 2 files, you will be manipulating modules. 
+
+A module is an abstraction barrier to used to bundle together related definitions and functionalities. In particular, it defines a namespace. 
+
+A file defines a module: Both files File and file define module File (thank you case-insensitive world). 
+
+Inside a module, one can define other modules. 
+
+Modules can be recursive. 
+
+5.2 Interface & implementation :: mli & ml
+
+OCaml programmers are encouraged to detach API interface (documentation, typing, …) from their implementation. 
+
+The usage is to not type every and all functions coded, only the ones that are exported and those whose type cannot be correctly inferred. 
+
+So for a given file-based module 
+
+* mli files contain interfaces (aka type signatures)
+* ml files contain implementations 
+
+ For "programmatic" modules, you will use module type to abstract functionalities/traits and module for implementing said modules. 
+
+5.3 Levels of type abstraction
+
+Modules help to delimit abstraction barriers and one can choose the desired level of abstraction. 
+
+5.3.1 Open
+
+Open types can be directly constructed & destructed 
+
+module Interval = struct
+  type t =
+  | Ival of { lo : int; hi : int; }
+  | Top
+  ;;
+
+  let top = Top ;;
+
+  let ival ~lo ~hi =
+    assert (lo <= hi);
+    if lo = min_int && hi = max_int then top
+    else Ival {lo; hi;}
+  ;;
+
+end
+;;
+
+open Interval
+
+(* Pattern-matching is ok *)
+let size = function
+  | Ival {lo; hi; } -> float @@ hi - lo + 1
+  | Top -> infinity
+;;
+
+(* This is authorized. *)
+let interval = Top ;;
+
+(* This is for the [top] function is part of the module signatures. *)
+let top2 = top ;;
+
+5.3.2 private
+
+Private types can be constructed only by predefined functions, destructed by usual pattern matching. 
+
+module Interval : sig
+  type t = private
+    | Ival of { lo : int; hi: int;}
+    | Top
+  ;;
+
+  val ival : lo:int -> hi:int -> t ;;
+  val top : t
+end = struct
+  type t =
+  | Ival of { lo : int; hi : int; }
+  | Top
+  ;;
+
+  let top = Top ;;
+
+  let ival ~lo ~hi =
+    assert (lo <= hi);
+    if lo = min_int && hi = max_int then top
+    else Ival {lo; hi;}
+  ;;
+
+end
+;;
+
+open Interval
+
+(* Pattern-matching is ok on private type *)
+let size = function
+  | Ival {lo; hi; } -> float @@ hi - lo + 1
+  | Top -> infinity
+;;
+
+(* This is not authorized. *)
+let interval = Top ;;
+
+(* This is for the [top] function is part of the module signatures. *)
+let top2 = top ;;
+
+5.3.3 abstract
+
+Abstract types can be constructed & destructed only be predefined functions 
+
+module Interval : sig
+  type t (* opaque to the outside world *)
+  val ival : lo:int -> hi:int -> t ;;
+  val top : t
+
+  val is_top : t -> bool
+  val lo : t -> int (* raises an exception *)
+  val hi : t -> int
+end = struct
+  type t =
+  | Ival of { lo : int; hi : int; }
+  | Top
+  ;;
+
+  let top = Top ;;
+
+  let ival ~lo ~hi =
+    assert (lo <= hi);
+    if lo = min_int && hi = max_int then top
+    else Ival {lo; hi;}
+  ;;
+
+end
+;;
+
+open Interval
+
+(* Pattern-matching does not work anymore *)
+let size ival =
+  if is_top ival then infinity
+  else  hi ival - lo ival + 1
+;;
+
+(* This is still not authorized. *)
+let interval = Top ;;
+
+(* This is for the [top] function is part of the module signatures. *)
+let top2 = top ;;
+
+5.4 Genericity
+
+5.4.1 Ad-hoc polymorphism
+
+let rec length match l with
+  | [] -> 0
+  | _ :: l' -> 1 + length l'
+;;
+
+5.4.2 Functors (module generator)
+
+The standard library has functors for sets, maps (tree-based persistent dictionaries) and hashtables. 
+
+module type PRINTABLE = sig
+  type t
+  val pp: Format.formatter -> t -> unit
+end
+
+
+module List_printer(X:PRINTABLE) = struct
+  type printer_func = Format.formatter -> unit -> unit
+
+  let pp_list
+	?(pre=(fun ppf () -> Format.pp_print_string ppf "["))
+	?(post=(fun ppf () -> Format.pp_print_string ppf "]"))
+	?(sep=(fun ppf () -> Format.fprintf ppf ";@ "))
+	ppf l =
+    let open Format in
+    let rec loop = function
+      | [] -> post ppf ()
+      | e :: es ->
+	 begin
+	   X.pp ppf e;
+	   sep ppf ();
+	   loop es
+	 end
+    in pre ppf (); loop l
+  ;;
+end
+
+module Int_list_pp =
+  List_printer(struct type t = int let pp = Format.pp_print_int end)
+;;
+
+let pp = fun ppf l -> Int_list_pp.pp_list ppf l in
+pp Format.std_formatter [1;2;3] ;;
+
+module String_list_pp =
+  List_printer(struct type t = string let pp = Format.pp_print_string end)
+;;
+
+let pp_slist = fun ppf l -> String_list_pp.pp_list ppf l;;
+Format.printf "@[<h>%a@]" pp_slist  ["foo"; "bar"; "bar";] ;;
+
+5.5 First-order modules
+
+Modules can also be used as "first-class" values. 
+
+module type COMPARABLE = sig
+  type t
+  val compare : t -> t -> int
+end
+;;
+
+let lmax (type a) (module M:COMPARABLE with type t = a) (l:a list) =
+  let rec aux cur_max l =
+    match l with
+    | [] -> cur_max
+    | x :: xs ->
+       let cur_max' =
+	 match cur_max with
+	 | None -> Some x
+	 | Some vmax -> if M.compare x vmax > 0 then Some x else cur_max in
+       aux cur_max' xs
+  in aux None l
+;;
+
+module Int = struct
+  type t = int ;;
+  let compare = Pervasives.compare ;;
+end
+;;
+
+lmax (module Int) [1;2;3;] ;;
+
+(* Module [String] is part of the standard library *)
+lmax (module String) ["foo"; "bar"; "baz";] ;;
+
+5.5.1 More involved example
+
+type ('var,'cst,'bop,'uop) expr =
+  | Var of 'var
+  | Cst of 'cst
+  | Bop of 'bop * ('var,'cst,'bop,'uop) expr * ('var,'cst,'bop,'uop) expr
+  | Uop of 'uop * ('var,'cst,'bop,'uop) expr
+;;
+
+
+module type EXPR = sig
+  type var
+  type uop
+  type cst
+  type bop
+end
+
+module Bool = struct
+  type bop =
+    | Band
+    | Bor
+    | Bxor
+  ;;
+
+  type uop = Bnot
+
+  type var = string
+
+  type cst = bool
+end
+
+
+let free_variables
+      (type a b c d)
+      (module M:EXPR with type var = a and
+			  type cst = b and
+			  type bop = c and
+			  type uop = d)
+      (e:(a,b,c,d) expr) : a list =
+  let module S =
+    Set.Make(struct type t = M.var let compare = Pervasives.compare end) in
+  let rec loop (set:S.t) = function
+    | Var v -> S.add v set
+    | Cst _ -> set
+    | Bop (_, e1, e2) -> S.union (loop set e1) (loop S.empty e2)
+    | Uop (_, e) -> loop set e
+  in
+  let set = loop S.empty e in
+  S.fold (fun e l -> e :: l) set []
+;;
+
+free_variables (module Bool) (Var "foo") ;;
+
+5.6 Monadic style programming
+
+The following type has been making a comeback. 
+
+type ('a, 'b) result =
+  | Ok of 'a
+  | Error of 'b
+;;
+
+and with it loads of heretofore banished monads :-) 
+
+There is no dedicated notation for working inside monads. 
+
+One usually uses the M.bind function of monad M or define an infix operator 
+
+let (>>=) = Option.bind ;;
+
+let hd =
+  | [] -> None
+  | x :: _ -> Some x
+
+let sum_heads l1 l2 =
+  hd l1 >>=
+    fun v1 -> hd l2 >>=
+    fun v2 -> v1 + v2
+;;
+
+5.7 GADTs
+
+Generalized Abstract Data Types are available in OCaml since version 4.00. 
+
+They are sparsely used 
+
+type arith_bop =
+  | Add
+  | Mul
+  | Div
+;;
+
+type arith_uop =
+  | UMin
+;;
+
+type comparison =
+  | Eq
+  | Gt
+;;
+
+type bool_bop =
+  | Bor
+  | Band
+;;
+
+type bool_uop =
+  | Bnot
+;;
+
+type _ typ =
+  | Int  : int -> int typ
+  | Bool : bool -> bool typ
+  | Ite  : bool typ * 'a typ * 'a typ -> 'a typ
+  | Bar  : arith_bop * int typ * int typ -> int typ
+  | Uar  : arith_uop * int typ -> int typ
+  | Cmp  : comparison * 'a typ * 'a typ -> bool typ
+  | Bbo  : bool_bop * bool typ * bool typ -> bool typ
+  | Ubo  : bool_uop * bool typ -> bool typ
+;;
+
+
+let term = Ite ( Cmp (Eq, Int 3, Int 4), Int 12, Int 11) ;;
+
+let term2 = Ite ( Cmp (Eq, Int 3, Int), Bool true, Bool false) ;;
+
+let eval_abop = function
+  | Add -> ( + )
+  | Mul -> ( * )
+  | Div -> ( / )
+
+let eval_cmp = function
+  | Eq -> ( = )
+  | Gt -> ( > )
+
+let eval_bbop = function
+  | Bor -> ( || )
+  | Band -> ( && )
+
+let rec eval: type a. a typ -> a  = function
+  | Int n -> n
+  | Bool b -> b
+  | Ite (b, ethen, eelse) -> if eval b then eval ethen else eval eelse
+  | Bar (op, e1, e2) -> (eval_abop op) (eval e1) (eval e2)
+  | Uar (UMin, e) -> - (eval e)
+  | Cmp (op, e1, e2) -> (eval_cmp op) (eval e1) (eval e2)
+  | Bbo (op, e1, e2) -> (eval_bbop op) (eval e1) (eval e2)
+  | Ubo (Bnot, e) -> not (eval e)
+;;
+
+eval term ;;
+
+eval term2 ;;
+
+5.8 Death by GADTs
+
+With great expressiveness comes great unreadability ;-) 
+
+(* in tdlib/camlinternalFormatBasics.ml *)
+and ('a1, 'b1, 'c1, 'd1, 'e1, 'f1,
+     'a2, 'b2, 'c2, 'd2, 'e2, 'f2) fmtty_rel =
+  | Char_ty :                                                 (* %c  *)
+      ('a1, 'b1, 'c1, 'd1, 'e1, 'f1,
+       'a2, 'b2, 'c2, 'd2, 'e2, 'f2) fmtty_rel ->
+      (char -> 'a1, 'b1, 'c1, 'd1, 'e1, 'f1,
+       char -> 'a2, 'b2, 'c2, 'd2, 'e2, 'f2) fmtty_rel
+  | String_ty :                                               (* %s  *)
+      ('a1, 'b1, 'c1, 'd1, 'e1, 'f1,
+       'a2, 'b2, 'c2, 'd2, 'e2, 'f2) fmtty_rel ->
+      (string -> 'a1, 'b1, 'c1, 'd1, 'e1, 'f1,
+       string -> 'a2, 'b2, 'c2, 'd2, 'e2, 'f2) fmtty_rel
+  | Int_ty :                                                  (* %d  *)
+      ('a1, 'b1, 'c1, 'd1, 'e1, 'f1,
+       'a2, 'b2, 'c2, 'd2, 'e2, 'f2) fmtty_rel ->
+      (int -> 'a1, 'b1, 'c1, 'd1, 'e1, 'f1,
+       int -> 'a2, 'b2, 'c2, 'd2, 'e2, 'f2) fmtty_rel
+  | Int32_ty :                                                (* %ld *)
+      ('a1, 'b1, 'c1, 'd1, 'e1, 'f1,
+       'a2, 'b2, 'c2, 'd2, 'e2, 'f2) fmtty_rel ->
+      (int32 -> 'a1, 'b1, 'c1, 'd1, 'e1, 'f1,
+       int32 -> 'a2, 'b2, 'c2, 'd2, 'e2, 'f2) fmtty_rel
+(* same file *)
+let rec erase_rel : type a b c d e f g h i j k l .
+  (a, b, c, d, e, f,
+   g, h, i, j, k, l) fmtty_rel -> (a, b, c, d, e, f) fmtty
+
+5.9 Format'ing text
+
+The Format module is a nice printf-like pretty-printing facility available in the standard library. This helps outputting structured data in a good-looking way. 
+
+A Format-ted output mixes boxes and break hints to structure your output. 
+
+3 salient elements to think about 
+
+* Format.fprintf
+* the formatter abstraction
+* %a : chaining pretty printers
+
+type t =
+  | Int of int
+  | Add of t * t
+;;
+
+open Format ;;
+
+let rec pp_expr ppf = function
+  | Int n -> fprintf ppf "%i" n
+  | Add (e1, e2) ->
+     fprintf ppf "@[%a@ +@ %a@]"
+       pp_expression e1
+       pp_expression e2
+
+and pp_expression ppf =
+  fprintf ppf "@[%a@]" pp_expr
+;;
+
+
+let rec addition_list = function
+  | [] -> assert false
+  | [n] -> Int n
+  | x :: xs -> Add (Int x, addition_list xs)
+;;
+
+
+let al =
+  List.map (( + ) max_int) [1;2;3;4;5;6;7;]
+  |> addition_list
+;;
+
+
+Format.printf "%a@." pp_expr al;;
+
+For more: 
+
+* https://hal.archives-ouvertes.fr/hal-01503081/file/format-unraveled.pdf
+
+5.10 Things that I did not talk about
+
+* Polymorphic variants 
+
+ See http://www.yakobowski.org/publis/2008/jfla08.pdf (in French) 
+
+* Low-level representation 
+
+ https://v1.realworldocaml.org/v1/en/html/memory-representation-of-values.html 
+
+* Objects
+* PPX syntax extensions (deriving, sexp, …)
+* Ecosystem (parsing, JSONing, SMTing, …)
+
+6 Conclusion
+
+OCaml is not a language somehow stuck into a transformation to Haskell.It follows different design choices, in the lineage of ML and SML. 
+
+Is there something that is missing ? 
+
+Date: 20200109
+
+Author: Richard B.
+
+Created: 2020-01-09 Thu 10:14
+
+Validate
