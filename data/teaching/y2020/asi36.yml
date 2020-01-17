@@ -12,6 +12,13 @@ lectures:
     vulnerabilities in low-level code, as well as reminders regarding
     compilation and code analysis.
   href: intro
+  contents:
+    - title: Slides-I
+      file: ensta-01.pdf
+      type: pdf
+    - title: Slides-II
+      file: 01-lecture01.pdf
+      type: pdf
 
   references:
     - title: Mind Your Languages
@@ -74,7 +81,12 @@ lectures:
     - title: Low-level Software Security by Example
       type: pdf
       link: https://link.springer.com/content/pdf/10.1007/978-3-642-04117-4_30.pdf
-
+    - title: Reverse Engineering for Beginners
+      type: url
+      link: https://beginners.re/
+    - title: Reverse Engineering Course (in progress)
+      type: url
+      link: https://github.com/0xZ0F/Z0FCourse_ReverseEngineering
 
 - date: 2020-02-03
   href: cfi
@@ -140,12 +152,12 @@ lectures:
     TBA
 
 
-- date: 2020-02-13
+- date: 2020-02-27
   title: Semantic attacks (program analysis)
   descr: >-
     TBA
       
-- date: 2020-02-27
+- date: 2020-02-13
   title: Fuzzing
   href: fuzz
   descr: >-
