@@ -51,6 +51,16 @@ lectures:
     Most of the session is allotted to hands-on experimentation.
   
   href: basics
+  contents:
+    - title: Slides
+      file: 01-lecture02.pdf
+      type: pdf
+    - title: Exercises
+      file: 02-exercises02.pdf
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex2.tgz
 
   references:
     - title: How to write Buffer Overflows
@@ -103,6 +113,17 @@ lectures:
     measures that are currently available.
       
     A good part of the session is allotted to hands-on experimentations.
+  contents:
+    - title: Slides
+      file: 01-lecture03.pdf
+      type: pdf
+    - title: Exercises
+      file: 02-exercises03.pdf
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex3.tgz
+
   references:
     - title: Exploiting OpenBSD
       type: url
@@ -194,3 +215,73 @@ lectures:
   title: Exam
   href: exam
   descr: >-
+  descr: >-
+    The final exam will contain 2 parts:
+
+      * The presentation of a research article (groups of 2, 20 minutes + questions) -- rank the articles
+        from the list in decreasing order and send a message ranking them to the professors;
+        (see list here) ;
+      * A mini CTF problem (find the secret key!) and its **written** solution
+        report (5p. max).
+
+      The CTFs are available from https://github.com/rbonichon/asi36-ctf
+      
+  references:
+    - link: http://www.scs.stanford.edu/~sorbo/brop/bittau-brop.pdf
+      type: pdf
+      title: Hacking Blind
+    - link: http://www.cs.columbia.edu/~vpappas/papers/kbouncer.sec13.pdf
+      title: Transparent ROP Exploit Mitigation using Indirect Branch Tracing
+      type: pdf
+    - link: https://www.cs.dartmouth.edu/~sergey/wm/woot13-shapiro.pdf
+      type: pdf
+      title: Weird Machines in ELF
+    - link: http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf
+      type: pdf
+      title: Practical Control Flow Integrity & Randomization for Binary Executables
+    - link: https://www.usenix.org/legacy/event/sec11/tech/full_papers/Schwartz.pdf
+      title: "Q: Exploit Hardening Made Easy"
+      type: pdf
+    - title: "Towards Paving the Way for Large-Scale Windows Malware Analysis: Generic Binary Unpacking with Orders-of-Magnitude Performance Boost"
+      type: pdf
+      link: /asi36/papers/p395-cheng.pdf
+    - title: Function Boundary Detection in Stripped Binaries
+      type: pdf
+      link: /asi36/papers/functionboundary.pdf
+    - title: "Syntia: Synthesizing the Semantics  of Obfuscated Code"
+      type: pdf
+      link: https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-blazytko.pdf
+    - title: Grey-box Concolic Testing on Binary Code
+      type: pdf
+      link: https://softsec.kaist.ac.kr/~jschoi/data/icse2019.pdf
+    - title: Preventing zero-day exploits of memory vulnerabilities with guard lines
+      type: pdf
+      link: /asi36/papers/guardlines.pdf
+    - title: "Learn&Fuzz: machine learning for input fuzzing"
+      type: pdf
+      link: https://patricegodefroid.github.io/public_psfiles/ase2017.pdf
+    - title: "Nibbler: Debloating Binary Shared Libraries"
+      type: pdf
+      link: https://cs.brown.edu/~vpk/papers/nibbler.acsac19.pdf
+
+
+talks:
+- paper: Preventing zero-day exploits of memory vulnerabilities with guard lines
+  people: Alexandre, Emeline
+  time: "9:15"
+
+- paper: Practical Control Flow Integrity & Randomization for Binary Executables
+  people: Pierrick, Julien
+  time: "9:45"
+
+- paper: "Learn&Fuzz: machine learning for input fuzzing"
+  people: Mehdi, Corentin
+  time: "10:15"
+
+- paper: Hacking Blind
+  people: Isabelle, Soline
+  time: "10:45"
+
+- time: "11:15"
+
+- time: "11:45"
