@@ -14,7 +14,7 @@ lectures:
   href: intro
   contents:
     - title: Slides-I
-      file: ensta-01.pdf
+      file: cours-cyber-ensta-01.pdf
       type: pdf
     - title: Slides-II
       file: 01-lecture01.pdf
@@ -170,8 +170,20 @@ lectures:
   title: MATE, attack & defense
   href: mate
   descr: >-
-    TBA
+    This lecture discusses at length the Man-At-The-End (MATE) scenario.
+    MATE is an attack model where the attackers are very powerful since they
+    basically are *on* your computer, can read/write the code, execute it
+    step-by-step or patch it on the fly. 
 
+    
+    We will here expose the current state of known attacks and defenses, giving
+    an overview of this research area.
+
+  contents:
+    - title: Slides
+      file: cours-cyber-ensta-02.pdf
+      type: pdf
+    
 
 - date: 2020-02-27
   title: Semantic attacks (program analysis)
@@ -191,6 +203,19 @@ lectures:
 
     We will devote a good amount of time to hands-on experiments with the AFL fuzzer.
 
+  contents:
+    - title: Slides
+      type: pdf
+      file: 01-lecture04.pdf 
+      type: pdf
+    - title: Exercises
+      type: pdf
+      file: 02-exercises04.pdf 
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex04.tgz
+
   references:
     - title: "Driller: Augmenting Fuzzing Through Selective Symbolic Execution"
       type: pdf
@@ -209,22 +234,29 @@ lectures:
       title: Directed Greybox Fuzzing
     - type: pdf
       link: http://www.carolemieux.com/fairfuzz-ase18.pdf
-      title: "FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage"
+      title: >-
+        "FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz
+        Testing Coverage"
+    - type: url
+      link: https://wcventure.github.io/FuzzingPaper/
+      title: A list of recent results on fuzzing
 
 - date: 2020-03-05
   title: Exam
   href: exam
   descr: >-
-  descr: >-
     The final exam will contain 2 parts:
 
-      * The presentation of a research article (groups of 2, 20 minutes + questions) -- rank the articles
-        from the list in decreasing order and send a message ranking them to the professors;
-        (see list here) ;
+      * The presentation of a research article (groups of 2, 20 minutes +
+        questions) -- rank the articles from the list in decreasing order and
+        send a message ranking them to the professors;
+        
       * A mini CTF problem (find the secret key!) and its **written** solution
         report (5p. max).
 
-      The CTFs are available from https://github.com/rbonichon/asi36-ctf
+      The CTFs are available from:
+
+      https://github.com/rbonichon/asi36-ctf
       
   references:
     - link: http://www.scs.stanford.edu/~sorbo/brop/bittau-brop.pdf
@@ -270,9 +302,9 @@ talks:
   people: Alexandre, Emeline
   time: "9:15"
 
-- paper: Practical Control Flow Integrity & Randomization for Binary Executables
-  people: Pierrick, Julien
-  time: "9:45"
+- time: "9:45"
+  people: Sébastien, Baptiste
+  paper: "Nibbler: Debloating Binary Shared Libraries"
 
 - paper: "Learn&Fuzz: machine learning for input fuzzing"
   people: Mehdi, Corentin
@@ -283,5 +315,9 @@ talks:
   time: "10:45"
 
 - time: "11:15"
-
-- time: "11:45"
+  paper: "Syntia: Synthesizing the Semantics  of Obfuscated Code"
+  people: Paul, Antoine
+  
+- paper: Practical Control Flow Integrity & Randomization for Binary Executables
+  people: Pierrick, Julien
+  time: TBD 
