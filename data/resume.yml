@@ -18,8 +18,14 @@ sections:
       location:
         institute:
           name: Tweag I/O
+          url: https://www.tweag.io/
         city: Paris
         country: France
+      descr: >-
+        Clients (thin client, Sapling client) for the Tezos blockchain
+        <br/>
+        Gerrit plugins (enforce owner approval, CI-related UI extensions)
+        
     - title: Researcher
       period:
         start: 2008
@@ -134,7 +140,7 @@ sections:
       url: http://frama-c.com
       lang: OCaml
       descr: >-
-        Software analyzers for C/C++ code -- plugins metrics & mthread (initial version).
+         C/C++ software analyzers -- plugins metrics & mthread (initial version).
       period:
         start: 2008
         end: 2013
@@ -143,7 +149,7 @@ sections:
       url: http://www.pathcrawler-online.com:8080
       lang: Java, Javascript
       descr: >-
-        Web-based platform for users to freely play with the Pathcrawler test generation tool.
+        Web-based platform for users to test the Pathcrawler test generation tool.
       period:
         start: 2012
         end: 2013
@@ -155,7 +161,7 @@ sections:
         start: 2014
         end: 2015
       descr: >-
-        Preprocessors and analyzers for SMT-LIB, the problem repository for SMT solvers.
+        Preprocessing platform for SMT-LIB, the problem repository for SMT solvers.
 
     - title: Moca
       url: http://moca.inria.fr
@@ -164,13 +170,21 @@ sections:
         start: 2007
         end: 2009
       descr: >-
-        A generator of construction functions for (OCaml) datatypes with
+        Construction functions generator for datatypes with
         (algebraic) invariants.
 
 - title: Students
+  break_before: true
   type: students
   icon: fa-user
   entries:
+    - title: "Combining Formal and Learning Approaches for Binary-Level Security Analysis"
+      who: Cauim de Souza Lima
+      type: master 
+      period:
+        year: 2019
+        start: 03
+        end: 04
     - title: "Automatic verification of low-level code: C, assembly & binary code"
       who: Frédéric Recoules
       type: phd

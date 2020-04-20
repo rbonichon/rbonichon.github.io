@@ -22,7 +22,7 @@ nav {
         &:hover {
             color: $primary_hovered;
             transform: translateY(-1px);
-            boder-radius: 25px;
+            border-radius: 25px;
             box-shadow: 0 6px 14px $primary, 0 -6px 10px $primary_hovered;
         }
 

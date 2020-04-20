@@ -1,8 +1,9 @@
 {{- partial "resume/date.html" (dict "date" .s.period) -}}
 
 <div class="decorator">
-            <i class="fa fa-circle" aria-hidden="true"></i>
+  <i class="fa fa-circle" aria-hidden="true"></i>
 </div>
+
 <div class="details">
   <header>
     <h3> {{ .s.title }} <span class="tool-url"><a href="{{ .s.url }}"> {{.s.url }}</a></span></h3>
@@ -10,4 +11,3 @@
   </header>
   <div class="descr tool-descr">{{ .s.descr }}</div>
 </div>
-
