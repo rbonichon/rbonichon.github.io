@@ -10329,7 +10329,7 @@ nav a.navbar-item:visited, nav a.navbar-item:link {
 nav a.navbar-item:hover {
   color: #279b8a;
   transform: translateY(-1px);
-  boder-radius: 25px;
+  border-radius: 25px;
   box-shadow: 0 6px 14px #31c4ae, 0 -6px 10px #279b8a;
 }
 /* line 30, ../../src/sass/screen.scss */

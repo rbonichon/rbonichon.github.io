@@ -30,7 +30,7 @@
   --decorator-border-width: 1px;
   --decorator-outer-dim: 9px;
   --decorator-border: 1px solid #ccc;
-  --row-blocks-padding-top: 5pt;
+  --row-blocks-padding-top: 3pt;
   --date-block-width: 0.6in;
   --main-blocks-title-icon-offset-left: -19pt;
 }
@@ -62,7 +62,7 @@ li {
 #main {
   float: left;
   width: var(--main-width);
-  padding: 0.25in 0.25in 0 0.25in;
+  padding: 0.1in 0.25in 0 0.25in;
   font-size: 7pt;
 }
 
@@ -85,45 +85,46 @@ li {
   text-transform: uppercase;
 }
 
-/* line 82, ../../src/sass/resume.scss */
+/* line 81, ../../src/sass/resume.scss */
 #title {
   position: relative;
   left: 0.55in;
-  margin-bottom: 0.3in;
+  margin-bottom: 0.1in;
   line-height: 1.2;
 }
 
-/* line 89, ../../src/sass/resume.scss */
+/* line 88, ../../src/sass/resume.scss */
 #title h1 {
   font-weight: 300;
   font-size: 20pt;
   line-height: 1.5;
 }
 
-/* line 95, ../../src/sass/resume.scss */
-#title h1.name {
+/* line 94, ../../src/sass/resume.scss */
+#title h1#name {
+  text-transform: none;
   font-variant: small-caps;
 }
 
 /* line 99, ../../src/sass/resume.scss */
 #title h1 strong {
-  margin: auto 2pt auto 4pt;
+  margin: auto 2pt auto 2pt;
   font-weight: 600;
 }
 
-/* line 104, ../../src/sass/resume.scss */
+/* line 105, ../../src/sass/resume.scss */
 .subtitle {
-  font-size: 12pt;
+  font-size: 10pt;
 }
 
 /*** categorial blocks ***/
-/* line 110, ../../src/sass/resume.scss */
+/* line 111, ../../src/sass/resume.scss */
 .main-block {
   margin-top: 0.1in;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* line 115, ../../src/sass/resume.scss */
+/* line 116, ../../src/sass/resume.scss */
 #main h2 {
   position: relative;
   top: var(--row-blocks-padding-top);
@@ -134,7 +135,7 @@ li {
   color: #555;
 }
 
-/* line 125, ../../src/sass/resume.scss */
+/* line 126, ../../src/sass/resume.scss */
 #main h2 > i {
   /* use absolute position to prevent icon's width from misaligning title */
   /* assigning a fixed width here is no better due to needing to align decorator
@@ -146,7 +147,7 @@ li {
   color: #444;
 }
 
-/* line 135, ../../src/sass/resume.scss */
+/* line 136, ../../src/sass/resume.scss */
 #main h2::after {
   /* extends the decorator line */
   height: calc(var(--row-blocks-padding-top) * 2);
@@ -162,41 +163,41 @@ li {
   content: ' ';
 }
 
-/* line 149, ../../src/sass/resume.scss */
+/* line 150, ../../src/sass/resume.scss */
 #main h2.subtitle {
   border-left: none;
 }
 
 /**** minor tweaks on the icon fonts ****/
-/* line 154, ../../src/sass/resume.scss */
+/* line 155, ../../src/sass/resume.scss */
 #main h2 > .fa-graduation-cap {
   left: calc(var(--main-blocks-title-icon-offset-left) - 2pt);
   top: 2pt;
 }
 
-/* line 159, ../../src/sass/resume.scss */
+/* line 160, ../../src/sass/resume.scss */
 #main h2 > .fa-suitcase {
   top: 1pt;
 }
 
-/* line 163, ../../src/sass/resume.scss */
+/* line 164, ../../src/sass/resume.scss */
 #main h2 > .fa-folder-open {
   top: 1.5pt;
 }
 
 /**** individual row blocks (date - decorator - details) ****/
-/* line 169, ../../src/sass/resume.scss */
+/* line 170, ../../src/sass/resume.scss */
 .blocks {
   display: flex;
   flex-flow: row nowrap;
 }
 
-/* line 174, ../../src/sass/resume.scss */
+/* line 175, ../../src/sass/resume.scss */
 .blocks > div {
   padding-top: var(--row-blocks-padding-top);
 }
 
-/* line 178, ../../src/sass/resume.scss */
+/* line 179, ../../src/sass/resume.scss */
 .date {
   flex: 0 0 var(--date-block-width);
   padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
@@ -206,12 +207,12 @@ li {
   line-height: 1;
 }
 
-/* line 187, ../../src/sass/resume.scss */
+/* line 188, ../../src/sass/resume.scss */
 .date span {
   display: block;
 }
 
-/* line 191, ../../src/sass/resume.scss */
+/* line 192, ../../src/sass/resume.scss */
 .date span:nth-child(2)::before {
   position: relative;
   top: 1pt;
@@ -221,7 +222,7 @@ li {
   content: '|';
 }
 
-/* line 200, ../../src/sass/resume.scss */
+/* line 201, ../../src/sass/resume.scss */
 .decorator {
   flex: 0 0 0;
   position: relative;
@@ -230,7 +231,7 @@ li {
   border-left: var(--decorator-border);
 }
 
-/* line 208, ../../src/sass/resume.scss */
+/* line 209, ../../src/sass/resume.scss */
 .decorator i {
   color: #555;
   display: block;
@@ -238,16 +239,7 @@ li {
   margin-top: 1mm;
 }
 
-/*
- * XXX: Use two filled circles to achieve the circle-with-white-border effect.
- * The normal technique of only using one pseudo element and
- * border: 1px solid white; style makes firefox erroneously either:
- * 1) overflows the grayshade background (if no background-clip is set), or
- * 2) shows decorator line which should've been masked by the white border
- *
- */
-/***** fine-tunes on the details block where the real juice is *****/
-/* line 254, ../../src/sass/resume.scss */
+/* line 217, ../../src/sass/resume.scss */
 .details {
   flex: 1 0 0;
   padding-left: var(--decorator-horizontal-margin);
@@ -255,51 +247,51 @@ li {
   /* not sure why but this is needed for better alignment */
 }
 
-/* line 260, ../../src/sass/resume.scss */
+/* line 223, ../../src/sass/resume.scss */
 .details header {
   color: #000;
 }
 
-/* line 264, ../../src/sass/resume.scss */
+/* line 227, ../../src/sass/resume.scss */
 .details h3 {
   font-size: 10pt;
   font-weight: 600;
 }
 
-/* line 269, ../../src/sass/resume.scss */
+/* line 232, ../../src/sass/resume.scss */
 .main-block:not(.concise) .details div {
   margin: 0.18in 0 0.1in 0;
 }
 
-/* line 273, ../../src/sass/resume.scss */
+/* line 236, ../../src/sass/resume.scss */
 .main-block:not(.concise) .blocks:last-child .details div {
   margin-bottom: 0;
 }
 
-/* line 277, ../../src/sass/resume.scss */
+/* line 240, ../../src/sass/resume.scss */
 .main-block.concise .details div:not(.concise) {
   /* use padding to work around the fact that margin doesn't affect floated
      neighboring elements */
   padding: 0.05in 0 0.07in 0;
 }
 
-/* line 283, ../../src/sass/resume.scss */
+/* line 246, ../../src/sass/resume.scss */
 .details .place {
   float: left;
   font-size: 8pt;
 }
 
-/* line 288, ../../src/sass/resume.scss */
+/* line 251, ../../src/sass/resume.scss */
 .details .location {
   float: right;
 }
 
-/* line 292, ../../src/sass/resume.scss */
+/* line 255, ../../src/sass/resume.scss */
 .details div {
   clear: both;
 }
 
-/* line 296, ../../src/sass/resume.scss */
+/* line 259, ../../src/sass/resume.scss */
 .details .location::before {
   display: inline-block;
   position: relative;
@@ -312,32 +304,32 @@ li {
   content: "\f041";
 }
 
-/* line 308, ../../src/sass/resume.scss */
+/* line 271, ../../src/sass/resume.scss */
 .details .descr {
   font-size: 8.5pt;
 }
 
 /***** fine-tunes on the lists... *****/
-/* line 313, ../../src/sass/resume.scss */
+/* line 276, ../../src/sass/resume.scss */
 #main ul {
   padding-left: 0.07in;
   margin: 0.08in 0;
 }
 
-/* line 318, ../../src/sass/resume.scss */
+/* line 281, ../../src/sass/resume.scss */
 #main li {
   margin: 0 0 0.025in 0;
 }
 
 /****** customize list symbol style ******/
-/* line 323, ../../src/sass/resume.scss */
+/* line 286, ../../src/sass/resume.scss */
 #main li::before {
   position: relative;
   margin-left: -4.25pt;
   content: '• ';
 }
 
-/* line 329, ../../src/sass/resume.scss */
+/* line 292, ../../src/sass/resume.scss */
 .details .concise ul {
   margin: 0 !important;
   -webkit-columns: 2;
@@ -345,30 +337,32 @@ li {
   columns: 2;
 }
 
-/* line 336, ../../src/sass/resume.scss */
+/* line 299, ../../src/sass/resume.scss */
 .details .concise li {
   margin: 0 !important;
 }
 
-/* line 340, ../../src/sass/resume.scss */
+/* line 303, ../../src/sass/resume.scss */
 .details .concise li {
   margin-left: 0 !important;
 }
 
-/* sidebar */
-/* line 348, ../../src/sass/resume.scss */
+/*
+ *  Sidebar
+ */
+/* line 311, ../../src/sass/resume.scss */
 #sidebar h1 {
   font-weight: 400;
   font-size: 11pt;
   padding-bottom: .4rem;
 }
 
-/* line 355, ../../src/sass/resume.scss */
+/* line 318, ../../src/sass/resume.scss */
 .side-block {
   margin-top: 0.5in;
 }
 
-/* line 360, ../../src/sass/resume.scss */
+/* line 322, ../../src/sass/resume.scss */
 #contact ul {
   margin-top: 0.05in;
   padding-left: 0;
@@ -378,7 +372,7 @@ li {
   font-size: .9rem;
 }
 
-/* line 369, ../../src/sass/resume.scss */
+/* line 331, ../../src/sass/resume.scss */
 #contact li > i {
   width: 9pt;
   /* for text alignment */
@@ -386,45 +380,45 @@ li {
   margin-right: .5rem;
 }
 
-/* line 378, ../../src/sass/resume.scss */
+/* line 337, ../../src/sass/resume.scss */
 #skills {
   line-height: 1.5;
 }
 
-/* line 382, ../../src/sass/resume.scss */
+/* line 341, ../../src/sass/resume.scss */
 #skills ul {
   margin: 0.05in 0 0.15in;
   padding: 0;
 }
 
-/* line 388, ../../src/sass/resume.scss */
+/* line 347, ../../src/sass/resume.scss */
 #computer-skills {
   line-height: 1.5;
 }
 
-/* line 392, ../../src/sass/resume.scss */
+/* line 351, ../../src/sass/resume.scss */
 #computer-skills ul {
   margin: 0.05in 0 0.15in;
   padding: 0;
 }
 
-/* line 398, ../../src/sass/resume.scss */
+/* line 357, ../../src/sass/resume.scss */
 #misc {
   line-height: 1.5;
 }
 
-/* line 403, ../../src/sass/resume.scss */
+/* line 362, ../../src/sass/resume.scss */
 #misc ul {
   margin: 0.05in 0 0.15in;
   padding: 0;
 }
 
-/* line 408, ../../src/sass/resume.scss */
+/* line 367, ../../src/sass/resume.scss */
 #misc .lang-level {
   padding-left: 1em;
 }
 
-/* line 413, ../../src/sass/resume.scss */
+/* line 372, ../../src/sass/resume.scss */
 #disclaimer {
   position: absolute;
   bottom: var(--sidebar-horizontal-padding);
@@ -436,7 +430,7 @@ li {
   color: #777;
 }
 
-/* line 424, ../../src/sass/resume.scss */
+/* line 383, ../../src/sass/resume.scss */
 #disclaimer code {
   color: #666;
   font-family: "Source Code Pro";
@@ -444,51 +438,51 @@ li {
   font-style: normal;
 }
 
-/* line 433, ../../src/sass/resume.scss */
+/* line 392, ../../src/sass/resume.scss */
 .hidden-print {
   display: none !important;
 }
 
-/* line 438, ../../src/sass/resume.scss */
+/* line 396, ../../src/sass/resume.scss */
 .details .tool-url {
   float: right;
   font-size: .6rem;
 }
 
-/* line 444, ../../src/sass/resume.scss */
+/* line 401, ../../src/sass/resume.scss */
 ul#lang {
   width: 70%;
 }
 
-/* line 448, ../../src/sass/resume.scss */
+/* line 405, ../../src/sass/resume.scss */
 .details .student-level {
   float: right;
   font-size: .6rem;
   text-transform: capitalize;
 }
 
-/* line 454, ../../src/sass/resume.scss */
+/* line 411, ../../src/sass/resume.scss */
 span.lang-level {
   float: right;
 }
 
-/* line 457, ../../src/sass/resume.scss */
+/* line 415, ../../src/sass/resume.scss */
 ul#address-tbl {
   margin-top: -.58cm;
   margin-left: .6cm;
 }
 
-/* line 463, ../../src/sass/resume.scss */
+/* line 420, ../../src/sass/resume.scss */
 div.page-break {
   page-break-before: always;
 }
 
-/* line 467, ../../src/sass/resume.scss */
+/* line 424, ../../src/sass/resume.scss */
 section#students {
   padding-top: 3rem;
 }
 
-/* line 471, ../../src/sass/resume.scss */
+/* line 428, ../../src/sass/resume.scss */
 a {
   color: #4a4a4a;
   font-weight: 600;
