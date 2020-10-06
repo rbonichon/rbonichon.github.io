@@ -1,5 +1,24 @@
 ---
 references:
+- id: raid20
+  type: paper-conference
+  author:
+    - family: Nguyen
+      given: Manh Dung
+    - family: Bardin
+      given: Sébastien
+    - family: Bonichon
+      given: Richard
+    - family: Groz
+      given: Roland
+    - family: Lemerre 
+      given: Matthieu
+  year: 2020
+  venue: RAID
+  title: Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities
+  paper: uafuzz-raid20.pdf
+    
+
 - id: jfla20
   type: paper-conference 
   author:

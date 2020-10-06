@@ -10,6 +10,7 @@ PUBLISH_DIR = docs
 publish: $(PUBLISH_DIR)
 	hugo 
 	(cd $(PUBLISH_DIR); \
+	 touch .nojekyll; \
 	 git add -f *; \
 	 git commit -am "publish"; \
 	 git push -f origin master; \

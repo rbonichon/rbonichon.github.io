@@ -43,7 +43,7 @@
         </div>
         <div class="descr">
           {{ if $entry.descr }}
-             {{ $entry.descr }}
+             {{ $entry.descr | markdownify }}
           {{ end }}
         </div>
       </div>
@@ -53,7 +53,7 @@
 
       </div>
     </section>
-      
+
     {{ end }}
 
       <div class="container is-desktop">
@@ -62,4 +62,3 @@
 
     </body>
 </html>
-    

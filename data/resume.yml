@@ -22,9 +22,10 @@ sections:
         city: Paris
         country: France
       descr: >-
-        Clients (thin client, Sapling client) for the Tezos blockchain
-        <br/>
-        Gerrit plugins (enforce owner approval, CI-related UI extensions)
+
+        - Clients (mockup/proxy client, Sapling client) for the Tezos
+          blockchain.
+        - Gerrit plugins (enforce owner approval, CI-related UI extensions)
         
     - title: Researcher
       period:
@@ -37,10 +38,9 @@ sections:
         city: Saclay
         country: France
       descr: >-
-        Development of (formal) program analyses on source and binary code,  for
-        safer and more secure software engineering
-         <br/>
-        Lead developer of binary-code analysis platform BINSEC (see Tools) <br/>
+        - Development of (formal) program analyses on source and binary code,  for
+          safer and more secure software engineering.
+        - Lead developer of binary-code analysis platform BINSEC (see <a href="#Tools">Tools<a>) <br/>
 
     - title: Post-doc
       location:
@@ -149,7 +149,7 @@ sections:
       url: http://www.pathcrawler-online.com:8080
       lang: Java, Javascript
       descr: >-
-        Web-based platform for users to test the Pathcrawler test generation tool.
+        Web application for users to play with the Pathcrawler test generation tool.
       period:
         start: 2012
         end: 2013
