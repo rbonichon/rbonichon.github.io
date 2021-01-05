@@ -24,3 +24,6 @@ $(PUBLISH_DIR):
 	git submodule add -b master \
 	git@github.com:rbonichon/rbonichon.github.io.git \
 	$@
+
+clean_publish:
+	git rm $(PUBLISH_DIR)
