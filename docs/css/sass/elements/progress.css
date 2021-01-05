@@ -1,0 +1,59 @@
+/*
+Error: Undefined variable: "$border".
+        on line 1 of /home/richard/devel/www/rbonichon.github.io/src/sass/sass/elements/progress.sass
+
+1: $progress-bar-background-color: $border !default
+2: $progress-value-background-color: $text !default
+3: 
+4: .progress
+5:   +block
+6:   -moz-appearance: none
+
+Backtrace:
+/home/richard/devel/www/rbonichon.github.io/src/sass/sass/elements/progress.sass:1
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:472:in `visit_variable'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
+/nix/store/d44mw22a7k7c6sn2mhq5gaykplghma3l-ruby2.6.5-compass-import-once-1.0.5/lib/ruby/gems/2.6.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/nix/store/d44mw22a7k7c6sn2mhq5gaykplghma3l-ruby2.6.5-compass-import-once-1.0.5/lib/ruby/gems/2.6.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/nix/store/d44mw22a7k7c6sn2mhq5gaykplghma3l-ruby2.6.5-compass-import-once-1.0.5/lib/ruby/gems/2.6.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/nix/store/ylinv33q17zfcvlaj6c23cfgnxss3myh-ruby2.6.5-sass-3.4.25/lib/ruby/gems/2.6.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:294:in `watch'
+/nix/store/kd4446f8z7r2ai3zyrmyp48f49pzshf3-ruby2.6.5-compass-1.0.3/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+/nix/store/kd4446f8z7r2ai3zyrmyp48f49pzshf3-ruby2.6.5-compass-1.0.3/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+/nix/store/kd4446f8z7r2ai3zyrmyp48f49pzshf3-ruby2.6.5-compass-1.0.3/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/nix/store/kd4446f8z7r2ai3zyrmyp48f49pzshf3-ruby2.6.5-compass-1.0.3/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/nix/store/kd4446f8z7r2ai3zyrmyp48f49pzshf3-ruby2.6.5-compass-1.0.3/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/nix/store/kd4446f8z7r2ai3zyrmyp48f49pzshf3-ruby2.6.5-compass-1.0.3/lib/ruby/gems/2.6.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/nix/store/ci7gzchd789sww5gqai2qybpgs400gxh-compass-1.0.3/lib/ruby/gems/2.6.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/nix/store/ci7gzchd789sww5gqai2qybpgs400gxh-compass-1.0.3/lib/ruby/gems/2.6.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/nix/var/nix/profiles/default/bin/compass:18:in `load'
+/nix/var/nix/profiles/default/bin/compass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$border\".\A         on line 1 of /home/richard/devel/www/rbonichon.github.io/src/sass/sass/elements/progress.sass\A \A 1: $progress-bar-background-color: $border !default\A 2: $progress-value-background-color: $text !default\A 3: \A 4: .progress\A 5:   +block\A 6:   -moz-appearance: none"; }
