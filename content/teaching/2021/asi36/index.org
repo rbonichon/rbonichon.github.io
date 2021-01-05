@@ -1,0 +1,27 @@
+---
+title: ASI36
+date: 2021-01-01
+type: "teaching"
+layout : "asi36-2021"
+---
+
+Software attacks are a common part of today's headlines. This course aims at
+demystifying them by giving the fundamentals to understand these attacks, what
+they consist in and how to mitigate them. We will mostly focus on software
+vulnerabilities.
+
+We will cover the following topics:
+
+  - semantics and modelization of low-level languages
+  - classical attack and exploitation
+  - control-flow integrity techniques
+  - MATE attacks and reverse engineering
+  - code obfuscation
+
+
+
+*Note:* These lectures will require a fair amount of hands-on
+experiments on the computer to make the concepts more practical. 
+They also involve supplementary reading material as part of the contents.
+
+
