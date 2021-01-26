@@ -52,6 +52,16 @@ lectures:
     Most of the session is allotted to hands-on experimentation.
   
   href: basics
+  contents:
+    - title: Slides
+      file: 01-lecture02.pdf
+      type: pdf
+    - title: Exercises
+      file: 02-exercises02.pdf
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex2.tgz
 
   references:
     - title: How to write Buffer Overflows
@@ -104,6 +114,17 @@ lectures:
     measures that are currently available.
       
     A good part of the session is allotted to hands-on experimentations.
+
+  contents:
+    - title: Slides
+      file: 01-lecture03.pdf
+      type: pdf
+    - title: Exercises
+      file: 02-exercises03.pdf
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex3.tgz
 
   references:
     - title: Exploiting OpenBSD
@@ -160,6 +181,10 @@ lectures:
     We will here expose the current state of known attacks and defenses, giving
     an overview of this research area.
 
+  contents:
+    - title: Slides-I
+      file: cours-cyber-ensta-01.pdf
+      type: pdf
     
 
 - date: 2021-02-02
@@ -217,4 +242,54 @@ lectures:
         
       * A mini CTF problem (find the secret key!) and its **written** solution
         report (10p. max).
-      
+
+        The CTFs are available from:
+
+        https://github.com/rbonichon/asi36-ctf/tree/ctf-2020-2021
+        
+  references:
+    - title: >-
+        Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input
+      link: https://www.ndss-symposium.org/wp-content/uploads/2020/02/24422-paper.pdf
+      type: pdf
+    - link: http://www.cs.columbia.edu/~vpappas/papers/kbouncer.sec13.pdf
+      title: Transparent ROP Exploit Mitigation using Indirect Branch Tracing
+      type: pdf
+    - link: https://www.cs.dartmouth.edu/~sergey/wm/woot13-shapiro.pdf
+      type: pdf
+      title: Weird Machines in ELF
+    - link: https://www.usenix.org/legacy/event/sec11/tech/full_papers/Schwartz.pdf
+      title: "Q: Exploit Hardening Made Easy"
+      type: pdf
+    - title: "Towards Paving the Way for Large-Scale Windows Malware Analysis: Generic Binary Unpacking with Orders-of-Magnitude Performance Boost"
+      type: pdf
+      link: /asi36/papers/p395-cheng.pdf
+    - title: Function Boundary Detection in Stripped Binaries
+      type: pdf
+      link: /asi36/papers/functionboundary.pdf
+    - title: Grey-box Concolic Testing on Binary Code
+      type: pdf
+      link: https://softsec.kaist.ac.kr/~jschoi/data/icse2019.pdf
+    - title: "Symbolic execution with SymCC: Don't interpret, compile!"
+      link: http://www.s3.eurecom.fr/docs/usenixsec20_symcc.pdf
+      type: pdf
+    - title: "ContractFuzzer: Fuzzing Smart Contracts for Vulnerability Detection"
+      type: pdf
+      link: https://github.com/gongbell/ContractFuzzer/blob/master/ASE18-ContractFuzzer.pdf
+
+
+talks:
+- paper: Weird Machines in ELF
+  people: Loïc, Jean-Baptiste 
+
+- people: Laetitia, Laetitia
+  paper: Grey-box Concolic Testing on Binary Code
+
+- people: Tom
+  paper: "ContractFuzzer: Fuzzing Smart Contracts for Vulnerability Detection"
+
+- people: Alizée, Sabry
+  paper: Transparent ROP Exploit Mitigation using Indirect Branch Tracing
+
+- people: Quentin, Pierre-Élisée
+  paper: Function Boundary Detection in Stripped Binaries
