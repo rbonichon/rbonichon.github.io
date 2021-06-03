@@ -1,5 +1,60 @@
 ---
 references:
+- id: secrypt21
+  type: paper-conference
+  author: 
+  - family: McDonald
+    given: Todd
+  - family: Manikyam
+    given: Ramya 
+  - family: Bardin
+    given: Sébastien
+  - family: Bonichon
+    given: Richard
+  - family: Andel
+    given: Todd R.
+  year: 2021
+  venue: SECRYPT 
+  title: "Program Protection Through Software-Based Hardware Abstraction"
+  paper: sbha-secrypt21.pdf
+  
+- id: ccs21
+  type: paper-conference
+  author:
+  - family: Menguy
+    given: Grégoire
+  - family: Bardin
+    given: Sébastien
+  - family: Bonichon
+    given: Richard
+  - family: de Souza Lima
+    given: Cauim
+  year: 2021
+  venue: CCS 
+  title: "Search-based Approaches for Local Blackbox Deobfuscation: Understand, Improve and Mitigate"
+  paper: xyntia-ccs21.pdf
+
+- id: icse21
+  type: paper-conference 
+  author:
+  - family: Recoules
+    given: Frédéric
+  - family: Bardin
+    given: Sébastien
+  - family: Bonichon
+    given: Richard
+  - family: Lemerre
+    given: Matthieu
+  - family: Mounier
+    given: Laurent
+  - family: Potet
+    given: Marie-Laure
+  year: 2021
+  venue: ICSE 
+  title: "Interface Compliance of Inline Assembly: Automatically Check, Patch and Refine"
+  paper: rustina-icse21.pdf
+
+
 - id: raid20
   type: paper-conference
   author:

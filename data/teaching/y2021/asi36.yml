@@ -205,6 +205,17 @@ lectures:
 
     We will devote a good amount of time to hands-on experiments with the AFL fuzzer.
 
+  contents:
+    - title: Slides
+      file: 01-lecture04.pdf
+      type: pdf
+    - title: Exercises
+      file: 02-exercises04.pdf
+      type: pdf
+    - title: Tarball
+      type: archive
+      file: asi36_ex04.tgz
+
   references:
     - title: "Driller: Augmenting Fuzzing Through Selective Symbolic Execution"
       type: pdf
@@ -229,6 +240,9 @@ lectures:
     - type: url
       link: https://wcventure.github.io/FuzzingPaper/
       title: A list of recent results on fuzzing
+    - type: url
+      link: https://www.fuzzingbook.org/
+      title: The Fuzzing Book
 
 - date: 2021-02-16
   title: Exam
@@ -246,6 +260,8 @@ lectures:
         The CTFs are available from:
 
         https://github.com/rbonichon/asi36-ctf/tree/ctf-2020-2021
+
+        *Deadline for CTF reports: **April 2 2021***
         
   references:
     - title: >-
@@ -280,16 +296,28 @@ lectures:
 
 talks:
 - paper: Weird Machines in ELF
-  people: Loïc, Jean-Baptiste 
-
-- people: Laetitia, Laetitia
-  paper: Grey-box Concolic Testing on Binary Code
-
-- people: Tom
-  paper: "ContractFuzzer: Fuzzing Smart Contracts for Vulnerability Detection"
+  people: Loïc, Jean-Baptiste
+  time: "9:00"
 
 - people: Alizée, Sabry
   paper: Transparent ROP Exploit Mitigation using Indirect Branch Tracing
+  time: "9:30"
 
+- people: Tom
+  paper: "ContractFuzzer: Fuzzing Smart Contracts for Vulnerability Detection"
+  time: "10:00"
+  
+
+- people: Laetitia, Laetitia
+  paper: Grey-box Concolic Testing on Binary Code
+  time: "10:30"
+  
+  
 - people: Quentin, Pierre-Élisée
   paper: Function Boundary Detection in Stripped Binaries
+  time: "11:00"
+
+- people: Charbel, Mahmoud
+  paper: "Towards Paving the Way for Large-Scale Windows Malware Analysis: Generic Binary Unpacking with Orders-of-Magnitude Performance Boost"
+  time: "11:30"
+  

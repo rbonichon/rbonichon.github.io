@@ -8,7 +8,7 @@ title: About
 <div class="column is-two-fifths">
 #+END_EXPORT
 
-I am currently a software engineer @ [[https://www.tweag.io/][Tweag I/O]].
+I am currently a software engineer @ [[https://nomadic-labs.com][Nomadic Labs]].
 
 You can contact me by e-mail or snail mail.
 
@@ -22,13 +22,13 @@ You can contact me by e-mail or snail mail.
 
 
 
-|----------------+--------------------------------|
-| *E-mail*       | =richard.bonichon_at_tweag.io= |
-| *Address*      | EURL Tweag                     |
-|                | 207 rue de Bercy               |
-|                | 75012 Paris                    |
-|                | France                         |
-|----------------+--------------------------------|
+|-----------+----------------------------------------|
+| *E-mail*  | =richard.bonichon_at_nomadic-labs.com= |
+| *Address* | Nomadic Labs                           |
+|           | 6 rue Germaine Richier                 |
+|           | 75013 Paris                            |
+|           | France                                 |
+|-----------+----------------------------------------|
 
 
 #+BEGIN_EXPORT html
