@@ -53,6 +53,8 @@ references:
   venue: ICSE 
   title: "Interface Compliance of Inline Assembly: Automatically Check, Patch and Refine"
   paper: rustina-icse21.pdf
+  note: >-
+    *Distinguished Paper Award*
 
 
 - id: raid20

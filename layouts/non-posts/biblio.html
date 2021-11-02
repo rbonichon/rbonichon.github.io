@@ -52,7 +52,7 @@
             {{ end }}
           </span>
           <span class="article-venue">{{ $article.venue|}}.</span>
-
+          <span class="note">{{ if $article.note }}{{ $article.note | markdownify -}}{{ end }}</span>
           </div>
 
           <div class="download">
