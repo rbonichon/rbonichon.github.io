@@ -3,7 +3,7 @@ default: watch
 .phony: watch publish
 
 watch:
-	(cd src; compass watch) & hugo server
+	hugo server
 
 PUBLISH_DIR = docs
 

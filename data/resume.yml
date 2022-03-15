@@ -4,17 +4,35 @@ phone: +33 7 81 84 10 24
 www: https://rbonichon.github.io
 github: https://github.com/rbonichon
 address: 
-  street: 17 rue de la Solidarité 
-  city: 75019 Paris
+  street: 1 impasse Didier Daurat
+  city: F-31140 Saint-Alban
 
 
 sections:
 - title: Experience      
   entries:
+    - title: Software Engineer
+      period:
+        start: 2021
+        end: 3000
+      location:
+        institute:
+          name: Nomadic Labs
+          url: https://nomadic-labs.com
+        city: Saint-Alban (100% remote)
+        country: France
+      descr: >-
+        - Head of consensus team (since July'21).
+        
+        - Consensus protocol development & maintenance (Tenderbake)
+
+        - Merge Team member
+
+
     - title: Senior Software Engineer
       period:
         start: 2019
-        end: 3000
+        end: 2021
       location:
         institute:
           name: Tweag I/O
@@ -34,13 +52,14 @@ sections:
       location:
         institute: 
           name: CEA
+          url: http://www-list.cea.fr/en/
         lab: LSL
         city: Saclay
         country: France
       descr: >-
         - Development of (formal) program analyses on source and binary code,  for
           safer and more secure software engineering.
-        - Lead developer of binary-code analysis platform BINSEC (see <a href="#Tools">Tools<a>) <br/>
+        - Lead developer of binary-code analysis platform <a href="https://binsec.github.io">BINSEC</a> (see <a href="#Tools">Tools<a>) <br/>
 
     - title: Post-doc
       location:
@@ -123,6 +142,7 @@ sections:
 
 
 - title: Tools 
+  break_before: true
   icon: fa-code
   type: tools
   entries:
@@ -134,7 +154,7 @@ sections:
       lang: OCaml
       period:
         start: 2015
-        end: 3000
+        end: 2019
 
     - title: Frama-C
       url: http://frama-c.com
@@ -174,7 +194,6 @@ sections:
         (algebraic) invariants.
 
 - title: Students
-  break_before: true
   type: students
   icon: fa-user
   entries:
@@ -192,6 +211,8 @@ sections:
         start: 
           year: 2016
           month: 02
+        end:
+          year: 2021
     - title: Advanced fuzzing techniques for vulnerability discoveries at scale
       who: Manh-Dung Nguyen 
       type: phd
@@ -199,6 +220,8 @@ sections:
         start: 
           year: 2016
           month: 11
+        end:
+          year: 2020
     - title: "Software security: combining fuzzing and symbolic execution for
       vulnerability detection"
       who: Yaëlle Vinçont
