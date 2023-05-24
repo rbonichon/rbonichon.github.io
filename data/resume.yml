@@ -3,18 +3,31 @@ email: richard.bonichon@gmail.com
 phone: +33 7 81 84 10 24
 www: https://rbonichon.github.io
 github: https://github.com/rbonichon
-address: 
+address:
   street: 1 impasse Didier Daurat
   city: F-31140 Saint-Alban
 
 
 sections:
-- title: Experience      
+- title: Experience
   entries:
     - title: Software Engineer
       period:
-        start: 2021
+        start: 2022
         end: 3000
+      location:
+        institute:
+          name: O(1) labs
+          url: https://o1labs.org
+        city: Saint-Alban (100% remote)
+        country: France
+      descr: >-
+        - Member of Crypto team
+
+    - title: Software Engineer
+      period:
+        start: 2021
+        end: 2022
       location:
         institute:
           name: Nomadic Labs
@@ -23,7 +36,7 @@ sections:
         country: France
       descr: >-
         - Head of consensus team (since July'21).
-        
+
         - Consensus protocol development & maintenance (Tenderbake)
 
         - Merge Team member
@@ -44,13 +57,13 @@ sections:
         - Clients (mockup/proxy client, Sapling client) for the Tezos
           blockchain.
         - Gerrit plugins (enforce owner approval, CI-related UI extensions)
-        
+
     - title: Researcher
       period:
         start: 2008
         end: 2019
       location:
-        institute: 
+        institute:
           name: CEA
           url: http://www-list.cea.fr/en/
         lab: LSL
@@ -63,7 +76,7 @@ sections:
 
     - title: Post-doc
       location:
-        institute: 
+        institute:
           name: LORIA
         lab: Pareo
         city: Nancy
@@ -75,7 +88,7 @@ sections:
         Generation of construction function respecting algebraic invariants for OCaml
     - title: ATER
       location:
-        institute: 
+        institute:
           name: Université Paris 6 Pierre & Marie Curie
         city: Paris
         country: France
@@ -87,7 +100,7 @@ sections:
 
     - title: Visiting Professor
       location:
-        institute: 
+        institute:
           name: Universidade Federal do Rio Grande do Norte (UFRN)
         lab: DIMAp
         city: Natal
@@ -105,18 +118,18 @@ sections:
     - period:
         start: 1999
         end: 2002
-      location: 
+      location:
         city: Toulouse
         country: France
-        institute: 
+        institute:
           name: ENSEEIHT
           url: http://www.enseeiht.fr
-  
+
       title: MS in Computer Science & Applied Mathematics
 
     - title: MS in Computer Science (DEA)
       location:
-        institute: 
+        institute:
           name: Université Paris 7 Denis Diderot
           url: https://www.univ-paris-diderot.fr/
         city: Paris
@@ -127,7 +140,7 @@ sections:
 
     - title: PhD in Computer Science
       location:
-        institute: 
+        institute:
           name: Université Paris 6 Pierre & Marie Curie
           url: http://www.upmc.fr/en/
         city: Paris
@@ -137,11 +150,11 @@ sections:
         end: 2006
       descr: >-
         **Tableaux and Deduction Modulo** <br/>
-        
+
         Key areas : automated theorem proving, rewriting, proof theory
 
 
-- title: Tools 
+- title: Tools
   break_before: true
   icon: fa-code
   type: tools
@@ -199,7 +212,7 @@ sections:
   entries:
     - title: "Combining Formal and Learning Approaches for Binary-Level Security Analysis"
       who: Cauim de Souza Lima
-      type: master 
+      type: master
       period:
         year: 2019
         start: 03
@@ -208,16 +221,16 @@ sections:
       who: Frédéric Recoules
       type: phd
       period:
-        start: 
+        start:
           year: 2016
           month: 02
         end:
           year: 2021
     - title: Advanced fuzzing techniques for vulnerability discoveries at scale
-      who: Manh-Dung Nguyen 
+      who: Manh-Dung Nguyen
       type: phd
-      period: 
-        start: 
+      period:
+        start:
           year: 2016
           month: 11
         end:
@@ -241,20 +254,20 @@ sections:
       who: Vítor Alcantâra de Almeida
       type: master
       period:
-        start: 
+        start:
           year: 2013
-        end: 
+        end:
           year: 2015
 
 skills:
-- Functional programming 
+- Functional programming
 - Program analysis
 - Software verification
 - Automated theorem proving
 
 
 languages:
-- name: French 
+- name: French
   level: native
 - name: English
   level: fluent

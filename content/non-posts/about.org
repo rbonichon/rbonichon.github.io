@@ -8,9 +8,9 @@ title: About
 <div class="column is-two-fifths">
 #+END_EXPORT
 
-I am currently a software engineer @ [[https://nomadic-labs.com][Nomadic Labs]].
+I am currently a software engineer @ [[https://o1labs.org][O(1) Labs]].
 
-You can contact me by e-mail or snail mail.
+You can contact me by e-mail.
 
 #+BEGIN_EXPORT html
 <div class="column is-two-thirds has-text-centered">
@@ -23,11 +23,7 @@ You can contact me by e-mail or snail mail.
 
 
 |-----------+----------------------------------------|
-| *E-mail*  | =richard.bonichon_at_nomadic-labs.com= |
-| *Address* | Nomadic Labs                           |
-|           | 6 rue Germaine Richier                 |
-|           | 75013 Paris                            |
-|           | France                                 |
+| *E-mail*  | =richard.bonichon_at_o1labs.org= |
 |-----------+----------------------------------------|
 
 
