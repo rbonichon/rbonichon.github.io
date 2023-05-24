@@ -20,7 +20,7 @@ publish: $(PUBLISH_DIR)
 push: publish
 
 $(PUBLISH_DIR):
-	git submodule add -b master \
+	git submodule add --force -b master \
 	git@github.com:rbonichon/rbonichon.github.io.git \
 	$@
 
