@@ -264,6 +264,7 @@ skills:
 - Program analysis
 - Software verification
 - Automated theorem proving
+- Blockchain implementation
 
 
 languages:
@@ -283,6 +284,6 @@ misc:
 
 technologies:
 - OCaml
-- Python, C, Java, JavaScript
-- Emacs, Makefile, Git, Docker, LaTeX
+- Python, Rust, Lisp, C, Java, JavaScript
+- Emacs, Makefile, git, Docker, LaTeX
 - Linux, OpenBSD
