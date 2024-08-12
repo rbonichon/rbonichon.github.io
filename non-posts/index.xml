@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Non-Posts on RB</title>
-    <link>https://rbonichon.github.io/non-posts/</link>
+    <link>http://localhost:1313/non-posts/</link>
     <description>Recent content in Non-Posts on RB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rbonichon.github.io/non-posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/non-posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Resume</title>
-      <link>https://rbonichon.github.io/non-posts/resume/</link>
+      <link>http://localhost:1313/non-posts/resume/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/non-posts/resume/</guid>
+      <guid>http://localhost:1313/non-posts/resume/</guid>
       <description></description>
     </item>
     <item>
       <title>Bibliography</title>
-      <link>https://rbonichon.github.io/non-posts/biblio/</link>
+      <link>http://localhost:1313/non-posts/biblio/</link>
       <pubDate>Fri, 22 Dec 2017 11:29:41 +0100</pubDate>
-      <guid>https://rbonichon.github.io/non-posts/biblio/</guid>
+      <guid>http://localhost:1313/non-posts/biblio/</guid>
       <description></description>
     </item>
     <item>
       <title>About</title>
-      <link>https://rbonichon.github.io/non-posts/about/</link>
+      <link>http://localhost:1313/non-posts/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/non-posts/about/</guid>
+      <guid>http://localhost:1313/non-posts/about/</guid>
       <description> I am currently a software engineer @ O(1) Labs.&#xA;You can contact me by e-mail.&#xA;E-mail richard.bonichon_at_o1labs.org </description>
     </item>
     <item>
       <title>Archives</title>
-      <link>https://rbonichon.github.io/non-posts/archives/</link>
+      <link>http://localhost:1313/non-posts/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/non-posts/archives/</guid>
+      <guid>http://localhost:1313/non-posts/archives/</guid>
       <description>Archives</description>
     </item>
     <item>
       <title>Teaching</title>
-      <link>https://rbonichon.github.io/non-posts/teaching/</link>
+      <link>http://localhost:1313/non-posts/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/non-posts/teaching/</guid>
+      <guid>http://localhost:1313/non-posts/teaching/</guid>
       <description></description>
     </item>
   </channel>

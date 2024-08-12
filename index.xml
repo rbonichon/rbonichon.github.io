@@ -2,122 +2,122 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RB</title>
-    <link>https://rbonichon.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on RB</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://rbonichon.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ASI36</title>
-      <link>https://rbonichon.github.io/teaching/2021/asi36/</link>
+      <link>http://localhost:1313/teaching/2021/asi36/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/teaching/2021/asi36/</guid>
+      <guid>http://localhost:1313/teaching/2021/asi36/</guid>
       <description>Software attacks are a common part of today&amp;#39;s headlines. This course aims at demystifying them by giving the fundamentals to understand these attacks, what they consist in and how to mitigate them. We will mostly focus on software vulnerabilities.&#xA;We will cover the following topics:&#xA;semantics and modelization of low-level languages classical attack and exploitation control-flow integrity techniques MATE attacks and reverse engineering code obfuscation Note: These lectures will require a fair amount of hands-on experiments on the computer to make the concepts more practical.</description>
     </item>
     <item>
       <title>ASI36</title>
-      <link>https://rbonichon.github.io/teaching/2020/asi36/</link>
+      <link>http://localhost:1313/teaching/2020/asi36/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/teaching/2020/asi36/</guid>
+      <guid>http://localhost:1313/teaching/2020/asi36/</guid>
       <description>Software attacks are a common part of today&amp;#39;s headlines. This course aims at demystifying them by giving the fundamentals to understand these attacks, what they consist in and how to mitigate them. We will mostly focus on software vulnerabilities.&#xA;We will cover the following topics:&#xA;semantics and modelization of low-level languages classical attack and exploitation control-flow integrity techniques MATE attacks and reverse engineering code obfuscation Note: These lectures will require a fair amount of hands-on experiments on the computer to make the concepts more practical.</description>
     </item>
     <item>
       <title>SSPREW &#39;19</title>
-      <link>https://rbonichon.github.io/posts/ssprew-19/</link>
+      <link>http://localhost:1313/posts/ssprew-19/</link>
       <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/posts/ssprew-19/</guid>
+      <guid>http://localhost:1313/posts/ssprew-19/</guid>
       <description>I was @ SSPREW&amp;#39;19 to present our work regarding:&#xA;the state-of-the-art in anti-DSE software protection (paper) preliminary results and observations concerning improved stochastic code deobfuscation. It was the last SSPREW edition before the merger with the SPRO workshop, but it was a good one! I enjoyed the workshop as usual, for its constructive purpose and nice people. There were 3 highlights to me:&#xA;the Binary Ninja tutorial. This was my second introduction to this tool, and I must say this is just a superb tool, which is coded by nice guys as well.</description>
     </item>
     <item>
       <title>ASI36</title>
-      <link>https://rbonichon.github.io/teaching/2019/asi36/</link>
+      <link>http://localhost:1313/teaching/2019/asi36/</link>
       <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/teaching/2019/asi36/</guid>
+      <guid>http://localhost:1313/teaching/2019/asi36/</guid>
       <description> Software attacks are extensively hitting the headlines nowadays. This course aims at demystifying them by giving the fundamentals to understand these attacks, what they consist in and how to protect from them. We will mostly focus on software vulnerabilities.&#xA;We will cover the following topics:&#xA;semantics and modelization of low-level languages classical attack and exploitation control-flow integrity techniques MATE attacks and reverse engineering code obfuscation malware: principles and analysis </description>
     </item>
     <item>
       <title>USE &#39;18</title>
-      <link>https://rbonichon.github.io/posts/use-18/</link>
+      <link>http://localhost:1313/posts/use-18/</link>
       <pubDate>Sun, 08 Apr 2018 13:55:43 +0100</pubDate>
-      <guid>https://rbonichon.github.io/posts/use-18/</guid>
+      <guid>http://localhost:1313/posts/use-18/</guid>
       <description>We will talk about how we use symbolic execution in BINSEC at USE&amp;#39;18 @ ICST&amp;#39;18. Here are the slides of the presentation..&#xA;For more, this presentation is a mashup of different results obtained by our group during the last 2 years from the following articles.&#xA;Backward-bounded DSE: Targeting Infeasibility Questions on Obfuscated Codes. &amp;lt;br/&amp;gt; Robin David, Sébastien Bardin, Jean-Yves Marion. &amp;lt;br/&amp;gt; SP 2017. Finding the needle in the heap: combining static analysis and dynamic symbolic execution to trigger use-after-free.</description>
     </item>
     <item>
       <title>ASI36</title>
-      <link>https://rbonichon.github.io/teaching/2018/asi36/</link>
+      <link>http://localhost:1313/teaching/2018/asi36/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/teaching/2018/asi36/</guid>
+      <guid>http://localhost:1313/teaching/2018/asi36/</guid>
       <description> Software attacks are extensively hitting the headlines nowadays. This course aims at demystifying them by giving the fundamentals to understand these attacks, what they consist in and how to protect from them. We will mostly focus on software vulnerabilities.&#xA;We will cover the following topics:&#xA;semantics and modelization of low-level languages classical attack and exploitation control-flow integrity techniques MATE attacks and reverse engineering code obfuscation malware: principles and analysis </description>
     </item>
     <item>
       <title>Resume</title>
-      <link>https://rbonichon.github.io/non-posts/resume/</link>
+      <link>http://localhost:1313/non-posts/resume/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/non-posts/resume/</guid>
+      <guid>http://localhost:1313/non-posts/resume/</guid>
       <description></description>
     </item>
     <item>
       <title>Bibliography</title>
-      <link>https://rbonichon.github.io/non-posts/biblio/</link>
+      <link>http://localhost:1313/non-posts/biblio/</link>
       <pubDate>Fri, 22 Dec 2017 11:29:41 +0100</pubDate>
-      <guid>https://rbonichon.github.io/non-posts/biblio/</guid>
+      <guid>http://localhost:1313/non-posts/biblio/</guid>
       <description></description>
     </item>
     <item>
       <title>SSPREW &#39;17</title>
-      <link>https://rbonichon.github.io/posts/ssprew-17/</link>
+      <link>http://localhost:1313/posts/ssprew-17/</link>
       <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/posts/ssprew-17/</guid>
+      <guid>http://localhost:1313/posts/ssprew-17/</guid>
       <description>There will be a BINSEC tutorial @ SSPREW-7.&#xA;The tutorial uses a virtual machine which contains a compiled development snapshot of BINSEC and some examples. You can download it from ftp://ftp.cea.fr/incoming/y2k01/binsec_ssprew.ova (md5: 8d473d800b1fd2d3a2a929a51d1cb990).&#xA;username : vagrant password : vagrant The examples are found in the examples directory.&#xA;The above link will be active for 2 weeks only from November, 30. Here are the slides.</description>
     </item>
     <item>
       <title>ISSISP &#39;17</title>
-      <link>https://rbonichon.github.io/posts/issisp-17/</link>
+      <link>http://localhost:1313/posts/issisp-17/</link>
       <pubDate>Sat, 29 Apr 2017 13:55:43 +0100</pubDate>
-      <guid>https://rbonichon.github.io/posts/issisp-17/</guid>
+      <guid>http://localhost:1313/posts/issisp-17/</guid>
       <description>We — my colleague Sébastien and I — are organizing the 8th International Summer School on Information Security and Protection.&#xA;For those of you interested in software protection in particular and in analyzing binary code in general, this is a great opportunity to meet some of the best academics and professionals of the domain.&#xA;For more information about ISSISP &amp;#39;17, the website is up and running there.</description>
     </item>
     <item>
       <title>RESSI &#39;17</title>
-      <link>https://rbonichon.github.io/posts/ressi-17/</link>
+      <link>http://localhost:1313/posts/ressi-17/</link>
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/posts/ressi-17/</guid>
+      <guid>http://localhost:1313/posts/ressi-17/</guid>
       <description>I will be @ RESSI to talk about BINSEC on behalf of all the group.</description>
     </item>
     <item>
       <title>Postdoc positions @ CEA LIST</title>
-      <link>https://rbonichon.github.io/posts/postdocs_2017/</link>
+      <link>http://localhost:1313/posts/postdocs_2017/</link>
       <pubDate>Wed, 29 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/posts/postdocs_2017/</guid>
+      <guid>http://localhost:1313/posts/postdocs_2017/</guid>
       <description>The Software Reliability Lab at CEA LIST (Paris Saclay, France) is offering postdoc positions about Software security through binary-level analysis.&#xA;Full description is here.</description>
     </item>
     <item>
       <title>DIM0436</title>
-      <link>https://rbonichon.github.io/teaching/2014/dim0436/</link>
+      <link>http://localhost:1313/teaching/2014/dim0436/</link>
       <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/teaching/2014/dim0436/</guid>
+      <guid>http://localhost:1313/teaching/2014/dim0436/</guid>
       <description> Aulas # Data Título Material 1 [20140722] Introdução Slides 2 [20140724] Qualidade de especificação Slides 3 [20140729] Especificações informais Slides 4 [20140731] CFG, DFD Slides 5 [20140805] UML - I Slides 6 [20140807] UML - II Slides 7 [20140812] Autômatos, Redes de Petri Slides 8 [20140814] Conjuntos, Funções, Relações Slides 9 [20140820] Lógica Slides 10 [20140822] Semântica I Slides 11 [20140824] Semântica II Slides 12 [20140830] Semântica IIbis idem 13 [20140902] Tipagem I Slides 14 [20140904] Tipagem II idem (sem subtipagem) 15 [20140923] Programação por contrato Slides 16 [20140925] Lógica de Hoare Slides, Soluções 17 [20140930] Frama-C Slides 18 [20141002] Lab 1 Lab 19 [20141007] Lab 2 – 20 [20141009] Lab 3 – 21 [20141014] Resolução e método tableaux Slides 22 [20141016] Avaliação I – 23 [20141021] DPLL Slides 24 [20141023] Revisões e introdução ao teste Slides 25 [20141030] Teste de caixa preta Slides 26 [20141104] Teste de caixa branca: critérios de cobertura Slides, Exercícios 27 [20141106] Teste de caixa branca: mutações Slides, Exercícios 28 [20141111] Lab 4 Lab, Arquivos 29 [20141113] Lab 5 Lab 30 [20141115] Intepretação abstrata 1 Slides 31 [20141118] Intepretação abstrata 2 Slides 32 [20141122] Lab 6 Lab, Arquivos 33 [20141125] Lab 7 – 34 [20141127] Avaliação II – 35 [20141202] Apresentações – 36 [20141204] Apresentações – </description>
     </item>
     <item>
       <title>About</title>
-      <link>https://rbonichon.github.io/non-posts/about/</link>
+      <link>http://localhost:1313/non-posts/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/non-posts/about/</guid>
+      <guid>http://localhost:1313/non-posts/about/</guid>
       <description> I am currently a software engineer @ O(1) Labs.&#xA;You can contact me by e-mail.&#xA;E-mail richard.bonichon_at_o1labs.org </description>
     </item>
     <item>
       <title>Archives</title>
-      <link>https://rbonichon.github.io/non-posts/archives/</link>
+      <link>http://localhost:1313/non-posts/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/non-posts/archives/</guid>
+      <guid>http://localhost:1313/non-posts/archives/</guid>
       <description>Archives</description>
     </item>
     <item>
       <title>Teaching</title>
-      <link>https://rbonichon.github.io/non-posts/teaching/</link>
+      <link>http://localhost:1313/non-posts/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://rbonichon.github.io/non-posts/teaching/</guid>
+      <guid>http://localhost:1313/non-posts/teaching/</guid>
       <description></description>
     </item>
   </channel>
