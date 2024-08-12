@@ -1,5 +1,5 @@
 ---
-email: richard.bonichon@gmail.com
+email: richard@loopless.xyz
 phone: +33 7 81 84 10 24
 www: https://rbonichon.github.io
 github: https://github.com/rbonichon
@@ -22,7 +22,9 @@ sections:
         city: Saint-Alban (100% remote)
         country: France
       descr: >-
-        - Member of Crypto team
+        - Crypto team: code refactoring, chunking, zk-VM
+        
+        - Protocol team: code refactoring, hard-fork testing, account deletion
 
     - title: Software Engineer
       period:
