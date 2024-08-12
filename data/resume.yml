@@ -14,10 +14,10 @@ sections:
     - title: Software Engineer
       period:
         start: 2022
-        end: 3000
+        end: 2024
       location:
         institute:
-          name: O(1) labs
+          name: O(1) Labs
           url: https://o1labs.org
         city: Saint-Alban (100% remote)
         country: France
@@ -37,7 +37,7 @@ sections:
         city: Saint-Alban (100% remote)
         country: France
       descr: >-
-        - Head of consensus team (since July'21).
+        - Head of consensus team (from July'21).
 
         - Consensus protocol development & maintenance (Tenderbake)
 
@@ -266,7 +266,7 @@ skills:
 - Program analysis
 - Software verification
 - Automated theorem proving
-- Blockchain implementation
+- Blockchain implementation (protocol)
 
 
 languages:
@@ -286,6 +286,6 @@ misc:
 
 technologies:
 - OCaml
-- Python, Rust, Lisp, C, Java, JavaScript
-- Emacs, Makefile, git, Docker, LaTeX
+- Rust, Lisp, Python, C, Java, JavaScript
+- Emacs, git, nix, Makefile, Docker, LaTeX
 - Linux, OpenBSD
