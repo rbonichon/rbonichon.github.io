@@ -1,0 +1,93 @@
+#+title: ASI36 — Analyse de vulnérabilité (2018)
+#+date: 2018-01-01
+
+Software attacks are a common part of today's headlines. This course
+aims at demystifying them by giving the fundamentals to understand
+these attacks, what they consist in and how to mitigate them. We will
+mostly focus on software vulnerabilities.
+
+We will cover the following topics:
+
+- semantics and modelization of low-level languages
+- classical attack and exploitation
+- control-flow integrity techniques
+- MATE attacks and reverse engineering
+- code obfuscation
+
+* Lectures
+
+| # | Date       | Title                                |
+|---+------------+--------------------------------------|
+| 1 | 2018-01-11 | [[#intro][Introduction]]                         |
+| 2 | 2018-01-18 | [[#basics][Basic attacks & exploitation]]         |
+| 3 | 2018-01-25 | [[#cfi][Control-flow integrity]]               |
+| 4 | 2018-02-12 | MATE, attack & defense               |
+| 5 | 2018-02-15 | Semantic attacks (program analysis)  |
+| 6 | 2018-02-22 | Exam                                 |
+
+** Introduction (2018-01-11)
+:PROPERTIES:
+:CUSTOM_ID: intro
+:END:
+
+Overview of the course; security in general and low-level vulnerability
+analysis; compilation and code analysis reminders.
+
+*Materials* :: [[/asi36/ensta-01.pdf][Slides-I]] · [[/asi36/01-chapter01.pdf][Slides-II]]
+
+*References*
+
+- [[https://www.ssi.gouv.fr/uploads/IMG/pdf/Mind_Your_Languages_-_version_longue.pdf][Mind Your Languages]]
+- [[https://github.com/denysdovhan/wtfjs][wtfjs]]
+- [[https://cr.yp.to/qmail/qmailsec-20071101.pdf][Some thoughts on security after ten years of qmail 1.0]]
+
+** Basic attacks & exploitation (2018-01-18)
+:PROPERTIES:
+:CUSTOM_ID: basics
+:END:
+
+Buffer overflows, heap overflows, format-string exploitation. Hands-on.
+
+*Materials* :: [[/asi36/01-chapter02.pdf][Slides]] · [[/asi36/02-exercises02.pdf][Exercises]] · [[/asi36/asi36_ex2.tgz][Tarball]] · [[/asi36/03-solutions02.pdf][Solutions (partial)]]
+
+*References*
+
+- [[http://www.ouah.org/mudge.html][How to write Buffer Overflows]]
+- [[http://phrack.org/issues/49/14.html#article][Smashing The Stack For Fun And Profit]]
+- [[https://microcorruption.com/login][Microcorruption]]
+- [[http://www.jegerlehner.ch/intel/IntelCodeTable.pdf][80x86 CodeTable]]
+- [[http://ref.x86asm.net/][X86 opcode/instruction reference]]
+- [[https://software.intel.com/sites/default/files/managed/a4/60/325383-sdm-vol-2abcd.pdf][Intel full ISA reference]]
+- [[https://www.cgsecurity.org/exploit/heaptut.txt][w00w00 on Heap Overflows]]
+- [[https://nostarch.com/hacking2.htm][Hacking: The Art of Exploitation (Ch. 0x200 & 0x300)]]
+- [[https://link.springer.com/content/pdf/10.1007/978-3-642-04117-4_30.pdf][Low-level Software Security by Example]]
+
+** Control-flow integrity (2018-01-25)
+:PROPERTIES:
+:CUSTOM_ID: cfi
+:END:
+
+Stack canaries, DEP, ASLR; limitations + advanced CFI. Hands-on.
+
+*Materials* :: [[/asi36/01-chapter03.pdf][Slides]] · [[/asi36/02-exercises03.pdf][Exercises]] · [[/asi36/asi36_ex3.tgz][Tarball]] · [[/asi36/03-solutions03.pdf][Solutions (partial)]]
+
+*References*
+
+- [[http://inertiawar.com/openbsd/][Exploiting OpenBSD]]
+- [[http://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Bypassing-aslr-slides.pdf][Stack Smashing as of Today]]
+- [[http://phrack.org/issues/59/9.html#article][Bypassing PaX ASLR Protection]]
+- [[http://phrack.org/issues/55/8.html][The Frame Pointer Overwrite]]
+- [[http://phrack.org/issues/56/5.html][Bypassing StackGuard and StackShield]]
+- [[http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf][Practical CFI & Randomization for Binary Executables]]
+- [[http://www.pcc.me.uk/~peter/acad/usenix14.pdf][Enforcing Forward-Edge CFI in GCC & LLVM]]
+- [[https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf][The Geometry of Innocent Flesh on the Bone]]
+
+** MATE, attack & defense (2018-02-12)
+
+*Materials* :: [[/asi36/cours-cyber-ensta-02.pdf][Slides]]
+
+** Semantic attacks (program analysis) (2018-02-15)
+
+*Materials* :: [[/asi36/cours-cyber-ensta-03.pdf][Slides]]
+
+** Exam (2018-02-22)

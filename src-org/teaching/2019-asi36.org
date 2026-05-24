@@ -1,0 +1,105 @@
+#+title: ASI36 — Analyse de vulnérabilité (2019)
+#+date: 2019-01-01
+
+Software attacks are a common part of today's headlines. This course
+aims at demystifying them by giving the fundamentals to understand
+these attacks, what they consist in and how to mitigate them. We will
+mostly focus on software vulnerabilities.
+
+We will cover the following topics:
+
+- semantics and modelization of low-level languages
+- classical attack and exploitation
+- control-flow integrity techniques
+- MATE attacks and reverse engineering
+- code obfuscation
+
+* Lectures
+
+| # | Date       | Title                                |
+|---+------------+--------------------------------------|
+| 1 | 2019-01-17 | [[#intro][Introduction]]                         |
+| 2 | 2019-01-25 | [[#basics][Basic attacks & exploitation]]         |
+| 3 | 2019-02-07 | [[#mate][MATE, attack & defense]]               |
+| 4 | 2019-02-14 | [[#cfi][Control-flow integrity]]               |
+| 5 | 2019-02-21 | Semantic attacks (program analysis)  |
+
+** Introduction (2019-01-17)
+:PROPERTIES:
+:CUSTOM_ID: intro
+:END:
+
+Overview of the course; security in general and low-level vulnerability
+analysis; compilation and code analysis reminders.
+
+*Materials* :: [[/asi36/2019/ensta-01.pdf][Slides-I]] · [[/asi36/2019/01-chapter01.pdf][Slides-II]]
+
+*References*
+
+- [[https://www.ssi.gouv.fr/uploads/IMG/pdf/Mind_Your_Languages_-_version_longue.pdf][Mind Your Languages]]
+- [[https://github.com/denysdovhan/wtfjs][wtfjs]]
+- [[https://cr.yp.to/qmail/qmailsec-20071101.pdf][Some thoughts on security after ten years of qmail 1.0]]
+- [[https://pdos.csail.mit.edu/papers/ub:apsys12.pdf][Undefined Behavior: What happened to My Code?]]
+
+** Basic attacks & exploitation (2019-01-25)
+:PROPERTIES:
+:CUSTOM_ID: basics
+:END:
+
+Buffer overflows, heap overflows, format-string exploitation. Hands-on.
+
+*Materials* :: [[/asi36/2019/01-chapter02.pdf][Slides]] · [[/asi36/2019/02-exercises02.pdf][Exercises]] · [[/asi36/2019/asi36_ex2.tgz][Tarball]]
+
+*References*
+
+- [[http://www.ouah.org/mudge.html][How to write Buffer Overflows]]
+- [[http://phrack.org/issues/49/14.html#article][Smashing The Stack For Fun And Profit]]
+- [[https://microcorruption.com/login][Microcorruption]]
+- [[http://www.jegerlehner.ch/intel/IntelCodeTable.pdf][80x86 CodeTable]]
+- [[http://ref.x86asm.net/][X86 opcode/instruction reference]]
+- [[https://software.intel.com/sites/default/files/managed/a4/60/325383-sdm-vol-2abcd.pdf][Intel full ISA reference]]
+- [[https://www.cgsecurity.org/exploit/heaptut.txt][w00w00 on Heap Overflows]]
+- [[https://nostarch.com/hacking2.htm][Hacking: The Art of Exploitation (Ch. 0x200 & 0x300)]]
+- [[https://link.springer.com/content/pdf/10.1007/978-3-642-04117-4_30.pdf][Low-level Software Security by Example]]
+
+** MATE, attack & defense (2019-02-07)
+:PROPERTIES:
+:CUSTOM_ID: mate
+:END:
+
+TBA.
+
+** Control-flow integrity (2019-02-14)
+:PROPERTIES:
+:CUSTOM_ID: cfi
+:END:
+
+Stack canaries, DEP, ASLR; limitations + advanced CFI. Hands-on.
+
+*References*
+
+- [[http://inertiawar.com/openbsd/][Exploiting OpenBSD]]
+- [[http://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Bypassing-aslr-slides.pdf][Stack Smashing as of Today]]
+- [[http://phrack.org/issues/59/9.html#article][Bypassing PaX ASLR Protection]]
+- [[http://phrack.org/issues/55/8.html][The Frame Pointer Overwrite]]
+- [[http://phrack.org/issues/56/5.html][Bypassing StackGuard and StackShield]]
+- [[http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf][Practical CFI & Randomization for Binary Executables]]
+- [[http://www.pcc.me.uk/~peter/acad/usenix14.pdf][Enforcing Forward-Edge CFI in GCC & LLVM]]
+- [[https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf][The Geometry of Innocent Flesh on the Bone]]
+- [[https://www.cs.vu.nl/~herbertb/papers/srop_sp14.pdf][Framing Signals — A Return to Portable Shellcode]]
+- [[/asi36/papers/aslr.pdf][ASLR Smack & Laugh Reference]]
+
+** Semantic attacks (program analysis) (2019-02-21)
+
+TBA.
+
+* Student talks
+
+| Time  | Paper                                                                   | Students          |
+|-------+-------------------------------------------------------------------------+-------------------|
+| 9:15  | Binary Code is not easy                                                 | Kaori, Willy      |
+| 9:45  | Compiler-Agnostic Function Detection in Binaries                        | Ali, Matthieu     |
+| 10:15 | The Geometry of Innocent Flesh on the Bone                              | Ignacio           |
+| 11:00 | Hacking Blind                                                           | François, Louis-Marie |
+| 11:30 | SoK: (State of) The Art of War — Offensive Techniques in Binary Analysis | Benjamin, Cyrielle |
+| 12:00 | All you Ever Wanted to Know About Dynamic Taint Analysis & Forward SE   | Pierre, Léo       |

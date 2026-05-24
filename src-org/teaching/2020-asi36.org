@@ -1,0 +1,167 @@
+#+title: ASI36 — Analyse de vulnérabilité (2020)
+#+date: 2020-01-01
+
+Software attacks are a common part of today's headlines. This course
+aims at demystifying them by giving the fundamentals to understand
+these attacks, what they consist in and how to mitigate them. We will
+mostly focus on software vulnerabilities.
+
+We will cover the following topics:
+
+- semantics and modelization of low-level languages
+- classical attack and exploitation
+- control-flow integrity techniques
+- MATE attacks and reverse engineering
+- code obfuscation
+
+/Note:/ These lectures will require a fair amount of hands-on
+experiments on the computer to make the concepts more practical.
+
+* Lectures
+
+| # | Date       | Title                                |
+|---+------------+--------------------------------------|
+| 1 | 2020-01-16 | [[#intro][Introduction]]                         |
+| 2 | 2020-01-23 | [[#basics][Basic attacks & exploitation]]         |
+| 3 | 2020-02-03 | [[#cfi][Control-flow integrity]]               |
+| 4 | 2020-02-06 | [[#mate][MATE, attack & defense]]               |
+| 5 | 2020-02-13 | [[#fuzz][Fuzzing]]                              |
+| 6 | 2020-02-27 | Semantic attacks (program analysis)  |
+| 7 | 2020-03-05 | [[#exam][Exam]]                                 |
+
+** Introduction (2020-01-16)
+:PROPERTIES:
+:CUSTOM_ID: intro
+:END:
+
+Overview of the course, security in general and low-level vulnerability
+analysis. Reminders regarding compilation and code analysis.
+
+*Materials* :: [[/asi36/2020/cours-cyber-ensta-01.pdf][Slides-I]] · [[/asi36/2020/01-lecture01.pdf][Slides-II]]
+
+*References*
+
+- [[https://www.ssi.gouv.fr/uploads/IMG/pdf/Mind_Your_Languages_-_version_longue.pdf][Mind Your Languages]]
+- [[https://github.com/denysdovhan/wtfjs][wtfjs]]
+- [[https://cr.yp.to/qmail/qmailsec-20071101.pdf][Some thoughts on security after ten years of qmail 1.0]]
+- [[https://pdos.csail.mit.edu/papers/ub:apsys12.pdf][Undefined Behavior: What happened to My Code?]]
+- [[https://www.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf][Reflections on Trusting Trust]]
+
+** Basic attacks & exploitation (2020-01-23)
+:PROPERTIES:
+:CUSTOM_ID: basics
+:END:
+
+Buffer overflows, heap overflows, format-string exploitation. Hands-on.
+
+*Materials* :: [[/asi36/2020/01-lecture02.pdf][Slides]] · [[/asi36/2020/02-exercises02.pdf][Exercises]] · [[/asi36/2020/asi36_ex2.tgz][Tarball]]
+
+*References*
+
+- [[http://www.ouah.org/mudge.html][How to write Buffer Overflows]]
+- [[http://phrack.org/issues/49/14.html#article][Smashing The Stack For Fun And Profit]]
+- [[https://microcorruption.com/login][Microcorruption]]
+- [[http://www.jegerlehner.ch/intel/IntelCodeTable.pdf][80x86 CodeTable]]
+- [[http://ref.x86asm.net/][X86 opcode/instruction reference]]
+- [[https://software.intel.com/sites/default/files/managed/a4/60/325383-sdm-vol-2abcd.pdf][Intel full ISA reference]]
+- [[https://www.cgsecurity.org/exploit/heaptut.txt][w00w00 on Heap Overflows]]
+- [[https://nostarch.com/hacking2.htm][Hacking: The Art of Exploitation (Ch. 0x200 & 0x300)]]
+- [[https://link.springer.com/content/pdf/10.1007/978-3-642-04117-4_30.pdf][Low-level Software Security by Example]]
+- [[https://beginners.re/][Reverse Engineering for Beginners]]
+- [[https://github.com/0xZ0F/Z0FCourse_ReverseEngineering][Reverse Engineering Course (in progress)]]
+
+** Control-flow integrity (2020-02-03)
+:PROPERTIES:
+:CUSTOM_ID: cfi
+:END:
+
+Stack canaries, DEP, ASLR; limitations + advanced CFI. Hands-on.
+
+*Materials* :: [[/asi36/2020/01-lecture03.pdf][Slides]] · [[/asi36/2020/02-exercises03.pdf][Exercises]] · [[/asi36/2020/asi36_ex3.tgz][Tarball]]
+
+*References*
+
+- [[http://inertiawar.com/openbsd/][Exploiting OpenBSD]]
+- [[http://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Bypassing-aslr-slides.pdf][Stack Smashing as of Today]]
+- [[http://phrack.org/issues/59/9.html#article][Bypassing PaX ASLR Protection]]
+- [[http://phrack.org/issues/55/8.html][The Frame Pointer Overwrite]]
+- [[http://phrack.org/issues/56/5.html][Bypassing StackGuard and StackShield]]
+- [[http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf][Practical CFI & Randomization for Binary Executables]]
+- [[http://www.pcc.me.uk/~peter/acad/usenix14.pdf][Enforcing Forward-Edge CFI in GCC & LLVM]]
+- [[https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf][The Geometry of Innocent Flesh on the Bone]]
+- [[https://www.cs.vu.nl/~herbertb/papers/srop_sp14.pdf][Framing Signals — A Return to Portable Shellcode]]
+- [[/asi36/papers/aslr.pdf][ASLR Smack & Laugh Reference]]
+- [[https://googleprojectzero.blogspot.com/2019/11/bad-binder-android-in-wild-exploit.html][Bad Binder: Android In-The-Wild Exploit]]
+- [[/asi36/papers/guardlines.pdf][Preventing zero-day exploits with guard lines]]
+- [[https://paulmakowski.wordpress.com/2011/01/25/smashing-the-stack-in-2011/][Smashing the Stack in 2011]]
+
+** MATE, attack & defense (2020-02-06)
+:PROPERTIES:
+:CUSTOM_ID: mate
+:END:
+
+Man-At-The-End scenario: attackers /on/ your computer, read/write code,
+patch on the fly. State of known attacks and defenses; overview of this
+research area.
+
+*Materials* :: [[/asi36/2020/cours-cyber-ensta-02.pdf][Slides]]
+
+** Fuzzing (2020-02-13)
+:PROPERTIES:
+:CUSTOM_ID: fuzz
+:END:
+
+Overview of the current state of software fuzzing. Hands-on AFL.
+
+*Materials* :: [[/asi36/2020/01-lecture04.pdf][Slides]] · [[/asi36/2020/02-exercises04.pdf][Exercises]] · [[/asi36/2020/asi36_ex04.tgz][Tarball]]
+
+*References*
+
+- [[https://cs.ucsb.edu/~vigna/publications/2016_NDSS_Driller.pdf][Driller: Augmenting Fuzzing Through Selective Symbolic Execution]]
+- [[https://arxiv.org/abs/1803.01307][Angora: Efficient Fuzzing by Principled Search]]
+- [[https://www.cs.vu.nl/~giuffrida/papers/vuzzer-ndss-2017.pdf][VUzzer: Application-aware Evolutionary Fuzzing]]
+- [[http://lcamtuf.coredump.cx/afl/][AFL homepage]]
+- [[https://www.comp.nus.edu.sg/~thuanpv/publications/AFLGo_CCS17.pdf][Directed Greybox Fuzzing]]
+- [[http://www.carolemieux.com/fairfuzz-ase18.pdf][FairFuzz]]
+- [[https://wcventure.github.io/FuzzingPaper/][A list of recent results on fuzzing]]
+
+** Semantic attacks (program analysis) (2020-02-27)
+
+TBA.
+
+** Exam (2020-03-05)
+:PROPERTIES:
+:CUSTOM_ID: exam
+:END:
+
+Two parts:
+- Research article presentation (groups of 2, 20 min + questions)
+- Mini CTF (find the secret key!) + *written* solution report (5 p. max)
+
+CTFs: https://github.com/rbonichon/asi36-ctf
+
+*References*
+
+- [[http://www.scs.stanford.edu/~sorbo/brop/bittau-brop.pdf][Hacking Blind]]
+- [[http://www.cs.columbia.edu/~vpappas/papers/kbouncer.sec13.pdf][Transparent ROP Exploit Mitigation using Indirect Branch Tracing]]
+- [[https://www.cs.dartmouth.edu/~sergey/wm/woot13-shapiro.pdf][Weird Machines in ELF]]
+- [[http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf][Practical CFI & Randomization for Binary Executables]]
+- [[https://www.usenix.org/legacy/event/sec11/tech/full_papers/Schwartz.pdf][Q: Exploit Hardening Made Easy]]
+- [[/asi36/papers/p395-cheng.pdf][Towards Paving the Way for Large-Scale Windows Malware Analysis]]
+- [[/asi36/papers/functionboundary.pdf][Function Boundary Detection in Stripped Binaries]]
+- [[https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-blazytko.pdf][Syntia: Synthesizing the Semantics of Obfuscated Code]]
+- [[https://softsec.kaist.ac.kr/~jschoi/data/icse2019.pdf][Grey-box Concolic Testing on Binary Code]]
+- [[/asi36/papers/guardlines.pdf][Preventing zero-day exploits with guard lines]]
+- [[https://patricegodefroid.github.io/public_psfiles/ase2017.pdf][Learn&Fuzz: machine learning for input fuzzing]]
+- [[https://cs.brown.edu/~vpk/papers/nibbler.acsac19.pdf][Nibbler: Debloating Binary Shared Libraries]]
+
+* Student talks
+
+| Time  | Paper                                                                  | Students            |
+|-------+------------------------------------------------------------------------+---------------------|
+| 9:15  | Preventing zero-day exploits with guard lines                          | Alexandre, Emeline  |
+| 9:45  | Nibbler: Debloating Binary Shared Libraries                            | Sébastien, Baptiste |
+| 10:15 | Learn&Fuzz: machine learning for input fuzzing                         | Mehdi, Corentin     |
+| 10:45 | Hacking Blind                                                          | Isabelle, Soline    |
+| 11:15 | Syntia: Synthesizing the Semantics of Obfuscated Code                  | Paul, Antoine       |
+| TBD   | Practical CFI & Randomization for Binary Executables                   | Pierrick, Julien    |

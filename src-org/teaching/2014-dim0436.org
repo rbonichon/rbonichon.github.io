@@ -1,0 +1,50 @@
+#+title: DIM0436 — Métodos formais (2014)
+#+date: 2014-02-01
+
+Curso ministrado na [[https://www.ufrn.br/][UFRN]] (Universidade Federal do Rio Grande do
+Norte), DIMAp, Natal, durante minha estadia como professor visitante.
+
+Tópicos cobertos: especificação formal, lógica, semântica, tipagem,
+programação por contrato (lógica de Hoare, Frama-C), prova automática
+(SAT/SMT), teste de software, interpretação abstrata.
+
+* Aulas
+
+|  # | Data       | Título                                        | Material              |
+|----+------------+-----------------------------------------------+-----------------------|
+|  1 | 2014-07-22 | Introdução                                    | [[/dim0436/lectures/01-chapter01.pdf][Slides]]                |
+|  2 | 2014-07-24 | Qualidade de especificação                    | [[/dim0436/lectures/01-chapter02.pdf][Slides]]                |
+|  3 | 2014-07-29 | Especificações informais                      | [[/dim0436/lectures/01-chapter03.pdf][Slides]]                |
+|  4 | 2014-07-31 | CFG, DFD                                      | [[/dim0436/lectures/01-chapter04.pdf][Slides]]                |
+|  5 | 2014-08-05 | UML – I                                       | [[/dim0436/lectures/01-chapter05.pdf][Slides]]                |
+|  6 | 2014-08-07 | UML – II                                      | [[/dim0436/lectures/01-chapter06.pdf][Slides]]                |
+|  7 | 2014-08-12 | Autômatos, Redes de Petri                     | [[/dim0436/lectures/01-chapter07.pdf][Slides]]                |
+|  8 | 2014-08-14 | Conjuntos, Funções, Relações                  | [[/dim0436/lectures/01-chapter08.pdf][Slides]]                |
+|  9 | 2014-08-20 | Lógica                                        | [[/dim0436/lectures/01-chapter09.pdf][Slides]]                |
+| 10 | 2014-08-22 | Semântica I                                   | [[/dim0436/lectures/01-chapter10.pdf][Slides]]                |
+| 11 | 2014-08-24 | Semântica II                                  | [[/dim0436/lectures/01-chapter11.pdf][Slides]]                |
+| 12 | 2014-08-30 | Semântica IIbis                               | idem                  |
+| 13 | 2014-09-02 | Tipagem I                                     | [[/dim0436/lectures/01-chapter12.pdf][Slides]]                |
+| 14 | 2014-09-04 | Tipagem II                                    | idem (sem subtipagem) |
+| 15 | 2014-09-23 | Programação por contrato                      | [[/dim0436/lectures/01-chapter15.pdf][Slides]]                |
+| 16 | 2014-09-25 | Lógica de Hoare                               | [[/dim0436/lectures/01-chapter16.pdf][Slides]] · [[/dim0436/exercises/solucoes-wp.pdf][Soluções]]      |
+| 17 | 2014-09-30 | Frama-C                                       | [[/dim0436/lectures/01-chapter17.pdf][Slides]]                |
+| 18 | 2014-10-02 | Lab 1                                         | [[/dim0436/labs/lab-wp.pdf][Lab]]                   |
+| 19 | 2014-10-07 | Lab 2                                         | —                     |
+| 20 | 2014-10-09 | Lab 3                                         | —                     |
+| 21 | 2014-10-14 | Resolução e método tableaux                   | [[/dim0436/lectures/01-chapter21.pdf][Slides]]                |
+| 22 | 2014-10-16 | *Avaliação I*                                 | —                     |
+| 23 | 2014-10-21 | DPLL                                          | [[/dim0436/lectures/01-chapter23.pdf][Slides]]                |
+| 24 | 2014-10-23 | Revisões e introdução ao teste                | [[/dim0436/lectures/01-chapter24.pdf][Slides]]                |
+| 25 | 2014-10-30 | Teste de caixa preta                          | [[/dim0436/lectures/01-chapter25.pdf][Slides]]                |
+| 26 | 2014-11-04 | Teste de caixa branca: critérios de cobertura | [[/dim0436/lectures/01-chapter26.pdf][Slides]] · [[/dim0436/exercises/01-exercises26.pdf][Exercícios]]    |
+| 27 | 2014-11-06 | Teste de caixa branca: mutações               | [[/dim0436/lectures/01-chapter27.pdf][Slides]] · [[/dim0436/exercises/02-exercises27.pdf][Exercícios]]    |
+| 28 | 2014-11-11 | Lab 4                                         | [[/dim0436/labs/lab-caixa_preta.pdf][Lab]] · [[/dim0436/labs/arquivos.tgz][Arquivos]]         |
+| 29 | 2014-11-13 | Lab 5                                         | [[/dim0436/labs/lab-whitebox_testing29.pdf][Lab]]                   |
+| 30 | 2014-11-15 | Interpretação abstrata 1                      | [[/dim0436/lectures/01-chapter30.pdf][Slides]]                |
+| 31 | 2014-11-18 | Interpretação abstrata 2                      | [[/dim0436/lectures/01-chapter31.pdf][Slides]]                |
+| 32 | 2014-11-22 | Lab 6                                         | [[/dim0436/labs/lab-ai.pdf][Lab]] · [[/dim0436/labs/code-ai.tgz][Arquivos]]         |
+| 33 | 2014-11-25 | Lab 7                                         | —                     |
+| 34 | 2014-11-27 | *Avaliação II*                                | —                     |
+| 35 | 2014-12-02 | Apresentações                                 | —                     |
+| 36 | 2014-12-04 | Apresentações                                 | —                     |
