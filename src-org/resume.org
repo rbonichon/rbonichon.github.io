@@ -4,11 +4,8 @@
 <aside class="marginnote">
   <strong>Contact</strong><br/>
   richard@loopless.xyz<br/>
-  +33 7 81 84 10 24<br/>
   <a href="https://rbonichon.github.io">rbonichon.github.io</a><br/>
-  <a href="https://github.com/rbonichon">github.com/rbonichon</a><br/>
-  1 impasse Didier Daurat<br/>
-  F-31140 Saint-Alban
+  <a href="https://github.com/rbonichon">github.com/rbonichon</a>
 </aside>
 #+END_EXPORT
 
