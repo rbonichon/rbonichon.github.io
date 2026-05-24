@@ -11,87 +11,80 @@
 
 * Experience
 
-| Period      | Role                       | Where                                                 |
-|-------------+----------------------------+-------------------------------------------------------|
-| 2022 – 2024 | Software Engineer          | [[https://o1labs.org][O(1) Labs]] — Saint-Alban (remote), France          |
-| 2021 – 2022 | Software Engineer          | [[https://nomadic-labs.com][Nomadic Labs]] — Saint-Alban (remote), France       |
-| 2019 – 2021 | Senior Software Engineer   | [[https://www.tweag.io/][Tweag I/O]] — Paris, France                        |
-| 2008 – 2019 | Researcher                 | [[http://www-list.cea.fr/en/][CEA]] / LSL — Saclay, France                       |
-| 2013 – 2015 | Visiting Professor         | UFRN / DIMAp — Natal, Brazil                          |
-| 2007 – 2008 | Post-doc                   | LORIA / Paréo — Nancy, France                         |
-| 2006 – 2007 | ATER                       | Université Paris 6 Pierre & Marie Curie — Paris, France |
+** Software Engineer · O(1) Labs · 2022 – 2024
+- Crypto team: code refactoring, chunking, zk-VM.
+- Protocol team: code refactoring, hard-fork testing, account deletion.
 
-** O(1) Labs (2022 – 2024)
-- Crypto team: code refactoring, chunking, zk-VM
-- Protocol team: code refactoring, hard-fork testing, account deletion
+** Software Engineer · Nomadic Labs · 2021 – 2022
+- Head of consensus team (from July 2021).
+- Consensus protocol development & maintenance (Tenderbake).
+- Merge Team member.
 
-** Nomadic Labs (2021 – 2022)
-- Head of consensus team (from July 2021)
-- Consensus protocol development & maintenance (Tenderbake)
-- Merge Team member
+** Senior Software Engineer · Tweag I/O · 2019 – 2021
+- Tezos clients (mockup/proxy client, Sapling client).
+- Gerrit plugins (enforce owner approval, CI-related UI extensions).
 
-** Tweag I/O (2019 – 2021)
-- Tezos clients (mockup/proxy client, Sapling client)
-- Gerrit plugins (enforce owner approval, CI-related UI extensions)
+** Researcher · CEA / LSL · 2008 – 2019
+- Development of (formal) program analyses on source and binary code,
+  for safer and more secure software engineering.
+- Lead developer of the binary-code analysis platform [[https://binsec.github.io][BINSEC]].
 
-** CEA / LSL (2008 – 2019)
-- Development of (formal) program analyses on source and binary code, for
-  safer and more secure software engineering
-- Lead developer of binary-code analysis platform [[https://binsec.github.io][BINSEC]]
-
-** UFRN / DIMAp (2013 – 2015, visiting)
+** Visiting Professor · UFRN / DIMAp (Natal, Brazil) · 2013 – 2015
 Enhancing constraint solvers used in software verification.
 
-** LORIA / Paréo (2007 – 2008, post-doc)
+** Post-doc · LORIA / Paréo · 2007 – 2008
 Generation of construction functions respecting algebraic invariants for OCaml.
+
+** ATER · Université Paris 6 Pierre & Marie Curie · 2006 – 2007
+Teaching assistant.
 
 * Education
 
-| Period      | Degree                                 | Where                                                    |
-|-------------+----------------------------------------+----------------------------------------------------------|
-| 2003 – 2006 | PhD in Computer Science                | [[http://www.upmc.fr/en/][Université Paris 6 Pierre & Marie Curie]] — Paris       |
-| 2002 – 2003 | MS in Computer Science (DEA)           | [[https://www.univ-paris-diderot.fr/][Université Paris 7 Denis Diderot]] — Paris              |
-| 1999 – 2002 | MS in CS & Applied Mathematics         | [[http://www.enseeiht.fr][ENSEEIHT]] — Toulouse                                   |
+** PhD in Computer Science · Université Paris 6 Pierre & Marie Curie · 2003 – 2006
+Thesis: /Tableaux and Deduction Modulo/. Automated theorem proving,
+rewriting, proof theory.
 
-Thesis (PhD) :: *Tableaux and Deduction Modulo* — automated theorem
-proving, rewriting, proof theory.
+** MS in Computer Science (DEA) · Université Paris 7 Denis Diderot · 2002 – 2003
+
+** MS in Computer Science & Applied Mathematics · ENSEEIHT (Toulouse) · 1999 – 2002
 
 * Tools
 
-| Period      | Project                                  | Language           |
-|-------------+------------------------------------------+--------------------|
-| 2015 – 2019 | [[https://binsec.github.io][BINSEC]]                          | OCaml              |
-| 2008 – 2013 | [[http://frama-c.com][Frama-C]] (plugins metrics & mthread) | OCaml              |
-| 2014 – 2015 | [[https://github.com/rbonichon/smtpp][SMTpp]]                          | OCaml              |
-| 2012 – 2013 | Pathcrawler Online                       | Java, JavaScript   |
-| 2007 – 2009 | [[http://moca.inria.fr][Moca]]                              | OCaml              |
-
-** BINSEC
+** [[https://binsec.github.io][BINSEC]] · OCaml · 2015 – 2019
 Formal methods platform for security-oriented binary code analysis
 (symbolic execution, fuzzing, code deobfuscation, ...).
 
-** Frama-C
+** [[http://frama-c.com][Frama-C]] · OCaml · 2008 – 2013
 C/C++ software analyzers — plugins =metrics= and =mthread= (initial version).
 
-** Pathcrawler Online
-Web application for users to play with the Pathcrawler test generation tool.
-
-** SMTpp
+** [[https://github.com/rbonichon/smtpp][SMTpp]] · OCaml · 2014 – 2015
 Preprocessing platform for SMT-LIB, the problem repository for SMT solvers.
 
-** Moca
+** Pathcrawler Online · Java, JavaScript · 2012 – 2013
+Web application for users to play with the Pathcrawler test generation tool.
+
+** [[http://moca.inria.fr][Moca]] · OCaml · 2007 – 2009
 Construction functions generator for datatypes with (algebraic) invariants.
 
 * Students
 
-| Period      | Level  | Student                  | Topic                                                                     |
-|-------------+--------+--------------------------+---------------------------------------------------------------------------|
-| 2016 – 2021 | PhD    | Frédéric Recoules        | Automatic verification of low-level code: C, assembly & binary code       |
-| 2016 – 2020 | PhD    | Manh-Dung Nguyen         | Advanced fuzzing techniques for vulnerability discoveries at scale        |
-| 2013 – 2015 | MSc    | Vítor Alcantâra de Almeida | =WPTrans=: assistant for program verification in Frama-C                |
-| 2019 (Mar–Apr) | MSc | Cauim de Souza Lima      | Combining formal and learning approaches for binary-level security        |
-| 2017 (Apr–Sep) | MSc | Yaëlle Vinçont           | Combining fuzzing and symbolic execution for vulnerability detection      |
-| 2017 (Apr–Sep) | MSc | Guillaume Girol          | Sharpening symbolic methods for vulnerability detection                   |
+** Frédéric Recoules (PhD) · 2016 – 2021
+Automatic verification of low-level code: C, assembly & binary code.
+
+** Manh-Dung Nguyen (PhD) · 2016 – 2020
+Advanced fuzzing techniques for vulnerability discoveries at scale.
+
+** Vítor Alcantâra de Almeida (MSc) · 2013 – 2015
+=WPTrans=: assistant for program verification in Frama-C.
+
+** Cauim de Souza Lima (MSc) · 2019 (Mar–Apr)
+Combining formal and learning approaches for binary-level security analysis.
+
+** Yaëlle Vinçont (MSc) · 2017 (Apr–Sep)
+Combining fuzzing and symbolic execution for vulnerability detection.
+
+** Guillaume Girol (MSc) · 2017 (Apr–Sep)
+Sharpening symbolic methods for vulnerability detection.
 
 * Skills
 
