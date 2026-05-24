@@ -1,0 +1,17 @@
+#+title: RB
+
+Hello, world. This is a smoke test of the org-publish chain.
+
+* A heading
+
+Some text with /italics/ and *bold*. Followed by a list:
+
+- item one
+- item two
+
+A short table:
+
+| key | value |
+|-----+-------|
+| foo | 42    |
+| bar | 7     |
