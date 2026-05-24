@@ -1,17 +1,35 @@
-#+title: RB
+#+title: Richard Bonichon
 
-Hello, world. This is a smoke test of the org-publish chain.
+#+BEGIN_EXPORT html
+<aside class="marginnote">
+  <img src="/img/rb.jpg" alt="Portrait"
+       style="max-width: 100%; border-radius: 4px;"/>
+  <p style="margin-top: 0.5rem;">
+    <strong>E-mail</strong><br/>
+    <code>richard@loopless.xyz</code>
+  </p>
+</aside>
+#+END_EXPORT
 
-* A heading
+I am a software engineer based in Saint-Alban (near Toulouse, France).
+I currently run [[https://loopless.xyz][Loopless]], my own consulting / engineering vehicle.
 
-Some text with /italics/ and *bold*. Followed by a list:
+Previously :: software engineer at [[https://o1labs.org][O(1) Labs]] (2022–2024) on
+the Mina Protocol, [[https://nomadic-labs.com][Nomadic Labs]] (2021–2022) on the Tezos consensus
+layer, and [[https://www.tweag.io/][Tweag I/O]] (2019–2021). Before that, eleven years as a
+researcher at [[http://www-list.cea.fr/en/][CEA / LSL]] (2008–2019), working on formal program
+analyses for source and binary code, and as lead developer of the
+[[https://binsec.github.io][BINSEC]] binary analysis platform.
 
-- item one
-- item two
+PhD in computer science from Université Paris 6 Pierre & Marie Curie
+(2003–2006) — /Tableaux and Deduction Modulo/.
 
-A short table:
+I am most at home in functional programming (OCaml, Lisp, Rust), formal
+methods, program analysis, automated theorem proving, and the
+boundaries where these meet practical software engineering.
 
-| key | value |
-|-----+-------|
-| foo | 42    |
-| bar | 7     |
+* See also
+
+- [[file:resume.org][Resume]]
+- [[file:biblio.org][Publications]]
+- [[file:teaching/index.org][Teaching]]
