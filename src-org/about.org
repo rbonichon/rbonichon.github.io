@@ -2,17 +2,21 @@
 
 #+BEGIN_EXPORT html
 <aside class="marginnote">
-  <img src="/img/rb.jpg" alt="Portrait"
-       style="max-width: 100%; border-radius: 4px;"/>
-  <p style="margin-top: 0.5rem;">
-    <strong>E-mail</strong><br/>
-    <code>richard@loopless.xyz</code>
-  </p>
+  <strong>E-mail</strong><br/>
+  <code>richard@loopless.xyz</code>
 </aside>
 #+END_EXPORT
 
-I am a software engineer based in Saint-Alban (near Toulouse, France).
-I currently run [[https://loopless.xyz][Loopless]], my own consulting / engineering vehicle.
+#+BEGIN_EXPORT html
+<p>
+  <img src="/img/rb.jpg" alt="Portrait"
+       style="width: 180px; border-radius: 4px; float: left;
+              margin: 0 1.2rem 0.5rem 0;"/>
+</p>
+#+END_EXPORT
+
+I am a software engineer. I currently run [[https://loopless.xyz][Loopless]], my own
+consulting / engineering vehicle.
 
 Previously :: software engineer at [[https://o1labs.org][O(1) Labs]] (2022–2024) on
 the Mina Protocol, [[https://nomadic-labs.com][Nomadic Labs]] (2021–2022) on the Tezos consensus
