@@ -1,0 +1,114 @@
+#+title: Publications
+
+Liste chronologique inverse. Les PDF sont sous =/papers/=.
+
+* 2021
+
+- McDonald, Manikyam, Bardin, Bonichon, Andel.
+  /Program Protection Through Software-Based Hardware Abstraction/.
+  *SECRYPT 2021*. [[/papers/sbha-secrypt21.pdf][pdf]]
+
+- Menguy, Bardin, Bonichon, de Souza Lima.
+  /Search-based Approaches for Local Blackbox Deobfuscation: Understand,
+  Improve and Mitigate/. *CCS 2021*. [[/papers/xyntia-ccs21.pdf][pdf]]
+
+- Recoules, Bardin, Bonichon, Lemerre, Mounier, Potet.
+  /Interface Compliance of Inline Assembly: Automatically Check, Patch
+  and Refine/. *ICSE 2021* — *Distinguished Paper Award*.
+  [[/papers/rustina-icse21.pdf][pdf]]
+
+* 2020
+
+- Nguyen, Bardin, Bonichon, Groz, Lemerre.
+  /Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities/.
+  *RAID 2020*. [[/papers/uafuzz-raid20.pdf][pdf]]
+
+- Recoules, Bardin, Bonichon, Mounier, Potet.
+  /Et TInA RUSTInA le lien vers l'assembleur/. *JFLA 2020*.
+  [[/papers/rustina-jfla20.pdf][pdf]]
+
+* 2019
+
+- Ollivier, Bardin, Bonichon, Marion.
+  /How to Kill Symbolic Deobfuscation for Free (or: Unleashing the
+  Potential of Path-Oriented Protections)/. *ACSAC 2019*.
+  [[/papers/ksdf-acsac19.pdf][pdf]]
+
+- Ollivier, Bardin, Bonichon, Marion.
+  /Obfuscation: Where Are We in Anti-DSE Protections? (a first attempt)/.
+  *SSPREW 2019*. [[/papers/anti-dse-ssprew19.pdf][pdf]]
+
+- Recoules, Bardin, Bonichon, Mounier, Potet.
+  /Get rid of inline assembly through verification-oriented lifting/.
+  *ASE 2019*. [[/papers/tina-ase19.pdf][pdf]]
+
+- Recoules, Bardin, Bonichon, Mounier, Potet.
+  /De l'assembleur sur la ligne ? Appelez TInA !/. *JFLA 2019*.
+  [[/papers/tina-jfla19.pdf][pdf]]
+
+- Farinier, Bardin, Bonichon, Potet.
+  /En finir avec les faux positifs grâce à l'exécution symbolique robuste/.
+  *JFLA 2019*. [[/papers/se-robuste-jfla19.pdf][pdf]]
+
+* 2018
+
+- Farinier, Bardin, Bonichon, Potet.
+  /Model Generation for Quantified Formulas: A Taint-Based Approach/.
+  *CAV 2018*. [[/papers/cav2018.pdf][pdf]]
+
+* 2017
+
+- Bonichon, Weis.
+  /Format unraveled/. *JFLA 2017*.
+  [[/papers/format-unraveled.pdf][pdf]] · [[/papers/format-unraveled-slides.pdf][slides]]
+
+* 2015
+
+- Bonichon, Hermant.
+  /A syntactic soundness proof for free-variable tableaux with on-the-fly
+  Skolemization/. *CoRR* abs/1505.06376. [[http://arxiv.org/abs/1505.06376][arxiv]]
+
+- Bonichon, Déharbe, Dobal, Tavares.
+  /SMTpp: preprocessors and analyzers for SMT-LIB/. *SMT Workshop 2015*.
+  [[/papers/smtpp-smt15.pdf][pdf]]
+
+* 2014
+
+- Bonichon, Déharbe, Lecomte, Medeiros Jr.
+  /LLVM-Based Code Generation for B/. *SBMF 2014*.
+
+- Bonichon, Déharbe, Tavares.
+  /Extending SMT-LIB v2 with \(\lambda\)-Terms and Polymorphism/.
+  *SMT Workshop 2014*. [[/papers/smtlib_lambda-smt14.pdf][pdf]]
+
+* 2011
+
+- Bonichon, Cuoq.
+  /A Mergeable Interval Map/. *Stud. Inform. Univ.* 9(1), p. 5–37.
+  [[/papers/rangemaps-jfla11.pdf][pdf]]
+
+- Bonichon, Canet, Correnson, Goubault, Haucourt, Hirschowitz, Labbé,
+  Mimram. /Rigorous Evidence of Freedom from Concurrency Faults in
+  Industrial Control Software/. *SAFECOMP 2011*, p. 85–98.
+  [[/papers/safecomp2011.pdf][pdf]] · [[https://doi.org/10.1007/978-3-642-24270-0_7][doi]]
+
+* 2007
+
+- Bonichon, Delahaye, Doligez.
+  /Zenon: An Extensible Automated Theorem Prover Producing Checkable
+  Proofs/. *LPAR 2007*. [[/papers/zenon-lpar07.pdf][pdf]]
+
+* 2006
+
+- Bonichon, Hermant.
+  /On Constructive Cut Admissibility in Deduction Modulo/. *TYPES 2006*.
+  [[/papers/constr-elim-mod-types06.pdf][pdf]]
+
+- Bonichon, Hermant.
+  /A semantic completeness proof for TaMeD/. *LPAR 2006*.
+  [[/papers/semantic-tamed-lpar06.pdf][pdf]]
+
+* 2004
+
+- Bonichon. /TaMeD: A Tableau Method for Deduction Modulo/. *IJCAR 2004*,
+  p. 445–459. [[/papers/tamed-ijcar04.pdf][pdf]] · [[https://doi.org/10.1007/978-3-540-25984-8_33][doi]]
