@@ -145,3 +145,16 @@ code {
 #content h2 {
   margin-top: 2.1rem;
 }
+
+/* Visual separation between consecutive H3 sections (typically lectures
+ * inside a teaching page : "Lecture 1", "Lecture 2", etc.). */
+#content .outline-3 + .outline-3 {
+  border-top: 1px solid #c8c0a8;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+}
+
+#content .outline-3 h3 {
+  font-style: italic;
+  margin-top: 0;
+}
