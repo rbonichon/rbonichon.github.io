@@ -2,19 +2,19 @@
 
 * 2021
 
-- [[file:2021/asi36/index.org][ASI36 — Analyse de vulnérabilité]] (ENSTA Bretagne)
+- [[file:2021/asi36/index.org][ASI36 — Analyse de vulnérabilité]] (ENSTA Paris)
 
 * 2020
 
-- [[file:2020/asi36/index.org][ASI36 — Analyse de vulnérabilité]] (ENSTA Bretagne)
+- [[file:2020/asi36/index.org][ASI36 — Analyse de vulnérabilité]] (ENSTA Paris)
 
 * 2019
 
-- [[file:2019/asi36/index.org][ASI36 — Analyse de vulnérabilité]] (ENSTA Bretagne)
+- [[file:2019/asi36/index.org][ASI36 — Analyse de vulnérabilité]] (ENSTA Paris)
 
 * 2018
 
-- [[file:2018/asi36/index.org][ASI36 — Analyse de vulnérabilité]] (ENSTA Bretagne)
+- [[file:2018/asi36/index.org][ASI36 — Analyse de vulnérabilité]] (ENSTA Paris)
 
 * 2014
 
