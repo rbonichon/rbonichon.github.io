@@ -1,7 +1,0 @@
----
-title: "Teaching"
-layout: teaching
----
-
-
-# Empty on purpose
