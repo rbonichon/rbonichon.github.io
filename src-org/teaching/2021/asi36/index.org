@@ -26,7 +26,7 @@ also involve supplementary reading material as part of the contents.
 | 2 | 2021-01-12 | [[#basics][Basic attacks & exploitation]]         |
 | 3 | 2021-01-19 | [[#mate][MATE, attack & defense]]               |
 | 4 | 2021-01-26 | [[#cfi][Control-flow integrity]]               |
-| 5 | 2021-02-02 | Semantic attacks (program analysis)  |
+| 5 | 2021-02-02 | [[#semantic][Semantic attacks (program analysis)]] |
 | 6 | 2021-02-09 | [[#fuzz][Fuzzing]]                              |
 | 7 | 2021-02-16 | [[#exam][Exam]]                                 |
 
@@ -121,6 +121,9 @@ experiments included.
 - [[https://paulmakowski.wordpress.com/2011/01/25/smashing-the-stack-in-2011/][Smashing the Stack in 2011]]
 
 ** Semantic attacks (program analysis) (2021-02-02)
+:PROPERTIES:
+:CUSTOM_ID: semantic
+:END:
 
 TBA.
 

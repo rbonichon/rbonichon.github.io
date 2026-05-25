@@ -21,9 +21,9 @@ We will cover the following topics:
 | 1 | 2018-01-11 | [[#intro][Introduction]]                         |
 | 2 | 2018-01-18 | [[#basics][Basic attacks & exploitation]]         |
 | 3 | 2018-01-25 | [[#cfi][Control-flow integrity]]               |
-| 4 | 2018-02-12 | MATE, attack & defense               |
-| 5 | 2018-02-15 | Semantic attacks (program analysis)  |
-| 6 | 2018-02-22 | Exam                                 |
+| 4 | 2018-02-12 | [[#mate][MATE, attack & defense]]               |
+| 5 | 2018-02-15 | [[#semantic][Semantic attacks (program analysis)]] |
+| 6 | 2018-02-22 | [[#exam][Exam]]                                 |
 
 ** Introduction (2018-01-11)
 :PROPERTIES:
@@ -83,11 +83,20 @@ Stack canaries, DEP, ASLR; limitations + advanced CFI. Hands-on.
 - [[https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf][The Geometry of Innocent Flesh on the Bone]]
 
 ** MATE, attack & defense (2018-02-12)
+:PROPERTIES:
+:CUSTOM_ID: mate
+:END:
 
 *Materials* :: [[/asi36/cours-cyber-ensta-02.pdf][Slides]]
 
 ** Semantic attacks (program analysis) (2018-02-15)
+:PROPERTIES:
+:CUSTOM_ID: semantic
+:END:
 
 *Materials* :: [[/asi36/cours-cyber-ensta-03.pdf][Slides]]
 
 ** Exam (2018-02-22)
+:PROPERTIES:
+:CUSTOM_ID: exam
+:END:
