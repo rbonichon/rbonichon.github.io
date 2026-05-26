@@ -144,6 +144,15 @@ abbr {
   text-decoration: none;
 }
 
+/* ─── About page portrait ─────────────────────────────────── */
+
+#portrait {
+  width: 180px;
+  border-radius: 4px;
+  float: left;
+  margin: 0 2.5rem 0.8rem 0;
+}
+
 /* ─── org-html generated markup ────────────────────────────── */
 
 /* org-html emits a bare <table> (no .org-table class). Override Tufte's

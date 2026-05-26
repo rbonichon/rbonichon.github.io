@@ -9,24 +9,23 @@
 
 #+BEGIN_EXPORT html
 <p>
-  <img src="/img/rb.jpg" alt="Portrait"
-       style="width: 180px; border-radius: 4px; float: left;
-              margin: 0 1.2rem 0.5rem 0;"/>
+  <img id="portrait" src="/img/rb.jpg" alt="Portrait"/>
 </p>
 #+END_EXPORT
 
 I am a software engineer. I currently run [[https://loopless.xyz][Loopless]], my own
 consulting / engineering vehicle.
 
-Previously :: software engineer at [[https://o1labs.org][O(1) Labs]] (2022–2024) on
-the Mina Protocol, [[https://nomadic-labs.com][Nomadic Labs]] (2021–2022) on the Tezos consensus
-layer, and [[https://www.tweag.io/][Tweag I/O]] (2019–2021). Before that, eleven years as a
-researcher at [[http://www-list.cea.fr/en/][@@html:<abbr>CEA</abbr>@@ / @@html:<abbr>LSL</abbr>@@]] (2008–2019), working on formal
-program analyses for source and binary code, and as lead developer of
-the [[https://binsec.github.io][@@html:<abbr>BINSEC</abbr>@@]] binary analysis platform.
+*** Previously
 
-@@html:<abbr>PhD</abbr>@@ in computer science from Université Paris 6 Pierre & Marie Curie
-(2003–2006) — /Tableaux and Deduction Modulo/.
+- Software engineer at [[https://o1labs.org][O(1) Labs]] (2022–2024) on the Mina Protocol
+- [[https://nomadic-labs.com][Nomadic Labs]] (2021–2022) on the Tezos consensus layer;
+- [[https://www.tweag.io/][Tweag I/O]] (2019–2021).
+
+Before that, I spent 11 years as a researcher at [[http://www-list.cea.fr/en/][@@html:<abbr>CEA</abbr>@@ /
+@@html:<abbr>LSL</abbr>@@]], working on formal program analyses for source and
+binary code, and as lead developer of the [[https://binsec.github.io][@@html:<abbr>BINSEC</abbr>@@]] binary
+analysis platform.
 
 I am most at home in functional programming (OCaml, Lisp, Rust), formal
 methods, program analysis, automated theorem proving, and the
