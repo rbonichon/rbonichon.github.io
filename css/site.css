@@ -146,11 +146,15 @@ abbr {
 
 /* ─── About page portrait ─────────────────────────────────── */
 
+/* Portrait sits in the right margin, mirroring Tufte's .marginnote
+ * placement. Width is a fraction of the content column. */
 #portrait {
-  width: 180px;
+  width: 50%;
+  float: right;
+  clear: right;
+  margin-right: -60%;
+  margin-top: 0.3rem;
   border-radius: 4px;
-  float: left;
-  margin: 0 2.5rem 0.8rem 0;
 }
 
 /* ─── org-html generated markup ────────────────────────────── */
