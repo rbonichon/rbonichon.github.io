@@ -1,0 +1,60 @@
+#+title: rbonichon.github.io
+
+Personal site of Richard Bonichon. Built with Emacs =org-publish=,
+Tufte CSS, and a thin Makefile. Deployed to GitHub Pages.
+
+* Layout
+
+| Path         | Purpose                                                  |
+|--------------+----------------------------------------------------------|
+| =src-org/=   | Org sources (canonical content)                          |
+| =templates/= | =header.html=, =footer.html= (org-publish preamble/postamble) |
+| =css/=       | =tufte.css= upstream + =site.css= surcouche + ET Book fonts |
+| =static/=    | Static assets (papers/, slides/, img/, documents/)       |
+| =docs/=      | Generated output (git submodule → =origin/master=, served by GitHub Pages) |
+| =Makefile=   | =build= / =serve= / =watch= / =publish=                  |
+
+* Toolchain
+
+Entering the directory triggers =direnv= → =shell.nix=, which provides
+=emacs=, =gnumake=, =python3=, =inotify-tools=, =git=, =xdg-utils=,
+=linkchecker=.
+
+Publishing also requires the local Emacs library
+=~/.emacs.d/mylibs/rb-website.el= to be loaded (declared via
+=use-package= in =~/.emacs.d/init.el=).
+
+* Build local
+
+#+begin_src sh
+make build      # one-shot
+make serve      # build + http server on :8080 + watcher inotify + browser
+make watch      # rebuild on source changes (no server)
+make clean      # rm generated HTML
+#+end_src
+
+* Publier sur GitHub Pages
+
+#+begin_src sh
+make publish
+#+end_src
+
+Cette cible :
+1. =make build= → régénère =docs/=
+2. =touch .nojekyll= dans =docs/=
+3. Commit + =git push origin master= dans le sous-module =docs/= (la
+   branche servie par Pages)
+4. =git push origin HEAD= pour la branche source courante
+
+* Linkcheck
+
+#+begin_src sh
+# avec un serveur déjà sur :8080
+linkchecker --no-warnings http://localhost:8080/
+#+end_src
+
+* Historique
+
+Migré de Hugo (theme =hugo-tufte=) vers =org-publish= en mai 2026
+(commit /purge Hugo era/). L'ancienne chaîne reste accessible via
+=git log --all= si besoin de rollback.
