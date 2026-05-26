@@ -5,6 +5,28 @@
  * - Adjustments for org-html generated markup
  */
 
+/* ─── Palette ──────────────────────────────────────────────── */
+
+:root {
+  --rule-color:        #d0c8b0;
+  --rule-color-strong: #c8c0a8;
+  --muted-text:        #555;
+  --code-bg:           #fafaf6;
+  --table-border:      #ddd;
+  --hover-text:        #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rule-color:        #3a3a3a;
+    --rule-color-strong: #4a4a4a;
+    --muted-text:        #aaa;
+    --code-bg:           #1d1d1d;
+    --table-border:      #333;
+    --hover-text:        #bbb;
+  }
+}
+
 /* ─── Top navigation ───────────────────────────────────────── */
 
 .site-nav {
@@ -14,7 +36,7 @@
   max-width: 1400px;
   margin: 1rem auto 2rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #d0c8b0;
+  border-bottom: 1px solid var(--rule-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,9 +81,9 @@
   max-width: 1400px;
   margin: 4rem auto 2rem;
   padding-top: 1rem;
-  border-top: 1px solid #d0c8b0;
+  border-top: 1px solid var(--rule-color);
   font-size: 0.9rem;
-  color: #555;
+  color: var(--muted-text);
 }
 
 .site-footer a {
@@ -80,7 +102,7 @@
 }
 
 #content a:hover {
-  color: #555;
+  color: var(--hover-text);
 }
 
 /* ─── org-html generated markup ────────────────────────────── */
@@ -103,30 +125,34 @@
 
 #content th {
   text-align: left;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid var(--muted-text);
   font-weight: 600;
 }
 
 #content td {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--table-border);
 }
 
-/* Source blocks (code) emitted with .org-src-container > pre.src */
+/* Source blocks (code) emitted with .org-src-container > pre.src.
+ * Left rail instead of full border — less "office document", more modern. */
 pre.src,
 pre.example {
-  background: #fafaf6;
-  border: 1px solid #e6e0c8;
+  background: var(--code-bg);
+  border: none;
+  border-left: 3px solid var(--rule-color-strong);
   padding: 0.8rem 1rem;
-  font-family: Consolas, Menlo, "DejaVu Sans Mono", monospace;
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono",
+               Menlo, Consolas, "DejaVu Sans Mono", monospace;
   font-size: 0.95rem;
   overflow-x: auto;
 }
 
 /* Inline code */
 code {
-  font-family: Consolas, Menlo, "DejaVu Sans Mono", monospace;
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono",
+               Menlo, Consolas, "DejaVu Sans Mono", monospace;
   font-size: 0.95em;
-  background: #fafaf6;
+  background: var(--code-bg);
   padding: 0.05em 0.25em;
   border-radius: 2px;
 }
@@ -157,7 +183,7 @@ code {
  * outline-3 so the first lecture is also separated from the preceding
  * intro / overview table. */
 #content .outline-3 {
-  border-top: 1px solid #c8c0a8;
+  border-top: 1px solid var(--rule-color-strong);
   margin-top: 3.5rem;
   padding-top: 1.5rem;
 }
