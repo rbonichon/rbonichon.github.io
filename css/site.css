@@ -91,18 +91,57 @@
   text-shadow: none;
 }
 
-/* ─── Body links: drop Tufte's fancy background+text-shadow ── */
+/* ─── Body links ──────────────────────────────────────────────
+ * Drop Tufte's background+text-shadow trick. No permanent underline:
+ * subtle text-decoration-color hint at rest, full underline on hover. */
 
 #content a:link,
 #content a:visited {
   background: none;
   text-shadow: none;
-  border-bottom: 1px solid currentColor;
+  border-bottom: none;
   color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--rule-color-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 #content a:hover {
   color: var(--hover-text);
+  text-decoration-color: currentColor;
+}
+
+/* ─── Sidenotes / marginnotes — hover affordance ──────────────
+ * Tufte CSS uses checkbox-toggled <label class="sidenote-number">
+ * followed by <span class="sidenote">. Highlight the note when the
+ * number is hovered, and when the note itself is hovered. */
+
+.sidenote-number:hover ~ .sidenote,
+.sidenote:hover,
+.marginnote:hover {
+  background: color-mix(in oklab, var(--rule-color-strong) 35%, transparent);
+  transition: background 120ms ease-out;
+}
+
+.sidenote-number:hover {
+  color: var(--hover-text);
+}
+
+/* ─── Smallcaps & abbreviations ───────────────────────────────
+ * et-book ships old-style figures + smallcaps via OpenType features.
+ * Use .smallcaps for spans you mark up explicitly; <abbr> picks them
+ * up automatically for acronyms (CEA, BINSEC, OCaml…). */
+
+.smallcaps,
+abbr {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp", "onum";
+  letter-spacing: 0.04em;
+}
+
+abbr {
+  text-decoration: none;
 }
 
 /* ─── org-html generated markup ────────────────────────────── */
