@@ -2,31 +2,30 @@
 
 #+BEGIN_EXPORT html
 <aside class="marginnote">
+  <img id="portrait" src="/img/rb.jpg" alt="Portrait"/>
+  
   <strong>E-mail</strong><br/>
   <code>richard@loopless.xyz</code>
 </aside>
 #+END_EXPORT
 
-#+BEGIN_EXPORT html
-<p>
-  <img id="portrait" src="/img/rb.jpg" alt="Portrait"/>
-</p>
-#+END_EXPORT
 
-I am a software engineer. I currently run [[https://loopless.xyz][Loopless]], my own
-consulting / engineering vehicle.
+I am a software engineer. I currently run [[https://loopless.xyz][Loopless]], my own consulting /
+engineering vehicle. I am working for Repyh Labs on the [[https://delta.network/en/][delta network]].
 
-*** Previously
+Previously, I also was a software engineer at 
 
-- Software engineer at [[https://o1labs.org][O(1) Labs]] (2022–2024) on the Mina Protocol
-- [[https://nomadic-labs.com][Nomadic Labs]] (2021–2022) on the Tezos consensus layer;
-- [[https://www.tweag.io/][Tweag I/O]] (2019–2021).
+- [[https://o1labs.org][O(1) Labs]] on the Mina Protocol;
+- [[https://nomadic-labs.com][Nomadic Labs]] on the Tezos consensus layer; and
+- [[https://www.tweag.io/][Tweag I/O]].
 
 Before that, I spent 11 years as a researcher at [[http://www-list.cea.fr/en/][@@html:<abbr>CEA</abbr>@@ /
 @@html:<abbr>LSL</abbr>@@]], working on formal program analyses for source and
 binary code, and as lead developer of the [[https://binsec.github.io][@@html:<abbr>BINSEC</abbr>@@]] binary
 analysis platform.
 
-I am most at home in functional programming (OCaml, Lisp, Rust), formal
-methods, program analysis, automated theorem proving, and the
-boundaries where these meet practical software engineering.
+I am most at home in functional programming (OCaml, Lisp, Rust), formal methods,
+program analysis, automated theorem proving, and the boundaries where these meet
+practical software engineering. These last few years, I've also enjoyed messing
+with distributed systems as they appear on blockchain protocols, and
+zero-knowledge cryptography.

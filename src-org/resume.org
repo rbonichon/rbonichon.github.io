@@ -40,30 +40,30 @@ Teaching assistant.
 
 * Education
 
-** PhD in Computer Science · Université Paris 6 Pierre & Marie Curie · 2003 – 2006
+** PhD. in Computer Science · Université Paris 6 Pierre & Marie Curie
 Thesis: /Tableaux and Deduction Modulo/. Automated theorem proving,
 rewriting, proof theory.
 
-** MS in Computer Science (DEA) · Université Paris 7 Denis Diderot · 2002 – 2003
+** MSc. in Computer Science (DEA): Programming, Semantics, Proofs & Languages · Université Paris 7 Denis Diderot
 
-** MS in Computer Science & Applied Mathematics · ENSEEIHT (Toulouse) · 1999 – 2002
+** MSc. in Computer Science & Applied Mathematics (Engineering degree) · ENSEEIHT (Toulouse) 
 
 * Tools
 
-** [[https://binsec.github.io][BINSEC]] · OCaml · 2015 – 2019
+** [[https://binsec.github.io][BINSEC]] · OCaml 
 Formal methods platform for security-oriented binary code analysis
 (symbolic execution, fuzzing, code deobfuscation, ...).
 
-** [[http://frama-c.com][Frama-C]] · OCaml · 2008 – 2013
+** [[http://frama-c.com][Frama-C]] · OCaml
 C/C++ software analyzers — plugins =metrics= and =mthread= (initial version).
 
-** [[https://github.com/rbonichon/smtpp][SMTpp]] · OCaml · 2014 – 2015
+** [[https://github.com/rbonichon/smtpp][SMTpp]] · OCaml
 Preprocessing platform for SMT-LIB, the problem repository for SMT solvers.
 
-** Pathcrawler Online · Java, JavaScript · 2012 – 2013
-Web application for users to play with the Pathcrawler test generation tool.
+** [[http://pathcrawler-online.com:8080/][PathCrawler online]] · Java, JavaScript
+Web application for users to play with the PathCrawler test generation tool.
 
-** [[http://moca.inria.fr][Moca]] · OCaml · 2007 – 2009
+** [[https://github.com/fblanqui/moca][Moca]] · OCaml 
 Construction functions generator for datatypes with (algebraic) invariants.
 
 * Students

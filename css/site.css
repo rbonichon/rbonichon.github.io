@@ -5,6 +5,27 @@
  * - Adjustments for org-html generated markup
  */
 
+/* ─── Fluid sizing ────────────────────────────────────────────
+ * Tufte hard-codes html { font-size: 15px } and sizes everything else
+ * in rem. Scaling the root scales the whole document with the viewport:
+ * ~15px on phones, up to ~20px on large screens. */
+
+html {
+  font-size: clamp(15px, 13px + 0.4vw, 20px);
+}
+
+/* ─── Page gutters ────────────────────────────────────────────
+ * Tufte centres body (margin: auto) with a 12.5% left padding. Override
+ * to an asymmetric layout: left gutter is half the right one, leaving
+ * more room on the right where sidenotes live. */
+
+body {
+  margin-left: 4%;
+  margin-right: 8%;
+  width: auto;
+  padding-left: 0;
+}
+
 /* ─── Palette ──────────────────────────────────────────────── */
 
 :root {
@@ -32,9 +53,7 @@
 .site-nav {
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
                "Book Antiqua", Georgia, serif;
-  width: 87.5%;
-  max-width: 1400px;
-  margin: 1rem auto 2rem;
+  margin: 1rem 0 2rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--rule-color);
   display: flex;
@@ -77,9 +96,7 @@
 /* ─── Footer ───────────────────────────────────────────────── */
 
 .site-footer {
-  width: 87.5%;
-  max-width: 1400px;
-  margin: 4rem auto 2rem;
+  margin: 4rem 0 2rem;
   padding-top: 1rem;
   border-top: 1px solid var(--rule-color);
   font-size: 0.9rem;
@@ -146,14 +163,12 @@ abbr {
 
 /* ─── About page portrait ─────────────────────────────────── */
 
-/* Portrait sits in the right margin, mirroring Tufte's .marginnote
- * placement. Width is a fraction of the content column. */
+/* Portrait lives inside the .marginnote, which already handles the
+ * right-margin float. The image just fills its column width. */
 #portrait {
-  width: 50%;
-  float: right;
-  clear: right;
-  margin-right: -60%;
-  margin-top: 0.3rem;
+  display: block;
+  width: 40%;
+  margin-bottom: 0.8rem;
   border-radius: 4px;
 }
 
@@ -211,10 +226,7 @@ code {
 
 /* org-mode org-html wraps the body in #content; align with Tufte's article */
 #content {
-  width: 87.5%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding-left: 12.5%;
+  padding-left: 0;
 }
 
 /* Section heading offsets to match Tufte's vertical rhythm */
@@ -243,4 +255,25 @@ code {
 #content .outline-3 h3 {
   font-style: italic;
   margin-top: 0;
+}
+
+/* ─── Narrow viewports ─────────────────────────────────────────
+ * Tufte's own breakpoint relaxes the body padding at 760px, but #content,
+ * .site-nav and .site-footer override body, so they need the same care. */
+
+@media (max-width: 760px) {
+  body {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  .site-nav .site-menu {
+    gap: 1rem;
+    font-size: 1.1rem;
+  }
 }
