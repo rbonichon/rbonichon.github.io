@@ -1,0 +1,212 @@
+# -*- mode: org -*-
+# DRAFT — lives in drafts/ (OUTSIDE src-org/) so `make build` will NOT publish it.
+# When ready: git mv to src-org/posts/ocaml-to-rust.org, then `make serve` / publish.
+#+title: OCaml to Rust: which functional habits survive the borrow checker
+#+date: [2026-07-17]
+#+filetags: :ocaml:rust:functional-programming:
+
+Both OCaml and Rust are ML-family languages: algebraic data types, pattern
+matching, type inference, expression-oriented syntax, immutability by default.
+Most of that intuition transfers unchanged. 
+
+Two things do not, and they reshape how you write code: *ownership/borrowing*
+(Rust tracks who owns each value and who may reference it) and the *absence of a
+garbage collector*. A third, milder shift: Rust abstracts with *traits*, not
+*modules and functors*. This post maps what carries over, what breaks, and how
+to spend your adaptation budget.
+
+Versions: claims are for OCaml 5.x and Rust (2021/2024 editions), as of 2026.
+
+* What transfers unchanged
+
+If you think in variants, records, and =match=, you already write idiomatic Rust
+data code. The vocabulary differs; the shape is the same.
+
+| OCaml                     | Rust                                       | Note                                                    |
+|---------------------------+--------------------------------------------+---------------------------------------------------------|
+| variant type              | =enum=                                     | sum type / tagged union                                 |
+| record                    | =struct=                                   | product type                                            |
+| =match ... with=          | =match=                                    | Rust enforces exhaustiveness as an /error/, OCaml warns |
+| ='a option= (=Some/None=) | =Option<T>= (=Some/None=)                   | same type                                               |
+| =('a, 'e) result=         | =Result<T, E>= (=Ok/Err=)                   | same type                                               |
+| =let= binding, =let rec=  | =let=, recursion                           | expression-oriented in both                             |
+| =List.map=, =List.filter= | iterator adapters (=.map()=, =.filter()=)  | Rust is lazy until consumed                             |
+| immutable by default      | immutable by default (=let mut= to opt in) | same default                                            |
+| Hindley-Milner inference  | local inference                            | Rust infers inside bodies, not across signatures        |
+
+A sum type and a fold look nearly identical:
+
+#+begin_src ocaml
+type expr = Lit of int | Add of expr * expr
+
+let rec eval = function
+  | Lit n -> n
+  | Add (a, b) -> eval a + eval b
+#+end_src
+
+#+begin_src rust
+enum Expr { Lit(i64), Add(Box<Expr>, Box<Expr>) }
+
+fn eval(e: &Expr) -> i64 {
+    match e {
+        Expr::Lit(n) => *n,
+        Expr::Add(a, b) => eval(a) + eval(b),
+    }
+}
+#+end_src
+
+Two differences already show through, both consequences of "no GC": 
+- the recursive =Expr= must be boxed (=Box<Expr>=) because a value needs a known
+  size;
+- =eval= takes =&Expr= (a borrow) rather than consuming the tree.
+
+* The real tax: ownership and borrowing
+
+In OCaml the garbage collector lets you alias freely — pass a value around, keep
+several references to it, return a piece of it, and the GC reclaims it when no one
+looks. Rust replaces the GC with a compile-time discipline: every value has one
+*owner*; you either *move* ownership, *borrow* it immutably (=&T=, any number at
+once), or borrow it mutably (=&mut T=, exactly one, and no immutable borrows at the
+same time).
+
+The rule that bites: *aliasing XOR mutation*. You may have many readers or one
+writer, never both. OCaml never asked you to choose.
+
+Gotcha — returning a substructure. In OCaml you return an inner field and forget
+about it; the GC handles lifetime. In Rust you must decide: hand back a *borrow*
+(and thread a lifetime through the signature) or *clone*.
+
+#+begin_src ocaml
+let first_name (p : person) : string = p.first   (* aliases; GC frees later *)
+#+end_src
+
+#+begin_src rust
+fn first_name(p: &Person) -> &str { &p.first }   // borrow: tied to p's lifetime
+fn first_name_owned(p: &Person) -> String { p.first.clone() }  // or clone
+#+end_src
+
+Practical strategy: *clone first, optimize later*. A =.clone()= is a correct,
+readable placeholder; profile before replacing it with borrows and lifetimes. New
+Rust programmers lose weeks fighting the borrow checker to avoid clones that cost
+nothing measurable.
+
+* Traits, not modules and functors
+
+OCaml abstracts over implementations with *modules* and, for parameterised
+abstraction, *functors* (functions from modules to modules). Rust abstracts with
+*traits* (interfaces close to Haskell type classes) plus generics.
+
+| Goal                           | OCaml                     | Rust                                    |
+|--------------------------------+---------------------------+-----------------------------------------|
+| interface                      | module type (signature)   | =trait=                                 |
+| implementation                 | module (=struct ... end=) | =impl Trait for Type=                   |
+| parameterise code over an impl | functor                   | generic =<T: Trait>= or =dyn Trait=      |
+| ad-hoc polymorphism            | modules passed explicitly | trait bounds (resolved by the compiler) |
+
+The ergonomic win: trait bounds are resolved automatically, so you rarely thread an
+explicit module argument the way a functor makes you.
+
+The ceiling: *no higher-kinded types*. You cannot abstract over a type constructor
+=M<_>= (write a generic =Monad=/=Functor= as in Haskell or with OCaml's higher-order
+functors). Generic associated types (GATs, stable since Rust 1.65) narrow the gap
+but do not close it. Translate functor-of-a-type-constructor patterns into
+associated types or concrete generics; a fully generic =traverse= is not available.
+
+* No GC: lifetimes leak into your types
+
+Without a GC, "who frees this and when" becomes part of the type. The visible
+consequence for an OCaml programmer: what was one type is now two — an owned form
+and a borrowed form.
+
+| One OCaml type           | Owned (Rust) | Borrowed (Rust) |
+|--------------------------+--------------+-----------------|
+| =string=                 | =String=     | =&str=          |
+| ='a list= / array        | =Vec<T>=      | =&[T]=          |
+| a record you pass around | =T= (move)   | =&T= / =&mut T= |
+
+Design guidance: accept borrows in function arguments (=&str=, =&[T]=), return owned
+values (=String=, =Vec<T>=) unless a lifetime is genuinely cheap and useful.
+=Cow<str>= ("clone on write") covers the "usually borrowed, sometimes owned" case.
+
+Shared ownership — the GC you gave up — comes back explicitly when you need it:
+
+- =Rc<T>= :: reference-counted shared ownership, single-threaded.
+- =Arc<T>= :: atomic reference count, shared across threads.
+- =RefCell<T>= / =Cell<T>= :: *interior mutability* — move the aliasing-XOR-mutation
+  check from compile time to run time (=RefCell= panics on violation).
+- =Mutex<T>= / =RwLock<T>= :: interior mutability across threads.
+
+=Rc<RefCell<T>>= is the common "shared, mutable, single-threaded" node — e.g. a
+graph or a tree with back-edges — that a GC language expresses with a bare
+reference.
+
+* Errors: values in both, ergonomic in Rust
+
+OCaml has =result=, but exceptions are idiomatic and often used for control flow.
+Rust has no exceptions for recoverable errors: everything flows through =Option= and
+=Result=, and =panic!= is for unrecoverable bugs, not expected failure.
+
+The =?= operator makes error-as-value pleasant: it returns early on =Err=/=None= and
+unwraps otherwise.
+
+#+begin_src rust
+fn parse_config(path: &Path) -> Result<Config, Error> {
+    let text = std::fs::read_to_string(path)?;   // returns Err on failure
+    let cfg: Config = toml::from_str(&text)?;
+    Ok(cfg)
+}
+#+end_src
+
+To an FP programmer this is the monadic =bind= you already reach for, with syntax.
+The shift is discipline, not concept: no =raise= for expected cases; make failure a
+=Result= and let =?= thread it.
+
+* Mutation and aliasing
+
+Both languages make mutation opt-in (OCaml: =ref=, mutable record fields, arrays;
+Rust: =let mut=, =&mut=). The difference is checking. OCaml permits aliased mutable
+state and trusts you. Rust's =&mut T= is *exclusive* — while it exists, no other
+reference to that value may. Data races are a *compile error*, not a runtime
+surprise. When you genuinely need aliased mutation, reach for the interior-mutability
+types above and accept the runtime check.
+
+* Toolchain and runtime, quickly
+
+| Concern             | OCaml                                 | Rust                                                            |
+|---------------------+---------------------------------------+-----------------------------------------------------------------|
+| build / packages    | dune + opam                           | cargo + crates.io                                               |
+| generics at runtime | uniform (boxed) representation        | monomorphised (specialised per type)                            |
+| cost model          | GC pauses; fast allocation            | no GC; predictable frees; monomorphisation can grow binary size |
+| metaprogramming     | ppx                                   | macros (=macro_rules!=, procedural)                             |
+| concurrency         | effects/domains (5.x), lwt/async libs | =async/await=, =Send=/=Sync= enforced by types                  |
+
+Monomorphisation is the mirror image of OCaml's uniform representation: Rust
+specialises =Vec<T>= per =T= (faster, larger binary); OCaml compiles one polymorphic
+version (smaller, one boxed layout).
+
+* How to spend your adaptation budget
+
+1. Keep modelling data as enums + structs and driving logic with =match=. That
+   habit is correct and idiomatic on day one.
+2. *Clone first.* Replace clones with borrows only where a profiler tells you to.
+3. Push failures through =Result= + =?=; stop reaching for exceptions.
+4. When the borrow checker refuses, *restructure ownership* — usually the design was
+   aliasing something it should own. Fighting the checker line-by-line loses.
+5. Reach for =Rc=/=Arc= + =RefCell=/=Mutex= only when shared mutable state is real,
+   not to dodge the checker.
+6. Don't look for higher-kinded abstractions; use traits with associated types.
+
+* Bottom line
+
+The functional core — ADTs, pattern matching, immutability, errors-as-values —
+transfers directly; an OCaml programmer is productive in Rust quickly. The cost is
+learning to *model ownership* and living without a GC and without higher-kinded
+types. The return is a language with the same data-modelling pleasure, no GC pauses,
+and data-race freedom checked by the compiler.
+
+# ── writing checklist (delete before publishing) ────────────────────────────
+# [ ] Re-verify every Rust/OCaml claim (esp. GATs/HKT wording, exhaustiveness
+#     error-vs-warning) against current docs before publishing.
+# [ ] Dry pass done; tables carry the structured comparisons.
+# [ ] Generic — no client/product content. (This post has none.)
+# [ ] git mv to src-org/posts/, set #+date, `make serve` to preview, publish.

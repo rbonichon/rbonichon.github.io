@@ -1,0 +1,96 @@
+# -*- mode: org -*-
+# DRAFT — lives in drafts/ (OUTSIDE src-org/) so `make build` will NOT publish it.
+# When ready: move to src-org/posts/compiled-program-is-the-spec.org, then build.
+# CONFIDENTIALITY: keep 100% generic. No client/product names, no proprietary
+# schemas or internals. The IDEAS (typed DSL, canonical hashing, golden tests)
+# are general PL knowledge and safe to publish; specific systems are not.
+#+title: The compiled program is the spec: content-addressing a small typed language
+#+date: [2026-07-17]
+#+filetags: :pl:formal-methods:hashing:
+
+# BLUF — fill 2-3 sentences: a small typed DSL whose canonical bytecode's hash IS
+# its identity. Why design for that property, and what it costs.
+# TODO(bluf): write.
+
+* The problem: a spec needs an identity
+# TODO: why identity matters — reproducibility; two parties agreeing on "the same
+# rules"; cache keys; dedup; audit / tamper-evidence.
+# Name the failure mode explicitly:
+#   Textual equality is NOT identity. Whitespace, field order, comments, and
+#   equivalent encodings all differ byte-wise while meaning the same thing.
+# End state the reader should hold: "identity must be a canonical function of
+# meaning, not of text."
+
+* A tiny language, sketched
+# One minimal, GENERIC example: a typed parameter schema + a constraint block over
+# typed "evidence". Keep it invented/abstract.
+#+begin_src text
+name price_guard
+
+parameters {
+  max_total_cents: int
+  allowed_brands: optional Set<string>
+}
+
+requires {
+  evidence.total_cents <= parameters.max_total_cents;
+  optional: evidence.brand in parameters.allowed_brands;
+}
+#+end_src
+# TODO: 1-2 sentences — what it declares (typed params + boolean constraints over
+# evidence), and that it compiles to a fixed binary artifact.
+
+* Pipeline: source -> typed AST -> bytecode -> hash
+# ASCII (or mermaid) of the four hops. Keep it readable in the site's CSS.
+#+begin_src text
+source ──lex/parse──> AST ──type-check──> typed IR ──canonical encode──> bytecode ──SHA-256──> id
+#+end_src
+# TODO: one line per hop; stress that type-check happens BEFORE the artifact
+# exists, so an id only ever names a well-typed program.
+
+* The load-bearing choice: deterministic, positional serialization
+# The gotcha section — untie this knot with a concrete contrast.
+# Positional (e.g. bincode-style) encoding writes fields/variants by ORDER, not by
+# NAME. Consequences, stated as a rule:
+#   - Renaming a field or a type: id UNCHANGED (names aren't in the wire form).
+#   - Reordering struct fields or enum variants: id SILENTLY CHANGES.
+#+begin_src rust
+// Same bytes, different source names — identical hash:
+enum Ref { Param(String), Evidence(String) }   // rename Param->Parameter: no change
+// Reordering the variants below WOULD change every id (discriminant index shifts):
+enum Ref2 { Evidence(String), Param(String) }  // <- different wire form!
+#+end_src
+# TODO: state the invariant the reader must respect: canonical form is defined by
+# (order, types), never by names.
+
+* Locking the wire format: a golden-hash test
+# The concrete "how you don't get burned" payoff. Minimal test pinning one absolute
+# digest so any future reorder fails loudly (relative-invariance tests won't catch
+# an absolute drift).
+#+begin_src rust
+#[test]
+fn spec_id_is_stable() {
+    let p = compile("name pin\nparameters { max: int }\nrequires { evidence.x <= parameters.max; }");
+    assert_eq!(hash(&p).to_base58(), "<PINNED_DIGEST>"); // regenerate once, then it guards forever
+}
+#+end_src
+# TODO: 1-2 sentences — why relative tests (hash(a)==hash(b)) are insufficient; an
+# absolute pin is the tripwire.
+
+* What content-addressing buys, and what it costs
+# TODO: table or two short lists.
+#   Buys: dedup; cache keys; cross-party agreement; tamper-evidence; reproducibility.
+#   Costs: canonicalization discipline; migration pain when the format MUST change
+#          (new id ⇒ every reference must be re-pointed).
+
+* Where this shows up
+# TODO: 2-3 sentences — SMT/proof artifacts, build systems (Nix store paths as
+# content addresses), package registries, on-chain program identity. Close by
+# restating the thesis in one line.
+
+# ── writing checklist (delete before publishing) ────────────────────────────
+# [ ] BLUF written; first line states what + why.
+# [ ] Two knots untied: the 8-line example, the rename-vs-reorder contrast.
+# [ ] Dry pass: cut "simply/just/powerful/robust"; one idea per sentence.
+# [ ] Every claim generic — re-read for any client-specific leak.
+# [ ] Move to src-org/posts/, set #+date, `make serve` to preview, then publish.
