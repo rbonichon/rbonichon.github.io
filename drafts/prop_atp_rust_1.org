@@ -3,7 +3,7 @@
 
 This is the first part of a series covering automated theorem proving techniques
 for propositional logic. The series aims at being a foundational and practical
-guide introduction to this subject. The practical aspect means we will implement
+guide to this subject. The practical aspect means we will implement
 everything, and I chose =rust= to do that[fn:1].
 
 This first part will be dedicated to the abstract syntax of propositional logic,
@@ -16,7 +16,7 @@ of concepts, and comprises quite a number of lines of code.
 
 Let's start by giving a mathematical definition of the syntax of propositional
 logic. It is an /inductive/ definition where the base element is the /atom/ and
-the logical connectors $\neg, \vee, \land, \implies, \iff$
+the logical connectors $\neg, \vee, \land, \implies, \iff$:
 
 \[
   prop ::=
@@ -29,13 +29,12 @@ the logical connectors $\neg, \vee, \land, \implies, \iff$
 \]
 
 This is a maximal view of the type definition. You might indeed know that:
-- $P \implies Q \approx \neg P \vee Q$;
-- $P \iff Q \approx (P\implies Q) \land (Q \implies P) \approx (\neg P \vee Q)  \land (\neg Q \vee P)$.
+- $P \implies Q \equiv \neg P \vee Q$;
+- $P \iff Q \equiv (P\implies Q) \land (Q \implies P) \equiv (\neg P \vee Q) \land (\neg Q \vee P)$.
 
 
 We'll use these 2 facts to reduce the size of the definition of the abstract
-syntax[fn:2]  Since we aim at showing simple automated theorem proving techniques at
-work, we could also have chosen.
+syntax.
 
 ** Remark
 
@@ -49,7 +48,7 @@ discussion about normal forms a bit simpler.
 * Abstract syntax
 
 The so-called /abstract/ syntax is the way we internally represent logical
-formulas. It follows closely the inductive definition above, but remove the
+formulas. It follows closely the inductive definition above, but removes the
 implication and the biconditional. 
 
 # insert Formula
@@ -71,7 +70,7 @@ implication and the biconditional.
   | $P$            | =P=      | =Atom("P")=                                                         |
   | $\neg P$       | =~P=     | =Not(Atom("P"))=                                                    |
   | $P \vee Q$     | =P \/ Q= | =Or(Atom("P"), Atom("Q"))=                                          |
-  | $P \and Q$     | =P /\ Q= | =And(Atom("P"), Atom("Q"))=                                         |
+  | $P \land Q$    | =P /\ Q= | =And(Atom("P"), Atom("Q"))=                                         |
   |----------------+----------+---------------------------------------------------------------------|
   | $P \implies Q$ | =P => Q=  | =Or(Not(Atom("P")), Atom("Q"))=                                     |
   | $P \iff Q$     | =P <=> Q= | =And(Or(Not(Atom("P")), Atom("Q")), Or(Not(Atom("Q")), Atom("P")))= |
@@ -83,15 +82,15 @@ implication and the biconditional.
   Parsing transforms concrete syntax into abstract syntax, or produces an error
   in case of failure to do so.
 
-  We will roll our own [[https://en.wikipedia.org/wiki/Recursive_descent_parser][recursive descent parser]], where we will encode the
-  precedences of operators goes as follows: =<=> < => < \/ < /\ < ~=. The
+  We will roll our own [[https://en.wikipedia.org/wiki/Recursive_descent_parser][recursive descent parser]], which encodes
+  operator precedence as follows: =<=> < => < \/ < /\ < ~=. The
   associativity is also encoded in the parser: a production that loops on
   itself, like =iff=, =or= and =and=, folds its operands to the /left/, whereas
   one that recurses on the right, like =implies=, folds them to the
   /right/. Implication is the odd one out here, and this matches the usual
   reading of $P \implies Q \implies R$ as $P \implies (Q \implies R)$. For
   the biconditional, the choice is ours to make[fn:4]. And finally, we also
-  allow parentheses whose contents define its own precedence island.
+  allow parentheses whose contents define their own precedence island.
 
   Schematically, here is a semi-formal definition of our parser: 
 
@@ -106,29 +105,30 @@ implication and the biconditional.
     atom     → IDENT | LPAREN prop RPAREN
   #+end_src
 
-  The uppercase letter define /tokens/, that is, the words of the
-  language. Operators are keywords in our case (we will not allow to re-define
-  them). How do we obtain tokens to parser? Through /lexing/!
+  The uppercase words define /tokens/, that is, the words of the
+  language. Operators are keywords in our case (we will not allow redefining
+  them). How do we obtain tokens to parse? Through /lexing/!
 
 *** Lexer 
 
-  The lexer aims at categorizing words of the sentence, that is, in the case of
-  propositional logic[fn:5] aggregating
-  characters until a whitespace character is encountered, qualify this string as
-  one of the /token/ that we recognize, and continue until the end of the
-  stream.
+  The lexer cuts the input into the words of the sentence and categorizes
+  each one as a /token/. It skips whitespace, then reads the longest token
+  that starts at the current position: an operator such as =<=>= or =/\=, a
+  parenthesis, or an identifier made of letters and digits[fn:5]. It repeats
+  this until the end of the stream. Whitespace is therefore optional between
+  tokens: =~P= and =(P /\ Q)= lex as expected.
 
   # insert lexer.rs 
 
 *** Parser 
 
   Now that we have a lexer, we can go on implementing our recursive descent
-  parser following our semi formal specification [[semi_formal_parser.]]
+  parser following our semi formal specification [[semi_formal_parser]].
 
   # insert parser.rs
 
   The simplification to a more reduced logical core is done through construction
-  functions[fn:3].
+  functions[fn:2].[fn:3]
   
 ** Printing
 
@@ -141,20 +141,21 @@ implication and the biconditional.
 
 ** What goes around comes around
 
-   A pretty-printer and parser needs to be bound by some form of inverse
+   A pretty-printer and parser need to be bound by some form of inverse
    relation.  Let =s' = print(parse(s))=. Then either we have =s' = s=, or, more
-   usually, a weaker form of equality on abtract syntax trees =parse(s') =
+   usually, a weaker form of equality on abstract syntax trees =parse(s') =
    parse(s)=, since the former might hold only for a subset of parsable inputs.
 
    For example, in propositional logic $(P \land Q) \lor R$ reads the same as $P
    \land Q \lor R$ but the string representation is different. If we accept
    parentheses but permit omitting them, we can only enforce the weaker
-   relation.
+   relation. The same goes for any input using ==>= or =<=>=: since the
+   parser desugars them, the printer never writes them back.
 
 * Footnotes
-[fn:5] As for most programming languages 
+[fn:5] As for most programming languages: this is the /longest match/ rule.
 
-[fn:2] I could have used the term /smart/ constructors but this would have
+[fn:2] I could have used the term /smart/ constructors but this would have been
 overselling the smartness of what we do within the function bodies.
 [fn:3] The desugaring lives in the constructors, not in the parser:
 =PropFormula::implies= builds =Or(Not(p), q)= and =PropFormula::iff= builds the
@@ -167,9 +168,9 @@ outermost connective of a biconditional is a conjunction — and $\land$ already
 folds to the left. Nothing is lost semantically either, since $\iff$ is
 associative: both groupings of $P \iff Q \iff R$ hold exactly when an even
 number of $P, Q, R$ are false. What the grouping /does/ decide is the abstract
-syntax tree, because each unfolding mentions both its operands twice: a chain of
-$n$ biconditionals duplicates its leftmost operand $2^n$ times, whichever way we
-fold it. Chains of $\iff$ are best avoided.
+syntax tree, because each unfolding mentions both its operands twice: with our left fold,
+a chain of $n$ biconditionals copies each of its two leftmost operands $2^n$
+times (a right fold would copy the rightmost ones instead). Chains of $\iff$ are best avoided.
 [fn:1] In all honesty, I'd have chosen =ocaml= on pure bias, but John Harrison
-has this more than covered in its [[https://www.goodreads.com/book/show/7475215-handbook-of-practical-logic-and-automated-reasoning][Handbook of Practical Logic and Automated
+has this more than covered in his [[https://www.goodreads.com/book/show/7475215-handbook-of-practical-logic-and-automated-reasoning][Handbook of Practical Logic and Automated
 Reasoning]].
