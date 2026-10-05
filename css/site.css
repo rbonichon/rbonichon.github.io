@@ -1,9 +1,31 @@
 /* site.css — surcouche au-dessus de tufte.css.
  *
+ * - Typography and palette in the gwern.net vein: Source Serif 4,
+ *   monochrome text, small caps; one accent (wine) for links and headings
  * - Nav top bar (not provided by tufte.css)
  * - Footer
  * - Adjustments for org-html generated markup
  */
+
+/* ─── Fonts ───────────────────────────────────────────────────
+ * Source Serif 4, variable (weight + optical size), latin subset from
+ * Fontsource. SIL OFL, see source-serif-4/OFL.txt. */
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("source-serif-4/source-serif-4-latin-opsz-normal.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("source-serif-4/source-serif-4-latin-opsz-italic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
 
 /* ─── Fluid sizing ────────────────────────────────────────────
  * Tufte hard-codes html { font-size: 15px } and sizes everything else
@@ -11,7 +33,9 @@
  * ~15px on phones, up to ~20px on large screens. */
 
 html {
-  font-size: clamp(15px, 13px + 0.4vw, 20px);
+  /* Source Serif runs larger than et-book at the same size (taller
+   * x-height): the range sits ~8% below the et-book one. */
+  font-size: clamp(14px, 12px + 0.37vw, 18.5px);
 }
 
 /* ─── Page gutters ────────────────────────────────────────────
@@ -24,25 +48,39 @@ body {
   margin-right: 8%;
   width: auto;
   padding-left: 0;
+  font-family: var(--serif);
+  background-color: var(--page-bg);
+  color: var(--text);
 }
 
 /* ─── Palette ──────────────────────────────────────────────── */
 
 :root {
-  --rule-color:        #d0c8b0;
-  --rule-color-strong: #c8c0a8;
+  --serif:             "Source Serif 4", "Source Serif Pro", Georgia, serif;
+  --page-bg:           #fff;
+  --text:              #111;
+  --accent:            #8b1e3f;
+  --rule-color:        #d4d4d4;
+  --rule-color-strong: #bdbdbd;
   --muted-text:        #555;
-  --code-bg:           #fafaf6;
+  --code-bg:           #f8f8f8;
   --table-border:      #ddd;
   --hover-text:        #555;
+  /* One size for all code, inline or in blocks: rem, not em, so inline
+   * code does not grow with the 1.4rem paragraph text around it. */
+  --code-size:         1rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --page-bg:           #141414;
+    --text:              #e6e6e6;
+    --accent:            #e58aa3;
     --rule-color:        #3a3a3a;
     --rule-color-strong: #4a4a4a;
     --muted-text:        #aaa;
-    --code-bg:           #1d1d1d;
+    /* github-dark's own ground, so highlighted blocks keep their contrast. */
+    --code-bg:           #161b22;
     --table-border:      #333;
     --hover-text:        #bbb;
   }
@@ -51,8 +89,9 @@ body {
 /* ─── Top navigation ───────────────────────────────────────── */
 
 .site-nav {
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
-               "Book Antiqua", Georgia, serif;
+  font-family: var(--serif);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
   margin: 1rem 0 2rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--rule-color);
@@ -69,6 +108,7 @@ body {
 .site-nav .site-brand a {
   background: none;
   text-shadow: none;
+  color: var(--accent);
 }
 
 .site-nav .site-menu {
@@ -91,6 +131,11 @@ body {
 .site-nav .site-menu a {
   background: none;
   text-shadow: none;
+  text-decoration: none;
+}
+
+.site-nav .site-brand a {
+  text-decoration: none;
 }
 
 /* ─── Footer ───────────────────────────────────────────────── */
@@ -108,24 +153,32 @@ body {
   text-shadow: none;
 }
 
+/* Tufte sizes every p at 1.4rem, which overrode the footer's own size.
+ * Same size as the sidenotes: the footer is marginalia too. */
+.site-footer p {
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
 /* ─── Body links ──────────────────────────────────────────────
- * Drop Tufte's background+text-shadow trick. No permanent underline:
- * subtle text-decoration-color hint at rest, full underline on hover. */
+ * Drop Tufte's background+text-shadow trick. Accent colour with a
+ * dotted underline at rest, solid on hover. */
 
 #content a:link,
 #content a:visited {
   background: none;
   text-shadow: none;
   border-bottom: none;
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--rule-color-strong);
+  color: var(--accent);
+  text-decoration: underline dotted;
+  text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
 }
 
 #content a:hover {
-  color: var(--hover-text);
+  text-decoration-style: solid;
   text-decoration-color: currentColor;
 }
 
@@ -143,6 +196,15 @@ body {
 
 .sidenote-number:hover {
   color: var(--hover-text);
+}
+
+/* Note numbers: tufte.css sets them in et-book's old-style cut; use the
+ * text face, bold, in the accent colour. */
+.sidenote-number:after,
+.sidenote:before {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--accent);
 }
 
 /* ─── Smallcaps & abbreviations ───────────────────────────────
@@ -192,12 +254,20 @@ abbr {
 
 #content th {
   text-align: left;
-  border-bottom: 1px solid var(--muted-text);
+  border-bottom: 2px solid var(--text);
   font-weight: 600;
+  font-variant-caps: small-caps;
 }
 
 #content td {
   border-bottom: 1px solid var(--table-border);
+}
+
+/* Tables marked #+attr_html: :class syntax-table: the first two columns
+ * (mathematical and concrete notation) never wrap; the last one does. */
+#content table.syntax-table td:nth-child(-n+2),
+#content table.syntax-table th:nth-child(-n+2) {
+  white-space: nowrap;
 }
 
 /* Source blocks (code) emitted with .org-src-container > pre.src.
@@ -210,15 +280,35 @@ pre.example {
   padding: 0.8rem 1rem;
   font-family: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono",
                Menlo, Consolas, "DejaVu Sans Mono", monospace;
-  font-size: 0.95rem;
+  font-size: var(--code-size);
   overflow-x: auto;
+}
+
+/* Foldable code snippets (#+SNIPPET:), a <details> around the source block.
+ * The summary sits on the block's left rail so the two read as one. */
+details.snippet {
+  margin: 1rem 0;
+}
+
+details.snippet > summary {
+  cursor: pointer;
+  border-left: 3px solid var(--rule-color-strong);
+  padding: 0.3rem 1rem;
+  color: var(--muted-text);
+  font-size: 0.95rem;
+}
+
+/* Link to the snippet's lines on GitHub, pushed to the right of the summary. */
+details.snippet > summary .snippet-source {
+  float: right;
+  font-size: 0.85rem;
 }
 
 /* Inline code */
 code {
   font-family: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono",
                Menlo, Consolas, "DejaVu Sans Mono", monospace;
-  font-size: 0.95em;
+  font-size: var(--code-size);
   background: var(--code-bg);
   padding: 0.05em 0.25em;
   border-radius: 2px;
@@ -227,19 +317,70 @@ code {
 /* org-mode org-html wraps the body in #content; align with Tufte's article */
 #content {
   padding-left: 0;
+  /* Tufte sizes p, ul and ol at 1.4rem but leaves their container at
+   * 1rem, so anything org emits outside a paragraph (a LaTeX environment
+   * rendered by MathJax, which scales to its parent) came out 30% small. */
+  font-size: 1.4rem;
 }
 
-/* Section heading offsets to match Tufte's vertical rhythm */
+/* Running text: justified and hyphenated (org sets <html lang>). */
+#content p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Drop cap on the paragraph that opens an article. */
+#content > header + p::first-letter {
+  float: left;
+  font-size: 3.6em;
+  line-height: 0.85;
+  padding: 0.06em 0.08em 0 0;
+  color: var(--accent);
+}
+
+/* ─── Headings ────────────────────────────────────────────────
+ * Small caps instead of Tufte's italics, in the accent colour. */
+
+#content h1,
+#content h2,
+#content h3,
+#content h4 {
+  color: var(--accent);
+  font-style: normal;
+  text-wrap: balance;
+}
+
 #content h1.title {
-  font-style: italic;
   font-weight: 400;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.02em;
+  text-align: center;
   margin-top: 0;
-  font-size: 3.2rem;
-  line-height: 1;
+  font-size: 2.8rem;
+  line-height: 1.15;
 }
 
 #content h2 {
   margin-top: 2.1rem;
+  font-weight: 700;
+  font-size: 1.85rem;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  padding-bottom: 0.15em;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+#content h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.03em;
+}
+
+#content h4 {
+  font-weight: 600;
+  font-style: italic;
 }
 
 /* Visual separation between H3 sections (typically lectures inside a
@@ -253,8 +394,66 @@ code {
 }
 
 #content .outline-3 h3 {
-  font-style: italic;
   margin-top: 0;
+}
+
+/* Breathing room between sections. */
+#content .outline-2 {
+  margin-top: 4.5rem;
+}
+
+#content .outline-4 {
+  margin-top: 2.5rem;
+}
+
+/* ─── Footnotes and sidenotes ─────────────────────────────────
+ * The build emits every footnote twice: org's reference + entry in
+ * #footnotes, and a Tufte sidenote after the reference. Wide screens get
+ * the sidenotes in a right margin, carved out only on pages that have
+ * some; narrow screens get the footnotes section, in a smaller size. */
+
+#footnotes {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+#footnotes h2.footnotes {
+  font-size: 1.6rem;
+}
+
+.sidenote-number,
+span.sidenote {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  /* Text keeps 70% of the column, the margin 30%. Percentages below are
+   * of the text width: a note 34/70 of it wide, pushed 3% clear of it. */
+  #content:has(span.sidenote) {
+    padding-right: 30%;
+  }
+
+  #content:has(span.sidenote) span.sidenote {
+    display: inline;
+    float: right;
+    clear: right;
+    width: 34%;
+    margin-right: -40%;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    text-align: left;
+    padding-left: 0.7em;
+    border-left: 1px solid var(--rule-color-strong);
+  }
+
+  .sidenote-number {
+    display: inline;
+  }
+
+  #content:has(span.sidenote) sup:has(> a.footref),
+  #content:has(span.sidenote) #footnotes {
+    display: none;
+  }
 }
 
 /* ─── Narrow viewports ─────────────────────────────────────────
