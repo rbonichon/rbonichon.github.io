@@ -3,7 +3,11 @@ mkShell {
   name = "rbonichon-github-io";
   packages = [
     # Build
-    emacs            # org-publish via emacs --batch
+    # org-publish via emacs --batch, which skips init.el: the packages
+    # rb-website.el needs must come with the emacs itself.
+    ((emacsPackagesFor emacs).emacsWithPackages (epkgs: [
+      epkgs.yaml       # data/biblio.yml → src-org/biblio.org
+    ]))
     gnumake          # Makefile
 
     # Preview / dev
