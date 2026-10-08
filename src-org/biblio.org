@@ -2,8 +2,6 @@
 
 # GENERATED from data/biblio.yml by `rb-website-biblio': edit the YAML, not this file.
 
-Liste chronologique inverse. Les PDF sont sous =/papers/=.
-
 * 2024
 
 - J. Rosain, R. Bonichon, J. Cailler, O. Hermant. /A Generic Deskolemization Strategy/. *LPAR 2024*, EPiC Series in Computing 100, p. 246–263. [[https://doi.org/10.29007/g1tm][doi]]

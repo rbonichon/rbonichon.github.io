@@ -114,7 +114,7 @@ Sharpening symbolic methods for vulnerability detection.
 23 publications (22 peer-reviewed), in reverse chronological order (also on the
 [[/biblio.html][publications page]]).
 
-#+INCLUDE: "./biblio.org" :lines "7-" :minlevel 2
+#+INCLUDE: "./biblio.org" :lines "5-" :minlevel 2
 
 * Skills
 
