@@ -6,6 +6,10 @@
   
   <strong>E-mail</strong><br/>
   <code>richard@loopless.xyz</code>
+  <br/><br/>
+  <strong>CV</strong><br/>
+  <a href="/documents/rbonichon_resume_fm.pdf">Formal methods &amp; research</a><br/>
+  <a href="/documents/rbonichon_resume_protocol.pdf">Protocol engineering</a>
 </aside>
 #+END_EXPORT
 

@@ -5,32 +5,55 @@
   <strong>Contact</strong><br/>
   richard@loopless.xyz<br/>
   <a href="https://rbonichon.github.io">rbonichon.github.io</a><br/>
-  <a href="https://github.com/rbonichon">github.com/rbonichon</a>
+  <a href="https://github.com/rbonichon">github.com/rbonichon</a><br/><br/>
+  <strong>PDF</strong><br/>
+  <a href="/documents/rbonichon_resume_fm.pdf">Formal methods &amp; research</a><br/>
+  <a href="/documents/rbonichon_resume_protocol.pdf">Protocol engineering</a>
 </aside>
 #+END_EXPORT
 
 * Experience
 
+** Senior Software Engineer · Repyh Labs · 2025 – now
+Protocol engineer on the [[https://delta.network/en/][delta network]] (Rust).
+- Documented the SDK and base libraries for early app developers.
+- Modularized domain tasks; fixed transaction-application logic; typed abstractions.
+- Added NFT support; designed and built the archive node.
+- Built the integration-testing API and its test suite.
+
 ** Software Engineer · O(1) Labs · 2022 – 2024
-- Crypto team: code refactoring, chunking, zk-VM.
-- Protocol team: code refactoring, hard-fork testing, account deletion.
+Crypto & protocol engineer on the Mina Protocol.
+- Codebase-wide cleanup, refactoring and higher test coverage (OCaml, Nix).
+- o1vm / Optimism: low-level communication with the fault-proof op-program (Rust, Go).
+- Berkeley hard fork: pre/post-fork test harness.
+- Prototyped account deletion (core zkApps feature); chunking.
 
 ** Software Engineer · Nomadic Labs · 2021 – 2022
-- Head of consensus team (from July 2021).
-- Consensus protocol development & maintenance (Tenderbake).
-- Merge Team member.
+- Led the consensus team (from July 2021).
+- Implemented the [[https://research-development.nomadic-labs.com/activating-tenderbake.html][Tenderbake]] consensus for the [[http://tezos.gitlab.io/protocols/012_ithaca.html][Ithaca]] protocol upgrade; maintenance.
+- Test maintenance and migration Python → Tezt for the new consensus.
+- Merge Team (core reviewers) member.
 
 ** Senior Software Engineer · Tweag I/O · 2019 – 2021
+Project lead & consultant.
 - Tezos clients (mockup/proxy client, Sapling client).
 - Gerrit plugins (enforce owner approval, CI-related UI extensions).
+- Built the internship program (setup, outreach, selection).
 
 ** Researcher · CEA / LSL · 2008 – 2019
 - Development of (formal) program analyses on source and binary code,
   for safer and more secure software engineering.
-- Lead developer of the binary-code analysis platform [[https://binsec.github.io][BINSEC]].
+- Lead developer and team co-lead of the open-source binary-analysis and
+  symbolic-execution platform [[https://binsec.github.io][BINSEC]].
+- Co-advisor and day-to-day supervisor of two PhD students, plus MSc
+  interns (see [[*Students][Students]]).
+- [[/teaching/2021/asi36/][Lectures on software attacks & vulnerabilities]] (ENSTA).
 
 ** Visiting Professor · UFRN / DIMAp (Natal, Brazil) · 2013 – 2015
-Enhancing constraint solvers used in software verification.
+Teaching (programming, formal methods); research on the constraint solvers
+used in software verification: [[https://verit.loria.fr/][veriT]] SMT solver,
+[[https://github.com/rbonichon/smtpp][SMTpp]], the
+[[https://github.com/rbonichon/portugol][Portugol]] online interpreter.
 
 ** Post-doc · LORIA / Paréo · 2007 – 2008
 Generation of construction functions respecting algebraic invariants for OCaml.
@@ -40,13 +63,13 @@ Teaching assistant.
 
 * Education
 
-** PhD. in Computer Science · Université Paris 6 Pierre & Marie Curie
-Thesis: /Tableaux and Deduction Modulo/. Automated theorem proving,
+** PhD. in Computer Science · Université Paris 6 Pierre & Marie Curie · 2003 – 2006
+Thesis: [[./papers/bonichon_tableaux_modulo_these.pdf][/Tableaux et déduction modulo/]] (Tableaux and Deduction Modulo), defended 17 October 2006. Automated theorem proving,
 rewriting, proof theory.
 
-** MSc. in Computer Science (DEA): Programming, Semantics, Proofs & Languages · Université Paris 7 Denis Diderot
+** MSc. in Computer Science (DEA): Programming, Semantics, Proofs & Languages · Université Paris 7 Denis Diderot · 2002 – 2003
 
-** MSc. in Computer Science & Applied Mathematics (Engineering degree) · ENSEEIHT (Toulouse) 
+** MSc. in Computer Science & Applied Mathematics (Engineering degree) · ENSEEIHT (Toulouse) · 1999 – 2002
 
 * Tools
 
@@ -68,10 +91,10 @@ Construction functions generator for datatypes with (algebraic) invariants.
 
 * Students
 
-** Frédéric Recoules (PhD) · 2016 – 2021
+** Frédéric Recoules (PhD, co-advisor) · 2016 – 2021
 Automatic verification of low-level code: C, assembly & binary code.
 
-** Manh-Dung Nguyen (PhD) · 2016 – 2020
+** Manh-Dung Nguyen (PhD, co-advisor) · 2016 – 2020
 Advanced fuzzing techniques for vulnerability discoveries at scale.
 
 ** Vítor Alcantâra de Almeida (MSc) · 2013 – 2015
@@ -86,19 +109,26 @@ Combining fuzzing and symbolic execution for vulnerability detection.
 ** Guillaume Girol (MSc) · 2017 (Apr–Sep)
 Sharpening symbolic methods for vulnerability detection.
 
+* Publications
+
+23 publications (22 peer-reviewed), in reverse chronological order (also on the
+[[/biblio.html][publications page]]).
+
+#+INCLUDE: "./biblio.org" :lines "7-" :minlevel 2
+
 * Skills
 
-- Functional programming
-- Program analysis
-- Software verification
-- Automated theorem proving
-- Blockchain implementation (protocol)
+- Automated theorem proving, SMT solving
+- Symbolic execution & binary analysis, software verification
+- BFT consensus, blockchain protocols, ZK proof systems
+- Functional programming (OCaml, Rust)
+- LLM-assisted development
 
 * Languages
 
 - French (native)
-- English (fluent)
-- Portuguese (fluent)
+- English (fluent, TOEIC 966)
+- Portuguese (fluent, spoken at home)
 - German (fluent)
 
 * Technologies
