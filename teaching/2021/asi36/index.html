@@ -1,1685 +1,387 @@
 <!DOCTYPE html>
-<html lang="en" class="has-navbar-fixed-top" >
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-<title>RB</title>
-
-<meta name="author" content="RB">
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-
-
-
-    <link href="/css/screen.css" media="screen" rel="stylesheet">
-
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous">
-
-<script type="text/javascript" src="/js/nav.js"></script>
-
-    <link rel="canonical" href="http://localhost:1313/teaching/2021/asi36/">
-    
-    <link href="/rss.xml" type="application/atom+xml"
-          rel="alternate" title="RB">
-  </head>
-
-  <body>
-    <nav class="navbar is-fixed-top is-transparent hidden-print" role="navigation" aria-label="main navigation" >
-  <div class="container">
-    <div class="navbar-brand">
-      <a class="navbar-item " href="/">
-        <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
-        </i>
-        <span class="sr-only">Home</span>
-      </a>
-      <button class="button navbar-burger" data-target="navMenu" >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-    
-    <div class="navbar-menu" id="navMenu" >
-      <div class="navbar-start ">
-        <a aria-label="About" class="navbar-item" href="/non-posts/about/">
-          <i aria-hidden="true" class="fa fa-2x fa-user" title="About">
-          </i>
-          <span class="sr-only">About</span>
-        </a>
-        <a class="navbar-item" href="/non-posts/biblio/">
-          <i class="fa fa-2x fa-book" aria-hidden="true" title="Publications">
-          </i>
-          <span class="sr-only">Publications</span>
-        </a>
-
-        <a class="navbar-item" href="/non-posts/teaching/">
-          <i class="fa fa-2x fa-graduation-cap" aria-hidden="true" title="Teaching">
-          </i>
-          <span class="sr-only">Teaching</span>
-        </a>
-        <a class="navbar-item" href="https://github.com/rbonichon">
-          <i class="fa fa-2x fa-github" aria-hidden="true" title="GitHub">
-          </i>
-          <span class="sr-only">GitHub</span>
-        </a>
-      </div>
-      <div class="navbar-end">
-        <a class="navbar-item" href="/non-posts/archives/">
-          <i class="fa fa-2x fa-archive" aria-hidden="true" title="Archive">
-          </i>
-          <span class="sr-only">Archive</span>
-        </a>
-      </div>
-    </div>
-
-  </div>
-
+<html lang="en">
+<head>
+<!-- 2026-10-08 Thu 21:45 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ASI36 — Analyse de vulnérabilité (2021)</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/css/tufte.css"/>
+<link rel="stylesheet" href="/css/site.css"/>
+<link rel="stylesheet" href="/css/hljs/github.min.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="/css/hljs/github-dark.min.css" media="(prefers-color-scheme: dark)"/>
+<script defer src="/js/highlight.min.js"></script>
+<script defer src="/js/highlight-languages.min.js"></script>
+<script defer src="/js/highlight-init.js"></script>
+</head>
+<body>
+<div id="preamble" class="status">
+<nav class="site-nav">
+  <span class="site-brand"><a href="/">RB</a></span>
+  <ul class="site-menu">
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/teaching/">Teaching</a></li>
+    <li><a href="/resume.html">Resume</a></li>
+    <li><a href="/biblio.html">Publications</a></li>
+  </ul>
 </nav>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">ASI36 — Analyse de vulnérabilité (2021)</h1>
+</header><p>
+Software attacks are a common part of today's headlines. This course
+aims at demystifying them by giving the fundamentals to understand
+these attacks, what they consist in and how to mitigate them. We will
+mostly focus on software vulnerabilities.
+</p>
 
-    
-
-    
-
-<section class="section content">
-  
-  
-  
-
-  <div class="container">
-    <h1>ASI36</h1>
-    <hr/>
-    <div class="columns">
-      <div class="column">
-        <p>
-Software attacks are a common part of today&#39;s headlines. This course aims at
-demystifying them by giving the fundamentals to understand these attacks, what
-they consist in and how to mitigate them. We will mostly focus on software
-vulnerabilities.</p>
 <p>
-We will cover the following topics:</p>
-<ul>
+We will cover the following topics:
+</p>
+
+<ul class="org-ul">
 <li>semantics and modelization of low-level languages</li>
 <li>classical attack and exploitation</li>
 <li>control-flow integrity techniques</li>
 <li>MATE attacks and reverse engineering</li>
 <li>code obfuscation</li>
 </ul>
+
 <p>
-<strong>Note:</strong> These lectures will require a fair amount of hands-on
-experiments on the computer to make the concepts more practical. 
-They also involve supplementary reading material as part of the contents.</p>
-
-      </div>
-
-      <div class="column">
-        <h2>Lectures</h2>
-
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Date</th>
-              <th>Title</th>
-            </tr>
-          </thead>
-          <tbody>
-          
-          <tr>
-            <td>1</td>
-            <td>2021-01-05</td>
-            <td> <a href="#intro">Introduction </a></td>
-          </tr>
-          
-          <tr>
-            <td>2</td>
-            <td>2021-01-12</td>
-            <td> <a href="#basics">Basic attacks &amp; exploitation </a></td>
-          </tr>
-          
-          <tr>
-            <td>3</td>
-            <td>2021-01-19</td>
-            <td> <a href="#mate">MATE, attack &amp; defense </a></td>
-          </tr>
-          
-          <tr>
-            <td>4</td>
-            <td>2021-01-26</td>
-            <td> <a href="#cfi">Control-flow integrity </a></td>
-          </tr>
-          
-          <tr>
-            <td>5</td>
-            <td>2021-02-02</td>
-            <td> <a href="#">Semantic attacks (program analysis) </a></td>
-          </tr>
-          
-          <tr>
-            <td>6</td>
-            <td>2021-02-09</td>
-            <td> <a href="#fuzz">Fuzzing </a></td>
-          </tr>
-          
-          <tr>
-            <td>7</td>
-            <td>2021-02-16</td>
-            <td> <a href="#exam">Exam </a></td>
-          </tr>
-          
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="columns">
-      <div class="column">
-        <h1>References</h1>
-
-        
-
-        
-        
-        <h2 id="intro">1. Introduction</h2>
-        <hr/>
-        <div class="columns">
-          <div class="column">
-            <h3>Description</h3>
-            This introductory session presents an overview of the contents, the issues surrounding security in general, the more restricted issue of analyzing vulnerabilities in low-level code, as well as reminders regarding compilation and code analysis.</div>
-          
-
-          
-
-          
-          <div class="column">
-            
-            <h3>Reading material</h3>
-            
-            <ul class="fa-ul">
-              
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://www.ssi.gouv.fr/uploads/IMG/pdf/Mind_Your_Languages_-_version_longue.pdf">
-  
-
-  Mind Your Languages
-    </a>
-
-    
-
-</li>
+<i>Note:</i> These lectures will require a fair amount of hands-on
+experiments on the computer to make the concepts more practical. They
+also involve supplementary reading material as part of the contents.
+</p>
+<div id="outline-container-org46884e1" class="outline-2">
+<h2 id="org46884e1">Lectures</h2>
+<div class="outline-text-2" id="text-org46884e1">
+<table>
 
 
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://cr.yp.to/qmail/qmailsec-20071101.pdf">
-  
+<colgroup>
+<col  class="org-right">
 
-  Some thoughts on security after ten years of qmail 1.0
-    </a>
+<col  class="org-right">
 
-    
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">#</th>
+<th scope="col" class="org-right">Date</th>
+<th scope="col" class="org-left">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">2021-01-05</td>
+<td class="org-left"><a href="#intro">Introduction</a></td>
+</tr>
 
-</li>
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">2021-01-12</td>
+<td class="org-left"><a href="#basics">Basic attacks &amp; exploitation</a></td>
+</tr>
 
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">2021-01-19</td>
+<td class="org-left"><a href="#mate">MATE, attack &amp; defense</a></td>
+</tr>
 
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://pdos.csail.mit.edu/papers/ub:apsys12.pdf">
-  
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">2021-01-26</td>
+<td class="org-left"><a href="#cfi">Control-flow integrity</a></td>
+</tr>
 
-  Undefined Behavior: What happened to My Code?
-    </a>
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">2021-02-02</td>
+<td class="org-left"><a href="#semantic">Semantic attacks (program analysis)</a></td>
+</tr>
 
-    
+<tr>
+<td class="org-right">6</td>
+<td class="org-right">2021-02-09</td>
+<td class="org-left"><a href="#fuzz">Fuzzing</a></td>
+</tr>
 
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://www.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf">
-  
-
-  Reflections on Trusting Trust
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://github.com/denysdovhan/wtfjs">
-  
-
-  wtfjs
-    </a>
-
-    
-
-</li>
-
-
-            
-            </ul>
-          </div>
-          
-          <div class="column">
-            <h3>Lecture contents</h3>
-            <ul class="fa-ul">
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/cours-cyber-ensta-01.pdf">
-  
-
-  Slides-I
-    </a>
-
-    
-
-</li>
-
-
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/01-lecture01.pdf">
-  
-
-  Slides-II
-    </a>
-
-    
-
-</li>
-
-
-            </ul>
-          </div>
-          
-        </div>
-        
-      
-        
-        <h2 id="basics">2. Basic attacks &amp; exploitation</h2>
-        <hr/>
-        <div class="columns">
-          <div class="column">
-            <h3>Description</h3>
-            <p>This session presents basic low-level attack techniques:</p>
-<ul>
-<li>buffer overflows;</li>
-<li>heap overflows; &amp;</li>
-<li>format string exploitation.</li>
-</ul>
-<p>Most of the session is allotted to hands-on experimentation.</p>
+<tr>
+<td class="org-right">7</td>
+<td class="org-right">2021-02-16</td>
+<td class="org-left"><a href="#exam">Exam</a></td>
+</tr>
+</tbody>
+</table>
 </div>
-          
-
-          
-
-          
-          <div class="column">
-            
-            <h3>Reading material</h3>
-            
-            <ul class="fa-ul">
-              
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-book" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://nostarch.com/hacking2.htm">
-  
-
-  Hacking: The Art of Exploitation (Jon Erickson) -- (Ch. 0x200 &amp; 0x300)
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://www.jegerlehner.ch/intel/IntelCodeTable.pdf">
-  
-
-  80x86 CodeTable
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://software.intel.com/sites/default/files/managed/a4/60/325383-sdm-vol-2abcd.pdf">
-  
-
-  Intel full ISA reference
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://link.springer.com/content/pdf/10.1007/978-3-642-04117-4_30.pdf">
-  
-
-  Low-level Software Security by Example
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://www.ouah.org/mudge.html">
-  
-
-  How to write Buffer Overflows
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://phrack.org/issues/49/14.html#article">
-  
-
-  Smashing The Stack For Fun And Profit
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://microcorruption.com/login">
-  
-
-  Microcorruption
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://ref.x86asm.net/">
-  
-
-  X86 opcode/instruction reference
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://www.cgsecurity.org/exploit/heaptut.txt">
-  
-
-  w00w00 on Heap Overflows
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://beginners.re/">
-  
-
-  Reverse Engineering for Beginners
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://github.com/0xZ0F/Z0FCourse_ReverseEngineering">
-  
-
-  Reverse Engineering Course (in progress)
-    </a>
-
-    
-
-</li>
-
-
-            
-            </ul>
-          </div>
-          
-          <div class="column">
-            <h3>Lecture contents</h3>
-            <ul class="fa-ul">
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/01-lecture02.pdf">
-  
-
-  Slides
-    </a>
-
-    
-
-</li>
-
-
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/02-exercises02.pdf">
-  
-
-  Exercises
-    </a>
-
-    
-
-</li>
-
-
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-archive-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/asi36_ex2.tgz">
-  
-
-  Tarball
-    </a>
-
-    
-    
-    <div class="sha is-size-7 has-text-grey">
-      sha256 842a06084305129d42207aadeb805cfacd769a14de90003f3c58572148591e75
-     </div>
-    
-
-</li>
-
-
-            </ul>
-          </div>
-          
-        </div>
-        
-      
-        
-        <h2 id="mate">3. MATE, attack &amp; defense</h2>
-        <hr/>
-        <div class="columns">
-          <div class="column">
-            <h3>Description</h3>
-            <p>This lecture discusses at length the Man-At-The-End (MATE) scenario. MATE is an attack model where the attackers are very powerful since they basically are <em>on</em> your computer, can read/write the code, execute it step-by-step or patch it on the fly.</p>
-<p>We will here expose the current state of known attacks and defenses, giving an overview of this research area.</p>
-</div>
-          
-
-          
-
-          
-          <div class="column">
-            <h3>Lecture contents</h3>
-            <ul class="fa-ul">
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/cours-cyber-ensta-01.pdf">
-  
-
-  Slides-I
-    </a>
-
-    
-
-</li>
-
-
-            </ul>
-          </div>
-          
-        </div>
-        
-      
-        
-        <h2 id="cfi">4. Control-flow integrity</h2>
-        <hr/>
-        <div class="columns">
-          <div class="column">
-            <h3>Description</h3>
-            <p>This session presents three main basic binary exploitation mitigation techniques:</p>
-<ul>
-<li>stack canaries;</li>
-<li>data execution prevention; &amp;</li>
-<li>ASLR.</li>
-</ul>
-<p>We will also talk about their limitations and briefly present more advanced control-flow integrity measures that are currently available.</p>
-<p>A good part of the session is allotted to hands-on experimentations.</p>
-</div>
-          
-
-          
-
-          
-          <div class="column">
-            
-            <h3>Reading material</h3>
-            
-            <ul class="fa-ul">
-              
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Bypassing-aslr-slides.pdf">
-  
-
-  Stack Smashing as of Today
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf">
-  
-
-  Practical Control-Flow Integrity &amp; Randomization for Binary Executables
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://www.pcc.me.uk/~peter/acad/usenix14.pdf">
-  
-
-  Enforcing Forward-Edge Control-Flow Integrity in GCC &amp; LLVM
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf">
-  
-
-  The Geometry of Innocent Flesh on the Bone
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://www.cs.vu.nl/~herbertb/papers/srop_sp14.pdf">
-  
-
-  Framing Signals --- A Return to Portable Shellcode
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/papers/aslr.pdf">
-  
-
-  ASLR Smack &amp; Laugh Reference
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/papers/guardlines.pdf">
-  
-
-  Preventing zero-day exploits of memory vulnerabilities with guard lines
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://inertiawar.com/openbsd/">
-  
-
-  Exploiting OpenBSD
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://phrack.org/issues/59/9.html#article">
-  
-
-  Bypassing PaX ASLR Protection
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://phrack.org/issues/55/8.html">
-  
-
-  The Frame Pointer Overwrite
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://phrack.org/issues/56/5.html">
-  
-
-  Bypassing StackGuard and StackShield
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://googleprojectzero.blogspot.com/2019/11/bad-binder-android-in-wild-exploit.html">
-  
-
-  Bad Binder: Android In-The-Wild Exploit 
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://paulmakowski.wordpress.com/2011/01/25/smashing-the-stack-in-2011/">
-  
-
-  Smashing the Stack in 2011
-    </a>
-
-    
-
-</li>
-
-
-            
-            </ul>
-          </div>
-          
-          <div class="column">
-            <h3>Lecture contents</h3>
-            <ul class="fa-ul">
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/01-lecture03.pdf">
-  
-
-  Slides
-    </a>
-
-    
-
-</li>
-
-
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/02-exercises03.pdf">
-  
-
-  Exercises
-    </a>
-
-    
-
-</li>
-
-
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-archive-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/asi36_ex3.tgz">
-  
-
-  Tarball
-    </a>
-
-    
-    
-    <div class="sha is-size-7 has-text-grey">
-      sha256 a30e6a6ac7e0e6744c70c311ad944cc1b4c5c4182e32db33e0766b56e6aea6b0
-     </div>
-    
-
-</li>
-
-
-            </ul>
-          </div>
-          
-        </div>
-        
-      
-        
-        <h2 id="">5. Semantic attacks (program analysis)</h2>
-        <hr/>
-        <div class="columns">
-          <div class="column">
-            <h3>Description</h3>
-            TBA</div>
-          
-
-          
-
-          
-        </div>
-        
-      
-        
-        <h2 id="fuzz">6. Fuzzing</h2>
-        <hr/>
-        <div class="columns">
-          <div class="column">
-            <h3>Description</h3>
-            An overview of the current state of software fuzzing.
-Fuzzers have gained tremendous traction recently as automatic tools to find bugs. There have been a number of experiments trying to improve their worst aspects while keeping their best ones. This course will present the basics about fuzzing, an overview of recent results in the field.
-We will devote a good amount of time to hands-on experiments with the AFL fuzzer.</div>
-          
-
-          
-
-          
-          <div class="column">
-            
-            <h3>Reading material</h3>
-            
-            <ul class="fa-ul">
-              
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://cs.ucsb.edu/~vigna/publications/2016_NDSS_Driller.pdf">
-  
-
-  Driller: Augmenting Fuzzing Through Selective Symbolic Execution
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://www.cs.vu.nl/~giuffrida/papers/vuzzer-ndss-2017.pdf">
-  
-
-  VUzzer: Application-aware Evolutionary Fuzzing
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://www.comp.nus.edu.sg/~thuanpv/publications/AFLGo_CCS17.pdf">
-  
-
-  Directed Greybox Fuzzing
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://www.carolemieux.com/fairfuzz-ase18.pdf">
-  
-
-  &#34;FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage&#34;
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://arxiv.org/abs/1803.01307">
-  
-
-  Angora: Efficient Fuzzing by Principled Search
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://lcamtuf.coredump.cx/afl/">
-  
-
-  AFL homepage
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://wcventure.github.io/FuzzingPaper/">
-  
-
-  A list of recent results on fuzzing
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-external-link" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://www.fuzzingbook.org/">
-  
-
-  The Fuzzing Book
-    </a>
-
-    
-
-</li>
-
-
-            
-            </ul>
-          </div>
-          
-          <div class="column">
-            <h3>Lecture contents</h3>
-            <ul class="fa-ul">
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/01-lecture04.pdf">
-  
-
-  Slides
-    </a>
-
-    
-
-</li>
-
-
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/02-exercises04.pdf">
-  
-
-  Exercises
-    </a>
-
-    
-
-</li>
-
-
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-archive-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/2021/asi36_ex04.tgz">
-  
-
-  Tarball
-    </a>
-
-    
-    
-    <div class="sha is-size-7 has-text-grey">
-      sha256 12d1b6c6cd7fa0345481862c3e298df6fc63b837184d108c75b452e3b840e4d0
-     </div>
-    
-
-</li>
-
-
-            </ul>
-          </div>
-          
-        </div>
-        
-      
-        
-        <h2 id="exam">7. Exam</h2>
-        <hr/>
-        <div class="columns">
-          <div class="column">
-            <h3>Description</h3>
-            <p>The final exam will contain 2 parts:</p>
-<ul>
-<li>
-<p>The presentation of a research article (groups of 2, 20 minutes +
-questions) &ndash; rank the articles from the list in decreasing order and
-send a message ranking them to the professors;</p>
-</li>
-<li>
-<p>A mini CTF problem (find the secret key!) and its <strong>written</strong> solution
-report (10p. max).</p>
-<p>The CTFs are available from:</p>
-<p><a href="https://github.com/rbonichon/asi36-ctf/tree/ctf-2020-2021">https://github.com/rbonichon/asi36-ctf/tree/ctf-2020-2021</a></p>
-<p><em>Deadline for CTF reports: <strong>April 2 2021</strong></em></p>
-</li>
+<div id="outline-container-intro" class="outline-3">
+<h3 id="intro">Introduction (2021-01-05)</h3>
+<div class="outline-text-3" id="text-intro">
+<p>
+Overview of the contents, the issues surrounding security in general,
+the more restricted issue of analyzing vulnerabilities in low-level
+code, as well as reminders regarding compilation and code analysis.
+</p>
+
+<p>
+<b>Materials</b> :: <a href="file:///asi36/2021/cours-cyber-ensta-01.pdf">Slides-I</a> · <a href="file:///asi36/2021/01-lecture01.pdf">Slides-II</a>
+</p>
+
+<p>
+<b>References</b>
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.ssi.gouv.fr/uploads/IMG/pdf/Mind_Your_Languages_-_version_longue.pdf">Mind Your Languages</a></li>
+<li><a href="https://github.com/denysdovhan/wtfjs">wtfjs</a></li>
+<li><a href="https://cr.yp.to/qmail/qmailsec-20071101.pdf">Some thoughts on security after ten years of qmail 1.0</a></li>
+<li><a href="https://pdos.csail.mit.edu/papers/ub:apsys12.pdf">Undefined Behavior: What happened to My Code?</a></li>
+<li><a href="https://www.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf">Reflections on Trusting Trust</a></li>
 </ul>
 </div>
-          
+</div>
+<div id="outline-container-basics" class="outline-3">
+<h3 id="basics">Basic attacks &amp; exploitation (2021-01-12)</h3>
+<div class="outline-text-3" id="text-basics">
+<p>
+Basic low-level attack techniques: buffer overflows, heap overflows,
+format string exploitation. Most of the session is allotted to
+hands-on experimentation.
+</p>
 
-          
-          <div class="column">
-            
-            <h3>Presentations</h3>
+<p>
+<b>Materials</b> :: <a href="file:///asi36/2021/01-lecture02.pdf">Slides</a> · <a href="file:///asi36/2021/02-exercises02.pdf">Exercises</a> · <a href="file:///asi36/2021/asi36_ex2.tgz">Tarball</a>
+</p>
 
-            <table class="table is-striped is-narrow">
-              <thead>
-                <tr>
-                  <th>Selected article</th>
-                  <th>Students</th>
-                  <th>Scheduled</th>
-                </tr>
-              </thead>
-              <tbody>
-                
-              <tr>
-                <td>Weird Machines in ELF</td>
-                <td>Loïc, Jean-Baptiste</td>
-                <td>9:00</td>
-              </tr>
-              
-              <tr>
-                <td>Transparent ROP Exploit Mitigation using Indirect Branch Tracing</td>
-                <td>Alizée, Sabry</td>
-                <td>9:30</td>
-              </tr>
-              
-              <tr>
-                <td>ContractFuzzer: Fuzzing Smart Contracts for Vulnerability Detection</td>
-                <td>Tom</td>
-                <td>10:00</td>
-              </tr>
-              
-              <tr>
-                <td>Grey-box Concolic Testing on Binary Code</td>
-                <td>Laetitia, Laetitia</td>
-                <td>10:30</td>
-              </tr>
-              
-              <tr>
-                <td>Function Boundary Detection in Stripped Binaries</td>
-                <td>Quentin, Pierre-Élisée</td>
-                <td>11:00</td>
-              </tr>
-              
-              <tr>
-                <td>Towards Paving the Way for Large-Scale Windows Malware Analysis: Generic Binary Unpacking with Orders-of-Magnitude Performance Boost</td>
-                <td>Charbel, Mahmoud</td>
-                <td>11:30</td>
-              </tr>
-              
+<p>
+<b>References</b>
+</p>
 
-              </tbody>
-            </table>
-            
-          </div>
-          
+<ul class="org-ul">
+<li><a href="http://www.ouah.org/mudge.html">How to write Buffer Overflows</a></li>
+<li><a href="http://phrack.org/issues/49/14.html#article">Smashing The Stack For Fun And Profit</a></li>
+<li><a href="https://microcorruption.com/login">Microcorruption</a></li>
+<li><a href="http://www.jegerlehner.ch/intel/IntelCodeTable.pdf">80x86 CodeTable</a></li>
+<li><a href="http://ref.x86asm.net/">X86 opcode/instruction reference</a></li>
+<li><a href="https://software.intel.com/sites/default/files/managed/a4/60/325383-sdm-vol-2abcd.pdf">Intel full ISA reference</a></li>
+<li><a href="https://www.cgsecurity.org/exploit/heaptut.txt">w00w00 on Heap Overflows</a></li>
+<li><a href="https://nostarch.com/hacking2.htm">Hacking: The Art of Exploitation (Jon Erickson) — Ch. 0x200 &amp; 0x300</a></li>
+<li><a href="https://link.springer.com/content/pdf/10.1007/978-3-642-04117-4_30.pdf">Low-level Software Security by Example</a></li>
+<li><a href="https://beginners.re/">Reverse Engineering for Beginners</a></li>
+<li><a href="https://github.com/0xZ0F/Z0FCourse_ReverseEngineering">Reverse Engineering Course (in progress)</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-mate" class="outline-3">
+<h3 id="mate">MATE, attack &amp; defense (2021-01-19)</h3>
+<div class="outline-text-3" id="text-mate">
+<p>
+Discussion of the Man-At-The-End (MATE) scenario — an attack model
+where attackers are very powerful since they basically are <i>on</i> your
+computer: read/write code, execute it step-by-step, patch on the fly.
+Current state of known attacks and defenses; overview of this research
+area.
+</p>
 
-          
-          <div class="column">
-            
-            <h3>Papers</h3>
-            
-            <ul class="fa-ul">
-              
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://www.ndss-symposium.org/wp-content/uploads/2020/02/24422-paper.pdf">
-  
+<p>
+<b>Materials</b> :: <a href="file:///asi36/2021/cours-cyber-ensta-01.pdf">Slides</a>
+</p>
+</div>
+</div>
+<div id="outline-container-cfi" class="outline-3">
+<h3 id="cfi">Control-flow integrity (2021-01-26)</h3>
+<div class="outline-text-3" id="text-cfi">
+<p>
+Three main basic binary exploitation mitigation techniques:
+</p>
 
-  Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input
-    </a>
+<ul class="org-ul">
+<li>stack canaries</li>
+<li>data execution prevention</li>
+<li>ASLR</li>
+</ul>
 
-    
+<p>
+We will also discuss their limitations and briefly present more
+advanced control-flow integrity measures currently available. Hands-on
+experiments included.
+</p>
 
-</li>
+<p>
+<b>Materials</b> :: <a href="file:///asi36/2021/01-lecture03.pdf">Slides</a> · <a href="file:///asi36/2021/02-exercises03.pdf">Exercises</a> · <a href="file:///asi36/2021/asi36_ex3.tgz">Tarball</a>
+</p>
 
+<p>
+<b>References</b>
+</p>
 
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://www.cs.columbia.edu/~vpappas/papers/kbouncer.sec13.pdf">
-  
+<ul class="org-ul">
+<li><a href="http://inertiawar.com/openbsd/">Exploiting OpenBSD</a></li>
+<li><a href="http://www.blackhat.com/presentations/bh-europe-09/Fritsch/Blackhat-Europe-2009-Fritsch-Bypassing-aslr-slides.pdf">Stack Smashing as of Today</a></li>
+<li><a href="http://phrack.org/issues/59/9.html#article">Bypassing PaX ASLR Protection</a></li>
+<li><a href="http://phrack.org/issues/55/8.html">The Frame Pointer Overwrite</a></li>
+<li><a href="http://phrack.org/issues/56/5.html">Bypassing StackGuard and StackShield</a></li>
+<li><a href="http://seclab.cs.sunysb.edu/seclab/pubs/oak13.pdf">Practical Control-Flow Integrity &amp; Randomization for Binary Executables</a></li>
+<li><a href="http://www.pcc.me.uk/~peter/acad/usenix14.pdf">Enforcing Forward-Edge Control-Flow Integrity in GCC &amp; LLVM</a></li>
+<li><a href="https://cseweb.ucsd.edu/~hovav/dist/geometry.pdf">The Geometry of Innocent Flesh on the Bone</a></li>
+<li><a href="https://www.cs.vu.nl/~herbertb/papers/srop_sp14.pdf">Framing Signals — A Return to Portable Shellcode</a></li>
+<li><a href="file:///asi36/papers/aslr.pdf">ASLR Smack &amp; Laugh Reference</a></li>
+<li><a href="https://googleprojectzero.blogspot.com/2019/11/bad-binder-android-in-wild-exploit.html">Bad Binder: Android In-The-Wild Exploit</a></li>
+<li><a href="file:///asi36/papers/guardlines.pdf">Preventing zero-day exploits of memory vulnerabilities with guard lines</a></li>
+<li><a href="https://paulmakowski.wordpress.com/2011/01/25/smashing-the-stack-in-2011/">Smashing the Stack in 2011</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-semantic" class="outline-3">
+<h3 id="semantic">Semantic attacks (program analysis) (2021-02-02)</h3>
+<div class="outline-text-3" id="text-semantic">
+<p>
+TBA.
+</p>
+</div>
+</div>
+<div id="outline-container-fuzz" class="outline-3">
+<h3 id="fuzz">Fuzzing (2021-02-09)</h3>
+<div class="outline-text-3" id="text-fuzz">
+<p>
+Overview of the current state of software fuzzing. Fuzzers have gained
+tremendous traction recently as automatic tools to find bugs. We will
+present the basics, an overview of recent results, and devote a good
+amount of time to hands-on experiments with the AFL fuzzer.
+</p>
 
-  Transparent ROP Exploit Mitigation using Indirect Branch Tracing
-    </a>
+<p>
+<b>Materials</b> :: <a href="file:///asi36/2021/01-lecture04.pdf">Slides</a> · <a href="file:///asi36/2021/02-exercises04.pdf">Exercises</a> · <a href="file:///asi36/2021/asi36_ex04.tgz">Tarball</a>
+</p>
 
-    
+<p>
+<b>References</b>
+</p>
 
-</li>
+<ul class="org-ul">
+<li><a href="https://cs.ucsb.edu/~vigna/publications/2016_NDSS_Driller.pdf">Driller: Augmenting Fuzzing Through Selective Symbolic Execution</a></li>
+<li><a href="https://arxiv.org/abs/1803.01307">Angora: Efficient Fuzzing by Principled Search</a></li>
+<li><a href="https://www.cs.vu.nl/~giuffrida/papers/vuzzer-ndss-2017.pdf">VUzzer: Application-aware Evolutionary Fuzzing</a></li>
+<li><a href="http://lcamtuf.coredump.cx/afl/">AFL homepage</a></li>
+<li><a href="https://www.comp.nus.edu.sg/~thuanpv/publications/AFLGo_CCS17.pdf">Directed Greybox Fuzzing</a></li>
+<li><a href="http://www.carolemieux.com/fairfuzz-ase18.pdf">FairFuzz: A Targeted Mutation Strategy for Increasing Greybox Fuzz Testing Coverage</a></li>
+<li><a href="https://wcventure.github.io/FuzzingPaper/">A list of recent results on fuzzing</a></li>
+<li><a href="https://www.fuzzingbook.org/">The Fuzzing Book</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-exam" class="outline-3">
+<h3 id="exam">Exam (2021-02-16)</h3>
+<div class="outline-text-3" id="text-exam">
+<p>
+The final exam will contain 2 parts:
+</p>
 
+<ul class="org-ul">
+<li>The presentation of a research article (groups of 2, 20 minutes +
+questions) — rank the articles from the list in decreasing order
+and send a message ranking them to the professors.</li>
+<li>A mini CTF problem (find the secret key!) and its <b>written</b>
+solution report (10 p. max).</li>
+</ul>
 
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://www.cs.dartmouth.edu/~sergey/wm/woot13-shapiro.pdf">
-  
+<p>
+CTFs available at <a href="https://github.com/rbonichon/asi36-ctf/tree/ctf-2020-2021">https://github.com/rbonichon/asi36-ctf/tree/ctf-2020-2021</a>
+</p>
 
-  Weird Machines in ELF
-    </a>
+<p>
+<b>Deadline for CTF reports: April 2, 2021.</b>
+</p>
 
-    
+<p>
+<b>References</b>
+</p>
 
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://www.usenix.org/legacy/event/sec11/tech/full_papers/Schwartz.pdf">
-  
-
-  Q: Exploit Hardening Made Easy
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/papers/p395-cheng.pdf">
-  
-
-  Towards Paving the Way for Large-Scale Windows Malware Analysis: Generic Binary Unpacking with Orders-of-Magnitude Performance Boost
-    </a>
-
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="/asi36/papers/functionboundary.pdf">
-  
-
-  Function Boundary Detection in Stripped Binaries
-    </a>
-
-    
-
-</li>
+<ul class="org-ul">
+<li><a href="https://www.ndss-symposium.org/wp-content/uploads/2020/02/24422-paper.pdf">Not All Coverage Measurements Are Equal: Fuzzing by Coverage Accounting for Input</a></li>
+<li><a href="http://www.cs.columbia.edu/~vpappas/papers/kbouncer.sec13.pdf">Transparent ROP Exploit Mitigation using Indirect Branch Tracing</a></li>
+<li><a href="https://www.cs.dartmouth.edu/~sergey/wm/woot13-shapiro.pdf">Weird Machines in ELF</a></li>
+<li><a href="https://www.usenix.org/legacy/event/sec11/tech/full_papers/Schwartz.pdf">Q: Exploit Hardening Made Easy</a></li>
+<li><a href="file:///asi36/papers/p395-cheng.pdf">Towards Paving the Way for Large-Scale Windows Malware Analysis: Generic Binary Unpacking</a></li>
+<li><a href="file:///asi36/papers/functionboundary.pdf">Function Boundary Detection in Stripped Binaries</a></li>
+<li><a href="https://softsec.kaist.ac.kr/~jschoi/data/icse2019.pdf">Grey-box Concolic Testing on Binary Code</a></li>
+<li><a href="http://www.s3.eurecom.fr/docs/usenixsec20_symcc.pdf">Symbolic execution with SymCC: Don't interpret, compile!</a></li>
+<li><a href="https://github.com/gongbell/ContractFuzzer/blob/master/ASE18-ContractFuzzer.pdf">ContractFuzzer: Fuzzing Smart Contracts for Vulnerability Detection</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8613a52" class="outline-2">
+<h2 id="org8613a52">Student talks</h2>
+<div class="outline-text-2" id="text-org8613a52">
+<table>
 
 
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://softsec.kaist.ac.kr/~jschoi/data/icse2019.pdf">
-  
+<colgroup>
+<col  class="org-right">
 
-  Grey-box Concolic Testing on Binary Code
-    </a>
+<col  class="org-left">
 
-    
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Time</th>
+<th scope="col" class="org-left">Paper</th>
+<th scope="col" class="org-left">Students</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">9:00</td>
+<td class="org-left">Weird Machines in ELF</td>
+<td class="org-left">Loïc, Jean-Baptiste</td>
+</tr>
 
-</li>
+<tr>
+<td class="org-right">9:30</td>
+<td class="org-left">Transparent ROP Exploit Mitigation using Indirect Branch Tracing</td>
+<td class="org-left">Alizée, Sabry</td>
+</tr>
 
+<tr>
+<td class="org-right">10:00</td>
+<td class="org-left">ContractFuzzer: Fuzzing Smart Contracts for Vulnerability Detection</td>
+<td class="org-left">Tom</td>
+</tr>
 
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="http://www.s3.eurecom.fr/docs/usenixsec20_symcc.pdf">
-  
+<tr>
+<td class="org-right">10:30</td>
+<td class="org-left">Grey-box Concolic Testing on Binary Code</td>
+<td class="org-left">Laetitia, Laetitia</td>
+</tr>
 
-  Symbolic execution with SymCC: Don&#39;t interpret, compile!
-    </a>
+<tr>
+<td class="org-right">11:00</td>
+<td class="org-left">Function Boundary Detection in Stripped Binaries</td>
+<td class="org-left">Quentin, Pierre-Élisée</td>
+</tr>
 
-    
-
-</li>
-
-
-            
-              
-<li>
- <span class="fa-li">
-  
-  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-  
-  </span>
-  
-  
-    <a href="https://github.com/gongbell/ContractFuzzer/blob/master/ASE18-ContractFuzzer.pdf">
-  
-
-  ContractFuzzer: Fuzzing Smart Contracts for Vulnerability Detection
-    </a>
-
-    
-
-</li>
-
-
-            
-            </ul>
-          </div>
-          
-        </div>
-        
-      
-      </div>
-    </div>
-  </div>
-</section>
-
-    <footer class="footer">
-  <div class="container ">
-    <div class="has-text-centered">
-      <p> Built with <a href="https://github.com/spf13/hugo">Hugo</a>.</p>
-      <p>© Richard Bonichon 2017-2021</p>
-    </div>
-  </div>
+<tr>
+<td class="org-right">11:30</td>
+<td class="org-left">Towards Paving the Way for Large-Scale Windows Malware Analysis (Generic Binary Unpacking)</td>
+<td class="org-left">Charbel, Mahmoud</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<footer class="site-footer">
+  <p>Richard Bonichon &middot;
+     <a href="https://github.com/rbonichon">github</a> &middot;
+     built with <a href="https://orgmode.org/manual/Publishing.html">org-publish</a></p>
 </footer>
-
-
-  </body>
+</div>
+</body>
 </html>

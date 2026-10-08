@@ -1,0 +1,470 @@
+/* site.css — surcouche au-dessus de tufte.css.
+ *
+ * - Typography and palette in the gwern.net vein: Source Serif 4,
+ *   monochrome text, small caps; one accent (wine) for links and headings
+ * - Nav top bar and footer (not provided by tufte.css)
+ * - Adjustments for org-html generated markup, all scoped to #content
+ *
+ * Sections: fonts · tokens · page · nav · content (text, headings,
+ * sections, links, tables, code) · notes · footer · narrow viewports.
+ */
+
+/* ─── Fonts ───────────────────────────────────────────────────
+ * Source Serif 4, variable (weight + optical size), latin subset from
+ * Fontsource. SIL OFL, see source-serif-4/OFL.txt. */
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("source-serif-4/source-serif-4-latin-opsz-normal.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("source-serif-4/source-serif-4-latin-opsz-italic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ─── Tokens ───────────────────────────────────────────────── */
+
+:root {
+  --serif:             "Source Serif 4", "Source Serif Pro", Georgia, serif;
+  --mono:              ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono",
+                       Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  /* One size for all code, inline or in blocks: rem, not em, so inline
+   * code does not grow with the 1.4rem paragraph text around it. */
+  --code-size:         1rem;
+
+  --page-bg:           #fff;
+  --text:              #111;
+  --accent:            #8b1e3f;
+  --rule-color:        #d4d4d4;
+  --rule-color-strong: #bdbdbd;
+  --muted-text:        #555;
+  --code-bg:           #f8f8f8;
+  --table-border:      #ddd;
+  --hover-text:        #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-bg:           #141414;
+    --text:              #e6e6e6;
+    --accent:            #e58aa3;
+    --rule-color:        #3a3a3a;
+    --rule-color-strong: #4a4a4a;
+    --muted-text:        #aaa;
+    /* github-dark's own ground, so highlighted blocks keep their contrast. */
+    --code-bg:           #161b22;
+    --table-border:      #333;
+    --hover-text:        #bbb;
+  }
+}
+
+/* ─── Page ────────────────────────────────────────────────────
+ * Fluid sizing: tufte hard-codes html { font-size: 15px } and sizes
+ * everything else in rem, so scaling the root scales the whole document
+ * with the viewport. Source Serif runs larger than et-book at the same
+ * size (taller x-height): the range sits ~8% below the et-book one. */
+
+html {
+  font-size: clamp(14px, 12px + 0.37vw, 18.5px);
+}
+
+/* Tufte centres body (margin: auto) with a 12.5% left padding. Override
+ * to an asymmetric layout: left gutter is half the right one, leaving
+ * more room on the right where sidenotes live. */
+body {
+  margin-left: 4%;
+  margin-right: 8%;
+  width: auto;
+  padding-left: 0;
+  font-family: var(--serif);
+  background-color: var(--page-bg);
+  color: var(--text);
+}
+
+/* Smallcaps: .smallcaps for spans marked up explicitly; <abbr> picks
+ * them up automatically for acronyms (CEA, BINSEC, OCaml…). */
+.smallcaps,
+abbr {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: "smcp", "onum";
+  letter-spacing: 0.04em;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+/* ─── Top navigation ───────────────────────────────────────── */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule-color);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.06em;
+}
+
+.site-nav a {
+  text-decoration: none;
+}
+
+.site-nav .site-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.site-nav .site-brand a {
+  color: var(--accent);
+}
+
+.site-nav .site-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Reset tufte's li spacing, which breaks the inline layout. */
+.site-nav .site-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Content: running text ───────────────────────────────────
+ * org-html wraps the body in #content. */
+
+#content {
+  padding-left: 0;
+  /* Tufte sizes p, ul and ol at 1.4rem but leaves their container at
+   * 1rem, so anything org emits outside a paragraph (a LaTeX environment
+   * rendered by MathJax, which scales to its parent) came out 30% small. */
+  font-size: 1.4rem;
+}
+
+/* Justified and hyphenated (org sets <html lang>). */
+#content p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Drop cap on the paragraph that opens an article. */
+#content > header + p::first-letter {
+  float: left;
+  font-size: 3.6em;
+  line-height: 0.85;
+  padding: 0.06em 0.08em 0 0;
+  color: var(--accent);
+}
+
+/* About page portrait: lives inside a .marginnote, which already floats
+ * it into the right margin. */
+#portrait {
+  display: block;
+  width: 40%;
+  margin-bottom: 0.8rem;
+  border-radius: 4px;
+}
+
+/* ─── Content: headings ───────────────────────────────────────
+ * Small caps instead of tufte's italics, in the accent colour. */
+
+#content h1,
+#content h2,
+#content h3,
+#content h4 {
+  color: var(--accent);
+  font-style: normal;
+  text-wrap: balance;
+}
+
+#content h1.title {
+  margin-top: 0;
+  font-size: 2.8rem;
+  font-weight: 400;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  text-align: center;
+}
+
+/* Optional #+subtitle:, which org-html (html5-fancy) emits as
+ * <header><h1 class="title"/><p class="subtitle"/></header>: centred under
+ * the title, smaller, in muted italics rather than small caps. */
+#content header p.subtitle {
+  width: auto;
+  margin-top: -0.4rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-variant-caps: normal;
+  letter-spacing: normal;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--muted-text);
+}
+
+#content h2 {
+  margin-top: 2.1rem;
+  padding-bottom: 0.15em;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  font-size: 1.85rem;
+  font-weight: 700;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+#content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.03em;
+}
+
+#content h4 {
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* ─── Content: sections ───────────────────────────────────────
+ * Breathing room between org's .outline-N wrappers. Every H3 section is
+ * ruled off (typically lectures inside a teaching page), the first one
+ * included, so it separates from the preceding intro / overview table. */
+
+#content .outline-2 {
+  margin-top: 4.5rem;
+}
+
+#content .outline-3 {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule-color-strong);
+}
+
+#content .outline-3 h3 {
+  margin-top: 0;
+}
+
+#content .outline-4 {
+  margin-top: 2.5rem;
+}
+
+/* ─── Content: links ──────────────────────────────────────────
+ * Accent colour with a dotted underline at rest, solid on hover. */
+
+#content a:link,
+#content a:visited {
+  color: var(--accent);
+  text-decoration: underline dotted;
+  text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+#content a:hover {
+  text-decoration-style: solid;
+  text-decoration-color: currentColor;
+}
+
+/* ─── Content: tables ─────────────────────────────────────────
+ * org-html emits a bare <table>. Override tufte's tight line-height and
+ * sparse padding to match the rhythm of the body text. */
+
+#content table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  line-height: 1.8rem;
+}
+
+#content th,
+#content td {
+  padding: 0.3rem 1.2rem 0.3rem 0;
+  font-size: 1.4rem;
+}
+
+#content th {
+  border-bottom: 2px solid var(--text);
+  font-weight: 600;
+  font-variant-caps: small-caps;
+  text-align: left;
+}
+
+#content td {
+  border-bottom: 1px solid var(--table-border);
+}
+
+/* #+attr_html: :class syntax-table — the first two columns (mathematical
+ * and concrete notation) never wrap; the last one does. */
+#content table.syntax-table td:nth-child(-n+2),
+#content table.syntax-table th:nth-child(-n+2) {
+  white-space: nowrap;
+}
+
+/* ─── Content: code ───────────────────────────────────────────
+ * Blocks (.org-src-container > pre.src) get a left rail instead of a
+ * full border. */
+
+pre.src,
+pre.example {
+  overflow-x: auto;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-left: 3px solid var(--rule-color-strong);
+  background: var(--code-bg);
+  font-family: var(--mono);
+  font-size: var(--code-size);
+}
+
+code {
+  padding: 0.05em 0.25em;
+  border-radius: 2px;
+  background: var(--code-bg);
+  font-family: var(--mono);
+  font-size: var(--code-size);
+}
+
+/* Foldable snippets (#+SNIPPET:), a <details> around the source block.
+ * The summary sits on the block's left rail so the two read as one. */
+details.snippet {
+  margin: 1rem 0;
+}
+
+details.snippet > summary {
+  cursor: pointer;
+  padding: 0.3rem 1rem;
+  border-left: 3px solid var(--rule-color-strong);
+  font-size: 0.95rem;
+  color: var(--muted-text);
+}
+
+/* Link to the snippet's lines on GitHub, right of the summary. */
+details.snippet > summary .snippet-source {
+  float: right;
+  font-size: 0.85rem;
+}
+
+/* ─── Footnotes and sidenotes ─────────────────────────────────
+ * The build emits every footnote twice: org's reference + entry in
+ * #footnotes, and a tufte sidenote after the reference. Wide screens get
+ * the sidenotes in a right margin, carved out only on pages that have
+ * some; narrow screens get the footnotes section, in a smaller size. */
+
+#footnotes {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+#footnotes h2.footnotes {
+  font-size: 1.6rem;
+}
+
+.sidenote-number,
+span.sidenote {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  /* Text keeps 70% of the column, the margin 30%. Percentages below are
+   * of the text width: a note 34/70 of it wide, pushed 3% clear of it. */
+  #content:has(span.sidenote) {
+    padding-right: 30%;
+  }
+
+  #content:has(span.sidenote) span.sidenote {
+    display: inline;
+    float: right;
+    clear: right;
+    width: 34%;
+    margin-right: -40%;
+    padding-left: 0.7em;
+    border-left: 1px solid var(--rule-color-strong);
+    font-size: 1.05rem;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .sidenote-number {
+    display: inline;
+  }
+
+  #content:has(span.sidenote) sup:has(> a.footref),
+  #content:has(span.sidenote) #footnotes {
+    display: none;
+  }
+}
+
+/* Note numbers: tufte sets them in et-book's old-style cut; use the
+ * text face, bold, in the accent colour. */
+.sidenote-number:after,
+.sidenote:before {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Hover affordance: highlight a note when its number is hovered, and
+ * when the note itself is. */
+.sidenote-number:hover ~ .sidenote,
+.sidenote:hover,
+.marginnote:hover {
+  background: color-mix(in oklab, var(--rule-color-strong) 35%, transparent);
+  transition: background 120ms ease-out;
+}
+
+.sidenote-number:hover {
+  color: var(--hover-text);
+}
+
+/* ─── Footer ───────────────────────────────────────────────── */
+
+.site-footer {
+  margin: 4rem 0 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule-color);
+  font-size: 0.9rem;
+  color: var(--muted-text);
+}
+
+/* Tufte sizes every p at 1.4rem, which overrode the footer's own size.
+ * Same size as the sidenotes: the footer is marginalia too. */
+.site-footer p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+/* ─── Narrow viewports ─────────────────────────────────────────
+ * Tufte relaxes the body padding at 760px, but #content, .site-nav and
+ * .site-footer override body, so they need the same care. */
+
+@media (max-width: 760px) {
+  body {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  .site-nav .site-menu {
+    gap: 1rem;
+    font-size: 1.1rem;
+  }
+}

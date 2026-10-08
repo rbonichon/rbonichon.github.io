@@ -13,42 +13,56 @@
       <link>http://localhost:1313/posts/ssprew-19/</link>
       <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ssprew-19/</guid>
-      <description>I was @ SSPREW&amp;#39;19 to present our work regarding:&#xA;the state-of-the-art in anti-DSE software protection (paper) preliminary results and observations concerning improved stochastic code deobfuscation. It was the last SSPREW edition before the merger with the SPRO workshop, but it was a good one! I enjoyed the workshop as usual, for its constructive purpose and nice people. There were 3 highlights to me:&#xA;the Binary Ninja tutorial. This was my second introduction to this tool, and I must say this is just a superb tool, which is coded by nice guys as well.</description>
+      <description>&lt;p&gt;&#xA;I was @ &lt;a href=&#34;http://www.pprew.org/program.htm&#34;&gt;SSPREW&amp;#39;19&lt;/a&gt; to present our work regarding:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;the state-of-the-art in anti-DSE software protection (&lt;a href=&#34;http://localhost:1313/papers/anti-dse-ssprew19.pdf&#34;&gt;paper&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;preliminary results and observations concerning improved stochastic code&#xA;deobfuscation.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;It was the last SSPREW edition before the merger with the &lt;a href=&#34;https://spro.aspire-fp7.eu/&#34;&gt;SPRO&lt;/a&gt; workshop, but it&#xA;was a good one! &lt;/p&gt;&#xA;&lt;p&gt;&#xA;I enjoyed the workshop as usual, for its constructive purpose and nice people. &#xA;There were 3 highlights to me:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;the &lt;a href=&#34;https://binary.ninja/&#34;&gt;Binary Ninja&lt;/a&gt; tutorial. This was my second introduction to this tool, and&#xA;I must say this is just a superb tool, which is coded by nice guys as well.&lt;/li&gt;&#xA;&lt;li&gt;the talk about the Guard Lines memory protection, called &lt;code&gt;Preventing Zero-Day Exploits of Memory Vulnerabilities with Guard Lines&lt;/code&gt;; and&lt;/li&gt;&#xA;&lt;li&gt;Yuan Gu&amp;#39;s keynote about &lt;code&gt;AI Security and Smart Asset Protection&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>USE &#39;18</title>
       <link>http://localhost:1313/posts/use-18/</link>
       <pubDate>Sun, 08 Apr 2018 13:55:43 +0100</pubDate>
       <guid>http://localhost:1313/posts/use-18/</guid>
-      <description>We will talk about how we use symbolic execution in BINSEC at USE&amp;#39;18 @ ICST&amp;#39;18. Here are the slides of the presentation..&#xA;For more, this presentation is a mashup of different results obtained by our group during the last 2 years from the following articles.&#xA;Backward-bounded DSE: Targeting Infeasibility Questions on Obfuscated Codes. &amp;lt;br/&amp;gt; Robin David, Sébastien Bardin, Jean-Yves Marion. &amp;lt;br/&amp;gt; SP 2017. Finding the needle in the heap: combining static analysis and dynamic symbolic execution to trigger use-after-free.</description>
+      <description>&lt;p&gt;&#xA;We will talk about how we use symbolic execution in BINSEC at USE&amp;#39;18 @ ICST&amp;#39;18. &lt;/p&gt;&#xA;&lt;p&gt;&#xA;Here are the &lt;a href=&#34;../../slides/use18.pdf&#34;&gt;slides&lt;/a&gt; of the presentation..&lt;/p&gt;&#xA;&lt;p&gt;For more, this presentation is a mashup of different results obtained by our&#xA;group during the last 2 years from the following articles.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;Backward-bounded DSE: Targeting Infeasibility Questions on Obfuscated&#xA;  Codes&lt;/em&gt;. &amp;lt;br/&amp;gt;&#xA;  Robin David, Sébastien Bardin, Jean-Yves Marion. &amp;lt;br/&amp;gt;&#xA;  SP 2017.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Finding the needle in the heap: combining static analysis and&#xA; dynamic symbolic execution to trigger use-after-free&lt;/em&gt;.&amp;lt;br/&amp;gt;&#xA; Josselin Feist, Laurent Mounier, Sébastien Bardin, Robin David, Marie-Laure&#xA;Potet. &amp;lt;br/&amp;gt;SSPREW@ACSAC 2016.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Recovering high-level conditions from binary programs&lt;/em&gt;. &amp;lt;br/&amp;gt;Adel Djoudi,&#xA;Sébastien Bardin. &amp;lt;br/&amp;gt; FM 2016.&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;BINSEC-SE: A Dynamic Symbolic Execution Toolkit for&#xA; Binary-Level Analysis&lt;/em&gt;. &amp;lt;br/&amp;gt; Robin David, Sébastien Bardin, Thanh Dinh Ta,&#xA; Laurent Mounier, Josselin Feist, Marie-Laure Potet,&#xA;  Jean-Yves Marion. &amp;lt;br/&amp;gt; SANER 2016&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;Specification of Concretization and Symbolization Policies in&#xA;  Symbolic Execution&lt;/em&gt;. &amp;lt;br/&amp;gt; &#xA;  Robin David, Sébastien Bardin, Josselin Feist, Thanh Dinh Ta, Laurent&#xA;  Mounier, Marie-Laure Potet, Jean-Yves Marion. &#xA;  &amp;lt;br/&amp;gt;ISSTA 2016&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;BINSEC: Binary Code Analysis with Low-Level Regions&lt;/em&gt;. &amp;lt;br/&amp;gt;&#xA; Adel Djoudi, Sébastien&#xA;Bardin. &#xA;&amp;lt;br/&amp;gt;TACAS 2015.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>SSPREW &#39;17</title>
       <link>http://localhost:1313/posts/ssprew-17/</link>
       <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ssprew-17/</guid>
-      <description>There will be a BINSEC tutorial @ SSPREW-7.&#xA;The tutorial uses a virtual machine which contains a compiled development snapshot of BINSEC and some examples. You can download it from ftp://ftp.cea.fr/incoming/y2k01/binsec_ssprew.ova (md5: 8d473d800b1fd2d3a2a929a51d1cb990).&#xA;username : vagrant password : vagrant The examples are found in the examples directory.&#xA;The above link will be active for 2 weeks only from November, 30. Here are the slides.</description>
+      <description>&lt;p&gt;&#xA;There will be a BINSEC tutorial @ &lt;a href=&#34;http://www.pprew.org/&#34;&gt;SSPREW-7&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;The tutorial uses a virtual machine which contains a compiled development&#xA;snapshot of BINSEC and some examples. &lt;/p&gt;&#xA;&lt;p&gt;&#xA;You can download it from &lt;a href=&#34;ftp://ftp.cea.fr/incoming/y2k01/binsec_ssprew.ova&#34;&gt;ftp://ftp.cea.fr/incoming/y2k01/binsec_ssprew.ova&lt;/a&gt;&#xA;(md5: 8d473d800b1fd2d3a2a929a51d1cb990).&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;username&lt;/strong&gt; : vagrant &lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;password&lt;/strong&gt; : vagrant &lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The examples are found in the &lt;code&gt;examples&lt;/code&gt; directory.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;The above link will be active for 2 weeks only from November, 30. &lt;/p&gt;&#xA;&lt;p&gt;&#xA;Here are the &lt;a href=&#34;../../slides/binsec@ssprew.pdf&#34;&gt;slides&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Basic disassembly in BINSEC</title>
+      <link>http://localhost:1313/posts/binsec-disasm/</link>
+      <pubDate>Sat, 19 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/binsec-disasm/</guid>
+      <description>&lt;p&gt;&#xA;In this post, we are interested in the basic disassembly abilities of &lt;code&gt;BINSEC&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reassessing format strings performance</title>
+      <link>http://localhost:1313/posts/format-comparison/</link>
+      <pubDate>Sat, 19 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/format-comparison/</guid>
+      <description>&lt;p&gt;&#xA;In November 2012, a thread on the OCaml devel mailing list mentioned that&#xA;using format strings, through either the &lt;code&gt;Printf&lt;/code&gt; or &lt;code&gt;Format&lt;/code&gt; modules, had a&#xA;measurable performance impact. It even mentioned that using &lt;code&gt;Format&lt;/code&gt; had some&#xA;further performance penalties over &lt;code&gt;Printf&lt;/code&gt;, e.g., regarding printing newlines.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;I am particularly drawn to OCaml&amp;#39;s format module since I find it one of&#xA;the best not-very-well-known features of its compact standard library.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;You might know that, since then, format strings handling has been changed and&#xA;now uses GADT. In theory, this should have brought performance&#xA;enhancements. So, in this post, I aim to revisit the performance question raised&#xA;in 2012. It&amp;#39;s 2017: what&amp;#39;s the performance penalty of format strings over direct&#xA;printing functions now in &lt;code&gt;OCaml&lt;/code&gt; ?&lt;/p&gt;</description>
     </item>
     <item>
       <title>ISSISP &#39;17</title>
       <link>http://localhost:1313/posts/issisp-17/</link>
       <pubDate>Sat, 29 Apr 2017 13:55:43 +0100</pubDate>
       <guid>http://localhost:1313/posts/issisp-17/</guid>
-      <description>We — my colleague Sébastien and I — are organizing the 8th International Summer School on Information Security and Protection.&#xA;For those of you interested in software protection in particular and in analyzing binary code in general, this is a great opportunity to meet some of the best academics and professionals of the domain.&#xA;For more information about ISSISP &amp;#39;17, the website is up and running there.</description>
+      <description>&lt;p&gt;&#xA;We — my colleague &lt;a href=&#34;http://sebastien.bardin.free.fr&#34;&gt;Sébastien&lt;/a&gt; and I — are organizing the 8th International&#xA;Summer School on Information Security and Protection.&lt;/p&gt;&#xA;&lt;p&gt;For those of you interested in software&#xA;protection in particular and in analyzing binary code in general,&#xA;this is a great opportunity to meet some of&#xA;the best academics and professionals of the domain.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;For more information about ISSISP &amp;#39;17, the website is up and running &lt;a href=&#34;https://issisp2017.github.io&#34;&gt;there&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>RESSI &#39;17</title>
       <link>http://localhost:1313/posts/ressi-17/</link>
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ressi-17/</guid>
-      <description>I will be @ RESSI to talk about BINSEC on behalf of all the group.</description>
+      <description>&lt;p&gt;&#xA;I will be @ &lt;a href=&#34;https://ressi2017.sciencesconf.org/&#34;&gt;RESSI&lt;/a&gt; &#xA;to talk about BINSEC on behalf of all the group.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Postdoc positions @ CEA LIST</title>
       <link>http://localhost:1313/posts/postdocs_2017/</link>
       <pubDate>Wed, 29 Mar 2017 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/postdocs_2017/</guid>
-      <description>The Software Reliability Lab at CEA LIST (Paris Saclay, France) is offering postdoc positions about Software security through binary-level analysis.&#xA;Full description is here.</description>
+      <description>&lt;p&gt;&#xA;The Software Reliability Lab at CEA LIST (Paris Saclay, France) is offering&#xA;postdoc positions about &lt;strong&gt;Software security through binary-level analysis&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Full description is &lt;a href=&#34;../../../../../../documents/2017-postdoc.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

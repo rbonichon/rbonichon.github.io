@@ -27,14 +27,14 @@
       <link>http://localhost:1313/non-posts/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/non-posts/about/</guid>
-      <description> I am currently a software engineer @ O(1) Labs.&#xA;You can contact me by e-mail.&#xA;E-mail richard.bonichon_at_o1labs.org </description>
+      <description>&lt;div class=&#34;columns&#34;&gt;&#xA;&#xA;&lt;div class=&#34;column is-two-fifths&#34;&gt;&#xA;&lt;p&gt;&#xA;I am currently a software engineer @ &lt;a href=&#34;https://o1labs.org&#34;&gt;O(1) Labs&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;You can contact me by e-mail.&lt;/p&gt;&#xA;&lt;div class=&#34;column is-two-thirds has-text-centered&#34;&gt;&#xA;      &lt;img id=&#34;portrait&#34; src=&#34;http://localhost:1313/img/rb.jpg&#34;/&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;column is-one-third &#34;&gt;&#xA;&lt;table&gt;&#xA;&lt;tbody&gt;&#xA;&lt;tr&gt;&#xA;&lt;td&gt;&lt;strong&gt;E-mail&lt;/strong&gt;&lt;/td&gt;&#xA;&lt;td&gt;&lt;code class=&#34;verbatim&#34;&gt;richard.bonichon_at_o1labs.org&lt;/code&gt;&lt;/td&gt;&#xA;&lt;/tr&gt;&#xA;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Archives</title>
       <link>http://localhost:1313/non-posts/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/non-posts/archives/</guid>
-      <description>Archives</description>
+      <description>&lt;p&gt;&#xA;Archives&lt;/p&gt;</description>
     </item>
     <item>
       <title>Teaching</title>

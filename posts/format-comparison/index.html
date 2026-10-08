@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top" >
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<title>RB</title>
+
+<meta name="author" content="RB">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+
+
+
+    <link href="/css/screen.css" media="screen" rel="stylesheet">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous">
+
+<script type="text/javascript" src="/js/nav.js"></script>
+
+
+    <link rel="canonical" href="">
+    
+    <link href="/rss.xml" type="application/atom+xml"
+          rel="alternate" title="">
+  </head>
+
+  <body>
+    <nav class="navbar is-fixed-top is-transparent hidden-print" role="navigation" aria-label="main navigation" >
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item " href="/">
+        <i class="fa fa-2x fa-home" aria-hidden="true" title="Home">
+        </i>
+        <span class="sr-only">Home</span>
+      </a>
+      <button class="button navbar-burger" data-target="navMenu" >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <div class="navbar-menu" id="navMenu" >
+      <div class="navbar-start ">
+        <a aria-label="About" class="navbar-item" href="/non-posts/about/">
+          <i aria-hidden="true" class="fa fa-2x fa-user" title="About">
+          </i>
+          <span class="sr-only">About</span>
+        </a>
+        <a class="navbar-item" href="/non-posts/biblio/">
+          <i class="fa fa-2x fa-book" aria-hidden="true" title="Publications">
+          </i>
+          <span class="sr-only">Publications</span>
+        </a>
+
+        <a class="navbar-item" href="/non-posts/teaching/">
+          <i class="fa fa-2x fa-graduation-cap" aria-hidden="true" title="Teaching">
+          </i>
+          <span class="sr-only">Teaching</span>
+        </a>
+        <a class="navbar-item" href="https://github.com/rbonichon">
+          <i class="fa fa-2x fa-github" aria-hidden="true" title="GitHub">
+          </i>
+          <span class="sr-only">GitHub</span>
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="/non-posts/archives/">
+          <i class="fa fa-2x fa-archive" aria-hidden="true" title="Archive">
+          </i>
+          <span class="sr-only">Archive</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</nav>
+
+    
+
+    <section class="section content">
+      <div class="container">
+      <h1>Reassessing format strings performance</h1>
+      
+<p>
+In November 2012, a thread on the OCaml devel mailing list mentioned that
+using format strings, through either the <code>Printf</code> or <code>Format</code> modules, had a
+measurable performance impact. It even mentioned that using <code>Format</code> had some
+further performance penalties over <code>Printf</code>, e.g., regarding printing newlines.</p>
+<p>
+I am particularly drawn to OCaml&#39;s format module since I find it one of
+the best not-very-well-known features of its compact standard library.</p>
+<p>
+You might know that, since then, format strings handling has been changed and
+now uses GADT. In theory, this should have brought performance
+enhancements. So, in this post, I aim to revisit the performance question raised
+in 2012. It&#39;s 2017: what&#39;s the performance penalty of format strings over direct
+printing functions now in <code>OCaml</code> ?</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Back to 2012
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>
+Let us first summarize the point that the <code>ocaml-devel</code> thread was raising
+in 2012. Let me state that I do not see any concern regarding this point and
+that I am taking it at face value.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+And on to 2017
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>
+Now that GADTs are in the game, I want to revisit the following questions:</p>
+<ol>
+<li>
+<p>Is is still true that direct printing functions are more efficient than
+formatted strings functions ? (most probably - yes)</p>
+<ol>
+<li>If so, how much do we lose ?</li>
+</ol>
+</li>
+<li>Does the use of <code>Format</code> incur a higher performance penalty than <code>Printf</code> ?</li>
+</ol>
+<p>Let&#39;s see if there still is a measurable difference between using non-formatted
+primitives (<code>print_string</code>, <code>print_int</code>, …) and using format strings.</p>
+<div class="src src-ocaml">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> x <span style="color:#f92672">=</span> 1</span></span></code></pre></div>
+</div>
+<p>
+We will be measuring the following printing functions with the shell&#39;s time
+utily. Each function will be its own executable. We&#39;ll see if there&#39;s any
+difference also between OCaml 3.12 (pre-GADT) and 4.05 (current stable
+release).</p>
+</div>
+</div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+  <div class="container ">
+    <div class="has-text-centered">
+      <p> Built with <a href="https://github.com/spf13/hugo">Hugo</a>.</p>
+      <p>© Richard Bonichon 2017-2021</p>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
