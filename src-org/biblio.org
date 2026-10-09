@@ -4,70 +4,116 @@
 
 * 2024
 
-- J. Rosain, R. Bonichon, J. Cailler, O. Hermant. /A Generic Deskolemization Strategy/. *LPAR 2024*, EPiC Series in Computing 100, p. 246–263. [[https://doi.org/10.29007/g1tm][doi]]
+- /A Generic Deskolemization Strategy/ \\
+  J. Rosain, R. Bonichon, J. Cailler, O. Hermant \\
+  @@html:<span class="pub-venue">@@ *LPAR 2024*, EPiC Series in Computing 100, p. 246–263 · [[https://doi.org/10.29007/g1tm][doi]] @@html:</span>@@
 
 * 2021
 
-- T. McDonald, R. Manikyam, S. Bardin, R. Bonichon, T. R. Andel. /Program Protection Through Software-Based Hardware Abstraction/. *SECRYPT 2021*. [[./papers/sbha-secrypt21.pdf][pdf]]
+- /Program Protection Through Software-Based Hardware Abstraction/ \\
+  T. McDonald, R. Manikyam, S. Bardin, R. Bonichon, T. R. Andel \\
+  @@html:<span class="pub-venue">@@ *SECRYPT 2021* · [[./papers/sbha-secrypt21.pdf][pdf]] @@html:</span>@@
 
-- G. Menguy, S. Bardin, R. Bonichon, C. de Souza Lima. /Search-based Approaches for Local Blackbox Deobfuscation: Understand, Improve and Mitigate/. *CCS 2021*. [[./papers/xyntia-ccs21.pdf][pdf]]
+- /Search-based Approaches for Local Blackbox Deobfuscation: Understand, Improve and Mitigate/ \\
+  G. Menguy, S. Bardin, R. Bonichon, C. de Souza Lima \\
+  @@html:<span class="pub-venue">@@ *CCS 2021* · [[./papers/xyntia-ccs21.pdf][pdf]] @@html:</span>@@
 
-- F. Recoules, S. Bardin, R. Bonichon, M. Lemerre, L. Mounier, M.-L. Potet. /Interface Compliance of Inline Assembly: Automatically Check, Patch and Refine/. *ICSE 2021* — *Distinguished Paper Award*. [[./papers/rustina-icse21.pdf][pdf]]
+- /Interface Compliance of Inline Assembly: Automatically Check, Patch and Refine/ \\
+  F. Recoules, S. Bardin, R. Bonichon, M. Lemerre, L. Mounier, M.-L. Potet \\
+  @@html:<span class="pub-venue">@@ *ICSE 2021* — *Distinguished Paper Award* · [[./papers/rustina-icse21.pdf][pdf]] @@html:</span>@@
 
 * 2020
 
-- M. D. Nguyen, S. Bardin, R. Bonichon, R. Groz, M. Lemerre. /Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities/. *RAID 2020*. [[./papers/uafuzz-raid20.pdf][pdf]]
+- /Binary-level Directed Fuzzing for Use-After-Free Vulnerabilities/ \\
+  M. D. Nguyen, S. Bardin, R. Bonichon, R. Groz, M. Lemerre \\
+  @@html:<span class="pub-venue">@@ *RAID 2020* · [[./papers/uafuzz-raid20.pdf][pdf]] @@html:</span>@@
 
-- F. Recoules, S. Bardin, R. Bonichon, L. Mounier, M.-L. Potet. /Et TInA RUSTInA le lien vers l'assembleur/. *JFLA 2020*. [[./papers/rustina-jfla20.pdf][pdf]]
+- /Et TInA RUSTInA le lien vers l'assembleur/ \\
+  F. Recoules, S. Bardin, R. Bonichon, L. Mounier, M.-L. Potet \\
+  @@html:<span class="pub-venue">@@ *JFLA 2020* · [[./papers/rustina-jfla20.pdf][pdf]] @@html:</span>@@
 
 * 2019
 
-- M. Ollivier, S. Bardin, R. Bonichon, J.-Y. Marion. /How to Kill Symbolic Deobfuscation for Free (or: Unleashing the Potential of Path-Oriented Protections)/. *ACSAC 2019*. [[./papers/ksdf-acsac19.pdf][pdf]]
+- /How to Kill Symbolic Deobfuscation for Free (or: Unleashing the Potential of Path-Oriented Protections)/ \\
+  M. Ollivier, S. Bardin, R. Bonichon, J.-Y. Marion \\
+  @@html:<span class="pub-venue">@@ *ACSAC 2019* · [[./papers/ksdf-acsac19.pdf][pdf]] @@html:</span>@@
 
-- M. Ollivier, S. Bardin, R. Bonichon, J.-Y. Marion. /Obfuscation: Where Are We in Anti-DSE Protections? (a first attempt)/. *SSPREW 2019*. [[./papers/anti-dse-ssprew19.pdf][pdf]]
+- /Obfuscation: Where Are We in Anti-DSE Protections? (a first attempt)/ \\
+  M. Ollivier, S. Bardin, R. Bonichon, J.-Y. Marion \\
+  @@html:<span class="pub-venue">@@ *SSPREW 2019* · [[./papers/anti-dse-ssprew19.pdf][pdf]] @@html:</span>@@
 
-- F. Recoules, S. Bardin, R. Bonichon, L. Mounier, M.-L. Potet. /Get rid of inline assembly through verification-oriented lifting/. *ASE 2019*. [[./papers/tina-ase19.pdf][pdf]]
+- /Get rid of inline assembly through verification-oriented lifting/ \\
+  F. Recoules, S. Bardin, R. Bonichon, L. Mounier, M.-L. Potet \\
+  @@html:<span class="pub-venue">@@ *ASE 2019* · [[./papers/tina-ase19.pdf][pdf]] @@html:</span>@@
 
-- F. Recoules, S. Bardin, R. Bonichon, L. Mounier, M.-L. Potet. /De l'assembleur sur la ligne ? Appelez TInA !/. *JFLA 2019*. [[./papers/tina-jfla19.pdf][pdf]]
+- /De l'assembleur sur la ligne ? Appelez TInA !/ \\
+  F. Recoules, S. Bardin, R. Bonichon, L. Mounier, M.-L. Potet \\
+  @@html:<span class="pub-venue">@@ *JFLA 2019* · [[./papers/tina-jfla19.pdf][pdf]] @@html:</span>@@
 
-- B. Farinier, S. Bardin, R. Bonichon, M.-L. Potet. /En finir avec les faux positifs grâce à l’exécution symbolique robuste/. *JFLA 2019*. [[./papers/se-robuste-jfla19.pdf][pdf]]
+- /En finir avec les faux positifs grâce à l’exécution symbolique robuste/ \\
+  B. Farinier, S. Bardin, R. Bonichon, M.-L. Potet \\
+  @@html:<span class="pub-venue">@@ *JFLA 2019* · [[./papers/se-robuste-jfla19.pdf][pdf]] @@html:</span>@@
 
 * 2018
 
-- B. Farinier, S. Bardin, R. Bonichon, M.-L. Potet. /Model Generation for Quantified Formulas: A Taint-Based Approach/. *CAV 2018*. [[./papers/cav2018.pdf][pdf]]
+- /Model Generation for Quantified Formulas: A Taint-Based Approach/ \\
+  B. Farinier, S. Bardin, R. Bonichon, M.-L. Potet \\
+  @@html:<span class="pub-venue">@@ *CAV 2018* · [[./papers/cav2018.pdf][pdf]] @@html:</span>@@
 
 * 2017
 
-- R. Bonichon, P. Weis. /Format unraveled/. *JFLA 2017*. [[./papers/format-unraveled.pdf][pdf]] · [[./slides/format-unraveled-slides.pdf][slides]]
+- /Format unraveled/ \\
+  R. Bonichon, P. Weis \\
+  @@html:<span class="pub-venue">@@ *JFLA 2017* · [[./papers/format-unraveled.pdf][pdf]] · [[./slides/format-unraveled-slides.pdf][slides]] @@html:</span>@@
 
 * 2015
 
-- R. Bonichon, O. Hermant. /A syntactic soundness proof for free-variable tableaux with on-the-fly Skolemization/. *CoRR* abs/1505.06376. [[http://arxiv.org/abs/1505.06376][arxiv]]
+- /A syntactic soundness proof for free-variable tableaux with on-the-fly Skolemization/ \\
+  R. Bonichon, O. Hermant \\
+  @@html:<span class="pub-venue">@@ *CoRR* abs/1505.06376 · [[http://arxiv.org/abs/1505.06376][arxiv]] @@html:</span>@@
 
-- R. Bonichon, D. Déharbe, P. Dobal, C. Tavares. /SMTpp: preprocessors and analyzers for SMT-LIB/. *SMT Workshop 2015*. [[./papers/smtpp-smt15.pdf][pdf]]
+- /SMTpp: preprocessors and analyzers for SMT-LIB/ \\
+  R. Bonichon, D. Déharbe, P. Dobal, C. Tavares \\
+  @@html:<span class="pub-venue">@@ *SMT Workshop 2015* · [[./papers/smtpp-smt15.pdf][pdf]] @@html:</span>@@
 
 * 2014
 
-- R. Bonichon, D. Déharbe, T. Lecomte, V. Medeiros Jr. /LLVM-Based Code Generation for B/. *SBMF 2014*.
+- /LLVM-Based Code Generation for B/ \\
+  R. Bonichon, D. Déharbe, T. Lecomte, V. Medeiros Jr \\
+  @@html:<span class="pub-venue">@@ *SBMF 2014* @@html:</span>@@
 
-- R. Bonichon, D. Déharbe, C. Tavares. /Extending SMT-LIB v2 with \(\lambda\)-Terms and Polymorphism/. *SMT Workshop 2014*. [[./papers/smtlib_lambda-smt14.pdf][pdf]]
+- /Extending SMT-LIB v2 with \(\lambda\)-Terms and Polymorphism/ \\
+  R. Bonichon, D. Déharbe, C. Tavares \\
+  @@html:<span class="pub-venue">@@ *SMT Workshop 2014* · [[./papers/smtlib_lambda-smt14.pdf][pdf]] @@html:</span>@@
 
 * 2011
 
-- R. Bonichon, P. Cuoq. /A Mergeable Interval Map/. *Stud. Inform. Univ.* 9(1), p. 5–37. [[./papers/rangemaps-jfla11.pdf][pdf]]
+- /A Mergeable Interval Map/ \\
+  R. Bonichon, P. Cuoq \\
+  @@html:<span class="pub-venue">@@ *Stud. Inform. Univ.* 9(1), p. 5–37 · [[./papers/rangemaps-jfla11.pdf][pdf]] @@html:</span>@@
 
-- R. Bonichon, G. Canet, L. Correnson, E. Goubault, E. Haucourt, M. Hirschowitz, S. Labbé, S. Mimram. /Rigorous Evidence of Freedom from Concurrency Faults in Industrial Control Software/. *SAFECOMP 2011*, p. 85–98. [[./papers/safecomp2011.pdf][pdf]] · [[https://doi.org/10.1007/978-3-642-24270-0_7][doi]]
+- /Rigorous Evidence of Freedom from Concurrency Faults in Industrial Control Software/ \\
+  R. Bonichon, G. Canet, L. Correnson, E. Goubault, E. Haucourt, M. Hirschowitz, S. Labbé, S. Mimram \\
+  @@html:<span class="pub-venue">@@ *SAFECOMP 2011*, p. 85–98 · [[./papers/safecomp2011.pdf][pdf]] · [[https://doi.org/10.1007/978-3-642-24270-0_7][doi]] @@html:</span>@@
 
 * 2007
 
-- R. Bonichon, D. Delahaye, D. Doligez. /Zenon: An Extensible Automated Theorem Prover Producing Checkable Proofs/. *LPAR 2007*. [[./papers/zenon-lpar07.pdf][pdf]]
+- /Zenon: An Extensible Automated Theorem Prover Producing Checkable Proofs/ \\
+  R. Bonichon, D. Delahaye, D. Doligez \\
+  @@html:<span class="pub-venue">@@ *LPAR 2007* · [[./papers/zenon-lpar07.pdf][pdf]] @@html:</span>@@
 
 * 2006
 
-- R. Bonichon, O. Hermant. /On Constructive Cut Admissibility in Deduction Modulo/. *TYPES 2006*. [[./papers/constr-elim-mod-types06.pdf][pdf]]
+- /On Constructive Cut Admissibility in Deduction Modulo/ \\
+  R. Bonichon, O. Hermant \\
+  @@html:<span class="pub-venue">@@ *TYPES 2006* · [[./papers/constr-elim-mod-types06.pdf][pdf]] @@html:</span>@@
 
-- R. Bonichon, O. Hermant. /A semantic completeness proof for TaMeD/. *LPAR 2006*. [[./papers/semantic-tamed-lpar06.pdf][pdf]]
+- /A semantic completeness proof for TaMeD/ \\
+  R. Bonichon, O. Hermant \\
+  @@html:<span class="pub-venue">@@ *LPAR 2006* · [[./papers/semantic-tamed-lpar06.pdf][pdf]] @@html:</span>@@
 
 * 2004
 
-- R. Bonichon. /TaMeD: A Tableau Method for Deduction Modulo/. *IJCAR 2004*, p. 445–459. [[./papers/tamed-ijcar04.pdf][pdf]] · [[https://doi.org/10.1007/978-3-540-25984-8_33][doi]]
+- /TaMeD: A Tableau Method for Deduction Modulo/ \\
+  R. Bonichon \\
+  @@html:<span class="pub-venue">@@ *IJCAR 2004*, p. 445–459 · [[./papers/tamed-ijcar04.pdf][pdf]] · [[https://doi.org/10.1007/978-3-540-25984-8_33][doi]] @@html:</span>@@

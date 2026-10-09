@@ -280,6 +280,18 @@ abbr {
   text-decoration-color: currentColor;
 }
 
+/* ─── Content: publications ───────────────────────────────────
+ * Entries generated from data/biblio.yml: title, authors, then the
+ * venue line (with links), muted as in the PDF resume. */
+
+#content li:has(> .pub-venue) {
+  margin-bottom: 0.9rem;
+}
+
+#content .pub-venue {
+  color: var(--muted-text);
+}
+
 /* ─── Content: tables ─────────────────────────────────────────
  * org-html emits a bare <table>. Override tufte's tight line-height and
  * sparse padding to match the rhythm of the body text. */
